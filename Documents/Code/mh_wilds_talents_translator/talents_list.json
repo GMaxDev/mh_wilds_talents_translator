@@ -463,43 +463,43 @@
       }
     }
   },
-  "": {
+  "burst_boost_1": {
     "FR": {
-      "name": "",
-      "type": "",
-      "description": "",
+      "name": " ",
+      "type": " ",
+      "description": " ",
       "levels": {
-        "1": ""
+        "1": " "
       }
     },
     "EN": {
-      "name": "",
-      "type": "",
-      "description": "",
+      "name": "Burst Boost 1",
+      "type": "Armor",
+      "description": "Extends the duration of the Burst skill and grants attack +3 while Burst is active.",
       "levels": {
-        "1": ""
+        "1": "Extends the duration of the Burst skill and grants attack +3 while Burst is active."
       }
     }
   },
-  "": {
+  "burst_boost_2": {
     "FR": {
-      "name": "",
-      "type": "",
-      "description": "",
+      "name": " ",
+      "type": " ",
+      "description": " ",
       "levels": {
-        "1": ""
+        "1": " "
       }
     },
     "EN": {
-      "name": "",
-      "type": "",
-      "description": "",
+      "name": "Burst Boost 2",
+      "type": "Armor",
+      "description": "Further extends the duration of the Burst skill and grants attack +10 while Burst is active.",
       "levels": {
-        "1": ""
+        "1": "Further extends the duration of the Burst skill and grants attack +10 while Burst is active."
       }
     }
   },
-  "": {
+  "buttery_leathercraft": {
     "FR": {
       "name": "",
       "type": "",
@@ -509,11 +509,11 @@
       }
     },
     "EN": {
-      "name": "",
-      "type": "",
-      "description": "",
+      "name": "Buttery Leathercraft",
+      "type": "Group",
+      "description": "Increases your affinity temporarily when sliding on terrain.",
       "levels": {
-        "1": ""
+        "1": "3 Pieces Unlock: Affinity Sliding"
       }
     }
   },
