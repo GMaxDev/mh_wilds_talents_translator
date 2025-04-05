@@ -45,6 +45,24 @@
       }
     }
   },
+  "affinity_sliding": {
+    "FR": {
+      "name": "Roi de la glisse ",
+      "type": "Armure",
+      "description": "",
+      "levels": {
+        "1": "Attqaue +4 et affinité +3% lorsqu'il est actif."
+      }
+    },
+    "EN": {
+      "name": "Affinity Sliding",
+      "type": "Armor",
+      "description": "Increases your affinity temporarily when sliding on terrain.",
+      "levels": {
+        "1": "Increases your affinity temporarily when sliding on terrain."
+      }
+    }
+  },
   "agitator": {
     "FR": {
       "name": "Témérité",
@@ -161,7 +179,7 @@
       "levels": {
         "1": "Augmente modérément la puissance des attaques et la vitesse du Feu de wyverne. Attaque feu du Bombardement +30.",
         "2": "Augmente la puissance des attaques et la vitesse du Feu de wyverne. Attaque feu du Bombardement +60.",
-        "2": "Augmente grandementla puissance des attaques et la vitesse du Feu de wyverne. Attaque feu du Bombardement +90."
+        "3": "Augmente grandementla puissance des attaques et la vitesse du Feu de wyverne. Attaque feu du Bombardement +90."
       }
     },
     "EN": {
@@ -501,16 +519,16 @@
   },
   "buttery_leathercraft": {
     "FR": {
-      "name": "",
-      "type": "",
-      "description": "",
+      "name": "Douceur du cuir",
+      "type": "Armure",
+      "description": "Augente temporairement votre affinité pendant les glissades.",
       "levels": {
-        "1": ""
+        "1": "Augente temporairement votre affinité pendant les glissades."
       }
     },
     "EN": {
       "name": "Buttery Leathercraft",
-      "type": "Group",
+      "type": "Armure",
       "description": "Increases your affinity temporarily when sliding on terrain.",
       "levels": {
         "1": "3 Pieces Unlock: Affinity Sliding"
