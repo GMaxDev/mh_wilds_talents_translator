@@ -3,34 +3,14 @@ import talentsData from "./data/talents.json"; // Assurez-vous que ce chemin est
 
 // Icônes simplifiées
 const SearchIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="8"></circle>
     <path d="m21 21-4.3-4.3"></path>
   </svg>
 );
 
 const ArrowLeftRightIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M8 3 4 7l4 4"></path>
     <path d="M4 7h16"></path>
     <path d="m16 21 4-4-4-4"></path>
@@ -39,49 +19,19 @@ const ArrowLeftRightIcon = () => (
 );
 
 const SparklesIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
   </svg>
 );
 
 const MoonIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
   </svg>
 );
 
 const SunIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="4"></circle>
     <path d="M12 2v2"></path>
     <path d="M12 20v2"></path>
@@ -108,9 +58,9 @@ function App() {
   useEffect(() => {
     // Appliquer le mode sombre par défaut au chargement
     if (darkMode) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('dark');
     }
   }, [darkMode]);
 
@@ -141,7 +91,8 @@ function App() {
       return (
         availableLanguages.some((lang) =>
           talent[lang]?.name.toLowerCase().includes(searchQuery.toLowerCase())
-        ) || talentKey.toLowerCase().includes(searchQuery.toLowerCase())
+        ) ||
+        talentKey.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
 
@@ -182,8 +133,7 @@ function App() {
     if (maxMatches > 0 && bestMatch !== sourceLanguage) {
       setSourceLanguage(bestMatch);
       // Set target language to something different than source
-      const otherLang =
-        availableLanguages.find((lang) => lang !== bestMatch) || targetLanguage;
+      const otherLang = availableLanguages.find((lang) => lang !== bestMatch) || targetLanguage;
       setTargetLanguage(otherLang);
     }
   };
@@ -206,48 +156,56 @@ function App() {
   };
 
   return (
-    <div
-      className={`min-h-screen ${
-        darkMode
-          ? "dark bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900"
-          : "bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
-      }`}
-    >
+    <div className={`min-h-screen ${darkMode
+      ? 'dark bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-900'
+      : 'bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100'}`}>
+
       {/* Éléments décoratifs pour l'arrière-plan */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute bg-purple-500 rounded-full -top-40 -left-40 w-80 h-80 mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute top-0 bg-yellow-500 rounded-full -right-20 w-80 h-80 mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
-        <div className="absolute bg-pink-500 rounded-full -bottom-40 left-20 w-80 h-80 mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
-        <div className="absolute text-gray-600 pointer-events-auto right-10 bottom-10 dark:text-gray-300">
-          <a href="https://github.com/gmaxdev">Develop by GMaxDev</a>
-        </div>
+        <div className={`absolute -top-40 -left-40 w-80 h-80 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob ${
+          darkMode ? 'bg-cyan-500' : 'bg-amber-500'
+        }`}></div>
+        <div className={`absolute top-0 -right-20 w-80 h-80 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000 ${
+          darkMode ? 'bg-blue-500' : 'bg-orange-400'
+        }`}></div>
+        <div className={`absolute -bottom-40 left-20 w-80 h-80 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000 ${
+          darkMode ? 'bg-indigo-500' : 'bg-amber-300'
+        }`}></div>
       </div>
 
       <div className="container relative z-10 px-4 py-8 mx-auto">
         <div className="flex justify-end mb-4">
           <button
             onClick={toggleDarkMode}
-            className="p-2 text-gray-700 transition-all duration-300 border rounded-full shadow-lg backdrop-blur-sm bg-white/10 dark:bg-gray-800/30 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-gray-700/50 border-white/20 dark:border-gray-700/30"
-            aria-label={
-              darkMode ? "Switch to light mode" : "Switch to dark mode"
-            }
+            className={`p-2 rounded-full backdrop-blur-sm border transition-all duration-300 shadow-lg ${
+              darkMode
+                ? 'bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/30'
+                : 'bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50'
+            }`}
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {darkMode ? <SunIcon /> : <MoonIcon />}
           </button>
         </div>
 
         <div className="mb-10 text-center">
-          <h1 className="mb-2 text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+          <h1 className={`text-5xl font-bold mb-2 ${
+            darkMode
+              ? 'bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-cyan-200'
+              : 'bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-orange-600'
+          }`}>
             MH Wilds Talent Translator
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className={`${darkMode ? 'text-amber-100/80' : 'text-amber-800/80'}`}>
             Translate Monster Hunter Wilds talents between languages
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           <div className="relative mb-6">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 pointer-events-none dark:text-gray-400">
+            <div className={`absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ${
+              darkMode ? 'text-amber-100/70' : 'text-amber-800/70'
+            }`}>
               <SearchIcon />
             </div>
             <input
@@ -255,35 +213,59 @@ function App() {
               placeholder="Search for a talent..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-12 px-4 py-2 pl-10 text-lg text-gray-900 transition-all duration-300 border shadow-lg rounded-xl border-white/20 dark:border-gray-700/30 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className={`pl-10 h-12 text-lg w-full rounded-xl px-4 py-2
+                backdrop-blur-md shadow-lg focus:outline-none transition-all duration-300 ${
+                darkMode
+                  ? 'bg-slate-800/30 text-amber-100 border border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50'
+                  : 'bg-amber-100/30 text-amber-900 border border-amber-200/50 focus:ring-2 focus:ring-amber-500/50'
+              }`}
             />
             {searchQuery && (
               <div className="absolute transform -translate-y-1/2 right-3 top-1/2">
-                <span className="inline-flex items-center px-2 py-1 text-xs font-medium text-gray-800 border rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30 dark:text-gray-200 border-white/20 dark:border-gray-700/30">
+                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium
+                  backdrop-blur-md border ${
+                  darkMode
+                    ? 'bg-slate-800/30 text-amber-100 border-slate-700/50'
+                    : 'bg-amber-100/30 text-amber-900 border-amber-200/50'
+                }`}>
                   {sourceLanguage} detected
-                  <SparklesIcon className="ml-1 text-yellow-500" />
+                  <SparklesIcon className={`ml-1 ${darkMode ? 'text-cyan-300' : 'text-amber-500'}`} />
                 </span>
               </div>
             )}
           </div>
 
           {filteredTalents.length > 0 && (
-            <div className="mt-2 overflow-y-auto border shadow-lg border-white/20 dark:border-gray-700/30 rounded-xl max-h-60 backdrop-blur-md bg-white/30 dark:bg-gray-800/30">
+            <div className={`mt-2 rounded-xl max-h-60 overflow-y-auto
+              backdrop-blur-md shadow-lg border ${
+              darkMode
+                ? 'bg-slate-800/30 border-slate-700/50'
+                : 'bg-amber-100/30 border-amber-200/50'
+            }`}>
               {filteredTalents.map((talentKey) => (
                 <div
                   key={talentKey}
-                  className="flex items-center justify-between p-3 transition-all duration-300 border-b cursor-pointer hover:bg-white/50 dark:hover:bg-gray-700/50 border-white/20 dark:border-gray-700/30 last:border-b-0"
+                  className={`p-3 cursor-pointer transition-all duration-300
+                    border-b last:border-b-0 flex justify-between items-center ${
+                    darkMode
+                      ? 'border-slate-700/50 hover:bg-slate-700/50'
+                      : 'border-amber-200/50 hover:bg-amber-200/50'
+                  }`}
                   onClick={() => handleTalentSelect(talentKey)}
                 >
                   <div>
-                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                    <span className={`font-medium ${darkMode ? 'text-amber-100' : 'text-amber-900'}`}>
                       {talents[talentKey][sourceLanguage]?.name || talentKey}
                     </span>
-                    <span className="ml-2 text-xs text-gray-600 dark:text-gray-400">
+                    <span className={`text-xs ml-2 ${darkMode ? 'text-amber-100/70' : 'text-amber-800/70'}`}>
                       {talents[talentKey][sourceLanguage]?.category}
                     </span>
                   </div>
-                  <span className="px-2 py-1 text-xs text-gray-700 border rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30 dark:text-gray-300 border-white/20 dark:border-gray-700/30">
+                  <span className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                    darkMode
+                      ? 'bg-slate-800/30 text-amber-100/90 border-slate-700/50'
+                      : 'bg-amber-100/50 text-amber-900 border-amber-200/50'
+                  }`}>
                     {talentKey}
                   </span>
                 </div>
@@ -298,9 +280,12 @@ function App() {
                   <select
                     value={sourceLanguage}
                     onChange={(e) => setSourceLanguage(e.target.value)}
-                    className="w-[100px] rounded-xl border border-white/20 dark:border-gray-700/30 px-3 py-2
-                      backdrop-blur-md bg-white/30 dark:bg-gray-800/30 text-gray-900 dark:text-gray-100
-                      shadow-md focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                    className={`w-[100px] rounded-xl px-3 py-2
+                      backdrop-blur-md shadow-md focus:outline-none border ${
+                      darkMode
+                        ? 'bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50'
+                        : 'bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50'
+                    }`}
                   >
                     {availableLanguages.map((lang) => (
                       <option key={`source-${lang}`} value={lang}>
@@ -311,7 +296,11 @@ function App() {
 
                   <button
                     onClick={handleLanguageSwap}
-                    className="p-2 text-gray-700 transition-all duration-300 border rounded-full shadow-md backdrop-blur-md bg-white/30 dark:bg-gray-800/30 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-700/50 border-white/20 dark:border-gray-700/30"
+                    className={`p-2 rounded-full backdrop-blur-md border transition-all duration-300 shadow-md ${
+                      darkMode
+                        ? 'bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/50'
+                        : 'bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50'
+                    }`}
                   >
                     <ArrowLeftRightIcon />
                   </button>
@@ -319,9 +308,12 @@ function App() {
                   <select
                     value={targetLanguage}
                     onChange={(e) => setTargetLanguage(e.target.value)}
-                    className="w-[100px] rounded-xl border border-white/20 dark:border-gray-700/30 px-3 py-2
-                      backdrop-blur-md bg-white/30 dark:bg-gray-800/30 text-gray-900 dark:text-gray-100
-                      shadow-md focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                    className={`w-[100px] rounded-xl px-3 py-2
+                      backdrop-blur-md shadow-md focus:outline-none border ${
+                      darkMode
+                        ? 'bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50'
+                        : 'bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50'
+                    }`}
                   >
                     {availableLanguages.map((lang) => (
                       <option key={`target-${lang}`} value={lang}>
@@ -331,7 +323,11 @@ function App() {
                   </select>
                 </div>
 
-                <span className="px-2 py-1 text-xs text-gray-700 border rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30 dark:text-gray-300 border-white/20 dark:border-gray-700/30">
+                <span className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                  darkMode
+                    ? 'bg-slate-800/30 text-amber-100 border-slate-700/50'
+                    : 'bg-amber-100/30 text-amber-900 border-amber-200/50'
+                }`}>
                   {selectedTalent}
                 </span>
               </div>
@@ -358,69 +354,90 @@ function App() {
   );
 }
 
-function TalentCard({ talent, language, darkMode }) {
+function TalentCard({ talent, talentKey, language, darkMode }) {
   if (!talent) {
     return (
-      <div className="p-4 border border-dashed shadow-lg border-white/20 dark:border-gray-700/30 rounded-xl backdrop-blur-md bg-white/20 dark:bg-gray-800/20">
+      <div className={`border-dashed rounded-xl p-4
+        backdrop-blur-md shadow-lg ${
+        darkMode
+          ? 'bg-slate-800/20 border border-slate-700/50 text-amber-100/70'
+          : 'bg-amber-100/20 border border-amber-200/50 text-amber-800/70'
+      }`}>
         <div className="p-4">
-          <h3 className="text-lg font-medium text-gray-500 dark:text-gray-400">
-            Translation not available in {language}
-          </h3>
+          <h3 className="text-lg font-medium">Translation not available in {language}</h3>
         </div>
       </div>
     );
   }
 
   return (
-    <div
-      className="group border border-white/20 dark:border-gray-700/30 rounded-xl overflow-hidden
-      backdrop-blur-md bg-white/30 dark:bg-gray-800/30
-      transition-all duration-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] dark:hover:shadow-[0_0_15px_rgba(168,85,247,0.3)]
-      hover:-translate-y-1"
-    >
-      <div
-        className={`border-b border-white/20 dark:border-gray-700/30 p-4
-        ${
-          darkMode
-            ? "bg-gradient-to-r from-gray-800/50 to-purple-900/30"
-            : "bg-gradient-to-r from-white/50 to-purple-100/30"
-        }`}
-      >
+    <div className={`group rounded-xl overflow-hidden
+      backdrop-blur-md border
+      transition-all duration-500 hover:-translate-y-1 ${
+      darkMode
+        ? 'bg-slate-800/30 border-slate-700/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]'
+        : 'bg-amber-100/30 border-amber-200/50 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)]'
+    }`}>
+      <div className={`border-b p-4 ${
+        darkMode
+          ? 'bg-gradient-to-r from-slate-800/50 to-indigo-900/30 border-slate-700/50'
+          : 'bg-gradient-to-r from-amber-100/50 to-orange-100/30 border-amber-200/50'
+      }`}>
         <div className="flex items-start justify-between">
           <div>
-            <span className="inline-block px-2 py-1 mb-2 text-xs font-medium text-gray-700 border rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30 dark:text-gray-300 border-white/20 dark:border-gray-700/30">
+            <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+              backdrop-blur-md border mb-2 ${
+              darkMode
+                ? 'bg-slate-800/30 text-amber-100 border-slate-700/50'
+                : 'bg-amber-100/50 text-amber-900 border-amber-200/50'
+            }`}>
               {language}
             </span>
-            <h3 className="text-xl font-bold text-gray-900 transition-colors duration-300 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
+            <h3 className={`text-xl font-bold transition-colors duration-300 ${
+              darkMode
+                ? 'text-amber-100 group-hover:text-cyan-300'
+                : 'text-amber-900 group-hover:text-amber-600'
+            }`}>
               {talent.name}
             </h3>
-            <div className="mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">
+            <div className={`text-sm font-medium mt-1 ${
+              darkMode ? 'text-amber-100/70' : 'text-amber-800/70'
+            }`}>
               {talent.category}
             </div>
           </div>
         </div>
       </div>
       <div className="p-4">
-        <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+        <p className={`mb-6 text-sm leading-relaxed ${
+          darkMode ? 'text-amber-100/90' : 'text-amber-900/90'
+        }`}>
           {talent.description}
         </p>
 
         {Object.keys(talent.levels).length > 0 && (
           <div>
-            <h3 className="mb-2 text-sm font-semibold tracking-wide text-gray-500 uppercase dark:text-gray-400">
+            <h3 className={`font-semibold mb-2 text-sm uppercase tracking-wide ${
+              darkMode ? 'text-amber-100/70' : 'text-amber-800/70'
+            }`}>
               Levels
             </h3>
-            <div className="p-3 space-y-2 border rounded-xl backdrop-blur-md bg-white/20 dark:bg-gray-700/30 border-white/10 dark:border-gray-600/30">
+            <div className={`space-y-2 rounded-xl backdrop-blur-md p-3 border ${
+              darkMode
+                ? 'bg-slate-800/20 border-slate-700/30'
+                : 'bg-amber-100/20 border-amber-200/30'
+            }`}>
               {Object.entries(talent.levels).map(([level, description]) => (
                 <div key={level} className="flex gap-2 text-sm">
-                  <span
-                    className="px-2 py-0.5 bg-purple-100/70 dark:bg-purple-900/30 rounded-lg
-                    text-purple-800 dark:text-purple-300 shrink-0 self-start mt-0.5
-                    border border-purple-200/50 dark:border-purple-700/30"
-                  >
+                  <span className={`px-2 py-0.5 rounded-lg
+                    shrink-0 self-start mt-0.5 border ${
+                    darkMode
+                      ? 'bg-cyan-900/30 text-cyan-300 border-cyan-800/30'
+                      : 'bg-amber-200/70 text-amber-800 border-amber-300/50'
+                  }`}>
                     {level}
                   </span>
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <span className={darkMode ? 'text-amber-100/90' : 'text-amber-900/90'}>
                     {description}
                   </span>
                 </div>
