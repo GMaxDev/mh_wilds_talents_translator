@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import talentsData from "./data/talents.json"; // Assurez-vous que ce chemin est correct
 
-// Icônes simplifiées (vous pouvez les remplacer par des SVG inline)
+// Icônes simplifiées
 const SearchIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="8"></circle>
@@ -24,6 +24,26 @@ const SparklesIcon = () => (
   </svg>
 );
 
+const MoonIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  </svg>
+);
+
+const SunIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2"></path>
+    <path d="M12 20v2"></path>
+    <path d="m4.93 4.93 1.41 1.41"></path>
+    <path d="m17.66 17.66 1.41 1.41"></path>
+    <path d="M2 12h2"></path>
+    <path d="M20 12h2"></path>
+    <path d="m6.34 17.66-1.41 1.41"></path>
+    <path d="m19.07 4.93-1.41 1.41"></path>
+  </svg>
+);
+
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTalent, setSelectedTalent] = useState(null);
@@ -33,6 +53,16 @@ function App() {
   const [filteredTalents, setFilteredTalents] = useState([]);
   const [talents, setTalents] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Mode sombre par défaut
+
+  useEffect(() => {
+    // Appliquer le mode sombre par défaut au chargement
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   useEffect(() => {
     // Initialize talents from the imported JSON
@@ -121,19 +151,33 @@ function App() {
     setTargetLanguage(temp);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
+    <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-gradient-to-b from-white to-gray-100'}`}>
       <div className="container mx-auto py-8 px-4">
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {darkMode ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
+
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
             MH Wilds Talent Translator
           </h1>
-          <p className="text-gray-500">Translate Monster Hunter Wilds talents between languages</p>
+          <p className="text-gray-500 dark:text-gray-400">Translate Monster Hunter Wilds talents between languages</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           <div className="relative mb-6">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500 dark:text-gray-400">
               <SearchIcon />
             </div>
             <input
@@ -141,11 +185,11 @@ function App() {
               placeholder="Search for a talent..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 h-12 text-lg shadow-md transition-all focus:ring-2 focus:ring-purple-500 w-full rounded-md border border-gray-300 px-4 py-2"
+              className="pl-10 h-12 text-lg shadow-md transition-all focus:ring-2 focus:ring-purple-500 w-full rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
             {searchQuery && (
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 border border-gray-300">
+                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">
                   {sourceLanguage} detected
                   <SparklesIcon className="ml-1 text-yellow-500" />
                 </span>
@@ -154,20 +198,20 @@ function App() {
           </div>
 
           {filteredTalents.length > 0 && (
-            <div className="mt-2 border rounded-md max-h-60 overflow-y-auto bg-white shadow-lg">
+            <div className="mt-2 border dark:border-gray-700 rounded-md max-h-60 overflow-y-auto bg-white dark:bg-gray-800 shadow-lg">
               {filteredTalents.map((talentKey) => (
                 <div
                   key={talentKey}
-                  className="p-3 hover:bg-gray-100 cursor-pointer transition-colors border-b last:border-b-0 flex justify-between items-center"
+                  className="p-3 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition-colors border-b dark:border-gray-700 last:border-b-0 flex justify-between items-center"
                   onClick={() => handleTalentSelect(talentKey)}
                 >
                   <div>
-                    <span className="font-medium">{talents[talentKey][sourceLanguage]?.name || talentKey}</span>
-                    <span className="text-xs text-gray-500 ml-2">
+                    <span className="font-medium text-gray-900 dark:text-gray-100">{talents[talentKey][sourceLanguage]?.name || talentKey}</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 ml-2">
                       {talents[talentKey][sourceLanguage]?.category}
                     </span>
                   </div>
-                  <span className="text-xs px-2 py-1 rounded-full border border-gray-300">
+                  <span className="text-xs px-2 py-1 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
                     {talentKey}
                   </span>
                 </div>
@@ -182,7 +226,7 @@ function App() {
                   <select
                     value={sourceLanguage}
                     onChange={(e) => setSourceLanguage(e.target.value)}
-                    className="w-[100px] rounded-md border border-gray-300 px-3 py-2"
+                    className="w-[100px] rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                   >
                     {availableLanguages.map((lang) => (
                       <option key={`source-${lang}`} value={lang}>
@@ -193,7 +237,7 @@ function App() {
 
                   <button
                     onClick={handleLanguageSwap}
-                    className="p-2 rounded-full hover:bg-gray-100"
+                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
                   >
                     <ArrowLeftRightIcon />
                   </button>
@@ -201,7 +245,7 @@ function App() {
                   <select
                     value={targetLanguage}
                     onChange={(e) => setTargetLanguage(e.target.value)}
-                    className="w-[100px] rounded-md border border-gray-300 px-3 py-2"
+                    className="w-[100px] rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                   >
                     {availableLanguages.map((lang) => (
                       <option key={`target-${lang}`} value={lang}>
@@ -211,7 +255,7 @@ function App() {
                   </select>
                 </div>
 
-                <span className="text-xs px-2 py-1 rounded-full border border-gray-300">
+                <span className="text-xs px-2 py-1 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
                   {selectedTalent}
                 </span>
               </div>
@@ -221,11 +265,13 @@ function App() {
                   talent={talents[selectedTalent][sourceLanguage]}
                   talentKey={selectedTalent}
                   language={sourceLanguage}
+                  darkMode={darkMode}
                 />
                 <TalentCard
                   talent={talents[selectedTalent][targetLanguage]}
                   talentKey={selectedTalent}
                   language={targetLanguage}
+                  darkMode={darkMode}
                 />
               </div>
             </div>
@@ -236,43 +282,43 @@ function App() {
   );
 }
 
-function TalentCard({ talent, language }) {
+function TalentCard({ talent, talentKey, language, darkMode }) {
   if (!talent) {
     return (
-      <div className="border border-dashed rounded-lg p-4 bg-gray-50">
+      <div className="border border-dashed dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-800">
         <div className="p-4">
-          <h3 className="text-lg font-medium text-gray-500">Translation not available in {language}</h3>
+          <h3 className="text-lg font-medium text-gray-500 dark:text-gray-400">Translation not available in {language}</h3>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="border rounded-lg overflow-hidden transition-all hover:shadow-md">
-      <div className="bg-gradient-to-r from-gray-50 to-white border-b p-4">
+    <div className="border dark:border-gray-700 rounded-lg overflow-hidden transition-all hover:shadow-md">
+      <div className={`${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-gray-50 to-white'} border-b dark:border-gray-700 p-4`}>
         <div className="flex justify-between items-start">
           <div>
-            <span className="inline-block px-2 py-1 text-xs font-medium rounded-full border border-gray-300 mb-2">
+            <span className="inline-block px-2 py-1 text-xs font-medium rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 mb-2">
               {language}
             </span>
-            <h3 className="text-xl font-bold">{talent.name}</h3>
-            <div className="text-sm font-medium text-gray-500 mt-1">{talent.category}</div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">{talent.name}</h3>
+            <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">{talent.category}</div>
           </div>
         </div>
       </div>
-      <div className="p-4">
-        <p className="mb-6 text-sm leading-relaxed">{talent.description}</p>
+      <div className="p-4 bg-white dark:bg-gray-800">
+        <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-gray-300">{talent.description}</p>
 
         {Object.keys(talent.levels).length > 0 && (
           <div>
-            <h3 className="font-semibold mb-2 text-sm uppercase tracking-wide text-gray-500">Levels</h3>
-            <div className="space-y-2 rounded-md bg-gray-50 p-3">
+            <h3 className="font-semibold mb-2 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Levels</h3>
+            <div className="space-y-2 rounded-md bg-gray-50 dark:bg-gray-700 p-3">
               {Object.entries(talent.levels).map(([level, description]) => (
                 <div key={level} className="flex gap-2 text-sm">
-                  <span className="px-2 py-0.5 bg-gray-200 rounded text-gray-800 shrink-0 self-start mt-0.5">
+                  <span className="px-2 py-0.5 bg-gray-200 dark:bg-gray-600 rounded text-gray-800 dark:text-gray-200 shrink-0 self-start mt-0.5">
                     {level}
                   </span>
-                  <span>{description}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{description}</span>
                 </div>
               ))}
             </div>
