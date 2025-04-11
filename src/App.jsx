@@ -282,7 +282,7 @@ function App() {
   );
 }
 
-function TalentCard({ talent, talentKey, language, darkMode }) {
+function TalentCard({ talent, language, darkMode }) {
   if (!talent) {
     return (
       <div className="border border-dashed dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-800">

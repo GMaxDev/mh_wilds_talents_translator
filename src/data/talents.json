@@ -2332,5 +2332,27 @@
         "3": "Increases recovery speed of stamina and red gauge when near Wylkrystals."
       }
     }
+  },
+  "slugger": {
+    "FR": {
+      "name": "Cogneur",
+      "category": "Arme",
+      "description": "Permet d'étourdir plus facilement les monstres.",
+      "levels": {
+        "1": "Étourdissement + 20 %",
+        "2": "Étourdissement + 30 %",
+        "3": "Étourdissement + 40 %"
+      }
+    },
+    "EN": {
+      "name": "Slugger",
+      "category": "Weapon",
+      "description": "Makes it easier to stun monsters.",
+      "levels": {
+        "1": "Stun power +20%",
+        "2": "Stun power +30%",
+        "3": "Stun power +40%"
+      }
+    }
   }
 }
