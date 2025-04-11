@@ -156,12 +156,22 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-gradient-to-b from-white to-gray-100'}`}>
-      <div className="container mx-auto py-8 px-4">
+    <div className={`min-h-screen ${darkMode
+      ? 'dark bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900'
+      : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'}`}>
+
+      {/* Éléments décoratifs pour l'arrière-plan */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute top-0 -right-20 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-40 left-20 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="container mx-auto py-8 px-4 relative z-10">
         <div className="flex justify-end mb-4">
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            className="p-2 rounded-full backdrop-blur-sm bg-white/10 dark:bg-gray-800/30 text-gray-700 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 shadow-lg border border-white/20 dark:border-gray-700/30"
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {darkMode ? <SunIcon /> : <MoonIcon />}
@@ -169,10 +179,10 @@ function App() {
         </div>
 
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+          <h1 className="text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
             MH Wilds Talent Translator
           </h1>
-          <p className="text-gray-500 dark:text-gray-400">Translate Monster Hunter Wilds talents between languages</p>
+          <p className="text-gray-600 dark:text-gray-300">Translate Monster Hunter Wilds talents between languages</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -185,11 +195,15 @@ function App() {
               placeholder="Search for a talent..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 h-12 text-lg shadow-md transition-all focus:ring-2 focus:ring-purple-500 w-full rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              className="pl-10 h-12 text-lg w-full rounded-xl border border-white/20 dark:border-gray-700/30 px-4 py-2
+                backdrop-blur-md bg-white/30 dark:bg-gray-800/30 text-gray-900 dark:text-gray-100
+                shadow-lg focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300"
             />
             {searchQuery && (
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">
+                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium
+                  backdrop-blur-md bg-white/30 dark:bg-gray-800/30 text-gray-800 dark:text-gray-200
+                  border border-white/20 dark:border-gray-700/30">
                   {sourceLanguage} detected
                   <SparklesIcon className="ml-1 text-yellow-500" />
                 </span>
@@ -198,20 +212,23 @@ function App() {
           </div>
 
           {filteredTalents.length > 0 && (
-            <div className="mt-2 border dark:border-gray-700 rounded-md max-h-60 overflow-y-auto bg-white dark:bg-gray-800 shadow-lg">
+            <div className="mt-2 border border-white/20 dark:border-gray-700/30 rounded-xl max-h-60 overflow-y-auto
+              backdrop-blur-md bg-white/30 dark:bg-gray-800/30 shadow-lg">
               {filteredTalents.map((talentKey) => (
                 <div
                   key={talentKey}
-                  className="p-3 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition-colors border-b dark:border-gray-700 last:border-b-0 flex justify-between items-center"
+                  className="p-3 hover:bg-white/50 dark:hover:bg-gray-700/50 cursor-pointer transition-all duration-300
+                    border-b border-white/20 dark:border-gray-700/30 last:border-b-0 flex justify-between items-center"
                   onClick={() => handleTalentSelect(talentKey)}
                 >
                   <div>
                     <span className="font-medium text-gray-900 dark:text-gray-100">{talents[talentKey][sourceLanguage]?.name || talentKey}</span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 ml-2">
+                    <span className="text-xs text-gray-600 dark:text-gray-400 ml-2">
                       {talents[talentKey][sourceLanguage]?.category}
                     </span>
                   </div>
-                  <span className="text-xs px-2 py-1 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
+                  <span className="text-xs px-2 py-1 rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30
+                    text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-700/30">
                     {talentKey}
                   </span>
                 </div>
@@ -226,7 +243,9 @@ function App() {
                   <select
                     value={sourceLanguage}
                     onChange={(e) => setSourceLanguage(e.target.value)}
-                    className="w-[100px] rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                    className="w-[100px] rounded-xl border border-white/20 dark:border-gray-700/30 px-3 py-2
+                      backdrop-blur-md bg-white/30 dark:bg-gray-800/30 text-gray-900 dark:text-gray-100
+                      shadow-md focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   >
                     {availableLanguages.map((lang) => (
                       <option key={`source-${lang}`} value={lang}>
@@ -237,7 +256,9 @@ function App() {
 
                   <button
                     onClick={handleLanguageSwap}
-                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
+                    className="p-2 rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30
+                      text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-700/50
+                      transition-all duration-300 border border-white/20 dark:border-gray-700/30 shadow-md"
                   >
                     <ArrowLeftRightIcon />
                   </button>
@@ -245,7 +266,9 @@ function App() {
                   <select
                     value={targetLanguage}
                     onChange={(e) => setTargetLanguage(e.target.value)}
-                    className="w-[100px] rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                    className="w-[100px] rounded-xl border border-white/20 dark:border-gray-700/30 px-3 py-2
+                      backdrop-blur-md bg-white/30 dark:bg-gray-800/30 text-gray-900 dark:text-gray-100
+                      shadow-md focus:ring-2 focus:ring-purple-500 focus:outline-none"
                   >
                     {availableLanguages.map((lang) => (
                       <option key={`target-${lang}`} value={lang}>
@@ -255,7 +278,8 @@ function App() {
                   </select>
                 </div>
 
-                <span className="text-xs px-2 py-1 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
+                <span className="text-xs px-2 py-1 rounded-full backdrop-blur-md bg-white/30 dark:bg-gray-800/30
+                  text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-700/30">
                   {selectedTalent}
                 </span>
               </div>
@@ -282,10 +306,11 @@ function App() {
   );
 }
 
-function TalentCard({ talent, language, darkMode }) {
+function TalentCard({ talent, talentKey, language, darkMode }) {
   if (!talent) {
     return (
-      <div className="border border-dashed dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-800">
+      <div className="border border-dashed border-white/20 dark:border-gray-700/30 rounded-xl p-4
+        backdrop-blur-md bg-white/20 dark:bg-gray-800/20 shadow-lg">
         <div className="p-4">
           <h3 className="text-lg font-medium text-gray-500 dark:text-gray-400">Translation not available in {language}</h3>
         </div>
@@ -294,28 +319,40 @@ function TalentCard({ talent, language, darkMode }) {
   }
 
   return (
-    <div className="border dark:border-gray-700 rounded-lg overflow-hidden transition-all hover:shadow-md">
-      <div className={`${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-gray-50 to-white'} border-b dark:border-gray-700 p-4`}>
+    <div className="group border border-white/20 dark:border-gray-700/30 rounded-xl overflow-hidden
+      backdrop-blur-md bg-white/30 dark:bg-gray-800/30
+      transition-all duration-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] dark:hover:shadow-[0_0_15px_rgba(168,85,247,0.3)]
+      hover:-translate-y-1">
+      <div className={`border-b border-white/20 dark:border-gray-700/30 p-4
+        ${darkMode
+          ? 'bg-gradient-to-r from-gray-800/50 to-purple-900/30'
+          : 'bg-gradient-to-r from-white/50 to-purple-100/30'}`}>
         <div className="flex justify-between items-start">
           <div>
-            <span className="inline-block px-2 py-1 text-xs font-medium rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 mb-2">
+            <span className="inline-block px-2 py-1 text-xs font-medium rounded-full
+              backdrop-blur-md bg-white/30 dark:bg-gray-800/30
+              text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-700/30 mb-2">
               {language}
             </span>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">{talent.name}</h3>
-            <div className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">{talent.category}</div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+              {talent.name}
+            </h3>
+            <div className="text-sm font-medium text-gray-600 dark:text-gray-400 mt-1">{talent.category}</div>
           </div>
         </div>
       </div>
-      <div className="p-4 bg-white dark:bg-gray-800">
+      <div className="p-4">
         <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-gray-300">{talent.description}</p>
 
         {Object.keys(talent.levels).length > 0 && (
           <div>
             <h3 className="font-semibold mb-2 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Levels</h3>
-            <div className="space-y-2 rounded-md bg-gray-50 dark:bg-gray-700 p-3">
+            <div className="space-y-2 rounded-xl backdrop-blur-md bg-white/20 dark:bg-gray-700/30 p-3 border border-white/10 dark:border-gray-600/30">
               {Object.entries(talent.levels).map(([level, description]) => (
                 <div key={level} className="flex gap-2 text-sm">
-                  <span className="px-2 py-0.5 bg-gray-200 dark:bg-gray-600 rounded text-gray-800 dark:text-gray-200 shrink-0 self-start mt-0.5">
+                  <span className="px-2 py-0.5 bg-purple-100/70 dark:bg-purple-900/30 rounded-lg
+                    text-purple-800 dark:text-purple-300 shrink-0 self-start mt-0.5
+                    border border-purple-200/50 dark:border-purple-700/30">
                     {level}
                   </span>
                   <span className="text-gray-700 dark:text-gray-300">{description}</span>
