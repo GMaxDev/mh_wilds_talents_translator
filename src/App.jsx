@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import talentsData from "./data/talents.json"; // Assurez-vous que ce chemin est correct
 
 // Icônes simplifiées
@@ -44,6 +44,13 @@ const SunIcon = () => (
   </svg>
 );
 
+const KeyboardArrowIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m12 19-7-7 7-7"></path>
+    <path d="m19 12-7 7-7-7"></path>
+  </svg>
+);
+
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTalent, setSelectedTalent] = useState(null);
@@ -54,6 +61,18 @@ function App() {
   const [talents, setTalents] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [darkMode, setDarkMode] = useState(true); // Mode sombre par défaut
+  const [keyboardSelectedIndex, setKeyboardSelectedIndex] = useState(-1); // Pour la navigation au clavier
+
+  const searchInputRef = useRef(null);
+  const resultsContainerRef = useRef(null);
+  const resultItemsRef = useRef([]);
+
+  // Mettre le focus sur l'input de recherche au chargement de la page
+  useEffect(() => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, []);
 
   useEffect(() => {
     // Appliquer le mode sombre par défaut au chargement
@@ -79,6 +98,7 @@ function App() {
     // Filter talents based on search query
     if (searchQuery.trim() === "") {
       setFilteredTalents([]);
+      setKeyboardSelectedIndex(-1); // Réinitialiser l'index sélectionné
       return;
     }
 
@@ -97,7 +117,30 @@ function App() {
     });
 
     setFilteredTalents(filtered);
+
+    // Réinitialiser l'index sélectionné lorsque les résultats changent
+    setKeyboardSelectedIndex(filtered.length > 0 ? 0 : -1);
   }, [searchQuery, talents, availableLanguages]);
+
+  // Effet pour faire défiler l'élément sélectionné dans la vue
+  useEffect(() => {
+    if (keyboardSelectedIndex >= 0 && resultsContainerRef.current && resultItemsRef.current[keyboardSelectedIndex]) {
+      const container = resultsContainerRef.current;
+      const selectedItem = resultItemsRef.current[keyboardSelectedIndex];
+
+      const containerRect = container.getBoundingClientRect();
+      const selectedItemRect = selectedItem.getBoundingClientRect();
+
+      // Vérifier si l'élément est en dehors de la vue
+      if (selectedItemRect.bottom > containerRect.bottom) {
+        // Faire défiler vers le bas si l'élément est en dessous
+        container.scrollTop += selectedItemRect.bottom - containerRect.bottom;
+      } else if (selectedItemRect.top < containerRect.top) {
+        // Faire défiler vers le haut si l'élément est au-dessus
+        container.scrollTop -= containerRect.top - selectedItemRect.top;
+      }
+    }
+  }, [keyboardSelectedIndex]);
 
   const detectLanguage = (query) => {
     if (query.length < 3) return; // Need minimum characters to detect
@@ -143,6 +186,12 @@ function App() {
     setSearchQuery("");
     setFilteredTalents([]);
     setShowResults(true);
+    setKeyboardSelectedIndex(-1); // Réinitialiser l'index sélectionné
+
+    // Remettre le focus sur l'input de recherche après la sélection
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
   };
 
   const handleLanguageSwap = () => {
@@ -153,6 +202,28 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+  };
+
+  // Gestionnaire pour les touches du clavier
+  const handleKeyDown = (e) => {
+    if (filteredTalents.length === 0) return;
+
+    // Navigation avec les flèches
+    if (e.key === 'ArrowDown') {
+      e.preventDefault(); // Empêcher le défilement de la page
+      setKeyboardSelectedIndex(prev =>
+        prev < filteredTalents.length - 1 ? prev + 1 : prev
+      );
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault(); // Empêcher le défilement de la page
+      setKeyboardSelectedIndex(prev => prev > 0 ? prev - 1 : 0);
+    } else if (e.key === 'Enter' && keyboardSelectedIndex >= 0) {
+      e.preventDefault(); // Empêcher la soumission du formulaire
+      handleTalentSelect(filteredTalents[keyboardSelectedIndex]);
+    } else if (e.key === 'Escape') {
+      setFilteredTalents([]);
+      setKeyboardSelectedIndex(-1);
+    }
   };
 
   return (
@@ -209,19 +280,22 @@ function App() {
               <SearchIcon />
             </div>
             <input
+              ref={searchInputRef}
               type="text"
               placeholder="Search for a talent..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleKeyDown}
               className={`pl-10 h-12 text-lg w-full rounded-xl px-4 py-2
                 backdrop-blur-md shadow-lg focus:outline-none transition-all duration-300 ${
                 darkMode
                   ? 'bg-slate-800/30 text-amber-100 border border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50'
                   : 'bg-amber-100/30 text-amber-900 border border-amber-200/50 focus:ring-2 focus:ring-amber-500/50'
               }`}
+              autoFocus // Ajout de l'attribut autoFocus pour le focus automatique
             />
             {searchQuery && (
-              <div className="absolute transform -translate-y-1/2 right-3 top-1/2">
+              <div className="absolute flex items-center gap-2 transform -translate-y-1/2 right-3 top-1/2">
                 <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium
                   backdrop-blur-md border ${
                   darkMode
@@ -231,27 +305,43 @@ function App() {
                   {sourceLanguage} detected
                   <SparklesIcon className={`ml-1 ${darkMode ? 'text-cyan-300' : 'text-amber-500'}`} />
                 </span>
+
+                {filteredTalents.length > 0 && (
+                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium
+                    backdrop-blur-md border ${
+                    darkMode
+                      ? 'bg-slate-800/30 text-amber-100 border-slate-700/50'
+                      : 'bg-amber-100/30 text-amber-900 border-amber-200/50'
+                  }`} title="Use keyboard arrows to navigate">
+                    <KeyboardArrowIcon />
+                  </span>
+                )}
               </div>
             )}
           </div>
 
           {filteredTalents.length > 0 && (
-            <div className={`mt-2 rounded-xl max-h-60 overflow-y-auto
-              backdrop-blur-md shadow-lg border ${
-              darkMode
-                ? 'bg-slate-800/30 border-slate-700/50'
-                : 'bg-amber-100/30 border-amber-200/50'
-            }`}>
-              {filteredTalents.map((talentKey) => (
+            <div
+              ref={resultsContainerRef}
+              className={`mt-2 rounded-xl max-h-60 overflow-y-auto
+                backdrop-blur-md shadow-lg border ${
+                darkMode
+                  ? 'bg-slate-800/30 border-slate-700/50'
+                  : 'bg-amber-100/30 border-amber-200/50'
+              }`}
+            >
+              {filteredTalents.map((talentKey, index) => (
                 <div
                   key={talentKey}
+                  ref={el => resultItemsRef.current[index] = el}
                   className={`p-3 cursor-pointer transition-all duration-300
                     border-b last:border-b-0 flex justify-between items-center ${
                     darkMode
-                      ? 'border-slate-700/50 hover:bg-slate-700/50'
-                      : 'border-amber-200/50 hover:bg-amber-200/50'
+                      ? `border-slate-700/50 ${index === keyboardSelectedIndex ? 'bg-slate-700/70' : 'hover:bg-slate-700/50'}`
+                      : `border-amber-200/50 ${index === keyboardSelectedIndex ? 'bg-amber-200/70' : 'hover:bg-amber-200/50'}`
                   }`}
                   onClick={() => handleTalentSelect(talentKey)}
+                  onMouseEnter={() => setKeyboardSelectedIndex(index)}
                 >
                   <div>
                     <span className={`font-medium ${darkMode ? 'text-amber-100' : 'text-amber-900'}`}>
@@ -354,7 +444,7 @@ function App() {
   );
 }
 
-function TalentCard({ talent, talentKey, language, darkMode }) {
+function TalentCard({ talent, language, darkMode }) {
   if (!talent) {
     return (
       <div className={`border-dashed rounded-xl p-4
