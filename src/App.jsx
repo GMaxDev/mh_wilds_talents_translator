@@ -742,6 +742,8 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
   const [newLanguageCode, setNewLanguageCode] = useState("")
   const [editedTalent, setEditedTalent] = useState(null)
   const [newTalentKey, setNewTalentKey] = useState("")
+  // Dans la fonction EditorPage, ajouter un nouvel état pour le filtre des talents incomplets
+  const [showIncompleteOnly, setShowIncompleteOnly] = useState(false)
 
   const searchInputRef = useRef(null)
 
@@ -760,24 +762,40 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
     }
   }, [talents])
 
+  // Modifier la fonction de filtrage des talents pour prendre en compte le nouveau filtre
   useEffect(() => {
-    // Filter talents based on search query
-    if (searchQuery.trim() === "") {
-      setFilteredTalents(Object.keys(talents))
-      return
+    // Filter talents based on search query and incomplete filter
+    let filtered = Object.keys(talents)
+
+    // Filter by search query if provided
+    if (searchQuery.trim() !== "") {
+      filtered = filtered.filter((talentKey) => {
+        const talent = talents[talentKey]
+        // Search in all available languages
+        return (
+          availableLanguages.some((lang) => talent[lang]?.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          talentKey.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      })
     }
 
-    const filtered = Object.keys(talents).filter((talentKey) => {
-      const talent = talents[talentKey]
-      // Search in all available languages
-      return (
-        availableLanguages.some((lang) => talent[lang]?.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        talentKey.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    })
+    // Apply incomplete filter if activated
+    if (showIncompleteOnly) {
+      filtered = filtered.filter((talentKey) => {
+        // Get completed languages for this talent
+        const completedLangs = getCompletedLanguages(talents[talentKey])
+        // Filter talents that don't have all languages completed
+        return completedLangs.length < availableLanguages.length
+      })
+    }
 
     setFilteredTalents(filtered)
-  }, [searchQuery, talents, availableLanguages])
+  }, [searchQuery, talents, availableLanguages, showIncompleteOnly])
+
+  // Ajouter une fonction pour basculer l'affichage des talents incomplets
+  const toggleIncompleteFilter = () => {
+    setShowIncompleteOnly(!showIncompleteOnly)
+  }
 
   // Initialiser la liste filtrée avec tous les talents au chargement
   useEffect(() => {
@@ -931,10 +949,41 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
     }
   }
 
+  // Dans la fonction EditorPage, ajoutez cette fonction pour vérifier si une langue est complète
+  // Ajoutez cette fonction juste avant le return de EditorPage
+
+  // Fonction pour vérifier si une langue est complète pour un talent donné
+  const isLanguageComplete = (talent, lang) => {
+    if (!talent[lang]) return false
+
+    // Vérifier si le nom est présent et non vide
+    if (!talent[lang].name || talent[lang].name.trim() === "") return false
+
+    // Vérifier si la description est présente et non vide
+    if (!talent[lang].description || talent[lang].description.trim() === "") return false
+
+    // Vérifier si au moins un niveau est défini avec une description non vide
+    if (!talent[lang].levels || Object.keys(talent[lang].levels).length === 0) return false
+
+    // Vérifier que tous les niveaux ont une description non vide
+    const hasEmptyLevelDescription = Object.values(talent[lang].levels).some((desc) => !desc || desc.trim() === "")
+
+    return !hasEmptyLevelDescription
+  }
+
+  // Fonction pour obtenir les langues complétées pour un talent
+  const getCompletedLanguages = (talent) => {
+    return availableLanguages.filter((lang) => isLanguageComplete(talent, lang))
+  }
+
+  // Maintenant, modifiez l'en-tête de la table dans le return pour ajouter la nouvelle colonne
+
   return (
     <div className="max-w-6xl mx-auto">
       {editMode === "list" && (
         <>
+          // Modifier l'interface pour ajouter la case à cocher // Dans le return de EditorPage, modifier la div qui
+          contient la barre de recherche et les boutons
           <div className="flex flex-col justify-between gap-4 mb-6 sm:flex-row">
             <div className="relative flex-grow">
               <div
@@ -960,7 +1009,30 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
               />
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
+              {/* Filtre pour les talents incomplets */}
+              <div className="flex items-center gap-2">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="filter-incomplete"
+                    checked={showIncompleteOnly}
+                    onChange={toggleIncompleteFilter}
+                    className={`h-4 w-4 rounded focus:ring-0 ${
+                      darkMode
+                        ? "bg-slate-700 border-slate-500 text-cyan-500 focus:ring-cyan-500/50"
+                        : "bg-amber-100 border-amber-300 text-amber-500 focus:ring-amber-500/50"
+                    }`}
+                  />
+                  <label
+                    htmlFor="filter-incomplete"
+                    className={`ml-2 text-sm font-medium ${darkMode ? "text-amber-100" : "text-amber-900"}`}
+                  >
+                    Show incomplete talents
+                  </label>
+                </div>
+              </div>
+
               <button
                 onClick={handleAddTalent}
                 className={`px-4 py-2 rounded-xl backdrop-blur-md border transition-all duration-300 shadow-lg flex items-center gap-2 ${
@@ -986,7 +1058,6 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
               </button>
             </div>
           </div>
-
           <div
             className={`rounded-xl overflow-hidden backdrop-blur-md shadow-lg border ${
               darkMode ? "bg-slate-800/30 border-slate-700/50" : "bg-amber-100/30 border-amber-200/50"
@@ -998,10 +1069,21 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
               }`}
             >
               <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-3 font-semibold">Talent Key</div>
-                <div className="col-span-3 font-semibold">Name (EN)</div>
-                <div className="col-span-3 font-semibold">Category</div>
-                <div className="col-span-3 font-semibold">Actions</div>
+                <div className={`col-span-2 font-semibold ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                  Talent Key
+                </div>
+                <div className={`col-span-2 font-semibold ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                  Name (EN)
+                </div>
+                <div className={`col-span-2 font-semibold ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                  Category
+                </div>
+                <div className={`col-span-3 font-semibold ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                  Completed Languages
+                </div>
+                <div className={`col-span-3 font-semibold ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                  Actions
+                </div>
               </div>
             </div>
 
@@ -1021,13 +1103,36 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
                     }`}
                   >
                     <div className="grid items-center grid-cols-12 gap-4">
-                      <div className="col-span-3 truncate">
+                      <div className="col-span-2 truncate">
                         <span className={`font-medium ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
                           {talentKey}
                         </span>
                       </div>
-                      <div className="col-span-3 truncate">{talents[talentKey].EN?.name || "—"}</div>
-                      <div className="col-span-3 truncate">{talents[talentKey].EN?.category || "—"}</div>
+                      <div className={`col-span-2 truncate ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                        {talents[talentKey].EN?.name || "—"}
+                      </div>
+                      <div className={`col-span-2 truncate ${darkMode ? "text-amber-100" : "text-amber-900"}`}>
+                        {talents[talentKey].EN?.category || "—"}
+                      </div>
+                      <div className="flex flex-wrap col-span-3 gap-1">
+                        {getCompletedLanguages(talents[talentKey]).map((lang) => (
+                          <span
+                            key={`${talentKey}-${lang}`}
+                            className={`px-2 py-0.5 text-xs rounded-full ${
+                              darkMode
+                                ? "bg-cyan-900/30 text-cyan-300 border border-cyan-800/30"
+                                : "bg-amber-200/70 text-amber-800 border border-amber-300/50"
+                            }`}
+                          >
+                            {lang}
+                          </span>
+                        ))}
+                        {getCompletedLanguages(talents[talentKey]).length === 0 && (
+                          <span className={`text-xs italic ${darkMode ? "text-amber-100/50" : "text-amber-800/50"}`}>
+                            No completed languages
+                          </span>
+                        )}
+                      </div>
                       <div className="flex col-span-3 gap-2">
                         <button
                           onClick={() => handleEditTalent(talentKey)}
