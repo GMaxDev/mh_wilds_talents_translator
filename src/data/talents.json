@@ -102,7 +102,7 @@
     "FR": {
       "name": "Totem élémentaire",
       "category": "Armure",
-      "description": "Confere une résistance à tous les fléaux élémentaires.",
+      "description": "Confère une résistance à tous les fléaux élémentaires.",
       "levels": {
         "1": "Durée fléaux élémentaires -50 %",
         "2": "Durée fléaux élémentaires -75%",
@@ -246,7 +246,7 @@
       "levels": {
         "1": "Attack +6 against large monsters affected by poison or paralysis.",
         "2": "Attack +8 and affinity +5% against large monsters affected by poison or paralysis.",
-        "3": "ttack +10 and affinity +10% against large monsters affected by poison or paralysis.",
+        "3": "Attack +10 and affinity +10% against large monsters affected by poison or paralysis.",
         "4": "Attack +12 and affinity +15% against large monsters affected by poison or paralysis.",
         "5": "Attack +15 and affinity +20% against large monsters affected by poison or paralysis."
       }
@@ -992,7 +992,7 @@
     "FR": {
       "name": "Tyrannie du Gore Magala",
       "category": "Bonus de set",
-      "description": "Éclipse noire I",
+      "description": "Éclipse noire",
       "levels": {
         "2": "Vous inflige la Furie face aux grands monstres.",
         "4": "Vous inflige la Furie et augmente votre attaque face aux grands monstres. Après guérison, l'attaque est encore accrue."
@@ -1001,7 +1001,7 @@
     "EN": {
       "name": "Gore Magala's Tyranny",
       "category": "Set bonus",
-      "description": "Infects you with Frenzy when against large monsters.",
+      "description": "Black Eclipse",
       "levels": {
         "2": "Infects you with Frenzy when against large monsters.",
         "4": "Infects you with Frenzy and raises attack when against large monsters. Attack power increases upon recovery."
@@ -1111,7 +1111,7 @@
     "FR": {
       "name": "Volonté de l'Anjanath tonnerre",
       "category": "Bonus de set",
-      "description": "Second souffle I",
+      "description": "Second souffle",
       "levels": {
         "2": "Confère une jauge d'endurance supplémentaire.",
         "4": "Confère une grande jauge d'endurance supplémentaire."
@@ -1120,7 +1120,7 @@
     "EN": {
       "name": "Fulgur Anjanath's Will",
       "category": "Set bonus",
-      "description": "Grants an additional Stamina Gauge",
+      "description": "Second wind",
       "levels": {
         "2": "Grants an additional Stamina Gauge.",
         "4": "Grants an additional long Stamina Gauge."
@@ -1542,7 +1542,7 @@
     "FR": {
       "name": "Mutinerie du Nu Udra",
       "category": "Bonus de set",
-      "description": "Mauvais sang I",
+      "description": "Mauvais sang",
       "levels": {
         "2": "Inflige une quantité modérée de dégâts supplémentaires quand le talent Vengeance est actif.",
         "4": "Inflige des dégâts supplémentaires quand le talent Vengeance est actif."
@@ -1551,7 +1551,7 @@
     "EN": {
       "name": "Nu Udra's Mutiny",
       "category": "Set bonus",
-      "description": "Increases the damage output while Resentment is active",
+      "description": "Bad Blood",
       "levels": {
         "2": "Deals moderate additional damage while the Resentment skill is active.",
         "4": "Deals additional damage while the Resentment skill is active."
@@ -1652,7 +1652,7 @@
     "FR": {
       "name": "Protection du Gravios",
       "category": "Bonus de set",
-      "description": "Armure sans défaut l",
+      "description": "Armure sans défaut",
       "levels": {
         "2": "Réduit les dégâts subis de 5% quand votre vie est pleine.",
         "4": "Réduit les dégâts subis de 10 % quand votre vie est pleine."
@@ -1661,7 +1661,7 @@
     "EN": {
       "name": "Gravios's Protection",
       "category": "Set bonus",
-      "description": "Reduces damage taken when health is full",
+      "description": "Flawless Armor",
       "levels": {
         "2": "Reduces the damage you take by 5% when your health is full.",
         "4": "Reduces the damage you take by 10% when your health is full."
@@ -1766,7 +1766,7 @@
     "FR": {
       "name": "Éclat du Rathalos",
       "category": "Bonus de set",
-      "description": "Carbonisateur I",
+      "description": "Carbonisateur",
       "levels": {
         "2": "Chances d'infliger des dégâts de feu supplémentaires après une attaque réussie.",
         "4": "Augmente les dégâts de feu supplémentaires après une attaque réussie."
@@ -1775,7 +1775,7 @@
     "EN": {
       "name": "Rathalos's Flare",
       "category": "Set bonus",
-      "description": "Chance to deal additional Fire Damage after landing an attack.",
+      "description": "Scorcher",
       "levels": {
         "2": "Chance to deal additional fire damage after landing an attack.",
         "4": "Increases additional fire damage after landing an attack."
@@ -1798,9 +1798,9 @@
       }
     },
     "EN": {
-      "name": "Adrenaline",
+      "name": "Scale Layering",
       "category": "Armor",
-      "description": "Temporarily reduces stamina depletion when health is at 40% or lower.",
+      "description": "Adrenaline",
       "levels": {
         "3": "Temporarily reduces stamina depletion when health is at 40% or lower."
       }
@@ -1924,7 +1924,7 @@
       "levels": {}
     }
   },
-  "hunter_gatherer": {
+  "flexible_leathercraft": {
     "FR": {
       "name": "Cuir souple",
       "category": "Armure",
@@ -1934,9 +1934,9 @@
       }
     },
     "EN": {
-      "name": "Hunter Gatherer",
+      "name": "Flexible Leathercraft",
       "category": "Armor",
-      "description": "Increases gathering speed, and prevents knock back when gathering or carving.",
+      "description": "Hunter Gatherer",
       "levels": {
         "3": "Increases gathering speed, and prevents knock back when gathering or carving."
       }
@@ -1952,7 +1952,7 @@
     "FR": {
       "name": "Puissance du Doshaguma",
       "category": "Bonus de set",
-      "description": "Culturiste I",
+      "description": "Culturiste",
       "levels": {
         "2": "Octroie temporairement Attaque +10 après une Neutralisation ou un Duel de force réussi.",
         "4": "Octroie temporairement Attaque +25 après une Neutralisation ou un Duel de force réussi."
@@ -1961,10 +1961,10 @@
     "EN": {
       "name": "Doshaguma's Might",
       "category": "Set bonus",
-      "description": "Temporarily increases attack after a successful Power Clash or Offset attack.",
+      "description": "Powerhouse",
       "levels": {
-        "2": "Temporarily grants attack +10 after a successful Power Clash or Offset attack",
-        "4": "Temporarily grants attack +25 after a successful Power Clash or Offset attack"
+        "2": "Temporarily grants attack +10 after a successful Power Clash or Offset attack.",
+        "4": "Temporarily grants attack +25 after a successful Power Clash or Offset attack."
       }
     },
     "JP": {
@@ -2088,11 +2088,11 @@
       "category": "Armure",
       "description": "Ralentit la perte d'endurance en cas d'esquive, de blocage, etc.",
       "levels": {
-        "1": "Coût d'endurance fixe -10 %",
-        "2": "Coût d'endurance fixe -20 %",
-        "3": "Coût d'endurance fixe -30 %",
-        "4": "Coût d'endurance fixe -40 %",
-        "5": "Coût d'endurance fixe -50 %"
+        "1": "Coût d'endurance fixe -10 %.",
+        "2": "Coût d'endurance fixe -20 %.",
+        "3": "Coût d'endurance fixe -30 %.",
+        "4": "Coût d'endurance fixe -40 %.",
+        "5": "Coût d'endurance fixe -50 %."
       }
     },
     "EN": {
@@ -2262,9 +2262,9 @@
       }
     },
     "EN": {
-      "name": "Inspiration",
+      "name": "Lord's Favor",
       "category": "Armor",
-      "description": "emporarily increases attack power when using effects like Melody Effects that affect companions in range.",
+      "description": "Inspiration",
       "levels": {
         "1": "Temporarily increases attack power when using effects like Melody Effects that affect companions in range."
       }
@@ -2382,7 +2382,7 @@
       "levels": {
         "1": "Attack +5% while active.",
         "2": "Attack +10% while active.",
-        "3": "Attack 15% while active."
+        "3": "Attack +15% while active."
       }
     },
     "JP": {
@@ -2480,9 +2480,9 @@
       "category": "Arme",
       "description": "Accélère la récupération d'endurance.",
       "levels": {
-        "1": "Vitesse de récupération d'endurance +10",
-        "2": "Vitesse de récupération d'endurance +20",
-        "3": "Vitesse de récupération d'endurance +50"
+        "1": "Vitesse de récupération d'endurance +10%.",
+        "2": "Vitesse de récupération d'endurance +20%.",
+        "3": "Vitesse de récupération d'endurance +50%."
       }
     },
     "EN": {
@@ -2490,9 +2490,9 @@
       "category": "Weapon",
       "description": "Speeds up stamina recovery.",
       "levels": {
-        "1": "Stamina recovery speed +10%",
-        "2": "Stamina recovery speed +20%",
-        "3": "Stamina recovery speed +50%"
+        "1": "Stamina recovery speed +10%.",
+        "2": "Stamina recovery speed +20%.",
+        "3": "Stamina recovery speed +50%."
       }
     },
     "JP": {
@@ -2506,7 +2506,7 @@
     "FR": {
       "name": "Esprit du Blangonga",
       "category": "Bonus de set",
-      "description": "Cri de guerre l",
+      "description": "Cri de guerre",
       "levels": {
         "2": "Augmente l'attaque modérément et temporairement dans la zone après Victoire !\n(accru pour Palicos/Chasseurs de soutien).",
         "4": "Augmente l'attaque temporairement dans la zone après Victoire ! (accru pour Palicos/Chasseurs de soutien)."
@@ -2515,7 +2515,7 @@
     "EN": {
       "name": "Blangonga's Spirit",
       "category": "Set bonus",
-      "description": "Increases attack by using the To Victory! gesture",
+      "description": "Warcry",
       "levels": {
         "2": "Using the To Victory! gesture moderately increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters.",
         "4": "Using the To Victory! gesture increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters."
@@ -2532,7 +2532,7 @@
     "FR": {
       "name": "Tension du Rey Dau",
       "category": "Bonus de set",
-      "description": "Rage foudroyante I",
+      "description": "Rage foudroyante",
       "levels": {
         "2": "Augmente modérément la durée de Force latente.",
         "4": "Augmente la durée de Force latente."
@@ -2541,7 +2541,7 @@
     "EN": {
       "name": "Rey Dau's Voltage",
       "category": "Set bonus",
-      "description": "Increases the activation time of the Latent Power skill",
+      "description": "Thunderous Roar",
       "levels": {
         "2": "Moderately extends the activation time of the Latent Power skill.",
         "4": "Extends the activation time of the Latent Power skill."
@@ -2586,7 +2586,7 @@
     "FR": {
       "name": "Couverture de l'Uth Duna",
       "category": "Bonus de set",
-      "description": "Voile protecteur I",
+      "description": "Voile protecteur",
       "levels": {
         "2": "Augmente temporairement la défense quand vous utilisez un outil de survie.",
         "4": "Augmente grandement la défense et la résistance temporairement quand vous utilisez un outil de survie."
@@ -2595,7 +2595,7 @@
     "EN": {
       "name": "Uth Duna's Cover",
       "category": "Set bonus",
-      "description": "Increases defense when using a specialized tool",
+      "description": "Protective Veil",
       "levels": {
         "2": "Increases defense temporarily when using a specialized tool.",
         "4": "Greatly increases defense and resistance temporarily when using a specialized tool."
@@ -2748,7 +2748,7 @@
       "levels": {}
     }
   },
-  "master_mounter": {
+  "scaling_prowess": {
     "FR": {
       "name": "Maîtrise des écailles",
       "category": "Armure",
@@ -2758,9 +2758,9 @@
       }
     },
     "EN": {
-      "name": "Master Mounter",
+      "name": "Scaling Prowess",
       "category": "Armor",
-      "description": "Makes it easier to mount monsters and to wound them once mounted.",
+      "description": "Master Mounter",
       "levels": {
         "3": "Makes it easier to mount monsters and to wound them once mounted.Master Mounter has 1 level, after which, additional levels won't provide any further benefit."
       }
@@ -2788,9 +2788,9 @@
       "category": "Armor",
       "description": "Increases affinity if stamina is kept full for a period of time.",
       "levels": {
-        "1": "Affinity +10% while active",
-        "2": "Affinity +20% while active",
-        "3": "Affinity +30% while active"
+        "1": "Affinity +10% while active.",
+        "2": "Affinity +20% while active.",
+        "3": "Affinity +30% while active."
       }
     },
     "JP": {
@@ -2954,7 +2954,7 @@
     "EN": {
       "name": "Palico Rally",
       "category": "Armor",
-      "description": "owers up Palicoes.",
+      "description": "Powers up Palicoes.",
       "levels": {
         "1": "Increases Palico attack power and defense by 5%.",
         "2": "Increases Palico attack power and defense by 10%.",
@@ -2976,11 +2976,11 @@
       "category": "Armure",
       "description": "Réduit le délai de réutilisation des outils de survie.",
       "levels": {
-        "1": "Délai de réutilisation -10 %",
-        "2": "Délai de réutilisation -20 %",
-        "3": "Délai de réutilisation -30 %",
-        "4": "Délai de réutilisation -40 %",
-        "5": "Délai de réutilisation -50 %"
+        "1": "Délai de réutilisation -10 %.",
+        "2": "Délai de réutilisation -20 %.",
+        "3": "Délai de réutilisation -30 %.",
+        "4": "Délai de réutilisation -40 %.",
+        "5": "Délai de réutilisation -50 %."
       }
     },
     "EN": {
@@ -3006,7 +3006,7 @@
     "FR": {
       "name": "Pouvoir de l'Odogaron désastre",
       "category": "Bonus de set",
-      "description": "Bonus Vendetta I",
+      "description": "Bonus Vendetta",
       "levels": {
         "2": "Augmente la durée du talent\nVendetta et confère Attaque +3 quand Vendetta est actif.",
         "4": "Augmente encore la durée du talent\nVendetta et confère Attaque +10 quand Vendetta est actif."
@@ -3015,7 +3015,7 @@
     "EN": {
       "name": "Ebony Odogaron's Power",
       "category": "Set bonus",
-      "description": "Increases the duration of the Burst skill",
+      "description": "Burst boost",
       "levels": {
         "2": "Extends the duration of the Burst skill and grants attack +3 while Burst is active.",
         "4": "Further extends the duration of the Burst skill and grants attack +10 while Burst is active."
@@ -3060,7 +3060,7 @@
     "FR": {
       "name": "Vitalité de l'Arkveld Gardien",
       "category": "Bonus de set",
-      "description": "Décimeur l",
+      "description": "Décimeur",
       "levels": {
         "2": "Restaure une quantité modérée de vie quand vous détruisez une blessure sur un grand monstre.",
         "4": "Restaure de la vie quand vous détruisez une blessure sur un grand monstre."
@@ -3069,7 +3069,7 @@
     "EN": {
       "name": "Guardian Arkveld's Vitality",
       "category": "Set bonus",
-      "description": "Restaure une quantité modérée de vie quand vous détruisez une blessure sur un grand monstre.",
+      "description": "Decimator",
       "levels": {
         "2": "Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon.",
         "4": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
