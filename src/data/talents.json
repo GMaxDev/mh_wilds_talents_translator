@@ -17,6 +17,15 @@
         "1": "Negates the effects of heat and cold.",
         "2": "Negates environmental damage."
       }
+    },
+    "JP": {
+      "name": "環境適応",
+      "category": "防具",
+      "description": "暑さや寒さ、ダメージを受ける地形に対する耐性を得る。",
+      "levels": {
+        "1": "暑さ、寒さの影響を無効化する",
+        "2": "地形によるダメージを無効化する"
+      }
     }
   },
   "adrenaline_rush": {
@@ -43,6 +52,18 @@
         "4": "Attack +25 while active.",
         "5": "Attack +30 while active."
       }
+    },
+    "JP": {
+      "name": "巧撃",
+      "category": "防具",
+      "description": "回避時、タイミングよくモンスターの攻撃が重なると、一定時間攻撃力が上がる。",
+      "levels": {
+        "1": "スキル発動中、基礎攻撃力＋１０",
+        "2": "スキル発動中、基礎攻撃力＋１５",
+        "3": "スキル発動中、基礎攻撃力＋２０",
+        "4": "スキル発動中、基礎攻撃力＋２５",
+        "5": "スキル発動中、基礎攻撃力＋３０"
+      }
     }
   },
   "partbreaker": {
@@ -65,13 +86,23 @@
         "2": "Increases part damage and damage dealt when conditions are met by 20%.",
         "3": "Increases part damage and damage dealt when conditions are met by 30%."
       }
+    },
+    "JP": {
+      "name": "破壊王",
+      "category": "防具",
+      "description": "大型モンスターの部位を破壊しやすくなり、集中弱点攻撃で傷口を破壊した時のダメージが上昇する。",
+      "levels": {
+        "1": "部位に対する蓄積ダメージと条件を満たした時のダメージが１．１倍になる",
+        "2": "部位に対する蓄積ダメージと条件を満たした時のダメージが１．２倍になる",
+        "3": "部位に対する蓄積ダメージと条件を満たした時のダメージが１．３倍になる"
+      }
     }
   },
   "blight_resistance": {
     "FR": {
       "name": "Totem élémentaire",
       "category": "Armure",
-      "description": "Confere une résistance à tous les fléaux élémentaires.",
+      "description": "Confère une résistance à tous les fléaux élémentaires.",
       "levels": {
         "1": "Durée fléaux élémentaires -50 %",
         "2": "Durée fléaux élémentaires -75%",
@@ -86,6 +117,16 @@
         "1": "Reduces the duration of all elemental blights by 50%.",
         "2": "Reduces the duration of all elemental blights by 75%.",
         "3": "Nullifies all elemental blights."
+      }
+    },
+    "JP": {
+      "name": "属性やられ耐性",
+      "category": "防具",
+      "description": "全ての属性やられ状態に対する耐性を得る。",
+      "levels": {
+        "1": "すべての属性やられの効果時間を５０％減らす",
+        "2": "すべての属性やられの効果時間を７５％減らす",
+        "3": "すべての属性やられを無効化する"
       }
     }
   },
@@ -113,6 +154,18 @@
         "4": "Greatly increases invulnerability window.",
         "5": "Massively increases invulnerability window."
       }
+    },
+    "JP": {
+      "name": "回避性能",
+      "category": "防具",
+      "description": "回避時の無敵時間が長くなる。",
+      "levels": {
+        "1": "無敵時間がほんのわずかに延長",
+        "2": "無敵時間がわずかに延長",
+        "3": "無敵時間が延長",
+        "4": "無敵時間が大きく延長",
+        "5": "無敵時間がとても大きく延長"
+      }
     }
   },
   "hunger_resistance": {
@@ -135,6 +188,16 @@
         "2": "Extends the time until your stamina cap reduces by 100%.",
         "3": "Prevents your stamina cap from decreasing."
       }
+    },
+    "JP": {
+      "name": "腹減り耐性",
+      "category": "防具",
+      "description": "時間経過による、スタミナゲージの最大値の減少を抑える。",
+      "levels": {
+        "1": "減少までの時間を５０％延長",
+        "2": "減少までの時間を１００％延長",
+        "3": "スタミナ最大値の減少を無効化"
+      }
     }
   },
   "leap_of_faith": {
@@ -152,6 +215,14 @@
       "description": "Allows you to do a dive-evade when facing towards large monsters and extends the dive-evade distance.",
       "levels": {
         "1": "Enables skill use."
+      }
+    },
+    "JP": {
+      "name": "飛び込み",
+      "category": "防具",
+      "description": "大型モンスターに向かってジャンプ回避ができるようになる。また、飛距離も延びる。",
+      "levels": {
+        "1": "スキル発動可能"
       }
     }
   },
@@ -175,9 +246,21 @@
       "levels": {
         "1": "Attack +6 against large monsters affected by poison or paralysis.",
         "2": "Attack +8 and affinity +5% against large monsters affected by poison or paralysis.",
-        "3": "ttack +10 and affinity +10% against large monsters affected by poison or paralysis.",
+        "3": "Attack +10 and affinity +10% against large monsters affected by poison or paralysis.",
         "4": "Attack +12 and affinity +15% against large monsters affected by poison or paralysis.",
         "5": "Attack +15 and affinity +20% against large monsters affected by poison or paralysis."
+      }
+    },
+    "JP": {
+      "name": "攻勢",
+      "category": "防具",
+      "description": "毒、麻痺状態の大型モンスターに対して攻撃力と会心率が上がる。",
+      "levels": {
+        "1": "毒、麻痺状態の大型モンスターに対して基礎攻撃力＋６",
+        "2": "毒、麻痺状態の大型モンスターに対して基礎攻撃力＋８、会心率＋５％",
+        "3": "毒、麻痺状態の大型モンスターに対して基礎攻撃力＋１０、会心率＋１０％",
+        "4": "毒、麻痺状態の大型モンスターに対して基礎攻撃力＋１２、会心率＋１５％",
+        "5": "毒、麻痺状態の大型モンスターに対して基礎攻撃力＋１５、会心率＋２０％"
       }
     }
   },
@@ -196,6 +279,14 @@
       "description": "Increases the damage caused by jumping attacks.",
       "levels": {
         "1": "Jumping attack power +10%"
+      }
+    },
+    "JP": {
+      "name": "飛燕",
+      "category": "武器",
+      "description": "ジャンプ攻撃が強化される。",
+      "levels": {
+        "1": "ジャンプ攻撃の威力を１．１倍"
       }
     }
   },
@@ -216,6 +307,15 @@
       "levels": {
         "2": "Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon.",
         "4": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
+      }
+    },
+    "JP": {
+      "name": "鎖刃竜の飢餓",
+      "category": "セットボーナス",
+      "description": "クイックリカバリーⅠ",
+      "levels": {
+        "2": "継続してモンスターに攻撃を当てると、体力が少し回復する（武器種により回復量は変動）",
+        "4": "継続してモンスターに攻撃を当てると、体力が回復する（武器種により回復量は変動）"
       }
     }
   },
@@ -239,6 +339,16 @@
         "2": "Nullifies weak monster roars and reduces the effects of strong monster roars.",
         "3": "Nullifies weak and strong monster roars."
       }
+    },
+    "JP": {
+      "name": "耳栓",
+      "category": "",
+      "description": "大型モンスターの咆哮に対する耐性を持つ。",
+      "levels": {
+        "1": "咆哮【小】の影響を軽減する",
+        "2": "咆哮【小】を無効化し、咆哮【大】の影響を軽減する",
+        "3": "咆哮【小】【大】を無効化する"
+      }
     }
   },
   "poison_duration_up": {
@@ -256,6 +366,14 @@
       "description": "Extends the duration of your poison's effect on monsters.",
       "levels": {
         "1": "Extends the duration of your poison's effect by 20%."
+      }
+    },
+    "JP": {
+      "name": "毒ダメージ強化",
+      "category": "武器",
+      "description": "モンスターに与える毒の効果時間を高める。",
+      "levels": {
+        "1": "毒の効果時間が１．２倍になる"
       }
     }
   },
@@ -279,6 +397,16 @@
         "2": "While active, moderately increases elemental attack, and resistance to element taken at activation by 6.",
         "3": "While active, increases elemental attack, and resistance to element taken at activation by 8."
       }
+    },
+    "JP": {
+      "name": "属性吸収",
+      "category": "防具",
+      "description": "属性攻撃を受けると発動し、一定時間、属性に関する効果を得る。（効果終了の後、一定時間は発動しなくなります）",
+      "levels": {
+        "1": "スキル発動中、属性攻撃値がわずかに上昇。発動時に受けた属性の耐性値＋４",
+        "2": "スキル発動中、属性攻撃値が少し上昇。発動時に受けた属性の耐性値＋６",
+        "3": "スキル発動中、属性攻撃値が上昇。発動時に受けた属性の耐性値＋８"
+      }
     }
   },
   "neopteron_camouflage": {
@@ -297,6 +425,14 @@
       "levels": {
         "3": "Fleetfoot"
       }
+    },
+    "JP": {
+      "name": "甲虫の擬態",
+      "category": "グループスキル",
+      "description": "しゃがみ移動速度が上昇し、大型モンスターに見つかりにくくなる",
+      "levels": {
+        "3": "しゃがみ移動速度が上昇し、大型モンスターに見つかりにくくなる"
+      }
     }
   },
   "neopteron_alert": {
@@ -314,6 +450,14 @@
       "description": "Increases the amount of honey you gain from gathering points.",
       "levels": {
         "3": "Honey Hunter"
+      }
+    },
+    "JP": {
+      "name": "甲虫の知らせ",
+      "category": "グループスキル",
+      "description": "フィールドでハチミツを採取した時の取得数が増える",
+      "levels": {
+        "3": "フィールドでハチミツを採取した時の取得数が増える"
       }
     }
   },
@@ -341,6 +485,18 @@
         "4": "Attacks that hit weak points have 20% increased affinity, with an extra 15% on wounds.",
         "5": "Attacks that hit weak points have 30% increased affinity, with an extra 20% on wounds."
       }
+    },
+    "JP": {
+      "name": "弱点特効",
+      "category": "防具",
+      "description": "モンスターを攻撃した際、その部位に攻撃がかなり有効であれば、会心率が上がる。",
+      "levels": {
+        "1": "有効部位への攻撃時、会心率＋５％傷口への攻撃時、さらに会心率＋３％",
+        "2": "有効部位への攻撃時、会心率＋１０％傷口への攻撃時、さらに会心率＋５％",
+        "3": "有効部位への攻撃時、会心率＋１５％傷口への攻撃時、さらに会心率＋１０％",
+        "4": "有効部位への攻撃時、会心率＋２０％傷口への攻撃時、さらに会心率＋１５％",
+        "5": "有効部位への攻撃時、会心率＋３０％傷口への攻撃時、さらに会心率＋２０％"
+      }
     }
   },
   "punishing_draw": {
@@ -362,6 +518,16 @@
         "1": "Draw attacks deal a small amount of stun damage and gain attack +3.",
         "2": "Draw attacks deal a small amount of stun damage and gain attack +5.",
         "3": "Draw attacks deal a small amount of stun damage and gain attack +7."
+      }
+    },
+    "JP": {
+      "name": "抜刀術【力】",
+      "category": "武器",
+      "description": "武器出し攻撃に気絶を誘発する力が追加・強化され、攻撃力も少し上がる。（騎乗中は発動しません）",
+      "levels": {
+        "1": "気絶を誘発する効果がわずかに付く武器出し攻撃の基礎攻撃力＋３",
+        "2": "気絶を誘発する効果が付く武器出し攻撃の基礎攻撃力＋５",
+        "3": "気絶を誘発する効果が大きく付く武器出し攻撃の基礎攻撃力＋７"
       }
     }
   },
@@ -389,6 +555,18 @@
         "4": "Attack +20 while active.",
         "5": "Attack +25 while active."
       }
+    },
+    "JP": {
+      "name": "逆恨み",
+      "category": "防具",
+      "description": "体力ゲージに赤い部分がある間、攻撃力が上がる。",
+      "levels": {
+        "1": "スキル発動中、基礎攻撃力＋５",
+        "2": "スキル発動中、基礎攻撃力＋１０",
+        "3": "スキル発動中、基礎攻撃力＋１５",
+        "4": "スキル発動中、基礎攻撃力＋２０",
+        "5": "スキル発動中、基礎攻撃力＋２５"
+      }
     }
   },
   "jin_dahaad_s_revolt": {
@@ -408,6 +586,15 @@
       "levels": {
         "2": "Increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash.",
         "4": "Greatly increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash."
+      }
+    },
+    "JP": {
+      "name": "凍峰竜の反逆",
+      "category": "セットボーナス",
+      "description": "一部の状態異常から回復すると攻撃力が上昇する。",
+      "levels": {
+        "2": "糸拘束状態、凍結状態の回復時、または拘束攻撃から解放された時、鍔迫り合いの後、一定時間、攻撃力が上昇",
+        "4": "糸拘束状態、凍結状態の回復時、または拘束攻撃から解放された時、鍔迫り合いの後、一定時間、攻撃力が大きく上昇"
       }
     }
   },
@@ -431,6 +618,16 @@
         "2": "Negates minor and major wind pressure and halves the effects of dragon wind pressure.",
         "3": "Negates all kinds of wind pressure."
       }
+    },
+    "JP": {
+      "name": "風圧耐性",
+      "category": "防具",
+      "description": "風圧に対する耐性を持つ。",
+      "levels": {
+        "1": "風圧【小】を無効化し、風圧【大】の影響を半減する",
+        "2": "風圧【小】【大】を無効化し、龍風圧の影響を半減する",
+        "3": "全ての風圧を無効化する"
+      }
     }
   },
   "iron_skin": {
@@ -452,6 +649,16 @@
         "1": "Reduces the duration of defense down by 50%.",
         "2": "Reduces the duration of defense down by 75%.",
         "3": "Prevents defense down."
+      }
+    },
+    "JP": {
+      "name": "防御力ＤＯＷＮ耐性",
+      "category": "防具",
+      "description": "防御力DOWNに対する耐性を持つ。",
+      "levels": {
+        "1": "防御力ＤＯＷＮ状態の時間を５０％減らす",
+        "2": "防御力ＤＯＷＮ状態の時間を７５％減らす",
+        "3": "防御力ＤＯＷＮ状態にならない"
       }
     }
   },
@@ -475,6 +682,16 @@
         "2": "Explosive power +20%",
         "3": "Explosive power +30%"
       }
+    },
+    "JP": {
+      "name": "ボマー",
+      "category": "防具",
+      "description": "爆弾系アイテムのダメージが上がる。",
+      "levels": {
+        "1": "威力１．１倍",
+        "2": "威力１．２倍",
+        "3": "威力１．３倍"
+      }
     }
   },
   "evade_extender": {
@@ -497,6 +714,16 @@
         "2": "Extends evasion distance.",
         "3": "Greatly extends evasion distance."
       }
+    },
+    "JP": {
+      "name": "回避距離ＵＰ",
+      "category": "防具",
+      "description": "回避時の移動距離が長くなる。",
+      "levels": {
+        "1": "回避距離がわずかに延長",
+        "2": "回避距離が延長",
+        "3": "回避距離が大きく延長"
+      }
     }
   },
   "fortifying_pelt": {
@@ -514,6 +741,14 @@
       "description": "Fortify",
       "levels": {
         "3": "Increases attack and defense after fainting during a quest. (Can be used twice.)"
+      }
+    },
+    "JP": {
+      "name": "毛皮の昂揚",
+      "category": "グループスキル",
+      "description": "不屈の魂（ふくつのたましい ",
+      "levels": {
+        "3": "クエスト中、力尽きる度に攻撃力と防御力が上がる（最大２回まで）"
       }
     }
   },
@@ -541,6 +776,18 @@
         "4": "Attack +10% and defense +100 while active.",
         "5": "Attack +30% and defense-increasing effects are negated while active."
       }
+    },
+    "JP": {
+      "name": "火事場力",
+      "category": "防具",
+      "description": "体力が最大値の３５％以下の時に攻撃力と防御力が上がる。",
+      "levels": {
+        "1": "スキル発動中、防御力＋５０",
+        "2": "スキル発動中、攻撃力１．０５倍防御力＋５０",
+        "3": "スキル発動中、攻撃力１．０５倍防御力＋１００",
+        "4": "スキル発動中、攻撃力１．１倍防御力＋１００",
+        "5": "スキル発動中、攻撃力１．３倍防御力上昇効果は無くなる"
+      }
     }
   },
   "recovery_speed": {
@@ -562,6 +809,16 @@
         "1": "Doubles the speed at which you heal recoverable damage.",
         "2": "Triples the speed at which you heal recoverable damage.",
         "3": "Quadruples the speed at which you heal recoverable damage."
+      }
+    },
+    "JP": {
+      "name": "回復速度",
+      "category": "防具",
+      "description": "ダメージを受けた際の赤ゲージ部分の回復速度が上がる。",
+      "levels": {
+        "1": "赤ゲージの自動回復速度２倍",
+        "2": "赤ゲージの自動回復速度３倍",
+        "3": "赤ゲージの自動回復速度４倍"
       }
     }
   },
@@ -585,6 +842,16 @@
         "2": "Reduces the duration of sleep by 60%.",
         "3": "Prevents sleep."
       }
+    },
+    "JP": {
+      "name": "睡眠耐性",
+      "category": "防具",
+      "description": "睡眠状態の時間を短くする。",
+      "levels": {
+        "1": "睡眠状態の時間を３０％減らす",
+        "2": "睡眠状態の時間を６０％減らす",
+        "3": "睡眠状態にならない"
+      }
     }
   },
   "rapid_morph": {
@@ -606,6 +873,16 @@
         "1": "Speed +10%",
         "2": "Speed +20% Morph\nAttack damage +10%",
         "3": "Speed +30% Morph\nAttack damage +20%"
+      }
+    },
+    "JP": {
+      "name": "高速変形",
+      "category": "武器",
+      "description": "スラッシュアックスとチャージアックスの変形アクションの速度と火力が上昇する。",
+      "levels": {
+        "1": "速度が１．１倍になる",
+        "2": "速度が１．２倍になり、変形攻撃のダメージが１．１倍になる",
+        "3": "速度が１．３倍になり、変形攻撃のダメージが１．２倍になる"
       }
     }
   },
@@ -629,6 +906,16 @@
         "2": "Affinity +75%",
         "3": "Affinity +100%"
       }
+    },
+    "JP": {
+      "name": "抜刀術【技】",
+      "category": "武器",
+      "description": "武器出し行動の後、一定時間、会心率が上がる。（騎乗中は発動しません）",
+      "levels": {
+        "1": "会心率＋５０％",
+        "2": "会心率＋７５％",
+        "3": "会心率＋１００％"
+      }
     }
   },
   "guard": {
@@ -650,6 +937,16 @@
         "1": "Slightly decreases the impact of attacks and reduces stamina depletion by 15%.",
         "2": "Decreases the impact of attacks and reduces stamina depletion by 30%.",
         "3": "Greatly decreases the impact of attacks and reduces stamina depletion by 50%."
+      }
+    },
+    "JP": {
+      "name": "ガード性能",
+      "category": "武器",
+      "description": "ガード時にのけぞりにくくなり、消費スタミナも軽減される。",
+      "levels": {
+        "1": "攻撃の威力をわずかに軽減。スタミナ消費量を１５％軽減。",
+        "2": "攻撃の威力を軽減。スタミナ消費量を３０％軽減。",
+        "3": "攻撃の威力を大きく軽減。スタミナ消費量を５０％軽減。"
       }
     }
   },
@@ -677,13 +974,25 @@
         "4": "Increases damage dealt by critical hits to 37%.",
         "5": "Increases damage dealt by critical hits to 40%."
       }
+    },
+    "JP": {
+      "name": "超会心",
+      "category": "武器",
+      "description": "会心攻撃のダメージが増加する。",
+      "levels": {
+        "1": "会心攻撃時のダメージ倍率を１．２８倍に強化する",
+        "2": "会心攻撃時のダメージ倍率を１．３１倍に強化する",
+        "3": "会心攻撃時のダメージ倍率を１．３４倍に強化する",
+        "4": "会心攻撃時のダメージ倍率を１．３７倍に強化する",
+        "5": "会心攻撃時のダメージ倍率を１．４倍に強化する"
+      }
     }
   },
   "gore_magala_s_tyranny": {
     "FR": {
       "name": "Tyrannie du Gore Magala",
       "category": "Bonus de set",
-      "description": "Éclipse noire I",
+      "description": "Éclipse noire",
       "levels": {
         "2": "Vous inflige la Furie face aux grands monstres.",
         "4": "Vous inflige la Furie et augmente votre attaque face aux grands monstres. Après guérison, l'attaque est encore accrue."
@@ -692,10 +1001,19 @@
     "EN": {
       "name": "Gore Magala's Tyranny",
       "category": "Set bonus",
-      "description": "Infects you with Frenzy when against large monsters.",
+      "description": "Black Eclipse",
       "levels": {
         "2": "Infects you with Frenzy when against large monsters.",
         "4": "Infects you with Frenzy and raises attack when against large monsters. Attack power increases upon recovery."
+      }
+    },
+    "JP": {
+      "name": "黒蝕竜の力",
+      "category": "セットボーナス",
+      "description": "黒き日蝕",
+      "levels": {
+        "2": "大型モンスターと対峙した時、狂竜症に感染する。",
+        "4": "大型モンスターと対峙した時、狂竜症に感染し、攻撃力が上昇する。克服時、さらに攻撃力が上昇する。"
       }
     }
   },
@@ -719,6 +1037,16 @@
         "2": "Highly discourages monsters from engaging you even if you've been spotted.",
         "3": "Prevents monsters from engaging you even if you've been spotted."
       }
+    },
+    "JP": {
+      "name": "威嚇",
+      "category": "防具",
+      "description": "小型モンスターに発見されても戦闘になりにくくなる。（甲虫種など、一部のモンスターには効果がない）",
+      "levels": {
+        "1": "発見されていても戦闘状態になりにくい",
+        "2": "発見されていても戦闘状態にほとんどならない",
+        "3": "発見されていても戦闘状態にならない"
+      }
     }
   },
   "guardian's_protection": {
@@ -736,6 +1064,14 @@
       "description": "Ward of Wyveria",
       "levels": {
         "3": "Reduces elemental and unique damage while in the Ruins of Wyveria."
+      }
+    },
+    "JP": {
+      "name": "護竜の守り",
+      "category": "セットボーナス",
+      "description": "ワイヴェリアの加護",
+      "levels": {
+        "3": "竜都の跡形にいると、属性ダメージや特殊ダメージが軽減される。"
       }
     }
   },
@@ -759,13 +1095,23 @@
         "2": "Reduces damage taken by 50%.",
         "3": "Reduces damage taken by 80%."
       }
+    },
+    "JP": {
+      "name": "ガード強化",
+      "category": "武器",
+      "description": "通常はガードできない攻撃も、ガードできるようになる。",
+      "levels": {
+        "1": "ダメージ軽減３０％",
+        "2": "ダメージ軽減５０％",
+        "3": "ダメージ軽減８０％"
+      }
     }
   },
   "fulgur_anjanath_s_will": {
     "FR": {
       "name": "Volonté de l'Anjanath tonnerre",
       "category": "Bonus de set",
-      "description": "Second souffle I",
+      "description": "Second souffle",
       "levels": {
         "2": "Confère une jauge d'endurance supplémentaire.",
         "4": "Confère une grande jauge d'endurance supplémentaire."
@@ -774,10 +1120,19 @@
     "EN": {
       "name": "Fulgur Anjanath's Will",
       "category": "Set bonus",
-      "description": "Grants an additional Stamina Gauge",
+      "description": "Second wind",
       "levels": {
         "2": "Grants an additional Stamina Gauge.",
         "4": "Grants an additional long Stamina Gauge."
+      }
+    },
+    "JP": {
+      "name": "雷顎竜の闘志",
+      "category": "セットボーナス",
+      "description": "起死回生",
+      "levels": {
+        "2": "追加のスタミナゲージを得る",
+        "4": "長い追加のスタミナゲージを得る"
       }
     }
   },
@@ -800,6 +1155,16 @@
         "1": "Moderately boosts the duration weapons are powered up.",
         "2": "Boosts the duration weapons are powered up.",
         "3": "Greatly boosts the duration weapons are powered up."
+      }
+    },
+    "JP": {
+      "name": "強化持続",
+      "category": "武器",
+      "description": "太刀、双剣、剣斧、盾斧、操虫棍で発生する、強化状態の持続時間を長くする。",
+      "levels": {
+        "1": "強化時間を少し延長",
+        "2": "強化時間を延長",
+        "3": "強化時間を大きく延長"
       }
     }
   },
@@ -827,6 +1192,18 @@
         "4": "Hit 5 successive times for an even bigger stat boost.",
         "5": "Hit 5 successive times for a huge stat boost."
       }
+    },
+    "JP": {
+      "name": "連撃",
+      "category": "防具",
+      "description": "攻撃を当て続けることで、段階的に攻撃力、属性値が上がる。（上昇効果は武器種ごとに異なる）",
+      "levels": {
+        "1": "攻撃ヒット時、一定時間基礎攻撃力と属性攻撃値がわずかに上昇５回継続で効果が強化される",
+        "2": "５回継続以降の上昇効果が少し強化される",
+        "3": "５回継続以降の上昇効果が更に強化される",
+        "4": "５回継続以降の上昇効果がかなり強化される",
+        "5": "５回継続以降の上昇効果が大きく強化される"
+      }
     }
   },
   "divine_blessing": {
@@ -849,6 +1226,12 @@
         "2": "While active, reduces damage taken by 30%.",
         "3": "While active, reduces damage taken by 50%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "wide-range": {
@@ -875,6 +1258,12 @@
         "4": "Items affect nearby allies in a much wider radius with 66% of their efficacy.",
         "5": "Items affect nearby allies in a much wider radius with full efficacy."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "jump_master": {
@@ -893,6 +1282,12 @@
       "levels": {
         "1": "Negates knockback during jumps."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "recovery_up": {
@@ -915,6 +1310,12 @@
         "2": "Moderately increases recovery.",
         "3": "Greatly increases recovery."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "blast_resistance": {
@@ -937,6 +1338,12 @@
         "2": "Greatly delays blastblight and greatly reduces blast damage.",
         "3": "Prevents blastblight."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "ice_resistance": {
@@ -959,6 +1366,12 @@
         "2": " Ice resistance +12",
         "3": "Ice resistance +20\nDefense +10"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "free_meal": {
@@ -981,6 +1394,12 @@
         "2": "Activates 25% of the time.",
         "3": "Activates 45% of the time."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "water_resistance": {
@@ -1003,6 +1422,12 @@
         "2": "Water resistance +12",
         "3": "Water resistance +20\nDefense +10"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "convert_element": {
@@ -1025,6 +1450,12 @@
         "2": "Increases additional dragon damage and increases dragon attack.",
         "3": "Further increases additional dragon damage and greatly increases dragon attack"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "critical_element": {
@@ -1047,6 +1478,12 @@
         "2": "Increases elemental damage while active.",
         "3": "Greatly increases elemental damage while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "blindsider": {
@@ -1065,6 +1502,12 @@
       "levels": {
         "1": "Improves the effectiveness of flash attacks and items."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "coalescence": {
@@ -1087,13 +1530,19 @@
         "2": "When active, grants an increase to elemental damage and status buildup.",
         "3": "When active, grants a large increase to elemental damage and status buildup."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "nu_udra_s_mutiny": {
     "FR": {
       "name": "Mutinerie du Nu Udra",
       "category": "Bonus de set",
-      "description": "Mauvais sang I",
+      "description": "Mauvais sang",
       "levels": {
         "2": "Inflige une quantité modérée de dégâts supplémentaires quand le talent Vengeance est actif.",
         "4": "Inflige des dégâts supplémentaires quand le talent Vengeance est actif."
@@ -1102,11 +1551,17 @@
     "EN": {
       "name": "Nu Udra's Mutiny",
       "category": "Set bonus",
-      "description": "Increases the damage output while Resentment is active",
+      "description": "Bad Blood",
       "levels": {
         "2": "Deals moderate additional damage while the Resentment skill is active.",
         "4": "Deals additional damage while the Resentment skill is active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "artillery": {
@@ -1129,6 +1584,12 @@
         "2": "Increases each attack and Wyvern's Fire firing speed. Shelling fire attack +60.",
         "3": "Greatly increases each attack and Wyvern's Fire firing speed. Shelling fire attack +90."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "tremor_resistance": {
@@ -1151,6 +1612,12 @@
         "2": "Nullifies up to minor ground tremors and greatly reduces the effects of major ground tremors.",
         "3": "Nullifies all ground tremors."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "stun_resistance": {
@@ -1173,13 +1640,19 @@
         "2": "Reduces the duration of stun by 60%.",
         "3": "Prevents stun."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "gravios_s_protection": {
     "FR": {
       "name": "Protection du Gravios",
       "category": "Bonus de set",
-      "description": "Armure sans défaut l",
+      "description": "Armure sans défaut",
       "levels": {
         "2": "Réduit les dégâts subis de 5% quand votre vie est pleine.",
         "4": "Réduit les dégâts subis de 10 % quand votre vie est pleine."
@@ -1188,11 +1661,17 @@
     "EN": {
       "name": "Gravios's Protection",
       "category": "Set bonus",
-      "description": "Reduces damage taken when health is full",
+      "description": "Flawless Armor",
       "levels": {
         "2": "Reduces the damage you take by 5% when your health is full.",
         "4": "Reduces the damage you take by 10% when your health is full."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "geologist": {
@@ -1215,6 +1694,12 @@
         "2": "Additionally adds one extra item when gathering special items.",
         "3": "Additionally adds one extra item when gathering from mining outcrops."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "peak_performance": {
@@ -1241,6 +1726,12 @@
         "4": "Attack +15 while active.",
         "5": "Attack +20 while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "critical_status": {
@@ -1263,13 +1754,19 @@
         "2": "Increases abnormal status effects when landing critical hits.",
         "3": "Greatly increases abnormal status effects when landing critical hits."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "rathalos_s_flare": {
     "FR": {
       "name": "Éclat du Rathalos",
       "category": "Bonus de set",
-      "description": "Carbonisateur I",
+      "description": "Carbonisateur",
       "levels": {
         "2": "Chances d'infliger des dégâts de feu supplémentaires après une attaque réussie.",
         "4": "Augmente les dégâts de feu supplémentaires après une attaque réussie."
@@ -1278,11 +1775,17 @@
     "EN": {
       "name": "Rathalos's Flare",
       "category": "Set bonus",
-      "description": "Chance to deal additional Fire Damage after landing an attack.",
+      "description": "Scorcher",
       "levels": {
         "2": "Chance to deal additional fire damage after landing an attack.",
         "4": "Increases additional fire damage after landing an attack."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "adrenaline": {
@@ -1295,12 +1798,18 @@
       }
     },
     "EN": {
-      "name": "Adrenaline",
+      "name": "Scale Layering",
       "category": "Armor",
-      "description": "Temporarily reduces stamina depletion when health is at 40% or lower.",
+      "description": "Adrenaline",
       "levels": {
         "3": "Temporarily reduces stamina depletion when health is at 40% or lower."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "mushroomancer": {
@@ -1323,6 +1832,12 @@
         "2": "Additionally lets you digest nitroshrooms and parashrooms.",
         "3": "Additionally lets you digest mandragoras, devil's blight, and exciteshrooms."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "attack_boost": {
@@ -1349,6 +1864,12 @@
         "4": "Attack +2%\nBonus: +8",
         "5": "Attack +4%\nBonus: +9"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "paralysis_resistance": {
@@ -1371,6 +1892,12 @@
         "2": "Reduces the duration of paralysis by 60%.",
         "3": "Prevents paralysis."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "outdoorsman": {
@@ -1389,9 +1916,15 @@
       "levels": {
         "1": "Improves fishing, grilling, and transporting abilities."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
-  "hunter_gatherer": {
+  "flexible_leathercraft": {
     "FR": {
       "name": "Cuir souple",
       "category": "Armure",
@@ -1401,19 +1934,25 @@
       }
     },
     "EN": {
-      "name": "Hunter Gatherer",
+      "name": "Flexible Leathercraft",
       "category": "Armor",
-      "description": "Increases gathering speed, and prevents knock back when gathering or carving.",
+      "description": "Hunter Gatherer",
       "levels": {
         "3": "Increases gathering speed, and prevents knock back when gathering or carving."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "doshaguma_s_might": {
     "FR": {
       "name": "Puissance du Doshaguma",
       "category": "Bonus de set",
-      "description": "Culturiste I",
+      "description": "Culturiste",
       "levels": {
         "2": "Octroie temporairement Attaque +10 après une Neutralisation ou un Duel de force réussi.",
         "4": "Octroie temporairement Attaque +25 après une Neutralisation ou un Duel de force réussi."
@@ -1422,11 +1961,17 @@
     "EN": {
       "name": "Doshaguma's Might",
       "category": "Set bonus",
-      "description": "Temporarily increases attack after a successful Power Clash or Offset attack.",
+      "description": "Powerhouse",
       "levels": {
-        "2": "Temporarily grants attack +10 after a successful Power Clash or Offset attack",
-        "4": "Temporarily grants attack +25 after a successful Power Clash or Offset attack"
+        "2": "Temporarily grants attack +10 after a successful Power Clash or Offset attack.",
+        "4": "Temporarily grants attack +25 after a successful Power Clash or Offset attack."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "bleeding_resistance": {
@@ -1449,6 +1994,12 @@
         "2": "Greatly reduces damage while bleeding.",
         "3": "Prevents bleeding."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "latent_power": {
@@ -1475,6 +2026,12 @@
         "4": "While active, affinity +40% and reduces stamina depletion by 50%.",
         "5": "While active, affinity +50% and reduces stamina depletion by 50%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "entomologist": {
@@ -1493,6 +2050,12 @@
       "levels": {
         "1": "Activates skill effect."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "alluring_pelt": {
@@ -1511,6 +2074,12 @@
       "levels": {
         "3": "Increases the attention drawn to you when attacking a monster."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "constitution": {
@@ -1519,11 +2088,11 @@
       "category": "Armure",
       "description": "Ralentit la perte d'endurance en cas d'esquive, de blocage, etc.",
       "levels": {
-        "1": "Coût d'endurance fixe -10 %",
-        "2": "Coût d'endurance fixe -20 %",
-        "3": "Coût d'endurance fixe -30 %",
-        "4": "Coût d'endurance fixe -40 %",
-        "5": "Coût d'endurance fixe -50 %"
+        "1": "Coût d'endurance fixe -10 %.",
+        "2": "Coût d'endurance fixe -20 %.",
+        "3": "Coût d'endurance fixe -30 %.",
+        "4": "Coût d'endurance fixe -40 %.",
+        "5": "Coût d'endurance fixe -50 %."
       }
     },
     "EN": {
@@ -1537,6 +2106,12 @@
         "4": "Reduces fixed stamina depletion by 40%.",
         "5": "Reduces fixed stamina depletion by 50%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "marathon_runner": {
@@ -1559,6 +2134,12 @@
         "2": "Reduces continuous stamina depletion by 30%.",
         "3": "Reduces continuous stamina depletion by 50%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "critical_eye": {
@@ -1585,6 +2166,12 @@
         "4": "Affinity +16%",
         "5": "Affinity +20%"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "lord_s_fury": {
@@ -1603,6 +2190,12 @@
       "levels": {
         "3": "Increases attack when inflicted with ailments."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "antivirus": {
@@ -1625,6 +2218,12 @@
         "2": "Increases recovery rate after contracting the Frenzy. Affinity +6% if cured.",
         "3": "Greatly increases recovery rate after contracting the Frenzy. Affinity +15% if cured."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "aquatic_oilsilt_mobility": {
@@ -1645,6 +2244,12 @@
         "1": "Negates the effects of muddy streams, and prevents you from being slowed down in water or oilsilt.",
         "2": "Also negates the effects of waves."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "inspiration": {
@@ -1657,12 +2262,18 @@
       }
     },
     "EN": {
-      "name": "Inspiration",
+      "name": "Lord's Favor",
       "category": "Armor",
-      "description": "emporarily increases attack power when using effects like Melody Effects that affect companions in range.",
+      "description": "Inspiration",
       "levels": {
         "1": "Temporarily increases attack power when using effects like Melody Effects that affect companions in range."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "agitator": {
@@ -1689,6 +2300,12 @@
         "4": "Attack +16 and affinity +10% while active.",
         "5": "Attack +20 and affinity +15% while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "ambush": {
@@ -1711,6 +2328,12 @@
         "2": "Attack +10% while active.",
         "3": "Attack +15% while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "quick_sheath": {
@@ -1733,6 +2356,12 @@
         "2": "Increases sheathing speed.",
         "3": "Greatly increases sheathing speed."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "offensive_guard": {
@@ -1753,8 +2382,14 @@
       "levels": {
         "1": "Attack +5% while active.",
         "2": "Attack +10% while active.",
-        "3": "Attack 15% while active."
+        "3": "Attack +15% while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "botanist": {
@@ -1779,6 +2414,12 @@
         "3": "Additionally adds one extra consumable insect item per gather.",
         "4": "Additionally adds one extra consumable mushroom item per gather."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "xu_wu_s_vigor": {
@@ -1799,6 +2440,12 @@
         "2": "Temporarily grants attack +15 after eating items such as well-done steak.",
         "4": "Temporarily grants attack +25 after eating items such as well-done steak."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "load_shells": {
@@ -1819,6 +2466,12 @@
         "1": "Increases shell and phial reloading speed.",
         "2": "Increases shell/phial reloading speed. Gunlance loading capacity +1. Charge blade charges 5 phials on yellow gauge."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "stamina_surge": {
@@ -1827,9 +2480,9 @@
       "category": "Arme",
       "description": "Accélère la récupération d'endurance.",
       "levels": {
-        "1": "Vitesse de récupération d'endurance +10",
-        "2": "Vitesse de récupération d'endurance +20",
-        "3": "Vitesse de récupération d'endurance +50"
+        "1": "Vitesse de récupération d'endurance +10%.",
+        "2": "Vitesse de récupération d'endurance +20%.",
+        "3": "Vitesse de récupération d'endurance +50%."
       }
     },
     "EN": {
@@ -1837,17 +2490,23 @@
       "category": "Weapon",
       "description": "Speeds up stamina recovery.",
       "levels": {
-        "1": "Stamina recovery speed +10%",
-        "2": "Stamina recovery speed +20%",
-        "3": "Stamina recovery speed +50%"
+        "1": "Stamina recovery speed +10%.",
+        "2": "Stamina recovery speed +20%.",
+        "3": "Stamina recovery speed +50%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "blangonga_s_spirit": {
     "FR": {
       "name": "Esprit du Blangonga",
       "category": "Bonus de set",
-      "description": "Cri de guerre l",
+      "description": "Cri de guerre",
       "levels": {
         "2": "Augmente l'attaque modérément et temporairement dans la zone après Victoire !\n(accru pour Palicos/Chasseurs de soutien).",
         "4": "Augmente l'attaque temporairement dans la zone après Victoire ! (accru pour Palicos/Chasseurs de soutien)."
@@ -1856,18 +2515,24 @@
     "EN": {
       "name": "Blangonga's Spirit",
       "category": "Set bonus",
-      "description": "Increases attack by using the To Victory! gesture",
+      "description": "Warcry",
       "levels": {
         "2": "Using the To Victory! gesture moderately increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters.",
         "4": "Using the To Victory! gesture increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "rey_dau_s_voltage": {
     "FR": {
       "name": "Tension du Rey Dau",
       "category": "Bonus de set",
-      "description": "Rage foudroyante I",
+      "description": "Rage foudroyante",
       "levels": {
         "2": "Augmente modérément la durée de Force latente.",
         "4": "Augmente la durée de Force latente."
@@ -1876,11 +2541,17 @@
     "EN": {
       "name": "Rey Dau's Voltage",
       "category": "Set bonus",
-      "description": "Increases the activation time of the Latent Power skill",
+      "description": "Thunderous Roar",
       "levels": {
         "2": "Moderately extends the activation time of the Latent Power skill.",
         "4": "Extends the activation time of the Latent Power skill."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "fire_resistance": {
@@ -1903,13 +2574,19 @@
         "2": "Fire resistance +12",
         "3": "Fire resistance +20\nDefense +10"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "uth_duna_s_cover": {
     "FR": {
       "name": "Couverture de l'Uth Duna",
       "category": "Bonus de set",
-      "description": "Voile protecteur I",
+      "description": "Voile protecteur",
       "levels": {
         "2": "Augmente temporairement la défense quand vous utilisez un outil de survie.",
         "4": "Augmente grandement la défense et la résistance temporairement quand vous utilisez un outil de survie."
@@ -1918,11 +2595,17 @@
     "EN": {
       "name": "Uth Duna's Cover",
       "category": "Set bonus",
-      "description": "Increases defense when using a specialized tool",
+      "description": "Protective Veil",
       "levels": {
         "2": "Increases defense temporarily when using a specialized tool.",
         "4": "Greatly increases defense and resistance temporarily when using a specialized tool."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "item_prolonger": {
@@ -1945,6 +2628,12 @@
         "2": "Item effect duration +25%",
         "3": "Item effect duration +50%"
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "focus": {
@@ -1967,6 +2656,12 @@
         "2": "Moderately increases gauge fill rate and reduces charge times by 10%.",
         "3": "Increases gauge fill rate and reduces charge times by 15%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "master_s_touch": {
@@ -1985,6 +2680,12 @@
       "levels": {
         "1": "Grants an 80% chance of no sharpness loss while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "speed_eating": {
@@ -2007,6 +2708,12 @@
         "2": "Increases eating speed.",
         "3": "Greatly increases eating speed."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "flayer": {
@@ -2033,9 +2740,15 @@
         "4": "Makes it much easier to inflict wounds. Also deals more additional non-elemental damage.",
         "5": "Makes it significantly easier to inflict wounds. Also deals much more additional non-elemental damage."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
-  "master_mounter": {
+  "scaling_prowess": {
     "FR": {
       "name": "Maîtrise des écailles",
       "category": "Armure",
@@ -2045,12 +2758,18 @@
       }
     },
     "EN": {
-      "name": "Master Mounter",
+      "name": "Scaling Prowess",
       "category": "Armor",
-      "description": "Makes it easier to mount monsters and to wound them once mounted.",
+      "description": "Master Mounter",
       "levels": {
         "3": "Makes it easier to mount monsters and to wound them once mounted.Master Mounter has 1 level, after which, additional levels won't provide any further benefit."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "Maximum Might": {
@@ -2069,10 +2788,16 @@
       "category": "Armor",
       "description": "Increases affinity if stamina is kept full for a period of time.",
       "levels": {
-        "1": "Affinity +10% while active",
-        "2": "Affinity +20% while active",
-        "3": "Affinity +30% while active"
+        "1": "Affinity +10% while active.",
+        "2": "Affinity +20% while active.",
+        "3": "Affinity +30% while active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "survival_expert": {
@@ -2095,6 +2820,12 @@
         "2": "Restores 50 health.",
         "3": "Restores 50 health."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "speed_sharpening": {
@@ -2115,6 +2846,12 @@
         "1": "Removes one cycle from the sharpening process.",
         "2": "Removes two cycles from the sharpening process."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "bind_resistance": {
@@ -2137,6 +2874,12 @@
         "2": "Allows you to very quickly recover from webbed status or frostblight.",
         "3": "Prevents webbed status and frostblight."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "flinch_free": {
@@ -2159,6 +2902,12 @@
         "2": "Prevents knockbacks. Tripping is reduced to a knockback instead.",
         "3": "Prevents knockbacks and tripping."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "counterstrike": {
@@ -2181,6 +2930,12 @@
         "2": "Attack +15 while active. Moderately extends effect time.",
         "3": "Attack +25 while active. Extends effect time."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "palico_rally": {
@@ -2199,7 +2954,7 @@
     "EN": {
       "name": "Palico Rally",
       "category": "Armor",
-      "description": "owers up Palicoes.",
+      "description": "Powers up Palicoes.",
       "levels": {
         "1": "Increases Palico attack power and defense by 5%.",
         "2": "Increases Palico attack power and defense by 10%.",
@@ -2207,6 +2962,12 @@
         "4": "Increases Palico attack power and defense by 20%.",
         "5": "Increases Palico attack power and defense by 25%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "tool_specialist": {
@@ -2215,11 +2976,11 @@
       "category": "Armure",
       "description": "Réduit le délai de réutilisation des outils de survie.",
       "levels": {
-        "1": "Délai de réutilisation -10 %",
-        "2": "Délai de réutilisation -20 %",
-        "3": "Délai de réutilisation -30 %",
-        "4": "Délai de réutilisation -40 %",
-        "5": "Délai de réutilisation -50 %"
+        "1": "Délai de réutilisation -10 %.",
+        "2": "Délai de réutilisation -20 %.",
+        "3": "Délai de réutilisation -30 %.",
+        "4": "Délai de réutilisation -40 %.",
+        "5": "Délai de réutilisation -50 %."
       }
     },
     "EN": {
@@ -2233,13 +2994,19 @@
         "4": "Shortens recharge time by 40%.",
         "5": "Shortens recharge time by 50%."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "ebony_odogaron_s_power": {
     "FR": {
       "name": "Pouvoir de l'Odogaron désastre",
       "category": "Bonus de set",
-      "description": "Bonus Vendetta I",
+      "description": "Bonus Vendetta",
       "levels": {
         "2": "Augmente la durée du talent\nVendetta et confère Attaque +3 quand Vendetta est actif.",
         "4": "Augmente encore la durée du talent\nVendetta et confère Attaque +10 quand Vendetta est actif."
@@ -2248,11 +3015,17 @@
     "EN": {
       "name": "Ebony Odogaron's Power",
       "category": "Set bonus",
-      "description": "Increases the duration of the Burst skill",
+      "description": "Burst boost",
       "levels": {
         "2": "Extends the duration of the Burst skill and grants attack +3 while Burst is active.",
         "4": "Further extends the duration of the Burst skill and grants attack +10 while Burst is active."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "poison_resistance": {
@@ -2275,13 +3048,19 @@
         "2": "Greatly reduces the number of times you take poison damage.",
         "3": "Prevents poison."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "guardian_arkveld_s_vitality": {
     "FR": {
       "name": "Vitalité de l'Arkveld Gardien",
       "category": "Bonus de set",
-      "description": "Décimeur l",
+      "description": "Décimeur",
       "levels": {
         "2": "Restaure une quantité modérée de vie quand vous détruisez une blessure sur un grand monstre.",
         "4": "Restaure de la vie quand vous détruisez une blessure sur un grand monstre."
@@ -2290,11 +3069,17 @@
     "EN": {
       "name": "Guardian Arkveld's Vitality",
       "category": "Set bonus",
-      "description": "Restaure une quantité modérée de vie quand vous détruisez une blessure sur un grand monstre.",
+      "description": "Decimator",
       "levels": {
         "2": "Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon.",
         "4": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "buttery_leathercraft": {
@@ -2313,6 +3098,12 @@
       "levels": {
         "3": "Increases your affinity temporarily when sliding on terrain."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "guardian_s_pulse": {
@@ -2331,6 +3122,12 @@
       "levels": {
         "3": "Increases recovery speed of stamina and red gauge when near Wylkrystals."
       }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
     }
   },
   "slugger": {
@@ -2352,6 +3149,50 @@
         "1": "Stun power +20%",
         "2": "Stun power +30%",
         "3": "Stun power +40%"
+      }
+    },
+    "JP": {
+      "name": "",
+      "category": "",
+      "description": "",
+      "levels": {}
+    }
+  },
+  "handicraft": {
+    "FR": {
+      "name": "Savoir-faire",
+      "category": "Arme",
+      "description": "Augmente la jauge de tranchant de l'arme. Ne peut dépasser la limite maximum.",
+      "levels": {
+        "1": "Tranchant +10",
+        "2": "Tranchant +20",
+        "3": "Tranchant +30",
+        "4": "Tranchant +40",
+        "5": "Tranchant +50"
+      }
+    },
+    "EN": {
+      "name": "Handicraft",
+      "category": "Weapon",
+      "description": "Extends the weapon sharpness gauge. However, it will not increase the gauge past its maximum.",
+      "levels": {
+        "1": "Weapon sharpness +10",
+        "2": "Weapon sharpness +20",
+        "3": "Weapon sharpness +30",
+        "4": "Weapon sharpness +40",
+        "5": "Weapon sharpness +50"
+      }
+    },
+    "JP": {
+      "name": "匠",
+      "category": "武器",
+      "description": "武器の斬れ味ゲージが長くなる。ただし、斬れ味ゲージの限界以上には長くならない。",
+      "levels": {
+        "1": "武器の斬れ味＋１０",
+        "2": "武器の斬れ味＋２０",
+        "3": "武器の斬れ味＋３０",
+        "4": "武器の斬れ味＋４０",
+        "5": "武器の斬れ味＋５０"
       }
     }
   }
