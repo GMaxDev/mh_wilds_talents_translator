@@ -731,7 +731,7 @@ function TranslatorPage({ talents, darkMode }) {
   )
 }
 
-function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
+function EditorPage({ talents, darkMode, updateTalents }) {
   const [selectedTalent, setSelectedTalent] = useState(null)
   const [searchQuery, setSearchQuery] = useState("")
   const [filteredTalents, setFilteredTalents] = useState([])
@@ -982,8 +982,6 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
     <div className="max-w-6xl mx-auto">
       {editMode === "list" && (
         <>
-          // Modifier l'interface pour ajouter la case à cocher // Dans le return de EditorPage, modifier la div qui
-          contient la barre de recherche et les boutons
           <div className="flex flex-col justify-between gap-4 mb-6 sm:flex-row">
             <div className="relative flex-grow">
               <div
@@ -1605,7 +1603,7 @@ function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
   )
 }
 
-function TalentCard({ talent, talentKey, language, darkMode }) {
+function TalentCard({ talent, language, darkMode }) {
   if (!talent) {
     return (
       <div
