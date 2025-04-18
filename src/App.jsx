@@ -235,8 +235,43 @@ const EyeIcon = () => (
   </svg>
 )
 
+const LightbulbIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+    <path d="M9 18h6"></path>
+    <path d="M10 22h4"></path>
+  </svg>
+)
+
+const SendIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="m22 2-7 20-4-9-9-4Z"></path>
+    <path d="M22 2 11 13"></path>
+  </svg>
+)
+
 function App() {
-  const [currentPage, setCurrentPage] = useState("translator") // "translator" ou "editor"
+  const [currentPage, setCurrentPage] = useState("translator") // "translator", "editor", ou "feedback"
   const [darkMode, setDarkMode] = useState(true) // Mode sombre par défaut
   const [talents, setTalents] = useState({})
 
@@ -333,6 +368,20 @@ function App() {
               <EditIcon />
               <span className="hidden sm:inline">Editor</span>
             </button>
+
+            {/* Nouveau bouton pour la page de feedback */}
+            <button
+              onClick={() => setCurrentPage("feedback")}
+              className={`p-2 rounded-full backdrop-blur-sm border transition-all duration-300 shadow-lg flex items-center gap-2 ${
+                darkMode
+                  ? "bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/30"
+                  : "bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50"
+              } ${currentPage === "feedback" ? (darkMode ? "ring-2 ring-cyan-500/50" : "ring-2 ring-amber-500/50") : ""}`}
+              aria-label="Suggest improvements"
+            >
+              <LightbulbIcon />
+              <span className="hidden sm:inline">Suggest Improvements</span>
+            </button>
           </div>
 
           <div className="flex gap-2">
@@ -374,24 +423,29 @@ function App() {
                 : "bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-orange-600"
             }`}
           >
-            MH Wilds Talent {currentPage === "translator" ? "Translator" : "Editor"}
+            MH Wilds Talent{" "}
+            {currentPage === "translator" ? "Translator" : currentPage === "editor" ? "Editor" : "Feedback"}
           </h1>
           <p className={`${darkMode ? "text-amber-100/80" : "text-amber-800/80"}`}>
             {currentPage === "translator"
               ? "Translate Monster Hunter Wilds talents between languages"
-              : "Add, edit or delete Monster Hunter Wilds talents"}
+              : currentPage === "editor"
+                ? "Add, edit or delete Monster Hunter Wilds talents"
+                : "Help us improve by sharing your suggestions"}
           </p>
         </div>
 
         {currentPage === "translator" ? (
           <TranslatorPage talents={talents} darkMode={darkMode} />
-        ) : (
+        ) : currentPage === "editor" ? (
           <EditorPage
             talents={talents}
             darkMode={darkMode}
             updateTalents={updateTalents}
             downloadTalentsJSON={downloadTalentsJSON}
           />
+        ) : (
+          <FeedbackPage darkMode={darkMode} />
         )}
       </div>
     </div>
@@ -731,7 +785,7 @@ function TranslatorPage({ talents, darkMode }) {
   )
 }
 
-function EditorPage({ talents, darkMode, updateTalents }) {
+function EditorPage({ talents, darkMode, updateTalents, downloadTalentsJSON }) {
   const [selectedTalent, setSelectedTalent] = useState(null)
   const [searchQuery, setSearchQuery] = useState("")
   const [filteredTalents, setFilteredTalents] = useState([])
@@ -742,7 +796,6 @@ function EditorPage({ talents, darkMode, updateTalents }) {
   const [newLanguageCode, setNewLanguageCode] = useState("")
   const [editedTalent, setEditedTalent] = useState(null)
   const [newTalentKey, setNewTalentKey] = useState("")
-  // Dans la fonction EditorPage, ajouter un nouvel état pour le filtre des talents incomplets
   const [showIncompleteOnly, setShowIncompleteOnly] = useState(false)
 
   const searchInputRef = useRef(null)
@@ -762,7 +815,6 @@ function EditorPage({ talents, darkMode, updateTalents }) {
     }
   }, [talents])
 
-  // Modifier la fonction de filtrage des talents pour prendre en compte le nouveau filtre
   useEffect(() => {
     // Filter talents based on search query and incomplete filter
     let filtered = Object.keys(talents)
@@ -791,11 +843,6 @@ function EditorPage({ talents, darkMode, updateTalents }) {
 
     setFilteredTalents(filtered)
   }, [searchQuery, talents, availableLanguages, showIncompleteOnly])
-
-  // Ajouter une fonction pour basculer l'affichage des talents incomplets
-  const toggleIncompleteFilter = () => {
-    setShowIncompleteOnly(!showIncompleteOnly)
-  }
 
   // Initialiser la liste filtrée avec tous les talents au chargement
   useEffect(() => {
@@ -949,8 +996,10 @@ function EditorPage({ talents, darkMode, updateTalents }) {
     }
   }
 
-  // Dans la fonction EditorPage, ajoutez cette fonction pour vérifier si une langue est complète
-  // Ajoutez cette fonction juste avant le return de EditorPage
+  // Fonction pour basculer l'affichage des talents incomplets
+  const toggleIncompleteFilter = () => {
+    setShowIncompleteOnly(!showIncompleteOnly)
+  }
 
   // Fonction pour vérifier si une langue est complète pour un talent donné
   const isLanguageComplete = (talent, lang) => {
@@ -975,8 +1024,6 @@ function EditorPage({ talents, darkMode, updateTalents }) {
   const getCompletedLanguages = (talent) => {
     return availableLanguages.filter((lang) => isLanguageComplete(talent, lang))
   }
-
-  // Maintenant, modifiez l'en-tête de la table dans le return pour ajouter la nouvelle colonne
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -1056,6 +1103,7 @@ function EditorPage({ talents, darkMode, updateTalents }) {
               </button>
             </div>
           </div>
+
           <div
             className={`rounded-xl overflow-hidden backdrop-blur-md shadow-lg border ${
               darkMode ? "bg-slate-800/30 border-slate-700/50" : "bg-amber-100/30 border-amber-200/50"
@@ -1603,7 +1651,173 @@ function EditorPage({ talents, darkMode, updateTalents }) {
   )
 }
 
-function TalentCard({ talent, language, darkMode }) {
+// Nouvelle page pour les propositions d'amélioration
+function FeedbackPage({ darkMode }) {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    message: "",
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      // Ici, vous devriez normalement envoyer les données à Google Sheets
+      // Pour cet exemple, nous simulons juste un délai
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+
+      // Afficher le message de succès
+      setShowSuccess(true)
+
+      // Réinitialiser le formulaire après quelques secondes
+      setTimeout(() => {
+        setFormData({
+          username: "",
+          email: "",
+          message: "",
+        })
+        setShowSuccess(false)
+      }, 5000)
+    } catch (error) {
+      console.error("Error submitting feedback:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div
+        className={`rounded-xl overflow-hidden backdrop-blur-md shadow-lg border ${
+          darkMode ? "bg-slate-800/30 border-slate-700/50" : "bg-amber-100/30 border-amber-200/50"
+        }`}
+      >
+        <div className="p-6">
+          {showSuccess ? (
+            <div
+              className={`p-4 mb-6 rounded-xl text-center ${
+                darkMode
+                  ? "bg-green-900/30 text-green-100 border border-green-800/50"
+                  : "bg-green-100/70 text-green-800 border border-green-200/50"
+              }`}
+            >
+              <p className="text-lg font-medium">Message correctement envoyé. Merci pour votre proposition !</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label
+                  htmlFor="username"
+                  className={`block mb-2 font-medium ${darkMode ? "text-amber-100" : "text-amber-900"}`}
+                >
+                  Pseudo
+                </label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  required
+                  className={`w-full rounded-xl px-4 py-2
+                    backdrop-blur-md shadow-md focus:outline-none border ${
+                      darkMode
+                        ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                        : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                    }`}
+                  placeholder="Votre pseudo"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className={`block mb-2 font-medium ${darkMode ? "text-amber-100" : "text-amber-900"}`}
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className={`w-full rounded-xl px-4 py-2
+                    backdrop-blur-md shadow-md focus:outline-none border ${
+                      darkMode
+                        ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                        : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                    }`}
+                  placeholder="votre@email.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className={`block mb-2 font-medium ${darkMode ? "text-amber-100" : "text-amber-900"}`}
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className={`w-full rounded-xl px-4 py-2
+                    backdrop-blur-md shadow-md focus:outline-none border ${
+                      darkMode
+                        ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                        : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                    }`}
+                  placeholder="Décrivez votre proposition d'amélioration..."
+                />
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`px-6 py-3 rounded-xl backdrop-blur-md border transition-all duration-300 flex items-center gap-2 ${
+                    darkMode
+                      ? "bg-cyan-900/30 text-cyan-100 hover:bg-cyan-800/50 border-cyan-900/50"
+                      : "bg-amber-500/30 text-amber-900 hover:bg-amber-500/50 border-amber-500/50"
+                  } ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}
+                >
+                  {isSubmitting ? (
+                    "Envoi en cours..."
+                  ) : (
+                    <>
+                      <SendIcon />
+                      <span>Envoyer</span>
+                    </>
+                  )}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function TalentCard({ talent, talentKey, language, darkMode }) {
   if (!talent) {
     return (
       <div
