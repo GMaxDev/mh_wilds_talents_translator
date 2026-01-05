@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import talentsData from "./data/skills.json";
 import skillSpecsData from "./data/skill-specifications.json";
 import weaponTypeTranslations from "./data/weapon-type-translations.json";
+import weaponsFullData from "./data/weapons-full.json";
 
 // Traductions des types d'armures
 const armorTypeTranslations = {
@@ -137,6 +138,188 @@ const uiTranslations = {
     PL: "Uruchom skrypt, aby pobrać dane o ekwipunku.",
     PT: "Execute o script para obter os detalhes do equipamento.",
     AR: "قم بتشغيل البرنامج النصي لجلب تفاصيل المعدات.",
+  },
+  weaponSkills: {
+    EN: "Skills",
+    JP: "技能",
+    JA: "スキル",
+    KO: "스킬",
+    FR: "Talents",
+    IT: "Abilità",
+    DE: "Fertigkeiten",
+    ES: "Habilidades",
+    RU: "Навыки",
+    PL: "Umiejętności",
+    PT: "Habilidades",
+    AR: "المهارات",
+  },
+  weaponStats: {
+    EN: "Stats",
+    JP: "屬性",
+    JA: "ステータス",
+    KO: "스탯",
+    FR: "Stats",
+    IT: "Statistiche",
+    DE: "Werte",
+    ES: "Estadísticas",
+    RU: "Характеристики",
+    PL: "Statystyki",
+    PT: "Estatísticas",
+    AR: "الإحصائيات",
+  },
+  searchPlaceholder: {
+    EN: "Search talents or weapons...",
+    JP: "搜尋技能或武器...",
+    JA: "スキルまたは武器を検索...",
+    KO: "스킬 또는 무기 검색...",
+    FR: "Rechercher talents ou armes...",
+    IT: "Cerca abilità o armi...",
+    DE: "Fertigkeiten oder Waffen suchen...",
+    ES: "Buscar habilidades o armas...",
+    RU: "Поиск навыков или оружия...",
+    PL: "Szukaj umiejętności lub broni...",
+    PT: "Buscar habilidades ou armas...",
+    AR: "البحث عن المهارات أو الأسلحة...",
+  },
+  talentsSection: {
+    EN: "Talents",
+    JP: "技能",
+    JA: "スキル",
+    KO: "스킬",
+    FR: "Talents",
+    IT: "Abilità",
+    DE: "Fertigkeiten",
+    ES: "Habilidades",
+    RU: "Навыки",
+    PL: "Umiejętności",
+    PT: "Habilidades",
+    AR: "المهارات",
+  },
+  weaponsSection: {
+    EN: "Weapons",
+    JP: "武器",
+    JA: "武器",
+    KO: "무기",
+    FR: "Armes",
+    IT: "Armi",
+    DE: "Waffen",
+    ES: "Armas",
+    RU: "Оружие",
+    PL: "Bronie",
+    PT: "Armas",
+    AR: "الأسلحة",
+  },
+  noSkillsData: {
+    EN: "This weapon has no skills",
+    JP: "此武器沒有技能",
+    JA: "この武器にはスキルがありません",
+    KO: "이 무기에는 스킬이 없습니다",
+    FR: "Cette arme n'a pas de talents",
+    IT: "Quest'arma non ha abilità",
+    DE: "Diese Waffe hat keine Fertigkeiten",
+    ES: "Esta arma no tiene habilidades",
+    RU: "У этого оружия нет навыков",
+    PL: "Ta broń nie ma umiejętności",
+    PT: "Esta arma não possui habilidades",
+    AR: "هذا السلاح لا يحتوي على مهارات",
+  },
+  attack: {
+    EN: "Attack",
+    JP: "攻擊",
+    JA: "攻撃力",
+    KO: "공격력",
+    FR: "Attaque",
+    IT: "Attacco",
+    DE: "Angriff",
+    ES: "Ataque",
+    RU: "Атака",
+    PL: "Atak",
+    PT: "Ataque",
+    AR: "الهجوم",
+  },
+  affinity: {
+    EN: "Affinity",
+    JP: "會心率",
+    JA: "会心率",
+    KO: "회심률",
+    FR: "Affinité",
+    IT: "Affinità",
+    DE: "Affinität",
+    ES: "Afinidad",
+    RU: "Сродство",
+    PL: "Powinowactwo",
+    PT: "Afinidade",
+    AR: "التقارب",
+  },
+  slots: {
+    EN: "Slots",
+    JP: "插槽",
+    JA: "スロット",
+    KO: "슬롯",
+    FR: "Emplacements",
+    IT: "Slot",
+    DE: "Slots",
+    ES: "Ranuras",
+    RU: "Слоты",
+    PL: "Sloty",
+    PT: "Compartimentos",
+    AR: "الفتحات",
+  },
+  switchTo: {
+    EN: "Switch to",
+    JP: "切換到",
+    JA: "に切り替え",
+    KO: "로 전환",
+    FR: "Voir en",
+    IT: "Passa a",
+    DE: "Wechseln zu",
+    ES: "Cambiar a",
+    RU: "Переключить на",
+    PL: "Przełącz na",
+    PT: "Mudar para",
+    AR: "التبديل إلى",
+  },
+  weaponStatsTitle: {
+    EN: "Weapon Stats",
+    JP: "武器屬性",
+    JA: "武器ステータス",
+    KO: "무기 스탯",
+    FR: "Stats de l'arme",
+    IT: "Statistiche arma",
+    DE: "Waffenwerte",
+    ES: "Estadísticas del arma",
+    RU: "Характеристики оружия",
+    PL: "Statystyki broni",
+    PT: "Estatísticas da arma",
+    AR: "إحصائيات السلاح",
+  },
+  weaponSkillsTitle: {
+    EN: "Weapon Skills",
+    JP: "武器技能",
+    JA: "武器スキル",
+    KO: "무기 스킬",
+    FR: "Talents de l'arme",
+    IT: "Abilità arma",
+    DE: "Waffenfertigkeiten",
+    ES: "Habilidades del arma",
+    RU: "Навыки оружия",
+    PL: "Umiejętności broni",
+    PT: "Habilidades da arma",
+    AR: "مهارات السلاح",
+  },
+  more: {
+    EN: "more",
+    JP: "更多",
+    JA: "もっと",
+    KO: "더 보기",
+    FR: "de plus",
+    IT: "altri",
+    DE: "mehr",
+    ES: "más",
+    RU: "ещё",
+    PL: "więcej",
+    PT: "mais",
+    AR: "المزيد",
   },
 };
 
@@ -685,10 +868,12 @@ function App() {
 function TranslatorPage({ talents, darkMode }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTalent, setSelectedTalent] = useState(null);
+  const [selectedWeapon, setSelectedWeapon] = useState(null); // Nouvelle: arme sélectionnée
   const [sourceLanguage, setSourceLanguage] = useState("EN");
   const [targetLanguage, setTargetLanguage] = useState("FR");
   const [availableLanguages, setAvailableLanguages] = useState([]);
   const [filteredTalents, setFilteredTalents] = useState([]);
+  const [filteredWeapons, setFilteredWeapons] = useState([]); // Nouvelle: armes filtrées
   const [keyboardSelectedIndex, setKeyboardSelectedIndex] = useState(-1); // Pour la navigation au clavier
   const [showResults, setShowResults] = useState(false);
   const [expandedSide, setExpandedSide] = useState(null); // "source" ou "target" ou null
@@ -713,19 +898,20 @@ function TranslatorPage({ talents, darkMode }) {
   }, [talents]);
 
   useEffect(() => {
-    // Filter talents based on search query
+    // Filter talents and weapons based on search query
     if (searchQuery.trim() === "") {
       setFilteredTalents([]);
-      setKeyboardSelectedIndex(-1); // Réinitialiser l'index sélectionné
+      setFilteredWeapons([]);
+      setKeyboardSelectedIndex(-1);
       return;
     }
 
     // Auto-detect language based on input
     detectLanguage(searchQuery);
 
-    const filtered = Object.keys(talents).filter((talentKey) => {
+    // Filtrer les talents
+    const filteredTalentsList = Object.keys(talents).filter((talentKey) => {
       const talent = talents[talentKey];
-      // Search in all available languages
       return (
         availableLanguages.some((lang) =>
           talent[lang]?.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -733,10 +919,29 @@ function TranslatorPage({ talents, darkMode }) {
       );
     });
 
-    setFilteredTalents(filtered);
+    // Filtrer les armes (limité à 20 résultats pour les performances)
+    const filteredWeaponsList = Object.keys(weaponsFullData).filter((weaponId) => {
+      const weapon = weaponsFullData[weaponId];
+      // Chercher dans toutes les langues disponibles
+      return availableLanguages.some((lang) => {
+        const weaponData = weapon[lang];
+        if (!weaponData) return false;
+        // Chercher par nom, type d'arme ou nom de skill
+        const matchesName = weaponData.name?.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesType = weaponData.type?.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesSkill = weaponData.skills?.some(([skillName]) => 
+          skillName?.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        return matchesName || matchesType || matchesSkill;
+      });
+    }).slice(0, 20); // Limiter à 20 armes
 
-    // Réinitialiser l'index sélectionné lorsque les résultats changent
-    setKeyboardSelectedIndex(filtered.length > 0 ? 0 : -1);
+    setFilteredTalents(filteredTalentsList);
+    setFilteredWeapons(filteredWeaponsList);
+
+    // Réinitialiser l'index sélectionné
+    const totalResults = filteredTalentsList.length + filteredWeaponsList.length;
+    setKeyboardSelectedIndex(totalResults > 0 ? 0 : -1);
   }, [searchQuery, talents, availableLanguages]);
 
   // Effet pour faire défiler l'élément sélectionné dans la vue
@@ -782,6 +987,16 @@ function TranslatorPage({ talents, darkMode }) {
       });
     });
 
+    // Check all weapons for matches in each language
+    Object.keys(weaponsFullData).forEach((weaponId) => {
+      availableLanguages.forEach((lang) => {
+        const weaponName = weaponsFullData[weaponId][lang]?.name?.toLowerCase() || "";
+        if (weaponName.includes(query.toLowerCase())) {
+          matchCounts[lang]++;
+        }
+      });
+    });
+
     // Find language with most matches
     let bestMatch = sourceLanguage;
     let maxMatches = 0;
@@ -805,12 +1020,29 @@ function TranslatorPage({ talents, darkMode }) {
 
   const handleTalentSelect = (talentKey) => {
     setSelectedTalent(talentKey);
+    setSelectedWeapon(null); // Désélectionner l'arme
     setSearchQuery("");
     setFilteredTalents([]);
+    setFilteredWeapons([]);
     setShowResults(true);
-    setKeyboardSelectedIndex(-1); // Réinitialiser l'index sélectionné
+    setKeyboardSelectedIndex(-1);
+    setExpandedSide(null); // Réinitialiser l'état d'expansion
 
-    // Remettre le focus sur l'input de recherche après la sélection
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  };
+
+  const handleWeaponSelect = (weaponId) => {
+    setSelectedWeapon(weaponId);
+    setSelectedTalent(null); // Désélectionner le talent
+    setSearchQuery("");
+    setFilteredTalents([]);
+    setFilteredWeapons([]);
+    setShowResults(true);
+    setKeyboardSelectedIndex(-1);
+    setExpandedSide(null); // Réinitialiser l'état d'expansion
+
     if (searchInputRef.current) {
       searchInputRef.current.focus();
     }
@@ -822,24 +1054,34 @@ function TranslatorPage({ talents, darkMode }) {
     setTargetLanguage(temp);
   };
 
+  // Calcul des résultats combinés pour la navigation clavier
+  const totalResults = filteredTalents.length + filteredWeapons.length;
+
   // Gestionnaire pour les touches du clavier
   const handleKeyDown = (e) => {
-    if (filteredTalents.length === 0) return;
+    if (totalResults === 0) return;
 
     // Navigation avec les flèches
     if (e.key === "ArrowDown") {
-      e.preventDefault(); // Empêcher le défilement de la page
+      e.preventDefault();
       setKeyboardSelectedIndex((prev) =>
-        prev < filteredTalents.length - 1 ? prev + 1 : prev
+        prev < totalResults - 1 ? prev + 1 : prev
       );
     } else if (e.key === "ArrowUp") {
-      e.preventDefault(); // Empêcher le défilement de la page
+      e.preventDefault();
       setKeyboardSelectedIndex((prev) => (prev > 0 ? prev - 1 : 0));
     } else if (e.key === "Enter" && keyboardSelectedIndex >= 0) {
-      e.preventDefault(); // Empêcher la soumission du formulaire
-      handleTalentSelect(filteredTalents[keyboardSelectedIndex]);
+      e.preventDefault();
+      // Déterminer si c'est un talent ou une arme
+      if (keyboardSelectedIndex < filteredTalents.length) {
+        handleTalentSelect(filteredTalents[keyboardSelectedIndex]);
+      } else {
+        const weaponIndex = keyboardSelectedIndex - filteredTalents.length;
+        handleWeaponSelect(filteredWeapons[weaponIndex]);
+      }
     } else if (e.key === "Escape") {
       setFilteredTalents([]);
+      setFilteredWeapons([]);
       setKeyboardSelectedIndex(-1);
     }
   };
@@ -857,7 +1099,7 @@ function TranslatorPage({ talents, darkMode }) {
         <input
           ref={searchInputRef}
           type="text"
-          placeholder="Search for a talent..."
+          placeholder={uiTranslations[sourceLanguage]?.searchPlaceholder || "Search talents or weapons..."}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -887,7 +1129,7 @@ function TranslatorPage({ talents, darkMode }) {
               />
             </span>
 
-            {filteredTalents.length > 0 && (
+            {totalResults > 0 && (
               <span
                 className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium
                 backdrop-blur-md border ${
@@ -904,64 +1146,159 @@ function TranslatorPage({ talents, darkMode }) {
         )}
       </div>
 
-      {filteredTalents.length > 0 && (
+      {/* Résultats de recherche combinés */}
+      {totalResults > 0 && (
         <div
           ref={resultsContainerRef}
-          className={`mt-2 rounded-xl max-h-60 overflow-y-auto
+          className={`mt-2 rounded-xl max-h-80 overflow-y-auto
             backdrop-blur-md shadow-lg border ${
               darkMode
                 ? "bg-slate-800/30 border-slate-700/50"
                 : "bg-amber-100/30 border-amber-200/50"
             }`}
         >
-          {filteredTalents.map((talentKey, index) => (
-            <div
-              key={talentKey}
-              ref={(el) => (resultItemsRef.current[index] = el)}
-              className={`p-3 cursor-pointer transition-all duration-300
-                border-b last:border-b-0 flex justify-between items-center ${
+          {/* Section Talents */}
+          {filteredTalents.length > 0 && (
+            <>
+              <div
+                className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider sticky top-0 ${
                   darkMode
-                    ? `border-slate-700/50 ${
-                        index === keyboardSelectedIndex
-                          ? "bg-slate-700/70"
-                          : "hover:bg-slate-700/50"
-                      }`
-                    : `border-amber-200/50 ${
-                        index === keyboardSelectedIndex
-                          ? "bg-amber-200/70"
-                          : "hover:bg-amber-200/50"
-                      }`
-                }`}
-              onClick={() => handleTalentSelect(talentKey)}
-              onMouseEnter={() => setKeyboardSelectedIndex(index)}
-            >
-              <div>
-                <span
-                  className={`font-medium ${
-                    darkMode ? "text-amber-100" : "text-amber-900"
-                  }`}
-                >
-                  {talents[talentKey][sourceLanguage]?.name || talentKey}
-                </span>
-                <span
-                  className={`text-xs ml-2 ${
-                    darkMode ? "text-amber-100/70" : "text-amber-800/70"
-                  }`}
-                >
-                  {talents[talentKey][sourceLanguage]?.category}
-                </span>
-              </div>
-              <span
-                className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
-                  darkMode
-                    ? "bg-slate-800/30 text-amber-100/90 border-slate-700/50"
-                    : "bg-amber-100/50 text-amber-900 border-amber-200/50"
+                    ? "bg-slate-700/90 text-cyan-300 border-b border-slate-600/50"
+                    : "bg-amber-200/90 text-amber-700 border-b border-amber-300/50"
                 }`}
               >
-                {talentKey}
-              </span>
-            </div>
-          ))}
+                🎯 {uiTranslations[sourceLanguage]?.talentsSection || "Talents"} ({filteredTalents.length})
+              </div>
+              {filteredTalents.map((talentKey, index) => (
+                <div
+                  key={`talent-${talentKey}`}
+                  ref={(el) => (resultItemsRef.current[index] = el)}
+                  className={`p-3 cursor-pointer transition-all duration-300
+                    border-b last:border-b-0 flex justify-between items-center ${
+                      darkMode
+                        ? `border-slate-700/50 ${
+                            index === keyboardSelectedIndex
+                              ? "bg-slate-700/70"
+                              : "hover:bg-slate-700/50"
+                          }`
+                        : `border-amber-200/50 ${
+                            index === keyboardSelectedIndex
+                              ? "bg-amber-200/70"
+                              : "hover:bg-amber-200/50"
+                          }`
+                    }`}
+                  onClick={() => handleTalentSelect(talentKey)}
+                  onMouseEnter={() => setKeyboardSelectedIndex(index)}
+                >
+                  <div>
+                    <span
+                      className={`font-medium ${
+                        darkMode ? "text-amber-100" : "text-amber-900"
+                      }`}
+                    >
+                      {talents[talentKey][sourceLanguage]?.name || talentKey}
+                    </span>
+                    <span
+                      className={`text-xs ml-2 ${
+                        darkMode ? "text-amber-100/70" : "text-amber-800/70"
+                      }`}
+                    >
+                      {talents[talentKey][sourceLanguage]?.category}
+                    </span>
+                  </div>
+                  <span
+                    className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                      darkMode
+                        ? "bg-slate-800/30 text-amber-100/90 border-slate-700/50"
+                        : "bg-amber-100/50 text-amber-900 border-amber-200/50"
+                    }`}
+                  >
+                    {talentKey}
+                  </span>
+                </div>
+              ))}
+            </>
+          )}
+
+          {/* Section Armes */}
+          {filteredWeapons.length > 0 && (
+            <>
+              <div
+                className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider sticky top-0 ${
+                  darkMode
+                    ? "bg-slate-700/90 text-cyan-300 border-b border-slate-600/50"
+                    : "bg-amber-200/90 text-amber-700 border-b border-amber-300/50"
+                }`}
+              >
+                ⚔️ {uiTranslations[sourceLanguage]?.weaponsSection || "Weapons"} ({filteredWeapons.length})
+              </div>
+              {filteredWeapons.map((weaponId, index) => {
+                const globalIndex = filteredTalents.length + index;
+                const weapon = weaponsFullData[weaponId]?.[sourceLanguage];
+                return (
+                  <div
+                    key={`weapon-${weaponId}`}
+                    ref={(el) => (resultItemsRef.current[globalIndex] = el)}
+                    className={`p-3 cursor-pointer transition-all duration-300
+                      border-b last:border-b-0 flex justify-between items-center ${
+                        darkMode
+                          ? `border-slate-700/50 ${
+                              globalIndex === keyboardSelectedIndex
+                                ? "bg-slate-700/70"
+                                : "hover:bg-slate-700/50"
+                            }`
+                          : `border-amber-200/50 ${
+                              globalIndex === keyboardSelectedIndex
+                                ? "bg-amber-200/70"
+                                : "hover:bg-amber-200/50"
+                            }`
+                      }`}
+                    onClick={() => handleWeaponSelect(weaponId)}
+                    onMouseEnter={() => setKeyboardSelectedIndex(globalIndex)}
+                  >
+                    <div>
+                      <span
+                        className={`font-medium ${
+                          darkMode ? "text-amber-100" : "text-amber-900"
+                        }`}
+                      >
+                        {weapon?.name || weaponId}
+                      </span>
+                      <span
+                        className={`text-xs ml-2 ${
+                          darkMode ? "text-amber-100/70" : "text-amber-800/70"
+                        }`}
+                      >
+                        {weapon?.type}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      {weapon?.skills?.length > 0 && (
+                        <span
+                          className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                            darkMode
+                              ? "bg-cyan-900/30 text-cyan-300 border-cyan-700/50"
+                              : "bg-green-100/50 text-green-700 border-green-200/50"
+                          }`}
+                        >
+                          {weapon.skills.length} {uiTranslations[sourceLanguage]?.weaponSkills || "skills"}
+                        </span>
+                      )}
+                      <span
+                        className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                          darkMode
+                            ? "bg-slate-800/30 text-amber-100/90 border-slate-700/50"
+                            : "bg-amber-100/50 text-amber-900 border-amber-200/50"
+                        }`}
+                      >
+                        ⚔️ {weapon?.attack || "?"}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          )}
         </div>
       )}
 
@@ -1060,6 +1397,107 @@ function TranslatorPage({ talents, darkMode }) {
               <TalentCard
                 talent={talents[selectedTalent][targetLanguage]}
                 talentKey={selectedTalent}
+                language={targetLanguage}
+                darkMode={darkMode}
+                onClick={() => setExpandedSide("target")}
+              />
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Affichage de l'arme sélectionnée */}
+      {showResults && selectedWeapon && weaponsFullData[selectedWeapon] && (
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <select
+                value={sourceLanguage}
+                onChange={(e) => setSourceLanguage(e.target.value)}
+                className={`w-[100px] rounded-xl px-3 py-2
+                  backdrop-blur-md shadow-md focus:outline-none border ${
+                    darkMode
+                      ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                      : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                  }`}
+              >
+                {availableLanguages.map((lang) => (
+                  <option key={`source-weapon-${lang}`} value={lang}>
+                    {lang}
+                  </option>
+                ))}
+              </select>
+
+              <button
+                onClick={handleLanguageSwap}
+                className={`p-2 rounded-full backdrop-blur-md border transition-all duration-300 shadow-md ${
+                  darkMode
+                    ? "bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/50"
+                    : "bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50"
+                }`}
+              >
+                <ArrowLeftRightIcon />
+              </button>
+
+              <select
+                value={targetLanguage}
+                onChange={(e) => setTargetLanguage(e.target.value)}
+                className={`w-[100px] rounded-xl px-3 py-2
+                  backdrop-blur-md shadow-md focus:outline-none border ${
+                    darkMode
+                      ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                      : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                  }`}
+              >
+                {availableLanguages.map((lang) => (
+                  <option key={`target-weapon-${lang}`} value={lang}>
+                    {lang}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <span
+              className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                darkMode
+                  ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/50"
+                  : "bg-orange-100/50 text-orange-700 border-orange-200/50"
+              }`}
+            >
+              ⚔️ {weaponsFullData[selectedWeapon][sourceLanguage]?.type}
+            </span>
+          </div>
+
+          {expandedSide ? (
+            <ExpandedWeaponCard
+              weapon={
+                weaponsFullData[selectedWeapon][
+                  expandedSide === "source" ? sourceLanguage : targetLanguage
+                ]
+              }
+              language={
+                expandedSide === "source" ? sourceLanguage : targetLanguage
+              }
+              otherLanguage={
+                expandedSide === "source" ? targetLanguage : sourceLanguage
+              }
+              darkMode={darkMode}
+              onClose={() => setExpandedSide(null)}
+              onSwitchLanguage={() =>
+                setExpandedSide(expandedSide === "source" ? "target" : "source")
+              }
+              talents={talents}
+            />
+          ) : (
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <WeaponCard
+                weapon={weaponsFullData[selectedWeapon][sourceLanguage]}
+                language={sourceLanguage}
+                darkMode={darkMode}
+                onClick={() => setExpandedSide("source")}
+              />
+              <WeaponCard
+                weapon={weaponsFullData[selectedWeapon][targetLanguage]}
                 language={targetLanguage}
                 darkMode={darkMode}
                 onClick={() => setExpandedSide("target")}
@@ -2104,6 +2542,195 @@ function EditorPage({ talents, darkMode, updateTalents }) {
   );
 }
 
+// Composant pour afficher une carte d'arme compacte
+function WeaponCard({ weapon, language, darkMode, onClick }) {
+  if (!weapon) {
+    return (
+      <div
+        className={`border-dashed rounded-xl p-4
+        backdrop-blur-md shadow-lg ${
+          darkMode
+            ? "bg-slate-800/20 border border-slate-700/50 text-amber-100/70"
+            : "bg-amber-100/20 border border-amber-200/50 text-amber-800/70"
+        }`}
+      >
+        <div className="p-4">
+          <h3 className="text-lg font-medium">
+            Weapon not available in {language}
+          </h3>
+        </div>
+      </div>
+    );
+  }
+
+  // Couleurs par type d'élément
+  const getElementColor = (element) => {
+    const colors = {
+      Fire: { dark: "text-red-400", light: "text-red-600", icon: "🔥" },
+      Water: { dark: "text-blue-400", light: "text-blue-600", icon: "💧" },
+      Thunder: { dark: "text-yellow-400", light: "text-yellow-600", icon: "⚡" },
+      Ice: { dark: "text-cyan-400", light: "text-cyan-600", icon: "❄️" },
+      Dragon: { dark: "text-purple-400", light: "text-purple-600", icon: "🐉" },
+      Poison: { dark: "text-fuchsia-400", light: "text-fuchsia-600", icon: "☠️" },
+      Sleep: { dark: "text-indigo-400", light: "text-indigo-600", icon: "💤" },
+      Paralysis: { dark: "text-amber-400", light: "text-amber-600", icon: "⚡" },
+      Blast: { dark: "text-orange-400", light: "text-orange-600", icon: "💥" },
+    };
+    return colors[element] || { dark: "text-gray-400", light: "text-gray-600", icon: "✨" };
+  };
+
+  const elementInfo = weapon.element ? getElementColor(weapon.element) : null;
+
+  return (
+    <div
+      className={`group rounded-xl overflow-hidden
+      backdrop-blur-md border
+      transition-all duration-500 hover:-translate-y-1 ${
+        darkMode
+          ? "bg-slate-800/30 border-slate-700/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+          : "bg-amber-100/30 border-amber-200/50 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)]"
+      }`}
+    >
+      <div
+        className={`border-b p-4 ${
+          darkMode
+            ? "bg-gradient-to-r from-slate-800/50 to-cyan-900/30 border-slate-700/50"
+            : "bg-gradient-to-r from-amber-100/50 to-orange-100/30 border-amber-200/50"
+        }`}
+      >
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
+              <span
+                className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+                backdrop-blur-md border ${
+                  darkMode
+                    ? "bg-slate-800/30 text-amber-100 border-slate-700/50"
+                    : "bg-amber-100/50 text-amber-900 border-amber-200/50"
+                }`}
+              >
+                {language}
+              </span>
+              {weapon.rarity && (
+                <span
+                  className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+                  backdrop-blur-md border ${
+                    darkMode
+                      ? "bg-purple-900/30 text-purple-300 border-purple-800/50"
+                      : "bg-purple-100/50 text-purple-700 border-purple-200/50"
+                  }`}
+                >
+                  ★{weapon.rarity}
+                </span>
+              )}
+            </div>
+            <h3
+              onClick={onClick}
+              className={`text-xl font-bold transition-colors duration-300 cursor-pointer ${
+                darkMode
+                  ? "text-amber-100 group-hover:text-cyan-300 hover:underline"
+                  : "text-amber-900 group-hover:text-amber-600 hover:underline"
+              }`}
+              title="Click to expand and see skill details"
+            >
+              {weapon.name}
+            </h3>
+            <div
+              className={`text-sm font-medium mt-1 ${
+                darkMode ? "text-amber-100/70" : "text-amber-800/70"
+              }`}
+            >
+              ⚔️ {weapon.type}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-4">
+        {/* Stats rapides */}
+        <div
+          className={`flex flex-wrap gap-3 mb-4 text-sm ${
+            darkMode ? "text-amber-100/90" : "text-amber-900/90"
+          }`}
+        >
+          <span className="flex items-center gap-1">
+            <span className="font-bold">⚔️ {weapon.attack}</span>
+          </span>
+          {weapon.affinity !== undefined && weapon.affinity !== 0 && (
+            <span
+              className={`flex items-center gap-1 ${
+                weapon.affinity > 0
+                  ? (darkMode ? "text-green-400" : "text-green-600")
+                  : (darkMode ? "text-red-400" : "text-red-600")
+              }`}
+            >
+              💫 {weapon.affinity > 0 ? "+" : ""}{weapon.affinity}%
+            </span>
+          )}
+          {weapon.element && elementInfo && (
+            <span
+              className={`flex items-center gap-1 ${
+                darkMode ? elementInfo.dark : elementInfo.light
+              }`}
+            >
+              {elementInfo.icon} {weapon.elementAttack}
+            </span>
+          )}
+        </div>
+
+        {/* Skills */}
+        {weapon.skills && weapon.skills.length > 0 && (
+          <div>
+            <h4
+              className={`font-semibold mb-2 text-sm uppercase tracking-wide ${
+                darkMode ? "text-amber-100/70" : "text-amber-800/70"
+              }`}
+            >
+              {getUIText("weaponSkills", language)} ({weapon.skills.length})
+            </h4>
+            <div
+              className={`space-y-2 rounded-xl backdrop-blur-md p-3 border ${
+                darkMode
+                  ? "bg-slate-800/20 border-slate-700/30"
+                  : "bg-amber-100/20 border-amber-200/30"
+              }`}
+            >
+              {weapon.skills.slice(0, 3).map(([skillName, level], index) => (
+                <div key={index} className="flex justify-between items-center text-sm">
+                  <span
+                    className={
+                      darkMode ? "text-amber-100/90" : "text-amber-900/90"
+                    }
+                  >
+                    {skillName}
+                  </span>
+                  <span
+                    className={`px-2 py-0.5 rounded-lg border ${
+                      darkMode
+                        ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/30"
+                        : "bg-amber-200/70 text-amber-800 border-amber-300/50"
+                    }`}
+                  >
+                    +{level}
+                  </span>
+                </div>
+              ))}
+              {weapon.skills.length > 3 && (
+                <div
+                  className={`text-xs text-center pt-1 ${
+                    darkMode ? "text-amber-100/50" : "text-amber-800/50"
+                  }`}
+                >
+                  +{weapon.skills.length - 3} {getUIText("more", language)}...
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function TalentCard({ talent, language, darkMode, onClick }) {
   if (!talent) {
     return (
@@ -2228,6 +2855,352 @@ function TalentCard({ talent, language, darkMode, onClick }) {
   );
 }
 
+// Composant pour afficher les détails d'une arme
+function ExpandedWeaponCard({
+  weapon,
+  language,
+  otherLanguage,
+  darkMode,
+  onClose,
+  onSwitchLanguage,
+  talents,
+}) {
+  if (!weapon) {
+    return (
+      <div
+        className={`border-dashed rounded-xl p-4
+        backdrop-blur-md shadow-lg ${
+          darkMode
+            ? "bg-slate-800/20 border border-slate-700/50 text-amber-100/70"
+            : "bg-amber-100/20 border border-amber-200/50 text-amber-800/70"
+        }`}
+      >
+        <div className="p-4">
+          <h3 className="text-lg font-medium">
+            Weapon not available in {language}
+          </h3>
+        </div>
+      </div>
+    );
+  }
+
+  // Fonction pour trouver un talent par son nom traduit
+  const findTalentBySkillName = (skillName) => {
+    for (const [talentKey, talentData] of Object.entries(talents)) {
+      if (talentData[language]?.name === skillName) {
+        return { key: talentKey, data: talentData };
+      }
+      // Chercher aussi dans d'autres langues si pas trouvé
+      for (const lang of Object.keys(talentData)) {
+        if (talentData[lang]?.name === skillName) {
+          return { key: talentKey, data: talentData };
+        }
+      }
+    }
+    return null;
+  };
+
+  // Couleurs par type d'élément
+  const getElementColor = (element) => {
+    const colors = {
+      Fire: { dark: "text-red-400", light: "text-red-600", icon: "🔥" },
+      Water: { dark: "text-blue-400", light: "text-blue-600", icon: "💧" },
+      Thunder: { dark: "text-yellow-400", light: "text-yellow-600", icon: "⚡" },
+      Ice: { dark: "text-cyan-400", light: "text-cyan-600", icon: "❄️" },
+      Dragon: { dark: "text-purple-400", light: "text-purple-600", icon: "🐉" },
+      Poison: { dark: "text-fuchsia-400", light: "text-fuchsia-600", icon: "☠️" },
+      Sleep: { dark: "text-indigo-400", light: "text-indigo-600", icon: "💤" },
+      Paralysis: { dark: "text-amber-400", light: "text-amber-600", icon: "⚡" },
+      Blast: { dark: "text-orange-400", light: "text-orange-600", icon: "💥" },
+    };
+    return colors[element] || { dark: "text-gray-400", light: "text-gray-600", icon: "✨" };
+  };
+
+  const elementInfo = weapon.element ? getElementColor(weapon.element) : null;
+
+  return (
+    <div
+      className={`group rounded-xl overflow-hidden col-span-2
+      backdrop-blur-md border
+      transition-all duration-500 animate-fadeIn ${
+        darkMode
+          ? "bg-slate-800/30 border-slate-700/50 shadow-[0_0_20px_rgba(6,182,212,0.2)]"
+          : "bg-amber-100/30 border-amber-200/50 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
+      }`}
+    >
+      {/* Header with weapon info */}
+      <div
+        className={`border-b p-4 ${
+          darkMode
+            ? "bg-gradient-to-r from-slate-800/50 to-cyan-900/30 border-slate-700/50"
+            : "bg-gradient-to-r from-amber-100/50 to-orange-100/30 border-amber-200/50"
+        }`}
+      >
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
+              <span
+                className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+                backdrop-blur-md border ${
+                  darkMode
+                    ? "bg-slate-800/30 text-amber-100 border-slate-700/50"
+                    : "bg-amber-100/50 text-amber-900 border-amber-200/50"
+                }`}
+              >
+                {language}
+              </span>
+
+              {/* Weapon type badge */}
+              <span
+                className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+                backdrop-blur-md border ${
+                  darkMode
+                    ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/50"
+                    : "bg-orange-100/50 text-orange-700 border-orange-200/50"
+                }`}
+              >
+                ⚔️ {weapon.type}
+              </span>
+
+              {/* Rarity badge */}
+              {weapon.rarity && (
+                <span
+                  className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+                  backdrop-blur-md border ${
+                    darkMode
+                      ? "bg-purple-900/30 text-purple-300 border-purple-800/50"
+                      : "bg-purple-100/50 text-purple-700 border-purple-200/50"
+                  }`}
+                >
+                  ★ {weapon.rarity}
+                </span>
+              )}
+
+              {/* Switch language button */}
+              <button
+                onClick={onSwitchLanguage}
+                className={`flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full
+                backdrop-blur-md border transition-all duration-300 ${
+                  darkMode
+                    ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/50 hover:bg-cyan-800/50"
+                    : "bg-amber-200/50 text-amber-800 border-amber-300/50 hover:bg-amber-300/50"
+                }`}
+                title={`${getUIText("switchTo", language)} ${otherLanguage}`}
+              >
+                <GlobeIcon />
+                <span>{getUIText("switchTo", language)} {otherLanguage}</span>
+              </button>
+            </div>
+
+            <h3
+              className={`text-2xl font-bold ${
+                darkMode ? "text-amber-100" : "text-amber-900"
+              }`}
+            >
+              {weapon.name}
+            </h3>
+          </div>
+
+          {/* Close button */}
+          <button
+            onClick={onClose}
+            className={`p-2 rounded-full backdrop-blur-md border transition-all duration-300 ${
+              darkMode
+                ? "bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/50"
+                : "bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50"
+            }`}
+            title="Close expanded view"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+      </div>
+
+      <div className="p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Left column: Stats */}
+          <div>
+            <h4
+              className={`font-semibold mb-3 text-sm uppercase tracking-wide ${
+                darkMode ? "text-amber-100/70" : "text-amber-800/70"
+              }`}
+            >
+              {getUIText("weaponStatsTitle", language)}
+            </h4>
+
+            <div
+              className={`rounded-xl backdrop-blur-md p-4 border space-y-3 ${
+                darkMode
+                  ? "bg-slate-800/20 border-slate-700/30"
+                  : "bg-amber-100/20 border-amber-200/30"
+              }`}
+            >
+              {/* Attack */}
+              <div className="flex justify-between items-center">
+                <span className={darkMode ? "text-amber-100/70" : "text-amber-800/70"}>
+                  ⚔️ {getUIText("attack", language)}
+                </span>
+                <span
+                  className={`font-bold text-lg ${
+                    darkMode ? "text-amber-100" : "text-amber-900"
+                  }`}
+                >
+                  {weapon.attack}
+                </span>
+              </div>
+
+              {/* Affinity */}
+              {weapon.affinity !== undefined && weapon.affinity !== 0 && (
+                <div className="flex justify-between items-center">
+                  <span className={darkMode ? "text-amber-100/70" : "text-amber-800/70"}>
+                    💫 {getUIText("affinity", language)}
+                  </span>
+                  <span
+                    className={`font-bold text-lg ${
+                      weapon.affinity > 0
+                        ? (darkMode ? "text-green-400" : "text-green-600")
+                        : (darkMode ? "text-red-400" : "text-red-600")
+                    }`}
+                  >
+                    {weapon.affinity > 0 ? "+" : ""}{weapon.affinity}%
+                  </span>
+                </div>
+              )}
+
+              {/* Element */}
+              {weapon.element && (
+                <div className="flex justify-between items-center">
+                  <span className={darkMode ? "text-amber-100/70" : "text-amber-800/70"}>
+                    {elementInfo?.icon} {weapon.element}
+                  </span>
+                  <span
+                    className={`font-bold text-lg ${
+                      darkMode ? elementInfo?.dark : elementInfo?.light
+                    }`}
+                  >
+                    {weapon.elementAttack}
+                  </span>
+                </div>
+              )}
+
+              {/* Slots */}
+              {weapon.slots && weapon.slots.length > 0 && (
+                <div className="flex justify-between items-center">
+                  <span className={darkMode ? "text-amber-100/70" : "text-amber-800/70"}>
+                    🔲 {getUIText("slots", language)}
+                  </span>
+                  <div className="flex gap-1">
+                    {weapon.slots.map((slot, i) => (
+                      <span
+                        key={i}
+                        className={`px-2 py-0.5 text-xs rounded-full border ${
+                          darkMode
+                            ? "bg-slate-700/50 text-amber-100 border-slate-600/50"
+                            : "bg-amber-200/50 text-amber-800 border-amber-300/50"
+                        }`}
+                      >
+                        Lv{slot}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Right column: Skills */}
+          <div>
+            <h4
+              className={`font-semibold mb-3 text-sm uppercase tracking-wide ${
+                darkMode ? "text-amber-100/70" : "text-amber-800/70"
+              }`}
+            >
+              {getUIText("weaponSkillsTitle", language)} ({weapon.skills?.length || 0})
+            </h4>
+
+            {weapon.skills && weapon.skills.length > 0 ? (
+              <div
+                className={`rounded-xl backdrop-blur-md border max-h-80 overflow-y-auto ${
+                  darkMode
+                    ? "bg-slate-800/20 border-slate-700/30"
+                    : "bg-amber-100/20 border-amber-200/30"
+                }`}
+              >
+                {weapon.skills.map(([skillName, level], index) => {
+                  const talentInfo = findTalentBySkillName(skillName);
+                  return (
+                    <div
+                      key={index}
+                      className={`p-3 border-b last:border-b-0 ${
+                        darkMode ? "border-slate-700/30" : "border-amber-200/30"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1 min-w-0">
+                          <div
+                            className={`font-medium text-sm ${
+                              darkMode ? "text-amber-100" : "text-amber-900"
+                            }`}
+                          >
+                            {skillName}
+                          </div>
+                          {talentInfo && (
+                            <div
+                              className={`text-xs mt-1 ${
+                                darkMode ? "text-amber-100/60" : "text-amber-800/60"
+                              }`}
+                            >
+                              {talentInfo.data[language]?.category || talentInfo.data.EN?.category}
+                            </div>
+                          )}
+                        </div>
+                        <span
+                          className={`px-3 py-1 text-sm font-bold rounded-lg border ${
+                            darkMode
+                              ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/30"
+                              : "bg-amber-200/70 text-amber-800 border-amber-300/50"
+                          }`}
+                        >
+                          +{level}
+                        </span>
+                      </div>
+
+                      {/* Afficher la description du skill si trouvé */}
+                      {talentInfo && talentInfo.data[language]?.levels && (
+                        <div
+                          className={`mt-2 text-xs italic ${
+                            darkMode ? "text-amber-100/50" : "text-amber-800/50"
+                          }`}
+                        >
+                          Lv{level}: {talentInfo.data[language]?.levels?.[`Lv ${level}`] || 
+                            talentInfo.data[language]?.levels?.[`Lv${level}`] ||
+                            talentInfo.data[language]?.levels?.[level] || ""}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div
+                className={`rounded-xl backdrop-blur-md p-4 border text-center ${
+                  darkMode
+                    ? "bg-slate-800/20 border-slate-700/30 text-amber-100/50"
+                    : "bg-amber-100/20 border-amber-200/30 text-amber-800/50"
+                }`}
+              >
+                <p className="text-sm">
+                  {uiTranslations[language]?.noSkillsData || "This weapon has no skills"}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ExpandedTalentCard({
   talent,
   language,
@@ -2299,10 +3272,10 @@ function ExpandedTalentCard({
                     ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/50 hover:bg-cyan-800/50"
                     : "bg-amber-200/50 text-amber-800 border-amber-300/50 hover:bg-amber-300/50"
                 }`}
-                title={`Switch to ${otherLanguage}`}
+                title={`${getUIText("switchTo", language)} ${otherLanguage}`}
               >
                 <GlobeIcon />
-                <span>Switch to {otherLanguage}</span>
+                <span>{getUIText("switchTo", language)} {otherLanguage}</span>
               </button>
             </div>
 
