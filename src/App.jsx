@@ -3,6 +3,161 @@
 import { useState, useEffect, useRef } from "react";
 //import talentsData from "./data/talents.json";
 import talentsData from "./data/skills.json";
+import skillSpecsData from "./data/skill-specifications.json";
+import weaponTypeTranslations from "./data/weapon-type-translations.json";
+
+// Traductions des types d'armures
+const armorTypeTranslations = {
+  Head: {
+    EN: "Head",
+    JP: "頭",
+    JA: "頭",
+    KO: "머리",
+    FR: "Tête",
+    IT: "Testa",
+    DE: "Kopf",
+    ES: "Cabeza",
+    RU: "Голова",
+    PL: "Głowa",
+    PT: "Cabeça",
+    AR: "الرأس",
+  },
+  Chest: {
+    EN: "Chest",
+    JP: "胴",
+    JA: "胴",
+    KO: "몸통",
+    FR: "Torse",
+    IT: "Torace",
+    DE: "Brust",
+    ES: "Torso",
+    RU: "Торс",
+    PL: "Tułów",
+    PT: "Peito",
+    AR: "الصدر",
+  },
+  Arms: {
+    EN: "Arms",
+    JP: "腕",
+    JA: "腕",
+    KO: "팔",
+    FR: "Bras",
+    IT: "Braccia",
+    DE: "Arme",
+    ES: "Brazos",
+    RU: "Руки",
+    PL: "Ramiona",
+    PT: "Braços",
+    AR: "الذراعين",
+  },
+  Waist: {
+    EN: "Waist",
+    JP: "腰",
+    JA: "腰",
+    KO: "허리",
+    FR: "Taille",
+    IT: "Vita",
+    DE: "Taille",
+    ES: "Cintura",
+    RU: "Пояс",
+    PL: "Pas",
+    PT: "Cintura",
+    AR: "الخصر",
+  },
+  Legs: {
+    EN: "Legs",
+    JP: "脚",
+    JA: "脚",
+    KO: "다리",
+    FR: "Jambes",
+    IT: "Gambe",
+    DE: "Beine",
+    ES: "Piernas",
+    RU: "Ноги",
+    PL: "Nogi",
+    PT: "Pernas",
+    AR: "الساقين",
+  },
+};
+
+// Traductions de l'interface utilisateur
+const uiTranslations = {
+  equipmentWithSkill: {
+    EN: "Equipment with this skill",
+    JP: "該当裝備",
+    JA: "このスキルを持つ装備",
+    KO: "이 스킬을 가진 장비",
+    FR: "Équipements avec ce talent",
+    IT: "Equipaggiamento con questa abilità",
+    DE: "Ausrüstung mit dieser Fertigkeit",
+    ES: "Equipamiento con esta habilidad",
+    RU: "Снаряжение с этим навыком",
+    PL: "Ekwipunek z tą umiejętnością",
+    PT: "Equipamento com esta habilidade",
+    AR: "المعدات مع هذه المهارة",
+  },
+  levels: {
+    EN: "Levels",
+    JP: "等級",
+    JA: "レベル",
+    KO: "레벨",
+    FR: "Niveaux",
+    IT: "Livelli",
+    DE: "Stufen",
+    ES: "Niveles",
+    RU: "Уровни",
+    PL: "Poziomy",
+    PT: "Níveis",
+    AR: "المستويات",
+  },
+  noEquipmentData: {
+    EN: "No equipment data available yet.",
+    JP: "裝備數據尚未加載。",
+    JA: "装備データがまだありません。",
+    KO: "장비 데이터가 아직 없습니다.",
+    FR: "Aucune donnée d'équipement disponible.",
+    IT: "Nessun dato equipaggiamento disponibile.",
+    DE: "Noch keine Ausrüstungsdaten verfügbar.",
+    ES: "No hay datos de equipamiento disponibles.",
+    RU: "Данные о снаряжении пока недоступны.",
+    PL: "Brak danych o ekwipunku.",
+    PT: "Nenhum dado de equipamento disponível.",
+    AR: "لا تتوفر بيانات المعدات بعد.",
+  },
+  runScrapingScript: {
+    EN: "Run the scraping script to fetch equipment details.",
+    JP: "執行腳本以獲取裝備詳情。",
+    JA: "スクリプトを実行して装備データを取得してください。",
+    KO: "스크립트를 실행하여 장비 데이터를 가져오세요.",
+    FR: "Exécutez le script pour récupérer les équipements.",
+    IT: "Esegui lo script per recuperare i dettagli.",
+    DE: "Führen Sie das Skript aus, um Ausrüstungsdetails abzurufen.",
+    ES: "Ejecute el script para obtener los detalles del equipo.",
+    RU: "Запустите скрипт для получения данных о снаряжении.",
+    PL: "Uruchom skrypt, aby pobrać dane o ekwipunku.",
+    PT: "Execute o script para obter os detalhes do equipamento.",
+    AR: "قم بتشغيل البرنامج النصي لجلب تفاصيل المعدات.",
+  },
+};
+
+// Fonction pour obtenir une traduction UI
+const getUIText = (key, lang) => {
+  return uiTranslations[key]?.[lang] || uiTranslations[key]?.EN || key;
+};
+
+// Fonction pour traduire un type d'équipement
+const translateEquipmentType = (type, lang) => {
+  // Vérifier d'abord dans les types d'armes
+  if (weaponTypeTranslations[type]?.[lang]) {
+    return weaponTypeTranslations[type][lang];
+  }
+  // Sinon vérifier dans les types d'armures
+  if (armorTypeTranslations[type]?.[lang]) {
+    return armorTypeTranslations[type][lang];
+  }
+  // Fallback: retourner le type original
+  return type;
+};
 
 // Icônes simplifiées
 const SearchIcon = () => (
@@ -145,6 +300,41 @@ const HomeIcon = () => (
   >
     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
     <polyline points="9 22 9 12 15 12 15 22"></polyline>
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+);
+
+const GlobeIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
   </svg>
 );
 
@@ -501,6 +691,7 @@ function TranslatorPage({ talents, darkMode }) {
   const [filteredTalents, setFilteredTalents] = useState([]);
   const [keyboardSelectedIndex, setKeyboardSelectedIndex] = useState(-1); // Pour la navigation au clavier
   const [showResults, setShowResults] = useState(false);
+  const [expandedSide, setExpandedSide] = useState(null); // "source" ou "target" ou null
 
   const searchInputRef = useRef(null);
   const resultsContainerRef = useRef(null);
@@ -835,20 +1026,46 @@ function TranslatorPage({ talents, darkMode }) {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <TalentCard
-              talent={talents[selectedTalent][sourceLanguage]}
+          {expandedSide ? (
+            <ExpandedTalentCard
+              talent={
+                talents[selectedTalent][
+                  expandedSide === "source" ? sourceLanguage : targetLanguage
+                ]
+              }
               talentKey={selectedTalent}
-              language={sourceLanguage}
+              language={
+                expandedSide === "source" ? sourceLanguage : targetLanguage
+              }
+              otherLanguage={
+                expandedSide === "source" ? targetLanguage : sourceLanguage
+              }
               darkMode={darkMode}
+              onClose={() => setExpandedSide(null)}
+              onSwitchLanguage={() =>
+                setExpandedSide(expandedSide === "source" ? "target" : "source")
+              }
+              availableLanguages={availableLanguages}
+              specs={skillSpecsData[selectedTalent]}
             />
-            <TalentCard
-              talent={talents[selectedTalent][targetLanguage]}
-              talentKey={selectedTalent}
-              language={targetLanguage}
-              darkMode={darkMode}
-            />
-          </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <TalentCard
+                talent={talents[selectedTalent][sourceLanguage]}
+                talentKey={selectedTalent}
+                language={sourceLanguage}
+                darkMode={darkMode}
+                onClick={() => setExpandedSide("source")}
+              />
+              <TalentCard
+                talent={talents[selectedTalent][targetLanguage]}
+                talentKey={selectedTalent}
+                language={targetLanguage}
+                darkMode={darkMode}
+                onClick={() => setExpandedSide("target")}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -1887,7 +2104,7 @@ function EditorPage({ talents, darkMode, updateTalents }) {
   );
 }
 
-function TalentCard({ talent, language, darkMode }) {
+function TalentCard({ talent, language, darkMode, onClick }) {
   if (!talent) {
     return (
       <div
@@ -1937,11 +2154,13 @@ function TalentCard({ talent, language, darkMode }) {
               {language}
             </span>
             <h3
-              className={`text-xl font-bold transition-colors duration-300 ${
+              onClick={onClick}
+              className={`text-xl font-bold transition-colors duration-300 cursor-pointer ${
                 darkMode
-                  ? "text-amber-100 group-hover:text-cyan-300"
-                  : "text-amber-900 group-hover:text-amber-600"
+                  ? "text-amber-100 group-hover:text-cyan-300 hover:underline"
+                  : "text-amber-900 group-hover:text-amber-600 hover:underline"
               }`}
+              title="Click to expand and see equipment details"
             >
               {talent.name}
             </h3>
@@ -2004,6 +2223,247 @@ function TalentCard({ talent, language, darkMode }) {
             </div>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+function ExpandedTalentCard({
+  talent,
+  language,
+  otherLanguage,
+  darkMode,
+  onClose,
+  onSwitchLanguage,
+  specs,
+}) {
+  if (!talent) {
+    return (
+      <div
+        className={`border-dashed rounded-xl p-4
+        backdrop-blur-md shadow-lg ${
+          darkMode
+            ? "bg-slate-800/20 border border-slate-700/50 text-amber-100/70"
+            : "bg-amber-100/20 border border-amber-200/50 text-amber-800/70"
+        }`}
+      >
+        <div className="p-4">
+          <h3 className="text-lg font-medium">
+            Translation not available in {language}
+          </h3>
+        </div>
+      </div>
+    );
+  }
+
+  const equipment = specs?.[language]?.equipment || [];
+
+  return (
+    <div
+      className={`group rounded-xl overflow-hidden col-span-2
+      backdrop-blur-md border
+      transition-all duration-500 animate-fadeIn ${
+        darkMode
+          ? "bg-slate-800/30 border-slate-700/50 shadow-[0_0_20px_rgba(6,182,212,0.2)]"
+          : "bg-amber-100/30 border-amber-200/50 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
+      }`}
+    >
+      {/* Header with close and switch buttons */}
+      <div
+        className={`border-b p-4 ${
+          darkMode
+            ? "bg-gradient-to-r from-slate-800/50 to-indigo-900/30 border-slate-700/50"
+            : "bg-gradient-to-r from-amber-100/50 to-orange-100/30 border-amber-200/50"
+        }`}
+      >
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-2">
+              <span
+                className={`inline-block px-2 py-1 text-xs font-medium rounded-full
+                backdrop-blur-md border ${
+                  darkMode
+                    ? "bg-slate-800/30 text-amber-100 border-slate-700/50"
+                    : "bg-amber-100/50 text-amber-900 border-amber-200/50"
+                }`}
+              >
+                {language}
+              </span>
+
+              {/* Switch language button */}
+              <button
+                onClick={onSwitchLanguage}
+                className={`flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full
+                backdrop-blur-md border transition-all duration-300 ${
+                  darkMode
+                    ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/50 hover:bg-cyan-800/50"
+                    : "bg-amber-200/50 text-amber-800 border-amber-300/50 hover:bg-amber-300/50"
+                }`}
+                title={`Switch to ${otherLanguage}`}
+              >
+                <GlobeIcon />
+                <span>Switch to {otherLanguage}</span>
+              </button>
+            </div>
+
+            <h3
+              className={`text-2xl font-bold ${
+                darkMode ? "text-amber-100" : "text-amber-900"
+              }`}
+            >
+              {talent.name}
+            </h3>
+            <div
+              className={`text-sm font-medium mt-1 ${
+                darkMode ? "text-amber-100/70" : "text-amber-800/70"
+              }`}
+            >
+              {talent.category}
+            </div>
+          </div>
+
+          {/* Close button */}
+          <button
+            onClick={onClose}
+            className={`p-2 rounded-full backdrop-blur-md border transition-all duration-300 ${
+              darkMode
+                ? "bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/50"
+                : "bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50"
+            }`}
+            title="Close expanded view"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+      </div>
+
+      <div className="p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Left column: Description and Levels */}
+          <div>
+            <p
+              className={`mb-6 text-sm leading-relaxed ${
+                darkMode ? "text-amber-100/90" : "text-amber-900/90"
+              }`}
+            >
+              {talent.description}
+            </p>
+
+            {Object.keys(talent.levels).length > 0 && (
+              <div>
+                <h3
+                  className={`font-semibold mb-2 text-sm uppercase tracking-wide ${
+                    darkMode ? "text-amber-100/70" : "text-amber-800/70"
+                  }`}
+                >
+                  {getUIText("levels", language)}
+                </h3>
+                <div
+                  className={`space-y-2 rounded-xl backdrop-blur-md p-3 border ${
+                    darkMode
+                      ? "bg-slate-800/20 border-slate-700/30"
+                      : "bg-amber-100/20 border-amber-200/30"
+                  }`}
+                >
+                  {Object.entries(talent.levels).map(([level, description]) => (
+                    <div key={level} className="flex gap-2 text-sm">
+                      <span
+                        className={`px-2 py-0.5 rounded-lg
+                        shrink-0 self-start mt-0.5 border ${
+                          darkMode
+                            ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/30"
+                            : "bg-amber-200/70 text-amber-800 border-amber-300/50"
+                        }`}
+                      >
+                        {level}
+                      </span>
+                      <span
+                        className={
+                          darkMode ? "text-amber-100/90" : "text-amber-900/90"
+                        }
+                      >
+                        {description}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Right column: Equipment list */}
+          <div>
+            <h3
+              className={`font-semibold mb-2 text-sm uppercase tracking-wide ${
+                darkMode ? "text-amber-100/70" : "text-amber-800/70"
+              }`}
+            >
+              {getUIText("equipmentWithSkill", language)}
+            </h3>
+
+            {equipment.length > 0 ? (
+              <div
+                className={`rounded-xl backdrop-blur-md border max-h-80 overflow-y-auto ${
+                  darkMode
+                    ? "bg-slate-800/20 border-slate-700/30"
+                    : "bg-amber-100/20 border-amber-200/30"
+                }`}
+              >
+                {equipment.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`p-3 border-b last:border-b-0 ${
+                      darkMode ? "border-slate-700/30" : "border-amber-200/30"
+                    }`}
+                  >
+                    <div className="flex items-start gap-2">
+                      <span
+                        className={`px-2 py-0.5 text-xs rounded-lg shrink-0 border ${
+                          darkMode
+                            ? "bg-indigo-900/30 text-indigo-300 border-indigo-800/30"
+                            : "bg-orange-200/70 text-orange-800 border-orange-300/50"
+                        }`}
+                      >
+                        {translateEquipmentType(item.type, language)}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <div
+                          className={`font-medium text-sm truncate ${
+                            darkMode ? "text-amber-100" : "text-amber-900"
+                          }`}
+                        >
+                          {item.name}
+                        </div>
+                        <div
+                          className={`text-xs mt-1 ${
+                            darkMode ? "text-amber-100/60" : "text-amber-800/60"
+                          }`}
+                        >
+                          {item.skills}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div
+                className={`rounded-xl backdrop-blur-md p-4 border text-center ${
+                  darkMode
+                    ? "bg-slate-800/20 border-slate-700/30 text-amber-100/50"
+                    : "bg-amber-100/20 border-amber-200/30 text-amber-800/50"
+                }`}
+              >
+                <p className="text-sm">
+                  {getUIText("noEquipmentData", language)}
+                </p>
+                <p className="text-xs mt-2">
+                  {getUIText("runScrapingScript", language)}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,6398 @@
+{
+  "kurenawi_ougi": {
+    "EN": {
+      "name": "Kurenawi Ougi",
+      "type": "Sword & Shield"
+    }
+  },
+  "guiding_artorius": {
+    "EN": {
+      "name": "Guiding Artorius",
+      "type": "Sword & Shield"
+    }
+  },
+  "shrouded_katalo": {
+    "EN": {
+      "name": "Shrouded Katalo",
+      "type": "Sword & Shield"
+    }
+  },
+  "esperanza_sword": {
+    "EN": {
+      "name": "Esperanza Sword",
+      "type": "Sword & Shield"
+    }
+  },
+  "blazing_mikal": {
+    "EN": {
+      "name": "Blazing Mikal",
+      "type": "Sword & Shield"
+    }
+  },
+  "verdoloto": {
+    "EN": {
+      "name": "Verdoloto",
+      "type": "Sword & Shield"
+    }
+  },
+  "g_guiding_artorius": {
+    "EN": {
+      "name": "G. Guiding Artorius",
+      "type": "Sword & Shield"
+    }
+  },
+  "cordayle_s_revocation": {
+    "EN": {
+      "name": "Cordayle's Revocation",
+      "type": "Sword & Shield"
+    }
+  },
+  "snow_lion_jambiya": {
+    "EN": {
+      "name": "Snow Lion Jambiya",
+      "type": "Sword & Shield"
+    }
+  },
+  "ajara_subinda": {
+    "EN": {
+      "name": "Ajara-Subinda",
+      "type": "Sword & Shield"
+    }
+  },
+  "viperine_saber": {
+    "EN": {
+      "name": "Viperine Saber",
+      "type": "Sword & Shield"
+    }
+  },
+  "fulgursword_guardiana": {
+    "EN": {
+      "name": "Fulgursword Guardiana",
+      "type": "Sword & Shield"
+    }
+  },
+  "chief_kukri": {
+    "EN": {
+      "name": "Chief Kukri",
+      "type": "Sword & Shield"
+    }
+  },
+  "sandsea_katduva": {
+    "EN": {
+      "name": "Sandsea Katduva",
+      "type": "Sword & Shield"
+    }
+  },
+  "nerskiller": {
+    "EN": {
+      "name": "Nerskiller",
+      "type": "Sword & Shield"
+    }
+  },
+  "queen_rapier": {
+    "EN": {
+      "name": "Queen Rapier",
+      "type": "Sword & Shield"
+    }
+  },
+  "corona": {
+    "EN": {
+      "name": "Corona",
+      "type": "Sword & Shield"
+    }
+  },
+  "melting_point": {
+    "EN": {
+      "name": "Melting Point",
+      "type": "Sword & Shield"
+    }
+  },
+  "precipice_mateptro": {
+    "EN": {
+      "name": "Precipice Mateptro",
+      "type": "Sword & Shield"
+    }
+  },
+  "smithy_s_pride": {
+    "EN": {
+      "name": "Smithy's Pride",
+      "type": "Sword & Shield"
+    }
+  },
+  "titan_s_armament": {
+    "EN": {
+      "name": "Titan's Armament",
+      "type": "Sword & Shield"
+    }
+  },
+  "firetrail_fornax": {
+    "EN": {
+      "name": "Firetrail Fornax",
+      "type": "Sword & Shield"
+    }
+  },
+  "lala_acanthopelm": {
+    "EN": {
+      "name": "Lala Acanthopelm",
+      "type": "Sword & Shield"
+    }
+  },
+  "jager_ankh": {
+    "EN": {
+      "name": "Jäger-Ankh",
+      "type": "Sword & Shield"
+    }
+  },
+  "kuara_clairsword": {
+    "EN": {
+      "name": "Kuara Clairsword",
+      "type": "Sword & Shield"
+    }
+  },
+  "zoh_mikal_i": {
+    "EN": {
+      "name": "Zoh Mikal I",
+      "type": "Sword & Shield"
+    }
+  },
+  "artian_sword_ii": {
+    "EN": {
+      "name": "Artian Sword II",
+      "type": "Sword & Shield"
+    }
+  },
+  "veldian_mucro_i": {
+    "EN": {
+      "name": "Veldian Mucro I",
+      "type": "Sword & Shield"
+    }
+  },
+  "chata_club_iv": {
+    "EN": {
+      "name": "Chata Club IV",
+      "type": "Sword & Shield"
+    }
+  },
+  "balahara_blade_iv": {
+    "EN": {
+      "name": "Balahara Blade IV",
+      "type": "Sword & Shield"
+    }
+  },
+  "scaly_sword_iii": {
+    "EN": {
+      "name": "Scaly Sword III",
+      "type": "Sword & Shield"
+    }
+  },
+  "princess_rapier_ii": {
+    "EN": {
+      "name": "Princess Rapier II",
+      "type": "Sword & Shield"
+    }
+  },
+  "jin_dhaklab_i": {
+    "EN": {
+      "name": "Jin Dhaklab I",
+      "type": "Sword & Shield"
+    }
+  },
+  "quematrice_cuchillo_iv": {
+    "EN": {
+      "name": "Quematrice Cuchillo IV",
+      "type": "Sword & Shield"
+    }
+  },
+  "barina_dague_iv": {
+    "EN": {
+      "name": "Barina Dague IV",
+      "type": "Sword & Shield"
+    }
+  },
+  "sucher_ankh_i": {
+    "EN": {
+      "name": "Sucher-Ankh I",
+      "type": "Sword & Shield"
+    }
+  },
+  "rey_kuara_iii": {
+    "EN": {
+      "name": "Rey Kuara III",
+      "type": "Sword & Shield"
+    }
+  },
+  "hope_sword_v": {
+    "EN": {
+      "name": "Hope Sword V",
+      "type": "Sword & Shield"
+    }
+  },
+  "hana_no_nagoriwo_i": {
+    "EN": {
+      "name": "Hana no Nagoriwo I",
+      "type": "Sword & Shield"
+    }
+  },
+  "artian_sword_i": {
+    "EN": {
+      "name": "Artian Sword I",
+      "type": "Sword & Shield"
+    }
+  },
+  "g_veldian_mucro_ii": {
+    "EN": {
+      "name": "G. Veldian Mucro II",
+      "type": "Sword & Shield"
+    }
+  },
+  "nihil_sword_ii": {
+    "EN": {
+      "name": "Nihil Sword II",
+      "type": "Sword & Shield"
+    }
+  },
+  "snow_white_jambiya_i": {
+    "EN": {
+      "name": "Snow-white Jambiya I",
+      "type": "Sword & Shield"
+    }
+  },
+  "ajara_saber_ii": {
+    "EN": {
+      "name": "Ajara Saber II",
+      "type": "Sword & Shield"
+    }
+  },
+  "venom_s_pain_ii": {
+    "EN": {
+      "name": "Venom's Pain II",
+      "type": "Sword & Shield"
+    }
+  },
+  "rending_fulgur_i": {
+    "EN": {
+      "name": "Rending Fulgur I",
+      "type": "Sword & Shield"
+    }
+  },
+  "bone_kukri_iv": {
+    "EN": {
+      "name": "Bone Kukri IV",
+      "type": "Sword & Shield"
+    }
+  },
+  "heat_edge_i": {
+    "EN": {
+      "name": "Heat Edge I",
+      "type": "Sword & Shield"
+    }
+  },
+  "albirath_edge_ii": {
+    "EN": {
+      "name": "Albirath Edge II",
+      "type": "Sword & Shield"
+    }
+  },
+  "iron_beater_iii": {
+    "EN": {
+      "name": "Iron Beater III",
+      "type": "Sword & Shield"
+    }
+  },
+  "gravios_syphos_i": {
+    "EN": {
+      "name": "Gravios Syphos I",
+      "type": "Sword & Shield"
+    }
+  },
+  "chata_club_iii": {
+    "EN": {
+      "name": "Chata Club III",
+      "type": "Sword & Shield"
+    }
+  },
+  "venom_s_pain_i": {
+    "EN": {
+      "name": "Venom's Pain I",
+      "type": "Sword & Shield"
+    }
+  },
+  "balahara_blade_iii": {
+    "EN": {
+      "name": "Balahara Blade III",
+      "type": "Sword & Shield"
+    }
+  },
+  "scaly_sword_ii": {
+    "EN": {
+      "name": "Scaly Sword II",
+      "type": "Sword & Shield"
+    }
+  },
+  "princess_rapier_i": {
+    "EN": {
+      "name": "Princess Rapier I",
+      "type": "Sword & Shield"
+    }
+  },
+  "quematrice_cuchillo_iii": {
+    "EN": {
+      "name": "Quematrice Cuchillo III",
+      "type": "Sword & Shield"
+    }
+  },
+  "barina_dague_iii": {
+    "EN": {
+      "name": "Barina Dague III",
+      "type": "Sword & Shield"
+    }
+  },
+  "rey_kuara_ii": {
+    "EN": {
+      "name": "Rey Kuara II",
+      "type": "Sword & Shield"
+    }
+  },
+  "hope_sword_iv": {
+    "EN": {
+      "name": "Hope Sword IV",
+      "type": "Sword & Shield"
+    }
+  },
+  "g_veldian_mucro_i": {
+    "EN": {
+      "name": "G. Veldian Mucro I",
+      "type": "Sword & Shield"
+    }
+  },
+  "nihil_sword_i": {
+    "EN": {
+      "name": "Nihil Sword I",
+      "type": "Sword & Shield"
+    }
+  },
+  "bone_kukri_iii": {
+    "EN": {
+      "name": "Bone Kukri III",
+      "type": "Sword & Shield"
+    }
+  },
+  "balahara_blade_ii": {
+    "EN": {
+      "name": "Balahara Blade II",
+      "type": "Sword & Shield"
+    }
+  },
+  "albirath_edge_i": {
+    "EN": {
+      "name": "Albirath Edge I",
+      "type": "Sword & Shield"
+    }
+  },
+  "iron_beater_ii": {
+    "EN": {
+      "name": "Iron Beater II",
+      "type": "Sword & Shield"
+    }
+  },
+  "chata_club_ii": {
+    "EN": {
+      "name": "Chata Club II",
+      "type": "Sword & Shield"
+    }
+  },
+  "ajara_saber_i": {
+    "EN": {
+      "name": "Ajara Saber I",
+      "type": "Sword & Shield"
+    }
+  },
+  "scaly_sword_i": {
+    "EN": {
+      "name": "Scaly Sword I",
+      "type": "Sword & Shield"
+    }
+  },
+  "quematrice_cuchillo_ii": {
+    "EN": {
+      "name": "Quematrice Cuchillo II",
+      "type": "Sword & Shield"
+    }
+  },
+  "barina_dague_ii": {
+    "EN": {
+      "name": "Barina Dague II",
+      "type": "Sword & Shield"
+    }
+  },
+  "rey_kuara_i": {
+    "EN": {
+      "name": "Rey Kuara I",
+      "type": "Sword & Shield"
+    }
+  },
+  "hope_sword_iii": {
+    "EN": {
+      "name": "Hope Sword III",
+      "type": "Sword & Shield"
+    }
+  },
+  "bone_kukri_ii": {
+    "EN": {
+      "name": "Bone Kukri II",
+      "type": "Sword & Shield"
+    }
+  },
+  "balahara_blade_i": {
+    "EN": {
+      "name": "Balahara Blade I",
+      "type": "Sword & Shield"
+    }
+  },
+  "iron_beater_i": {
+    "EN": {
+      "name": "Iron Beater I",
+      "type": "Sword & Shield"
+    }
+  },
+  "chata_club_i": {
+    "EN": {
+      "name": "Chata Club I",
+      "type": "Sword & Shield"
+    }
+  },
+  "bone_kukri_i": {
+    "EN": {
+      "name": "Bone Kukri I",
+      "type": "Sword & Shield"
+    }
+  },
+  "quematrice_cuchillo_i": {
+    "EN": {
+      "name": "Quematrice Cuchillo I",
+      "type": "Sword & Shield"
+    }
+  },
+  "barina_dague_i": {
+    "EN": {
+      "name": "Barina Dague I",
+      "type": "Sword & Shield"
+    }
+  },
+  "hope_sword_ii": {
+    "EN": {
+      "name": "Hope Sword II",
+      "type": "Sword & Shield"
+    }
+  },
+  "hope_sword_i": {
+    "EN": {
+      "name": "Hope Sword I",
+      "type": "Sword & Shield"
+    }
+  },
+  "parting_slice": {
+    "EN": {
+      "name": "Parting Slice",
+      "type": "Switch Axe"
+    }
+  },
+  "blazing_mahaiah": {
+    "EN": {
+      "name": "Blazing Mahaiah",
+      "type": "Switch Axe"
+    }
+  },
+  "indomitable_perceval": {
+    "EN": {
+      "name": "Indomitable Perceval",
+      "type": "Switch Axe"
+    }
+  },
+  "fleshhacker_yaogahaac": {
+    "EN": {
+      "name": "Fleshhacker Yaogahaac",
+      "type": "Switch Axe"
+    }
+  },
+  "esperanza_axe": {
+    "EN": {
+      "name": "Esperanza Axe",
+      "type": "Switch Axe"
+    }
+  },
+  "mundus_altus": {
+    "EN": {
+      "name": "Mundus Altus",
+      "type": "Switch Axe"
+    }
+  },
+  "eisengeist": {
+    "EN": {
+      "name": "Eisengeist",
+      "type": "Switch Axe"
+    }
+  },
+  "rath_blaze_splitter": {
+    "EN": {
+      "name": "Rath Blaze Splitter",
+      "type": "Switch Axe"
+    }
+  },
+  "fulgurswitch_guardiana": {
+    "EN": {
+      "name": "Fulgurswitch Guardiana",
+      "type": "Switch Axe"
+    }
+  },
+  "gri_r_s_landmaker": {
+    "EN": {
+      "name": "Gríðr's Landmaker",
+      "type": "Switch Axe"
+    }
+  },
+  "sawbill_axe": {
+    "EN": {
+      "name": "Sawbill Axe",
+      "type": "Switch Axe"
+    }
+  },
+  "g_indomitable_perceval": {
+    "EN": {
+      "name": "G. Indomitable Perceval",
+      "type": "Switch Axe"
+    }
+  },
+  "brutus_s_abolishment": {
+    "EN": {
+      "name": "Brutus's Abolishment",
+      "type": "Switch Axe"
+    }
+  },
+  "albirath_blaze_splitter": {
+    "EN": {
+      "name": "Albirath Blaze Splitter",
+      "type": "Switch Axe"
+    }
+  },
+  "gorehacker_urgahaac": {
+    "EN": {
+      "name": "Gorehacker Urgahaac",
+      "type": "Switch Axe"
+    }
+  },
+  "abaddonian_zhangyu": {
+    "EN": {
+      "name": "Abaddonian Zhangyu",
+      "type": "Switch Axe"
+    }
+  },
+  "windsunder_sakibami": {
+    "EN": {
+      "name": "Windsunder Sakibami",
+      "type": "Switch Axe"
+    }
+  },
+  "olacha_of_the_waves": {
+    "EN": {
+      "name": "Olacha-of-the-Waves",
+      "type": "Switch Axe"
+    }
+  },
+  "gundava_vandal": {
+    "EN": {
+      "name": "Gundava Vandal",
+      "type": "Switch Axe"
+    }
+  },
+  "lala_selenocosmi": {
+    "EN": {
+      "name": "Lala Selenocosmi",
+      "type": "Switch Axe"
+    }
+  },
+  "chrome_accelerator": {
+    "EN": {
+      "name": "Chrome Accelerator",
+      "type": "Switch Axe"
+    }
+  },
+  "bone_smasher": {
+    "EN": {
+      "name": "Bone Smasher",
+      "type": "Switch Axe"
+    }
+  },
+  "zoh_mahaiah_i": {
+    "EN": {
+      "name": "Zoh Mahaiah I",
+      "type": "Switch Axe"
+    }
+  },
+  "artian_saw_ii": {
+    "EN": {
+      "name": "Artian Saw II",
+      "type": "Switch Axe"
+    }
+  },
+  "veldian_securis_i": {
+    "EN": {
+      "name": "Veldian Securis I",
+      "type": "Switch Axe"
+    }
+  },
+  "eisenleib_i": {
+    "EN": {
+      "name": "Eisenleib I",
+      "type": "Switch Axe"
+    }
+  },
+  "dragonmaiden_axe_ii": {
+    "EN": {
+      "name": "Dragonmaiden Axe II",
+      "type": "Switch Axe"
+    }
+  },
+  "beak_axe_ii": {
+    "EN": {
+      "name": "Beak Axe II",
+      "type": "Switch Axe"
+    }
+  },
+  "nu_zhangyu_ii": {
+    "EN": {
+      "name": "Nu Zhangyu II",
+      "type": "Switch Axe"
+    }
+  },
+  "windsunder_axe_iii": {
+    "EN": {
+      "name": "Windsunder Axe III",
+      "type": "Switch Axe"
+    }
+  },
+  "uth_olacha_iii": {
+    "EN": {
+      "name": "Uth Olacha III",
+      "type": "Switch Axe"
+    }
+  },
+  "barina_hache_iv": {
+    "EN": {
+      "name": "Barina Hache IV",
+      "type": "Switch Axe"
+    }
+  },
+  "hope_axe_v": {
+    "EN": {
+      "name": "Hope Axe V",
+      "type": "Switch Axe"
+    }
+  },
+  "fond_farewell_i": {
+    "EN": {
+      "name": "Fond Farewell I",
+      "type": "Switch Axe"
+    }
+  },
+  "artian_saw_i": {
+    "EN": {
+      "name": "Artian Saw I",
+      "type": "Switch Axe"
+    }
+  },
+  "rath_flamesplitter_i": {
+    "EN": {
+      "name": "Rath Flamesplitter I",
+      "type": "Switch Axe"
+    }
+  },
+  "morphing_fulgur_i": {
+    "EN": {
+      "name": "Morphing Fulgur I",
+      "type": "Switch Axe"
+    }
+  },
+  "g_veldian_securis_ii": {
+    "EN": {
+      "name": "G. Veldian Securis II",
+      "type": "Switch Axe"
+    }
+  },
+  "nihil_switch_axe_ii": {
+    "EN": {
+      "name": "Nihil Switch Axe II",
+      "type": "Switch Axe"
+    }
+  },
+  "albirath_flamesplitter_ii": {
+    "EN": {
+      "name": "Albirath Flamesplitter II",
+      "type": "Switch Axe"
+    }
+  },
+  "dosha_gorehacker_ii": {
+    "EN": {
+      "name": "Dosha Gorehacker II",
+      "type": "Switch Axe"
+    }
+  },
+  "dosha_fleshhacker_iii": {
+    "EN": {
+      "name": "Dosha Fleshhacker III",
+      "type": "Switch Axe"
+    }
+  },
+  "iron_accelerator_iii": {
+    "EN": {
+      "name": "Iron Accelerator III",
+      "type": "Switch Axe"
+    }
+  },
+  "bone_axe_iv": {
+    "EN": {
+      "name": "Bone Axe IV",
+      "type": "Switch Axe"
+    }
+  },
+  "dragonmaiden_axe_i": {
+    "EN": {
+      "name": "Dragonmaiden Axe I",
+      "type": "Switch Axe"
+    }
+  },
+  "beak_axe_i": {
+    "EN": {
+      "name": "Beak Axe I",
+      "type": "Switch Axe"
+    }
+  },
+  "windsunder_axe_ii": {
+    "EN": {
+      "name": "Windsunder Axe II",
+      "type": "Switch Axe"
+    }
+  },
+  "uth_olacha_ii": {
+    "EN": {
+      "name": "Uth Olacha II",
+      "type": "Switch Axe"
+    }
+  },
+  "golba_vandal_ii": {
+    "EN": {
+      "name": "Golba Vandal II",
+      "type": "Switch Axe"
+    }
+  },
+  "barina_hache_iii": {
+    "EN": {
+      "name": "Barina Hache III",
+      "type": "Switch Axe"
+    }
+  },
+  "hope_axe_iv": {
+    "EN": {
+      "name": "Hope Axe IV",
+      "type": "Switch Axe"
+    }
+  },
+  "g_veldian_securis_i": {
+    "EN": {
+      "name": "G. Veldian Securis I",
+      "type": "Switch Axe"
+    }
+  },
+  "nihil_switch_axe_i": {
+    "EN": {
+      "name": "Nihil Switch Axe I",
+      "type": "Switch Axe"
+    }
+  },
+  "albirath_flamesplitter_i": {
+    "EN": {
+      "name": "Albirath Flamesplitter I",
+      "type": "Switch Axe"
+    }
+  },
+  "dosha_gorehacker_i": {
+    "EN": {
+      "name": "Dosha Gorehacker I",
+      "type": "Switch Axe"
+    }
+  },
+  "nu_zhangyu_i": {
+    "EN": {
+      "name": "Nu Zhangyu I",
+      "type": "Switch Axe"
+    }
+  },
+  "dosha_fleshhacker_ii": {
+    "EN": {
+      "name": "Dosha Fleshhacker II",
+      "type": "Switch Axe"
+    }
+  },
+  "iron_accelerator_ii": {
+    "EN": {
+      "name": "Iron Accelerator II",
+      "type": "Switch Axe"
+    }
+  },
+  "bone_axe_iii": {
+    "EN": {
+      "name": "Bone Axe III",
+      "type": "Switch Axe"
+    }
+  },
+  "windsunder_axe_i": {
+    "EN": {
+      "name": "Windsunder Axe I",
+      "type": "Switch Axe"
+    }
+  },
+  "uth_olacha_i": {
+    "EN": {
+      "name": "Uth Olacha I",
+      "type": "Switch Axe"
+    }
+  },
+  "barina_hache_ii": {
+    "EN": {
+      "name": "Barina Hache II",
+      "type": "Switch Axe"
+    }
+  },
+  "hope_axe_iii": {
+    "EN": {
+      "name": "Hope Axe III",
+      "type": "Switch Axe"
+    }
+  },
+  "dosha_fleshhacker_i": {
+    "EN": {
+      "name": "Dosha Fleshhacker I",
+      "type": "Switch Axe"
+    }
+  },
+  "golba_vandal_i": {
+    "EN": {
+      "name": "Golba Vandal I",
+      "type": "Switch Axe"
+    }
+  },
+  "iron_accelerator_i": {
+    "EN": {
+      "name": "Iron Accelerator I",
+      "type": "Switch Axe"
+    }
+  },
+  "bone_axe_ii": {
+    "EN": {
+      "name": "Bone Axe II",
+      "type": "Switch Axe"
+    }
+  },
+  "barina_hache_i": {
+    "EN": {
+      "name": "Barina Hache I",
+      "type": "Switch Axe"
+    }
+  },
+  "bone_axe_i": {
+    "EN": {
+      "name": "Bone Axe I",
+      "type": "Switch Axe"
+    }
+  },
+  "hope_axe_ii": {
+    "EN": {
+      "name": "Hope Axe II",
+      "type": "Switch Axe"
+    }
+  },
+  "hope_axe_i": {
+    "EN": {
+      "name": "Hope Axe I",
+      "type": "Switch Axe"
+    }
+  },
+  "tamonowo": {
+    "EN": {
+      "name": "Tamonowo",
+      "type": "Long Sword"
+    }
+  },
+  "righteous_lancelot": {
+    "EN": {
+      "name": "Righteous Lancelot",
+      "type": "Long Sword"
+    }
+  },
+  "fatecleaver_kimkemush": {
+    "EN": {
+      "name": "Fatecleaver Kimkemush",
+      "type": "Long Sword"
+    }
+  },
+  "esperanza_edge": {
+    "EN": {
+      "name": "Esperanza Edge",
+      "type": "Long Sword"
+    }
+  },
+  "blazing_rafel": {
+    "EN": {
+      "name": "Blazing Rafel",
+      "type": "Long Sword"
+    }
+  },
+  "dimensius": {
+    "EN": {
+      "name": "Dimensius",
+      "type": "Long Sword"
+    }
+  },
+  "g_righteous_lancelot": {
+    "EN": {
+      "name": "G. Righteous Lancelot",
+      "type": "Long Sword"
+    }
+  },
+  "gravecleaver_urkemush": {
+    "EN": {
+      "name": "Gravecleaver Urkemush",
+      "type": "Long Sword"
+    }
+  },
+  "blangongaberge": {
+    "EN": {
+      "name": "Blangongaberge",
+      "type": "Long Sword"
+    }
+  },
+  "rompo_mytoxin": {
+    "EN": {
+      "name": "Rompo Mytoxin",
+      "type": "Long Sword"
+    }
+  },
+  "fulgurblade_guardiana": {
+    "EN": {
+      "name": "Fulgurblade Guardiana",
+      "type": "Long Sword"
+    }
+  },
+  "hard_bone_shotel": {
+    "EN": {
+      "name": "Hard Bone Shotel",
+      "type": "Long Sword"
+    }
+  },
+  "blood_scream": {
+    "EN": {
+      "name": "Blood Scream",
+      "type": "Long Sword"
+    }
+  },
+  "lala_ornithocton": {
+    "EN": {
+      "name": "Lala Ornithocton",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_holly": {
+    "EN": {
+      "name": "Wyvern Blade \"Holly\"",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_maple": {
+    "EN": {
+      "name": "Wyvern Blade \"Maple\"",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_lily": {
+    "EN": {
+      "name": "Wyvern Blade \"Lily\"",
+      "type": "Long Sword"
+    }
+  },
+  "keen_edge": {
+    "EN": {
+      "name": "Keen Edge",
+      "type": "Long Sword"
+    }
+  },
+  "firetrail_ferrocere": {
+    "EN": {
+      "name": "Firetrail Ferrocere",
+      "type": "Long Sword"
+    }
+  },
+  "windclaw_kiribami": {
+    "EN": {
+      "name": "Windclaw Kiribami",
+      "type": "Long Sword"
+    }
+  },
+  "khlunda_of_the_waves": {
+    "EN": {
+      "name": "Khlunda-of-the-Waves",
+      "type": "Long Sword"
+    }
+  },
+  "stahlrecht": {
+    "EN": {
+      "name": "Stahlrecht",
+      "type": "Long Sword"
+    }
+  },
+  "tonitrus_clairblade": {
+    "EN": {
+      "name": "Tonitrus Clairblade",
+      "type": "Long Sword"
+    }
+  },
+  "zoh_rafel_i": {
+    "EN": {
+      "name": "Zoh Rafel I",
+      "type": "Long Sword"
+    }
+  },
+  "artian_saber_ii": {
+    "EN": {
+      "name": "Artian Saber II",
+      "type": "Long Sword"
+    }
+  },
+  "veldian_ensis_i": {
+    "EN": {
+      "name": "Veldian Ensis I",
+      "type": "Long Sword"
+    }
+  },
+  "rompo_hacker_iii": {
+    "EN": {
+      "name": "Rompo Hacker III",
+      "type": "Long Sword"
+    }
+  },
+  "blood_cry_iii": {
+    "EN": {
+      "name": "Blood Cry III",
+      "type": "Long Sword"
+    }
+  },
+  "barina_flamberge_iv": {
+    "EN": {
+      "name": "Barina Flamberge IV",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_verde_ii": {
+    "EN": {
+      "name": "Wyvern Blade \"Verde\" II",
+      "type": "Long Sword"
+    }
+  },
+  "quematrice_lima_iv": {
+    "EN": {
+      "name": "Quematrice Lima IV",
+      "type": "Long Sword"
+    }
+  },
+  "windclaw_blade_iii": {
+    "EN": {
+      "name": "Windclaw Blade III",
+      "type": "Long Sword"
+    }
+  },
+  "uth_khlunda_iii": {
+    "EN": {
+      "name": "Uth Khlunda III",
+      "type": "Long Sword"
+    }
+  },
+  "stahlfakt_i": {
+    "EN": {
+      "name": "Stahlfakt I",
+      "type": "Long Sword"
+    }
+  },
+  "rey_tonitrus_iii": {
+    "EN": {
+      "name": "Rey Tonitrus III",
+      "type": "Long Sword"
+    }
+  },
+  "hope_edge_v": {
+    "EN": {
+      "name": "Hope Edge V",
+      "type": "Long Sword"
+    }
+  },
+  "kakaru_kumo_naki_i": {
+    "EN": {
+      "name": "Kakaru Kumo Naki I",
+      "type": "Long Sword"
+    }
+  },
+  "artian_saber_i": {
+    "EN": {
+      "name": "Artian Saber I",
+      "type": "Long Sword"
+    }
+  },
+  "g_veldian_ensis_ii": {
+    "EN": {
+      "name": "G. Veldian Ensis II",
+      "type": "Long Sword"
+    }
+  },
+  "dosha_gravecleaver_ii": {
+    "EN": {
+      "name": "Dosha Gravecleaver II",
+      "type": "Long Sword"
+    }
+  },
+  "blanberge_i": {
+    "EN": {
+      "name": "Blanberge I",
+      "type": "Long Sword"
+    }
+  },
+  "dosha_fatecleaver_iii": {
+    "EN": {
+      "name": "Dosha Fatecleaver III",
+      "type": "Long Sword"
+    }
+  },
+  "gnashing_fulgur_i": {
+    "EN": {
+      "name": "Gnashing Fulgur I",
+      "type": "Long Sword"
+    }
+  },
+  "bone_shotel_iv": {
+    "EN": {
+      "name": "Bone Shotel IV",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_blood_i": {
+    "EN": {
+      "name": "Wyvern Blade \"Blood\" I",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_ash_ii": {
+    "EN": {
+      "name": "Wyvern Blade \"Ash\" II",
+      "type": "Long Sword"
+    }
+  },
+  "iron_katana_iii": {
+    "EN": {
+      "name": "Iron Katana III",
+      "type": "Long Sword"
+    }
+  },
+  "rompo_hacker_ii": {
+    "EN": {
+      "name": "Rompo Hacker II",
+      "type": "Long Sword"
+    }
+  },
+  "blood_cry_ii": {
+    "EN": {
+      "name": "Blood Cry II",
+      "type": "Long Sword"
+    }
+  },
+  "barina_flamberge_iii": {
+    "EN": {
+      "name": "Barina Flamberge III",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_verde_i": {
+    "EN": {
+      "name": "Wyvern Blade \"Verde\" I",
+      "type": "Long Sword"
+    }
+  },
+  "quematrice_lima_iii": {
+    "EN": {
+      "name": "Quematrice Lima III",
+      "type": "Long Sword"
+    }
+  },
+  "windclaw_blade_ii": {
+    "EN": {
+      "name": "Windclaw Blade II",
+      "type": "Long Sword"
+    }
+  },
+  "uth_khlunda_ii": {
+    "EN": {
+      "name": "Uth Khlunda II",
+      "type": "Long Sword"
+    }
+  },
+  "rey_tonitrus_ii": {
+    "EN": {
+      "name": "Rey Tonitrus II",
+      "type": "Long Sword"
+    }
+  },
+  "hope_edge_iv": {
+    "EN": {
+      "name": "Hope Edge IV",
+      "type": "Long Sword"
+    }
+  },
+  "g_veldian_ensis_i": {
+    "EN": {
+      "name": "G. Veldian Ensis I",
+      "type": "Long Sword"
+    }
+  },
+  "dosha_gravecleaver_i": {
+    "EN": {
+      "name": "Dosha Gravecleaver I",
+      "type": "Long Sword"
+    }
+  },
+  "dosha_fatecleaver_ii": {
+    "EN": {
+      "name": "Dosha Fatecleaver II",
+      "type": "Long Sword"
+    }
+  },
+  "bone_shotel_iii": {
+    "EN": {
+      "name": "Bone Shotel III",
+      "type": "Long Sword"
+    }
+  },
+  "wyvern_blade_ash_i": {
+    "EN": {
+      "name": "Wyvern Blade \"Ash\" I",
+      "type": "Long Sword"
+    }
+  },
+  "iron_katana_ii": {
+    "EN": {
+      "name": "Iron Katana II",
+      "type": "Long Sword"
+    }
+  },
+  "rompo_hacker_i": {
+    "EN": {
+      "name": "Rompo Hacker I",
+      "type": "Long Sword"
+    }
+  },
+  "blood_cry_i": {
+    "EN": {
+      "name": "Blood Cry I",
+      "type": "Long Sword"
+    }
+  },
+  "barina_flamberge_ii": {
+    "EN": {
+      "name": "Barina Flamberge II",
+      "type": "Long Sword"
+    }
+  },
+  "quematrice_lima_ii": {
+    "EN": {
+      "name": "Quematrice Lima II",
+      "type": "Long Sword"
+    }
+  },
+  "windclaw_blade_i": {
+    "EN": {
+      "name": "Windclaw Blade I",
+      "type": "Long Sword"
+    }
+  },
+  "uth_khlunda_i": {
+    "EN": {
+      "name": "Uth Khlunda I",
+      "type": "Long Sword"
+    }
+  },
+  "rey_tonitrus_i": {
+    "EN": {
+      "name": "Rey Tonitrus I",
+      "type": "Long Sword"
+    }
+  },
+  "hope_edge_iii": {
+    "EN": {
+      "name": "Hope Edge III",
+      "type": "Long Sword"
+    }
+  },
+  "dosha_fatecleaver_i": {
+    "EN": {
+      "name": "Dosha Fatecleaver I",
+      "type": "Long Sword"
+    }
+  },
+  "bone_shotel_ii": {
+    "EN": {
+      "name": "Bone Shotel II",
+      "type": "Long Sword"
+    }
+  },
+  "iron_katana_i": {
+    "EN": {
+      "name": "Iron Katana I",
+      "type": "Long Sword"
+    }
+  },
+  "bone_shotel_i": {
+    "EN": {
+      "name": "Bone Shotel I",
+      "type": "Long Sword"
+    }
+  },
+  "barina_flamberge_i": {
+    "EN": {
+      "name": "Barina Flamberge I",
+      "type": "Long Sword"
+    }
+  },
+  "quematrice_lima_i": {
+    "EN": {
+      "name": "Quematrice Lima I",
+      "type": "Long Sword"
+    }
+  },
+  "hope_edge_ii": {
+    "EN": {
+      "name": "Hope Edge II",
+      "type": "Long Sword"
+    }
+  },
+  "hope_edge_i": {
+    "EN": {
+      "name": "Hope Edge I",
+      "type": "Long Sword"
+    }
+  },
+  "nifl_mist": {
+    "EN": {
+      "name": "Nifl Mist",
+      "type": "Light Bowgun"
+    }
+  },
+  "expiating_caius": {
+    "EN": {
+      "name": "Expiating Caius",
+      "type": "Light Bowgun"
+    }
+  },
+  "faithbreaker_leibolkule": {
+    "EN": {
+      "name": "Faithbreaker Leibolkule",
+      "type": "Light Bowgun"
+    }
+  },
+  "esperanza_rifle": {
+    "EN": {
+      "name": "Esperanza Rifle",
+      "type": "Light Bowgun"
+    }
+  },
+  "blazing_kaiah": {
+    "EN": {
+      "name": "Blazing Kaiah",
+      "type": "Light Bowgun"
+    }
+  },
+  "animilater": {
+    "EN": {
+      "name": "Animilater",
+      "type": "Light Bowgun"
+    }
+  },
+  "g_expiating_caius": {
+    "EN": {
+      "name": "G. Expiating Caius",
+      "type": "Light Bowgun"
+    }
+  },
+  "windshear_uchibami": {
+    "EN": {
+      "name": "Windshear Uchibami",
+      "type": "Light Bowgun"
+    }
+  },
+  "abaddonian_chobotnice": {
+    "EN": {
+      "name": "Abaddonian Chobotnice",
+      "type": "Light Bowgun"
+    }
+  },
+  "ajara_angaja": {
+    "EN": {
+      "name": "Ajara-Angaja",
+      "type": "Light Bowgun"
+    }
+  },
+  "bequeathed_animus": {
+    "EN": {
+      "name": "Bequeathed Animus",
+      "type": "Light Bowgun"
+    }
+  },
+  "fulgursnipe_guardiana": {
+    "EN": {
+      "name": "Fulgursnipe Guardiana",
+      "type": "Light Bowgun"
+    }
+  },
+  "power_rifle": {
+    "EN": {
+      "name": "Power Rifle",
+      "type": "Light Bowgun"
+    }
+  },
+  "valkyrie_flame": {
+    "EN": {
+      "name": "Valkyrie Flame",
+      "type": "Light Bowgun"
+    }
+  },
+  "tail_catapult": {
+    "EN": {
+      "name": "Tail Catapult",
+      "type": "Light Bowgun"
+    }
+  },
+  "combat_conga": {
+    "EN": {
+      "name": "Combat Conga",
+      "type": "Light Bowgun"
+    }
+  },
+  "rathling_phoenix": {
+    "EN": {
+      "name": "Rathling Phoenix",
+      "type": "Light Bowgun"
+    }
+  },
+  "white_rathling_phoenix": {
+    "EN": {
+      "name": "White Rathling Phoenix",
+      "type": "Light Bowgun"
+    }
+  },
+  "titan_panzer": {
+    "EN": {
+      "name": "Titan Panzer",
+      "type": "Light Bowgun"
+    }
+  },
+  "high_chain_blitz": {
+    "EN": {
+      "name": "High Chain Blitz",
+      "type": "Light Bowgun"
+    }
+  },
+  "gigasbreaker_urbolkule": {
+    "EN": {
+      "name": "Gigasbreaker Urbolkule",
+      "type": "Light Bowgun"
+    }
+  },
+  "szelatya_clairgun": {
+    "EN": {
+      "name": "Szelatya Clairgun",
+      "type": "Light Bowgun"
+    }
+  },
+  "wahnschleuder": {
+    "EN": {
+      "name": "Wahnschleuder",
+      "type": "Light Bowgun"
+    }
+  },
+  "kut_ku_counterattack": {
+    "EN": {
+      "name": "Kut-Ku Counterattack",
+      "type": "Light Bowgun"
+    }
+  },
+  "zoh_kaiah_i": {
+    "EN": {
+      "name": "Zoh Kaiah I",
+      "type": "Light Bowgun"
+    }
+  },
+  "artian_blaster_ii": {
+    "EN": {
+      "name": "Artian Blaster II",
+      "type": "Light Bowgun"
+    }
+  },
+  "veldian_impetum_i": {
+    "EN": {
+      "name": "Veldian Impetum I",
+      "type": "Light Bowgun"
+    }
+  },
+  "windshear_light_iii": {
+    "EN": {
+      "name": "Windshear Light III",
+      "type": "Light Bowgun"
+    }
+  },
+  "nu_chobotnice_ii": {
+    "EN": {
+      "name": "Nu Chobotnice II",
+      "type": "Light Bowgun"
+    }
+  },
+  "valkyrie_fire_ii": {
+    "EN": {
+      "name": "Valkyrie Fire II",
+      "type": "Light Bowgun"
+    }
+  },
+  "rey_szelatya_iii": {
+    "EN": {
+      "name": "Rey Szelatya III",
+      "type": "Light Bowgun"
+    }
+  },
+  "faulnisschleuder_i": {
+    "EN": {
+      "name": "Fäulnisschleuder I",
+      "type": "Light Bowgun"
+    }
+  },
+  "kut_ku_anger_ii": {
+    "EN": {
+      "name": "Kut-Ku Anger II",
+      "type": "Light Bowgun"
+    }
+  },
+  "hope_rifle_v": {
+    "EN": {
+      "name": "Hope Rifle V",
+      "type": "Light Bowgun"
+    }
+  },
+  "desolate_mist_i": {
+    "EN": {
+      "name": "Desolate Mist I",
+      "type": "Light Bowgun"
+    }
+  },
+  "artian_blaster_i": {
+    "EN": {
+      "name": "Artian Blaster I",
+      "type": "Light Bowgun"
+    }
+  },
+  "g_veldian_impetum_ii": {
+    "EN": {
+      "name": "G. Veldian Impetum II",
+      "type": "Light Bowgun"
+    }
+  },
+  "ajara_shellgun_ii": {
+    "EN": {
+      "name": "Ajara Shellgun II",
+      "type": "Light Bowgun"
+    }
+  },
+  "chthonian_gunfire_ii": {
+    "EN": {
+      "name": "Chthonian Gunfire II",
+      "type": "Light Bowgun"
+    }
+  },
+  "felling_fulgur_i": {
+    "EN": {
+      "name": "Felling Fulgur I",
+      "type": "Light Bowgun"
+    }
+  },
+  "hunter_s_rifle_iv": {
+    "EN": {
+      "name": "Hunter's Rifle IV",
+      "type": "Light Bowgun"
+    }
+  },
+  "tail_string_i": {
+    "EN": {
+      "name": "Tail String I",
+      "type": "Light Bowgun"
+    }
+  },
+  "rathling_gun_i": {
+    "EN": {
+      "name": "Rathling Gun I",
+      "type": "Light Bowgun"
+    }
+  },
+  "g_rathling_gun_ii": {
+    "EN": {
+      "name": "G. Rathling Gun II",
+      "type": "Light Bowgun"
+    }
+  },
+  "titan_launcher_i": {
+    "EN": {
+      "name": "Titan Launcher I",
+      "type": "Light Bowgun"
+    }
+  },
+  "chain_blitz_iii": {
+    "EN": {
+      "name": "Chain Blitz III",
+      "type": "Light Bowgun"
+    }
+  },
+  "dosha_gigasbreaker_ii": {
+    "EN": {
+      "name": "Dosha Gigasbreaker II",
+      "type": "Light Bowgun"
+    }
+  },
+  "dosha_faithbreaker_iii": {
+    "EN": {
+      "name": "Dosha Faithbreaker III",
+      "type": "Light Bowgun"
+    }
+  },
+  "windshear_light_ii": {
+    "EN": {
+      "name": "Windshear Light II",
+      "type": "Light Bowgun"
+    }
+  },
+  "valkyrie_fire_i": {
+    "EN": {
+      "name": "Valkyrie Fire I",
+      "type": "Light Bowgun"
+    }
+  },
+  "assault_conga_ii": {
+    "EN": {
+      "name": "Assault Conga II",
+      "type": "Light Bowgun"
+    }
+  },
+  "rey_szelatya_ii": {
+    "EN": {
+      "name": "Rey Szelatya II",
+      "type": "Light Bowgun"
+    }
+  },
+  "kut_ku_anger_i": {
+    "EN": {
+      "name": "Kut-Ku Anger I",
+      "type": "Light Bowgun"
+    }
+  },
+  "hope_rifle_iv": {
+    "EN": {
+      "name": "Hope Rifle IV",
+      "type": "Light Bowgun"
+    }
+  },
+  "g_veldian_impetum_i": {
+    "EN": {
+      "name": "G. Veldian Impetum I",
+      "type": "Light Bowgun"
+    }
+  },
+  "nu_chobotnice_i": {
+    "EN": {
+      "name": "Nu Chobotnice I",
+      "type": "Light Bowgun"
+    }
+  },
+  "chthonian_gunfire_i": {
+    "EN": {
+      "name": "Chthonian Gunfire I",
+      "type": "Light Bowgun"
+    }
+  },
+  "hunter_s_rifle_iii": {
+    "EN": {
+      "name": "Hunter's Rifle III",
+      "type": "Light Bowgun"
+    }
+  },
+  "g_rathling_gun_i": {
+    "EN": {
+      "name": "G. Rathling Gun I",
+      "type": "Light Bowgun"
+    }
+  },
+  "chain_blitz_ii": {
+    "EN": {
+      "name": "Chain Blitz II",
+      "type": "Light Bowgun"
+    }
+  },
+  "dosha_gigasbreaker_i": {
+    "EN": {
+      "name": "Dosha Gigasbreaker I",
+      "type": "Light Bowgun"
+    }
+  },
+  "dosha_faithbreaker_ii": {
+    "EN": {
+      "name": "Dosha Faithbreaker II",
+      "type": "Light Bowgun"
+    }
+  },
+  "windshear_light_i": {
+    "EN": {
+      "name": "Windshear Light I",
+      "type": "Light Bowgun"
+    }
+  },
+  "ajara_shellgun_i": {
+    "EN": {
+      "name": "Ajara Shellgun I",
+      "type": "Light Bowgun"
+    }
+  },
+  "rey_szelatya_i": {
+    "EN": {
+      "name": "Rey Szelatya I",
+      "type": "Light Bowgun"
+    }
+  },
+  "hope_rifle_iii": {
+    "EN": {
+      "name": "Hope Rifle III",
+      "type": "Light Bowgun"
+    }
+  },
+  "hunter_s_rifle_ii": {
+    "EN": {
+      "name": "Hunter's Rifle II",
+      "type": "Light Bowgun"
+    }
+  },
+  "assault_conga_i": {
+    "EN": {
+      "name": "Assault Conga I",
+      "type": "Light Bowgun"
+    }
+  },
+  "chain_blitz_i": {
+    "EN": {
+      "name": "Chain Blitz I",
+      "type": "Light Bowgun"
+    }
+  },
+  "dosha_faithbreaker_i": {
+    "EN": {
+      "name": "Dosha Faithbreaker I",
+      "type": "Light Bowgun"
+    }
+  },
+  "hunter_s_rifle_i": {
+    "EN": {
+      "name": "Hunter's Rifle I",
+      "type": "Light Bowgun"
+    }
+  },
+  "hope_rifle_ii": {
+    "EN": {
+      "name": "Hope Rifle II",
+      "type": "Light Bowgun"
+    }
+  },
+  "hope_rifle_i": {
+    "EN": {
+      "name": "Hope Rifle I",
+      "type": "Light Bowgun"
+    }
+  },
+  "babel_spear": {
+    "EN": {
+      "name": "Babel Spear",
+      "type": "Lance"
+    }
+  },
+  "kimi_ga_kiru": {
+    "EN": {
+      "name": "Kimi Ga Kiru",
+      "type": "Lance"
+    }
+  },
+  "blazing_sital": {
+    "EN": {
+      "name": "Blazing Sital",
+      "type": "Lance"
+    }
+  },
+  "purifying_beaumains": {
+    "EN": {
+      "name": "Purifying Beaumains",
+      "type": "Lance"
+    }
+  },
+  "fierceborer_dubhanith": {
+    "EN": {
+      "name": "Fierceborer Dubhanith",
+      "type": "Lance"
+    }
+  },
+  "esperanza_lance": {
+    "EN": {
+      "name": "Esperanza Lance",
+      "type": "Lance"
+    }
+  },
+  "skyscraper": {
+    "EN": {
+      "name": "Skyscraper",
+      "type": "Lance"
+    }
+  },
+  "fieberschild": {
+    "EN": {
+      "name": "Fieberschild",
+      "type": "Lance"
+    }
+  },
+  "spear_of_prominence": {
+    "EN": {
+      "name": "Spear of Prominence",
+      "type": "Lance"
+    }
+  },
+  "gravios_lance": {
+    "EN": {
+      "name": "Gravios Lance",
+      "type": "Lance"
+    }
+  },
+  "g_purifying_beaumains": {
+    "EN": {
+      "name": "G. Purifying Beaumains",
+      "type": "Lance"
+    }
+  },
+  "bequeathed_regret": {
+    "EN": {
+      "name": "Bequeathed Regret",
+      "type": "Lance"
+    }
+  },
+  "shining_pillar": {
+    "EN": {
+      "name": "Shining Pillar",
+      "type": "Lance"
+    }
+  },
+  "gloomborer_urshanith": {
+    "EN": {
+      "name": "Gloomborer Urshanith",
+      "type": "Lance"
+    }
+  },
+  "abaddonian_osminog": {
+    "EN": {
+      "name": "Abaddonian Osminog",
+      "type": "Lance"
+    }
+  },
+  "windpierce_tsukibami": {
+    "EN": {
+      "name": "Windpierce Tsukibami",
+      "type": "Lance"
+    }
+  },
+  "indra_clairlance": {
+    "EN": {
+      "name": "Indra Clairlance",
+      "type": "Lance"
+    }
+  },
+  "rompo_tetrotox": {
+    "EN": {
+      "name": "Rompo Tetrotox",
+      "type": "Lance"
+    }
+  },
+  "sandsea_prallaya": {
+    "EN": {
+      "name": "Sandsea Prallaya",
+      "type": "Lance"
+    }
+  },
+  "lala_aviculari": {
+    "EN": {
+      "name": "Lala Aviculari",
+      "type": "Lance"
+    }
+  },
+  "firetrail_kaminet": {
+    "EN": {
+      "name": "Firetrail Kaminet",
+      "type": "Lance"
+    }
+  },
+  "chrome_lance": {
+    "EN": {
+      "name": "Chrome Lance",
+      "type": "Lance"
+    }
+  },
+  "hard_bone_lance": {
+    "EN": {
+      "name": "Hard Bone Lance",
+      "type": "Lance"
+    }
+  },
+  "zoh_sital_i": {
+    "EN": {
+      "name": "Zoh Sital I",
+      "type": "Lance"
+    }
+  },
+  "artian_lance_ii": {
+    "EN": {
+      "name": "Artian Lance II",
+      "type": "Lance"
+    }
+  },
+  "veldian_lancea_i": {
+    "EN": {
+      "name": "Veldian Lancea I",
+      "type": "Lance"
+    }
+  },
+  "eiferschild_i": {
+    "EN": {
+      "name": "Eiferschild I",
+      "type": "Lance"
+    }
+  },
+  "nu_osminog_ii": {
+    "EN": {
+      "name": "Nu Osminog II",
+      "type": "Lance"
+    }
+  },
+  "windpierce_lance_iii": {
+    "EN": {
+      "name": "Windpierce Lance III",
+      "type": "Lance"
+    }
+  },
+  "rey_indra_iii": {
+    "EN": {
+      "name": "Rey Indra III",
+      "type": "Lance"
+    }
+  },
+  "rompo_piercer_iii": {
+    "EN": {
+      "name": "Rompo Piercer III",
+      "type": "Lance"
+    }
+  },
+  "balahara_lance_iv": {
+    "EN": {
+      "name": "Balahara Lance IV",
+      "type": "Lance"
+    }
+  },
+  "barina_sarissa_iv": {
+    "EN": {
+      "name": "Barina Sarissa IV",
+      "type": "Lance"
+    }
+  },
+  "quematrice_lanza_iv": {
+    "EN": {
+      "name": "Quematrice Lanza IV",
+      "type": "Lance"
+    }
+  },
+  "hope_lance_v": {
+    "EN": {
+      "name": "Hope Lance V",
+      "type": "Lance"
+    }
+  },
+  "paladin_lance_i": {
+    "EN": {
+      "name": "Paladin Lance I",
+      "type": "Lance"
+    }
+  },
+  "hana_mo_hana_nare_i": {
+    "EN": {
+      "name": "Hana Mo Hana Nare I",
+      "type": "Lance"
+    }
+  },
+  "artian_lance_i": {
+    "EN": {
+      "name": "Artian Lance I",
+      "type": "Lance"
+    }
+  },
+  "red_tail_i": {
+    "EN": {
+      "name": "Red Tail I",
+      "type": "Lance"
+    }
+  },
+  "gravios_spear_i": {
+    "EN": {
+      "name": "Gravios Spear I",
+      "type": "Lance"
+    }
+  },
+  "g_veldian_lancea_ii": {
+    "EN": {
+      "name": "G. Veldian Lancea II",
+      "type": "Lance"
+    }
+  },
+  "chthonian_firewheel_ii": {
+    "EN": {
+      "name": "Chthonian Firewheel II",
+      "type": "Lance"
+    }
+  },
+  "albirath_tail_ii": {
+    "EN": {
+      "name": "Albirath Tail II",
+      "type": "Lance"
+    }
+  },
+  "dosha_gloomborer_ii": {
+    "EN": {
+      "name": "Dosha Gloomborer II",
+      "type": "Lance"
+    }
+  },
+  "dosha_fierceborer_iii": {
+    "EN": {
+      "name": "Dosha Fierceborer III",
+      "type": "Lance"
+    }
+  },
+  "chrome_drill_iii": {
+    "EN": {
+      "name": "Chrome Drill III",
+      "type": "Lance"
+    }
+  },
+  "bone_lance_iv": {
+    "EN": {
+      "name": "Bone Lance IV",
+      "type": "Lance"
+    }
+  },
+  "windpierce_lance_ii": {
+    "EN": {
+      "name": "Windpierce Lance II",
+      "type": "Lance"
+    }
+  },
+  "rey_indra_ii": {
+    "EN": {
+      "name": "Rey Indra II",
+      "type": "Lance"
+    }
+  },
+  "rompo_piercer_ii": {
+    "EN": {
+      "name": "Rompo Piercer II",
+      "type": "Lance"
+    }
+  },
+  "balahara_lance_iii": {
+    "EN": {
+      "name": "Balahara Lance III",
+      "type": "Lance"
+    }
+  },
+  "barina_sarissa_iii": {
+    "EN": {
+      "name": "Barina Sarissa III",
+      "type": "Lance"
+    }
+  },
+  "quematrice_lanza_iii": {
+    "EN": {
+      "name": "Quematrice Lanza III",
+      "type": "Lance"
+    }
+  },
+  "hope_lance_iv": {
+    "EN": {
+      "name": "Hope Lance IV",
+      "type": "Lance"
+    }
+  },
+  "g_veldian_lancea_i": {
+    "EN": {
+      "name": "G. Veldian Lancea I",
+      "type": "Lance"
+    }
+  },
+  "chthonian_firewheel_i": {
+    "EN": {
+      "name": "Chthonian Firewheel I",
+      "type": "Lance"
+    }
+  },
+  "albirath_tail_i": {
+    "EN": {
+      "name": "Albirath Tail I",
+      "type": "Lance"
+    }
+  },
+  "dosha_gloomborer_i": {
+    "EN": {
+      "name": "Dosha Gloomborer I",
+      "type": "Lance"
+    }
+  },
+  "nu_osminog_i": {
+    "EN": {
+      "name": "Nu Osminog I",
+      "type": "Lance"
+    }
+  },
+  "dosha_fierceborer_ii": {
+    "EN": {
+      "name": "Dosha Fierceborer II",
+      "type": "Lance"
+    }
+  },
+  "balahara_lance_ii": {
+    "EN": {
+      "name": "Balahara Lance II",
+      "type": "Lance"
+    }
+  },
+  "chrome_drill_ii": {
+    "EN": {
+      "name": "Chrome Drill II",
+      "type": "Lance"
+    }
+  },
+  "bone_lance_iii": {
+    "EN": {
+      "name": "Bone Lance III",
+      "type": "Lance"
+    }
+  },
+  "windpierce_lance_i": {
+    "EN": {
+      "name": "Windpierce Lance I",
+      "type": "Lance"
+    }
+  },
+  "rey_indra_i": {
+    "EN": {
+      "name": "Rey Indra I",
+      "type": "Lance"
+    }
+  },
+  "rompo_piercer_i": {
+    "EN": {
+      "name": "Rompo Piercer I",
+      "type": "Lance"
+    }
+  },
+  "barina_sarissa_ii": {
+    "EN": {
+      "name": "Barina Sarissa II",
+      "type": "Lance"
+    }
+  },
+  "quematrice_lanza_ii": {
+    "EN": {
+      "name": "Quematrice Lanza II",
+      "type": "Lance"
+    }
+  },
+  "hope_lance_iii": {
+    "EN": {
+      "name": "Hope Lance III",
+      "type": "Lance"
+    }
+  },
+  "dosha_fierceborer_i": {
+    "EN": {
+      "name": "Dosha Fierceborer I",
+      "type": "Lance"
+    }
+  },
+  "balahara_lance_i": {
+    "EN": {
+      "name": "Balahara Lance I",
+      "type": "Lance"
+    }
+  },
+  "chrome_drill_i": {
+    "EN": {
+      "name": "Chrome Drill I",
+      "type": "Lance"
+    }
+  },
+  "bone_lance_ii": {
+    "EN": {
+      "name": "Bone Lance II",
+      "type": "Lance"
+    }
+  },
+  "barina_sarissa_i": {
+    "EN": {
+      "name": "Barina Sarissa I",
+      "type": "Lance"
+    }
+  },
+  "quematrice_lanza_i": {
+    "EN": {
+      "name": "Quematrice Lanza I",
+      "type": "Lance"
+    }
+  },
+  "bone_lance_i": {
+    "EN": {
+      "name": "Bone Lance I",
+      "type": "Lance"
+    }
+  },
+  "hope_lance_ii": {
+    "EN": {
+      "name": "Hope Lance II",
+      "type": "Lance"
+    }
+  },
+  "hope_lance_i": {
+    "EN": {
+      "name": "Hope Lance I",
+      "type": "Lance"
+    }
+  },
+  "curved_naganagi": {
+    "EN": {
+      "name": "Curved Naganagi",
+      "type": "Insect Glaive"
+    }
+  },
+  "blazing_katir": {
+    "EN": {
+      "name": "Blazing Katir",
+      "type": "Insect Glaive"
+    }
+  },
+  "enduring_tor": {
+    "EN": {
+      "name": "Enduring Tor",
+      "type": "Insect Glaive"
+    }
+  },
+  "shrouded_laphoka": {
+    "EN": {
+      "name": "Shrouded Laphoka",
+      "type": "Insect Glaive"
+    }
+  },
+  "esperanza_glaive": {
+    "EN": {
+      "name": "Esperanza Glaive",
+      "type": "Insect Glaive"
+    }
+  },
+  "diprielcha": {
+    "EN": {
+      "name": "Diprielcha",
+      "type": "Insect Glaive"
+    }
+  },
+  "leumundsgift": {
+    "EN": {
+      "name": "Leumundsgift",
+      "type": "Insect Glaive"
+    }
+  },
+  "firedance_rathmaul": {
+    "EN": {
+      "name": "Firedance Rathmaul",
+      "type": "Insect Glaive"
+    }
+  },
+  "gravordius": {
+    "EN": {
+      "name": "Gravordius",
+      "type": "Insect Glaive"
+    }
+  },
+  "immaculate_blizzard": {
+    "EN": {
+      "name": "Immaculate Blizzard",
+      "type": "Insect Glaive"
+    }
+  },
+  "fulgurglaive_guardiana": {
+    "EN": {
+      "name": "Fulgurglaive Guardiana",
+      "type": "Insect Glaive"
+    }
+  },
+  "queen_regalia": {
+    "EN": {
+      "name": "Queen Regalia",
+      "type": "Insect Glaive"
+    }
+  },
+  "toucan_pike": {
+    "EN": {
+      "name": "Toucan Pike",
+      "type": "Insect Glaive"
+    }
+  },
+  "g_enduring_tor": {
+    "EN": {
+      "name": "G. Enduring Tor",
+      "type": "Insect Glaive"
+    }
+  },
+  "bequeathed_testament": {
+    "EN": {
+      "name": "Bequeathed Testament",
+      "type": "Insect Glaive"
+    }
+  },
+  "precipice_geumgel": {
+    "EN": {
+      "name": "Precipice Geumgel",
+      "type": "Insect Glaive"
+    }
+  },
+  "alabaster_rathmaul": {
+    "EN": {
+      "name": "Alabaster Rathmaul",
+      "type": "Insect Glaive"
+    }
+  },
+  "ajara_bhadra": {
+    "EN": {
+      "name": "Ajara-Bhadra",
+      "type": "Insect Glaive"
+    }
+  },
+  "stealth_glaive_redux": {
+    "EN": {
+      "name": "Stealth Glaive Redux",
+      "type": "Insect Glaive"
+    }
+  },
+  "halilintar_clairglaive": {
+    "EN": {
+      "name": "Halilintar Clairglaive",
+      "type": "Insect Glaive"
+    }
+  },
+  "sandsea_uchaltiya": {
+    "EN": {
+      "name": "Sandsea Uchaltiya",
+      "type": "Insect Glaive"
+    }
+  },
+  "lala_stromatopelm": {
+    "EN": {
+      "name": "Lala Stromatopelm",
+      "type": "Insect Glaive"
+    }
+  },
+  "chrome_gale": {
+    "EN": {
+      "name": "Chrome Gale",
+      "type": "Insect Glaive"
+    }
+  },
+  "aerial_glaive": {
+    "EN": {
+      "name": "Aerial Glaive",
+      "type": "Insect Glaive"
+    }
+  },
+  "zoh_katir_i": {
+    "EN": {
+      "name": "Zoh Katir I",
+      "type": "Insect Glaive"
+    }
+  },
+  "artian_glaive_ii": {
+    "EN": {
+      "name": "Artian Glaive II",
+      "type": "Insect Glaive"
+    }
+  },
+  "veldian_trudis_i": {
+    "EN": {
+      "name": "Veldian Trudis I",
+      "type": "Insect Glaive"
+    }
+  },
+  "leumundslist": {
+    "EN": {
+      "name": "Leumundslist",
+      "type": "Insect Glaive"
+    }
+  },
+  "princess_regalia_ii": {
+    "EN": {
+      "name": "Princess Regalia II",
+      "type": "Insect Glaive"
+    }
+  },
+  "kut_ku_pike_ii": {
+    "EN": {
+      "name": "Kut-Ku Pike II",
+      "type": "Insect Glaive"
+    }
+  },
+  "jin_dhachhad": {
+    "EN": {
+      "name": "Jin Dhachhad",
+      "type": "Insect Glaive"
+    }
+  },
+  "stealth_glaive_iii": {
+    "EN": {
+      "name": "Stealth Glaive III",
+      "type": "Insect Glaive"
+    }
+  },
+  "rey_halilintar_iii": {
+    "EN": {
+      "name": "Rey Halilintar III",
+      "type": "Insect Glaive"
+    }
+  },
+  "balahara_glaive_iv": {
+    "EN": {
+      "name": "Balahara Glaive IV",
+      "type": "Insect Glaive"
+    }
+  },
+  "barina_perche_iv": {
+    "EN": {
+      "name": "Barina Perche IV",
+      "type": "Insect Glaive"
+    }
+  },
+  "chata_glaive_iv": {
+    "EN": {
+      "name": "Chata Glaive IV",
+      "type": "Insect Glaive"
+    }
+  },
+  "hope_glaive_v": {
+    "EN": {
+      "name": "Hope Glaive V",
+      "type": "Insect Glaive"
+    }
+  },
+  "fox_halberd_i": {
+    "EN": {
+      "name": "Fox Halberd I",
+      "type": "Insect Glaive"
+    }
+  },
+  "artian_glaive_i": {
+    "EN": {
+      "name": "Artian Glaive I",
+      "type": "Insect Glaive"
+    }
+  },
+  "rathmaul_i": {
+    "EN": {
+      "name": "Rathmaul I",
+      "type": "Insect Glaive"
+    }
+  },
+  "graviafaren_i": {
+    "EN": {
+      "name": "Graviafaren I",
+      "type": "Insect Glaive"
+    }
+  },
+  "blizzard_glaive_i": {
+    "EN": {
+      "name": "Blizzard Glaive I",
+      "type": "Insect Glaive"
+    }
+  },
+  "rising_fulgur_i": {
+    "EN": {
+      "name": "Rising Fulgur I",
+      "type": "Insect Glaive"
+    }
+  },
+  "g_veldian_trudis_ii": {
+    "EN": {
+      "name": "G. Veldian Trudis II",
+      "type": "Insect Glaive"
+    }
+  },
+  "chthonian_vajra_ii": {
+    "EN": {
+      "name": "Chthonian Vajra II",
+      "type": "Insect Glaive"
+    }
+  },
+  "guardian_rathmaul_ii": {
+    "EN": {
+      "name": "Guardian Rathmaul II",
+      "type": "Insect Glaive"
+    }
+  },
+  "ajara_trident_ii": {
+    "EN": {
+      "name": "Ajara Trident II",
+      "type": "Insect Glaive"
+    }
+  },
+  "iron_gale_iii": {
+    "EN": {
+      "name": "Iron Gale III",
+      "type": "Insect Glaive"
+    }
+  },
+  "bone_staff_iv": {
+    "EN": {
+      "name": "Bone Staff IV",
+      "type": "Insect Glaive"
+    }
+  },
+  "princess_regalia_i": {
+    "EN": {
+      "name": "Princess Regalia I",
+      "type": "Insect Glaive"
+    }
+  },
+  "kut_ku_pike_i": {
+    "EN": {
+      "name": "Kut-Ku Pike I",
+      "type": "Insect Glaive"
+    }
+  },
+  "stealth_glaive_ii": {
+    "EN": {
+      "name": "Stealth Glaive II",
+      "type": "Insect Glaive"
+    }
+  },
+  "rey_halilintar_ii": {
+    "EN": {
+      "name": "Rey Halilintar II",
+      "type": "Insect Glaive"
+    }
+  },
+  "balahara_glaive_iii": {
+    "EN": {
+      "name": "Balahara Glaive III",
+      "type": "Insect Glaive"
+    }
+  },
+  "barina_perche_iii": {
+    "EN": {
+      "name": "Barina Perche III",
+      "type": "Insect Glaive"
+    }
+  },
+  "chata_glaive_iii": {
+    "EN": {
+      "name": "Chata Glaive III",
+      "type": "Insect Glaive"
+    }
+  },
+  "hope_glaive_iv": {
+    "EN": {
+      "name": "Hope Glaive IV",
+      "type": "Insect Glaive"
+    }
+  },
+  "g_veldian_trudis_i": {
+    "EN": {
+      "name": "G. Veldian Trudis I",
+      "type": "Insect Glaive"
+    }
+  },
+  "chthonian_vajra_i": {
+    "EN": {
+      "name": "Chthonian Vajra I",
+      "type": "Insect Glaive"
+    }
+  },
+  "guardian_rathmaul_i": {
+    "EN": {
+      "name": "Guardian Rathmaul I",
+      "type": "Insect Glaive"
+    }
+  },
+  "balahara_glaive_ii": {
+    "EN": {
+      "name": "Balahara Glaive II",
+      "type": "Insect Glaive"
+    }
+  },
+  "iron_gale_ii": {
+    "EN": {
+      "name": "Iron Gale II",
+      "type": "Insect Glaive"
+    }
+  },
+  "bone_staff_iii": {
+    "EN": {
+      "name": "Bone Staff III",
+      "type": "Insect Glaive"
+    }
+  },
+  "ajara_trident_i": {
+    "EN": {
+      "name": "Ajara Trident I",
+      "type": "Insect Glaive"
+    }
+  },
+  "stealth_glaive_i": {
+    "EN": {
+      "name": "Stealth Glaive I",
+      "type": "Insect Glaive"
+    }
+  },
+  "rey_halilintar_i": {
+    "EN": {
+      "name": "Rey Halilintar I",
+      "type": "Insect Glaive"
+    }
+  },
+  "barina_perche_ii": {
+    "EN": {
+      "name": "Barina Perche II",
+      "type": "Insect Glaive"
+    }
+  },
+  "chata_glaive_ii": {
+    "EN": {
+      "name": "Chata Glaive II",
+      "type": "Insect Glaive"
+    }
+  },
+  "hope_glaive_iii": {
+    "EN": {
+      "name": "Hope Glaive III",
+      "type": "Insect Glaive"
+    }
+  },
+  "balahara_glaive_i": {
+    "EN": {
+      "name": "Balahara Glaive I",
+      "type": "Insect Glaive"
+    }
+  },
+  "iron_gale_i": {
+    "EN": {
+      "name": "Iron Gale I",
+      "type": "Insect Glaive"
+    }
+  },
+  "bone_staff_ii": {
+    "EN": {
+      "name": "Bone Staff II",
+      "type": "Insect Glaive"
+    }
+  },
+  "barina_perche_i": {
+    "EN": {
+      "name": "Barina Perche I",
+      "type": "Insect Glaive"
+    }
+  },
+  "chata_glaive_i": {
+    "EN": {
+      "name": "Chata Glaive I",
+      "type": "Insect Glaive"
+    }
+  },
+  "bone_staff_i": {
+    "EN": {
+      "name": "Bone Staff I",
+      "type": "Insect Glaive"
+    }
+  },
+  "hope_glaive_ii": {
+    "EN": {
+      "name": "Hope Glaive II",
+      "type": "Insect Glaive"
+    }
+  },
+  "hope_glaive_i": {
+    "EN": {
+      "name": "Hope Glaive I",
+      "type": "Insect Glaive"
+    }
+  },
+  "summoning_bell": {
+    "EN": {
+      "name": "Summoning Bell",
+      "type": "Hunting Horn"
+    }
+  },
+  "blazing_gariel": {
+    "EN": {
+      "name": "Blazing Gariel",
+      "type": "Hunting Horn"
+    }
+  },
+  "resounding_galahad": {
+    "EN": {
+      "name": "Resounding Galahad",
+      "type": "Hunting Horn"
+    }
+  },
+  "farsounder_honga": {
+    "EN": {
+      "name": "Farsounder Honga",
+      "type": "Hunting Horn"
+    }
+  },
+  "esperanza_horn": {
+    "EN": {
+      "name": "Esperanza Horn",
+      "type": "Hunting Horn"
+    }
+  },
+  "omiltika": {
+    "EN": {
+      "name": "Omiltika",
+      "type": "Hunting Horn"
+    }
+  },
+  "glass_royale": {
+    "EN": {
+      "name": "Glass Royale",
+      "type": "Hunting Horn"
+    }
+  },
+  "gramklang": {
+    "EN": {
+      "name": "Gramklang",
+      "type": "Hunting Horn"
+    }
+  },
+  "rathalos_feroce": {
+    "EN": {
+      "name": "Rathalos Feroce",
+      "type": "Hunting Horn"
+    }
+  },
+  "fulgurhowl_guardiana": {
+    "EN": {
+      "name": "Fulgurhowl Guardiana",
+      "type": "Hunting Horn"
+    }
+  },
+  "queen_chordmaker": {
+    "EN": {
+      "name": "Queen Chordmaker",
+      "type": "Hunting Horn"
+    }
+  },
+  "crazed_melody": {
+    "EN": {
+      "name": "Crazed Melody",
+      "type": "Hunting Horn"
+    }
+  },
+  "kut_ku_cantabile": {
+    "EN": {
+      "name": "Kut-Ku Cantabile",
+      "type": "Hunting Horn"
+    }
+  },
+  "g_resounding_galahad": {
+    "EN": {
+      "name": "G. Resounding Galahad",
+      "type": "Hunting Horn"
+    }
+  },
+  "kae_jin_s_lament": {
+    "EN": {
+      "name": "Kae-Jin's Lament",
+      "type": "Hunting Horn"
+    }
+  },
+  "precipice_kovira": {
+    "EN": {
+      "name": "Precipice Kovira",
+      "type": "Hunting Horn"
+    }
+  },
+  "g_rathalos_feroce": {
+    "EN": {
+      "name": "G. Rathalos Feroce",
+      "type": "Hunting Horn"
+    }
+  },
+  "grudgesounder_urga": {
+    "EN": {
+      "name": "Grudgesounder Urga",
+      "type": "Hunting Horn"
+    }
+  },
+  "ajara_jivaka": {
+    "EN": {
+      "name": "Ajara-Jivaka",
+      "type": "Hunting Horn"
+    }
+  },
+  "perun_clairhorn": {
+    "EN": {
+      "name": "Perun Clairhorn",
+      "type": "Hunting Horn"
+    }
+  },
+  "sandsea_ghantisil": {
+    "EN": {
+      "name": "Sandsea Ghantisil",
+      "type": "Hunting Horn"
+    }
+  },
+  "war_conga": {
+    "EN": {
+      "name": "War Conga",
+      "type": "Hunting Horn"
+    }
+  },
+  "great_bagpipe": {
+    "EN": {
+      "name": "Great Bagpipe",
+      "type": "Hunting Horn"
+    }
+  },
+  "hardened_bone_horn": {
+    "EN": {
+      "name": "Hardened Bone Horn",
+      "type": "Hunting Horn"
+    }
+  },
+  "zoh_gariel_i": {
+    "EN": {
+      "name": "Zoh Gariel I",
+      "type": "Hunting Horn"
+    }
+  },
+  "artian_sounder_ii": {
+    "EN": {
+      "name": "Artian Sounder II",
+      "type": "Hunting Horn"
+    }
+  },
+  "sonic_horn_iv": {
+    "EN": {
+      "name": "Sonic Horn IV",
+      "type": "Hunting Horn"
+    }
+  },
+  "veldian_sibilus_i": {
+    "EN": {
+      "name": "Veldian Sibilus I",
+      "type": "Hunting Horn"
+    }
+  },
+  "kummerklang_i": {
+    "EN": {
+      "name": "Kummerklang I",
+      "type": "Hunting Horn"
+    }
+  },
+  "valkyrie_chordmaker_ii": {
+    "EN": {
+      "name": "Valkyrie Chordmaker II",
+      "type": "Hunting Horn"
+    }
+  },
+  "kut_ku_s_song_ii": {
+    "EN": {
+      "name": "Kut-Ku's Song II",
+      "type": "Hunting Horn"
+    }
+  },
+  "jin_dhaang_i": {
+    "EN": {
+      "name": "Jin Dhaang I",
+      "type": "Hunting Horn"
+    }
+  },
+  "rey_perun_iii": {
+    "EN": {
+      "name": "Rey Perun III",
+      "type": "Hunting Horn"
+    }
+  },
+  "balahara_horn_iv": {
+    "EN": {
+      "name": "Balahara Horn IV",
+      "type": "Hunting Horn"
+    }
+  },
+  "hope_horn_v": {
+    "EN": {
+      "name": "Hope Horn V",
+      "type": "Hunting Horn"
+    }
+  },
+  "poetic_bell_i": {
+    "EN": {
+      "name": "Poetic Bell I",
+      "type": "Hunting Horn"
+    }
+  },
+  "artian_sounder_i": {
+    "EN": {
+      "name": "Artian Sounder I",
+      "type": "Hunting Horn"
+    }
+  },
+  "flame_feroce_i": {
+    "EN": {
+      "name": "Flame Feroce I",
+      "type": "Hunting Horn"
+    }
+  },
+  "deafening_fulgur_i": {
+    "EN": {
+      "name": "Deafening Fulgur I",
+      "type": "Hunting Horn"
+    }
+  },
+  "poisoned_capri_ii": {
+    "EN": {
+      "name": "Poisoned Capri II",
+      "type": "Hunting Horn"
+    }
+  },
+  "g_veldian_sibilus_ii": {
+    "EN": {
+      "name": "G. Veldian Sibilus II",
+      "type": "Hunting Horn"
+    }
+  },
+  "nihil_chord_ii": {
+    "EN": {
+      "name": "Nihil Chord II",
+      "type": "Hunting Horn"
+    }
+  },
+  "albirath_feroce_ii": {
+    "EN": {
+      "name": "Albirath Feroce II",
+      "type": "Hunting Horn"
+    }
+  },
+  "dosha_grudgesounder_ii": {
+    "EN": {
+      "name": "Dosha Grudgesounder II",
+      "type": "Hunting Horn"
+    }
+  },
+  "ajara_reverberator_ii": {
+    "EN": {
+      "name": "Ajara Reverberator II",
+      "type": "Hunting Horn"
+    }
+  },
+  "dosha_farsounder_iii": {
+    "EN": {
+      "name": "Dosha Farsounder III",
+      "type": "Hunting Horn"
+    }
+  },
+  "metal_bagpipe_iii": {
+    "EN": {
+      "name": "Metal Bagpipe III",
+      "type": "Hunting Horn"
+    }
+  },
+  "bone_horn_iv": {
+    "EN": {
+      "name": "Bone Horn IV",
+      "type": "Hunting Horn"
+    }
+  },
+  "sonic_horn_iii": {
+    "EN": {
+      "name": "Sonic Horn III",
+      "type": "Hunting Horn"
+    }
+  },
+  "valkyrie_chordmaker_i": {
+    "EN": {
+      "name": "Valkyrie Chordmaker I",
+      "type": "Hunting Horn"
+    }
+  },
+  "poisoned_capri_i": {
+    "EN": {
+      "name": "Poisoned Capri I",
+      "type": "Hunting Horn"
+    }
+  },
+  "kut_ku_s_song_i": {
+    "EN": {
+      "name": "Kut-Ku's Song I",
+      "type": "Hunting Horn"
+    }
+  },
+  "rey_perun_ii": {
+    "EN": {
+      "name": "Rey Perun II",
+      "type": "Hunting Horn"
+    }
+  },
+  "balahara_horn_iii": {
+    "EN": {
+      "name": "Balahara Horn III",
+      "type": "Hunting Horn"
+    }
+  },
+  "war_bongo_ii": {
+    "EN": {
+      "name": "War Bongo II",
+      "type": "Hunting Horn"
+    }
+  },
+  "hope_horn_iv": {
+    "EN": {
+      "name": "Hope Horn IV",
+      "type": "Hunting Horn"
+    }
+  },
+  "g_veldian_sibilus_i": {
+    "EN": {
+      "name": "G. Veldian Sibilus I",
+      "type": "Hunting Horn"
+    }
+  },
+  "nihil_chord_i": {
+    "EN": {
+      "name": "Nihil Chord I",
+      "type": "Hunting Horn"
+    }
+  },
+  "albirath_feroce_i": {
+    "EN": {
+      "name": "Albirath Feroce I",
+      "type": "Hunting Horn"
+    }
+  },
+  "dosha_grudgesounder_i": {
+    "EN": {
+      "name": "Dosha Grudgesounder I",
+      "type": "Hunting Horn"
+    }
+  },
+  "dosha_farsounder_ii": {
+    "EN": {
+      "name": "Dosha Farsounder II",
+      "type": "Hunting Horn"
+    }
+  },
+  "balahara_horn_ii": {
+    "EN": {
+      "name": "Balahara Horn II",
+      "type": "Hunting Horn"
+    }
+  },
+  "metal_bagpipe_ii": {
+    "EN": {
+      "name": "Metal Bagpipe II",
+      "type": "Hunting Horn"
+    }
+  },
+  "bone_horn_iii": {
+    "EN": {
+      "name": "Bone Horn III",
+      "type": "Hunting Horn"
+    }
+  },
+  "sonic_horn_ii": {
+    "EN": {
+      "name": "Sonic Horn II",
+      "type": "Hunting Horn"
+    }
+  },
+  "ajara_reverberator_i": {
+    "EN": {
+      "name": "Ajara Reverberator I",
+      "type": "Hunting Horn"
+    }
+  },
+  "rey_perun_i": {
+    "EN": {
+      "name": "Rey Perun I",
+      "type": "Hunting Horn"
+    }
+  },
+  "hope_horn_iii": {
+    "EN": {
+      "name": "Hope Horn III",
+      "type": "Hunting Horn"
+    }
+  },
+  "dosha_farsounder_i": {
+    "EN": {
+      "name": "Dosha Farsounder I",
+      "type": "Hunting Horn"
+    }
+  },
+  "balahara_horn_i": {
+    "EN": {
+      "name": "Balahara Horn I",
+      "type": "Hunting Horn"
+    }
+  },
+  "war_bongo_i": {
+    "EN": {
+      "name": "War Bongo I",
+      "type": "Hunting Horn"
+    }
+  },
+  "metal_bagpipe_i": {
+    "EN": {
+      "name": "Metal Bagpipe I",
+      "type": "Hunting Horn"
+    }
+  },
+  "bone_horn_ii": {
+    "EN": {
+      "name": "Bone Horn II",
+      "type": "Hunting Horn"
+    }
+  },
+  "sonic_horn_i": {
+    "EN": {
+      "name": "Sonic Horn I",
+      "type": "Hunting Horn"
+    }
+  },
+  "bone_horn_i": {
+    "EN": {
+      "name": "Bone Horn I",
+      "type": "Hunting Horn"
+    }
+  },
+  "hope_horn_ii": {
+    "EN": {
+      "name": "Hope Horn II",
+      "type": "Hunting Horn"
+    }
+  },
+  "hope_horn_i": {
+    "EN": {
+      "name": "Hope Horn I",
+      "type": "Hunting Horn"
+    }
+  },
+  "mountainous_roar": {
+    "EN": {
+      "name": "Mountainous Roar",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "aeternal_palamedes": {
+    "EN": {
+      "name": "Aeternal Palamedes",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "shrouded_muktana": {
+    "EN": {
+      "name": "Shrouded Muktana",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "esperanza_cannon": {
+    "EN": {
+      "name": "Esperanza Cannon",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "blazing_mitran": {
+    "EN": {
+      "name": "Blazing Mitran",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "greifen": {
+    "EN": {
+      "name": "Greifen",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "g_aeternal_palamedes": {
+    "EN": {
+      "name": "G. Aeternal Palamedes",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "ableben_abzug": {
+    "EN": {
+      "name": "Ableben Abzug",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "gravios_gigahowl": {
+    "EN": {
+      "name": "Gravios Gigahowl",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "fulgurblast_guardiana": {
+    "EN": {
+      "name": "Fulgurblast Guardiana",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "queen_s_farflier": {
+    "EN": {
+      "name": "Queen's Farflier",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "tanksorcerer": {
+    "EN": {
+      "name": "Tanksorcerer",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "super_kut_ku_cannon": {
+    "EN": {
+      "name": "Super Kut-Ku Cannon",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "heavy_shooter": {
+    "EN": {
+      "name": "Heavy Shooter",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "steel_assault": {
+    "EN": {
+      "name": "Steel Assault",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "precipice_malmiam": {
+    "EN": {
+      "name": "Precipice Malmiam",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "abaddonian_muneo": {
+    "EN": {
+      "name": "Abaddonian Muneo",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "buster_blaster": {
+    "EN": {
+      "name": "Buster Blaster",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "rompo_latrotox": {
+    "EN": {
+      "name": "Rompo Latrotox",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "dalgap_of_the_waves": {
+    "EN": {
+      "name": "Dalgap-of-the-Waves",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "wild_stinger": {
+    "EN": {
+      "name": "Wild Stinger",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "zoh_mitran_i": {
+    "EN": {
+      "name": "Zoh Mitran I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "artian_sheller_ii": {
+    "EN": {
+      "name": "Artian Sheller II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "veldian_tormentum_i": {
+    "EN": {
+      "name": "Veldian Tormentum I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "todlicher_abzug_i": {
+    "EN": {
+      "name": "Tödlicher Abzug I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "queen_s_longfire_ii": {
+    "EN": {
+      "name": "Queen's Longfire II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "yian_kut_ku_cannon_ii": {
+    "EN": {
+      "name": "Yian Kut-Ku Cannon II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "jin_dhaphal_i": {
+    "EN": {
+      "name": "Jin Dhaphal I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "nu_muneo_ii": {
+    "EN": {
+      "name": "Nu Muneo II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "ner_bustergun_iii": {
+    "EN": {
+      "name": "Ner Bustergun III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "rompo_sniper_iii": {
+    "EN": {
+      "name": "Rompo Sniper III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "uth_dalgap_iii": {
+    "EN": {
+      "name": "Uth Dalgap III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "chata_sheller_iv": {
+    "EN": {
+      "name": "Chata Sheller IV",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "hope_cannon_v": {
+    "EN": {
+      "name": "Hope Cannon V",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "cirrus_blaster_i": {
+    "EN": {
+      "name": "Cirrus Blaster I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "artian_sheller_i": {
+    "EN": {
+      "name": "Artian Sheller I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "g_veldian_tormentum_ii": {
+    "EN": {
+      "name": "G. Veldian Tormentum II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "gravios_howl_i": {
+    "EN": {
+      "name": "Gravios Howl I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "grounding_fulgur_i": {
+    "EN": {
+      "name": "Grounding Fulgur I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "tankmage_ii": {
+    "EN": {
+      "name": "Tankmage II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "bone_shooter_iv": {
+    "EN": {
+      "name": "Bone Shooter IV",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "iron_assault_iii": {
+    "EN": {
+      "name": "Iron Assault III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "queen_s_longfire_i": {
+    "EN": {
+      "name": "Queen's Longfire I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "tankmage_i": {
+    "EN": {
+      "name": "Tankmage I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "yian_kut_ku_cannon_i": {
+    "EN": {
+      "name": "Yian Kut-Ku Cannon I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "ner_bustergun_ii": {
+    "EN": {
+      "name": "Ner Bustergun II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "rompo_sniper_ii": {
+    "EN": {
+      "name": "Rompo Sniper II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "uth_dalgap_ii": {
+    "EN": {
+      "name": "Uth Dalgap II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "power_stinger_ii": {
+    "EN": {
+      "name": "Power Stinger II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "chata_sheller_iii": {
+    "EN": {
+      "name": "Chata Sheller III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "hope_cannon_iv": {
+    "EN": {
+      "name": "Hope Cannon IV",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "g_veldian_tormentum_i": {
+    "EN": {
+      "name": "G. Veldian Tormentum I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "bone_shooter_iii": {
+    "EN": {
+      "name": "Bone Shooter III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "iron_assault_ii": {
+    "EN": {
+      "name": "Iron Assault II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "nu_muneo_i": {
+    "EN": {
+      "name": "Nu Muneo I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "ner_bustergun_i": {
+    "EN": {
+      "name": "Ner Bustergun I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "rompo_sniper_i": {
+    "EN": {
+      "name": "Rompo Sniper I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "uth_dalgap_i": {
+    "EN": {
+      "name": "Uth Dalgap I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "chata_sheller_ii": {
+    "EN": {
+      "name": "Chata Sheller II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "hope_cannon_iii": {
+    "EN": {
+      "name": "Hope Cannon III",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "bone_shooter_ii": {
+    "EN": {
+      "name": "Bone Shooter II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "iron_assault_i": {
+    "EN": {
+      "name": "Iron Assault I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "power_stinger": {
+    "EN": {
+      "name": "Power Stinger",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "bone_shooter_i": {
+    "EN": {
+      "name": "Bone Shooter I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "chata_sheller_i": {
+    "EN": {
+      "name": "Chata Sheller I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "hope_cannon_ii": {
+    "EN": {
+      "name": "Hope Cannon II",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "hope_cannon_i": {
+    "EN": {
+      "name": "Hope Cannon I",
+      "type": "Heavy Bowgun"
+    }
+  },
+  "sinter_hammer": {
+    "EN": {
+      "name": "Sinter Hammer",
+      "type": "Hammer"
+    }
+  },
+  "blazing_uria": {
+    "EN": {
+      "name": "Blazing Uria",
+      "type": "Hammer"
+    }
+  },
+  "exultant_bedivere": {
+    "EN": {
+      "name": "Exultant Bedivere",
+      "type": "Hammer"
+    }
+  },
+  "shrouded_aghaturi": {
+    "EN": {
+      "name": "Shrouded Aghaturi",
+      "type": "Hammer"
+    }
+  },
+  "esperanza_hammer": {
+    "EN": {
+      "name": "Esperanza Hammer",
+      "type": "Hammer"
+    }
+  },
+  "moteurvankel": {
+    "EN": {
+      "name": "Moteurvankel",
+      "type": "Hammer"
+    }
+  },
+  "binder_mace": {
+    "EN": {
+      "name": "Binder Mace",
+      "type": "Hammer"
+    }
+  },
+  "grimmblick": {
+    "EN": {
+      "name": "Grimmblick",
+      "type": "Hammer"
+    }
+  },
+  "huracan_hammer": {
+    "EN": {
+      "name": "Huracan Hammer",
+      "type": "Hammer"
+    }
+  },
+  "graviton_hammer": {
+    "EN": {
+      "name": "Graviton Hammer",
+      "type": "Hammer"
+    }
+  },
+  "singha_gada": {
+    "EN": {
+      "name": "Singha Gada",
+      "type": "Hammer"
+    }
+  },
+  "fulgurhammer_guardiana": {
+    "EN": {
+      "name": "Fulgurhammer Guardiana",
+      "type": "Hammer"
+    }
+  },
+  "death_venom_hammer": {
+    "EN": {
+      "name": "Death Venom Hammer",
+      "type": "Hammer"
+    }
+  },
+  "kut_ku_thwap": {
+    "EN": {
+      "name": "Kut-Ku Thwap",
+      "type": "Hammer"
+    }
+  },
+  "g_exultant_bedivere": {
+    "EN": {
+      "name": "G. Exultant Bedivere",
+      "type": "Hammer"
+    }
+  },
+  "zaccio_s_execution": {
+    "EN": {
+      "name": "Zaccio's Execution",
+      "type": "Hammer"
+    }
+  },
+  "precipice_logamtu": {
+    "EN": {
+      "name": "Precipice Logamtu",
+      "type": "Hammer"
+    }
+  },
+  "gibil_hammer": {
+    "EN": {
+      "name": "Gibil Hammer",
+      "type": "Hammer"
+    }
+  },
+  "abaddonian_pulpo": {
+    "EN": {
+      "name": "Abaddonian Pulpo",
+      "type": "Hammer"
+    }
+  },
+  "nerscrapper": {
+    "EN": {
+      "name": "Nerscrapper",
+      "type": "Hammer"
+    }
+  },
+  "rompo_robustox": {
+    "EN": {
+      "name": "Rompo Robustox",
+      "type": "Hammer"
+    }
+  },
+  "sandsea_siamitiya": {
+    "EN": {
+      "name": "Sandsea Siamitiya",
+      "type": "Hammer"
+    }
+  },
+  "iron_devil": {
+    "EN": {
+      "name": "Iron Devil",
+      "type": "Hammer"
+    }
+  },
+  "heavy_bone_bludgeon": {
+    "EN": {
+      "name": "Heavy Bone Bludgeon",
+      "type": "Hammer"
+    }
+  },
+  "zoh_uria_i": {
+    "EN": {
+      "name": "Zoh Uria I",
+      "type": "Hammer"
+    }
+  },
+  "artian_hammer_ii": {
+    "EN": {
+      "name": "Artian Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "jail_hammer_iv": {
+    "EN": {
+      "name": "Jail Hammer IV",
+      "type": "Hammer"
+    }
+  },
+  "veldian_malleus_i": {
+    "EN": {
+      "name": "Veldian Malleus I",
+      "type": "Hammer"
+    }
+  },
+  "wuchtblick_i": {
+    "EN": {
+      "name": "Wuchtblick I",
+      "type": "Hammer"
+    }
+  },
+  "kut_ku_pick_ii": {
+    "EN": {
+      "name": "Kut-Ku Pick II",
+      "type": "Hammer"
+    }
+  },
+  "jin_dhauda_i": {
+    "EN": {
+      "name": "Jin Dhauda I",
+      "type": "Hammer"
+    }
+  },
+  "nu_pulpo_ii": {
+    "EN": {
+      "name": "Nu Pulpo II",
+      "type": "Hammer"
+    }
+  },
+  "cluster_hammer_iii": {
+    "EN": {
+      "name": "Cluster Hammer III",
+      "type": "Hammer"
+    }
+  },
+  "rompo_wrecker_iii": {
+    "EN": {
+      "name": "Rompo Wrecker III",
+      "type": "Hammer"
+    }
+  },
+  "balahara_hammer_iv": {
+    "EN": {
+      "name": "Balahara Hammer IV",
+      "type": "Hammer"
+    }
+  },
+  "chata_clobberer_iv": {
+    "EN": {
+      "name": "Chata Clobberer IV",
+      "type": "Hammer"
+    }
+  },
+  "hope_hammer_v": {
+    "EN": {
+      "name": "Hope Hammer V",
+      "type": "Hammer"
+    }
+  },
+  "purity_hammer_i": {
+    "EN": {
+      "name": "Purity Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "artian_hammer_i": {
+    "EN": {
+      "name": "Artian Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "red_bludgeon_i": {
+    "EN": {
+      "name": "Red Bludgeon I",
+      "type": "Hammer"
+    }
+  },
+  "shell_hammer_i": {
+    "EN": {
+      "name": "Shell Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "blan_gada_i": {
+    "EN": {
+      "name": "Blan Gada I",
+      "type": "Hammer"
+    }
+  },
+  "crashing_fulgur_i": {
+    "EN": {
+      "name": "Crashing Fulgur I",
+      "type": "Hammer"
+    }
+  },
+  "venom_monster_ii": {
+    "EN": {
+      "name": "Venom Monster II",
+      "type": "Hammer"
+    }
+  },
+  "g_veldian_malleus_ii": {
+    "EN": {
+      "name": "G. Veldian Malleus II",
+      "type": "Hammer"
+    }
+  },
+  "nihil_hammer_ii": {
+    "EN": {
+      "name": "Nihil Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "albirath_bludgeon_ii": {
+    "EN": {
+      "name": "Albirath Bludgeon II",
+      "type": "Hammer"
+    }
+  },
+  "iron_hammer_iii": {
+    "EN": {
+      "name": "Iron Hammer III",
+      "type": "Hammer"
+    }
+  },
+  "bone_bludgeon_iv": {
+    "EN": {
+      "name": "Bone Bludgeon IV",
+      "type": "Hammer"
+    }
+  },
+  "jail_hammer_iii": {
+    "EN": {
+      "name": "Jail Hammer III",
+      "type": "Hammer"
+    }
+  },
+  "venom_monster_i": {
+    "EN": {
+      "name": "Venom Monster I",
+      "type": "Hammer"
+    }
+  },
+  "kut_ku_pick_i": {
+    "EN": {
+      "name": "Kut-Ku Pick I",
+      "type": "Hammer"
+    }
+  },
+  "cluster_hammer_ii": {
+    "EN": {
+      "name": "Cluster Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "rompo_wrecker_ii": {
+    "EN": {
+      "name": "Rompo Wrecker II",
+      "type": "Hammer"
+    }
+  },
+  "balahara_hammer_iii": {
+    "EN": {
+      "name": "Balahara Hammer III",
+      "type": "Hammer"
+    }
+  },
+  "chata_clobberer_iii": {
+    "EN": {
+      "name": "Chata Clobberer III",
+      "type": "Hammer"
+    }
+  },
+  "hope_hammer_iv": {
+    "EN": {
+      "name": "Hope Hammer IV",
+      "type": "Hammer"
+    }
+  },
+  "g_veldian_malleus_i": {
+    "EN": {
+      "name": "G. Veldian Malleus I",
+      "type": "Hammer"
+    }
+  },
+  "nihil_hammer_i": {
+    "EN": {
+      "name": "Nihil Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "albirath_bludgeon_i": {
+    "EN": {
+      "name": "Albirath Bludgeon I",
+      "type": "Hammer"
+    }
+  },
+  "nu_pulpo_i": {
+    "EN": {
+      "name": "Nu Pulpo I",
+      "type": "Hammer"
+    }
+  },
+  "balahara_hammer_ii": {
+    "EN": {
+      "name": "Balahara Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "iron_hammer_ii": {
+    "EN": {
+      "name": "Iron Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "bone_bludgeon_iii": {
+    "EN": {
+      "name": "Bone Bludgeon III",
+      "type": "Hammer"
+    }
+  },
+  "jail_hammer_ii": {
+    "EN": {
+      "name": "Jail Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "cluster_hammer_i": {
+    "EN": {
+      "name": "Cluster Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "rompo_wrecker_i": {
+    "EN": {
+      "name": "Rompo Wrecker I",
+      "type": "Hammer"
+    }
+  },
+  "chata_clobberer_ii": {
+    "EN": {
+      "name": "Chata Clobberer II",
+      "type": "Hammer"
+    }
+  },
+  "hope_hammer_iii": {
+    "EN": {
+      "name": "Hope Hammer III",
+      "type": "Hammer"
+    }
+  },
+  "balahara_hammer_i": {
+    "EN": {
+      "name": "Balahara Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "iron_hammer_i": {
+    "EN": {
+      "name": "Iron Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "bone_bludgeon_ii": {
+    "EN": {
+      "name": "Bone Bludgeon II",
+      "type": "Hammer"
+    }
+  },
+  "jail_hammer_i": {
+    "EN": {
+      "name": "Jail Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "chata_clobberer_i": {
+    "EN": {
+      "name": "Chata Clobberer I",
+      "type": "Hammer"
+    }
+  },
+  "bone_bludgeon_i": {
+    "EN": {
+      "name": "Bone Bludgeon I",
+      "type": "Hammer"
+    }
+  },
+  "hope_hammer_ii": {
+    "EN": {
+      "name": "Hope Hammer II",
+      "type": "Hammer"
+    }
+  },
+  "hope_hammer_i": {
+    "EN": {
+      "name": "Hope Hammer I",
+      "type": "Hammer"
+    }
+  },
+  "mizumori": {
+    "EN": {
+      "name": "Mizumori",
+      "type": "Gunlance"
+    }
+  },
+  "blazing_lael": {
+    "EN": {
+      "name": "Blazing Lael",
+      "type": "Gunlance"
+    }
+  },
+  "lawful_bors": {
+    "EN": {
+      "name": "Lawful Bors",
+      "type": "Gunlance"
+    }
+  },
+  "esperanza_gunlance": {
+    "EN": {
+      "name": "Esperanza Gunlance",
+      "type": "Gunlance"
+    }
+  },
+  "argenesis": {
+    "EN": {
+      "name": "Argenesis",
+      "type": "Gunlance"
+    }
+  },
+  "debilitating_torpor": {
+    "EN": {
+      "name": "Debilitating Torpor",
+      "type": "Gunlance"
+    }
+  },
+  "verraterarm": {
+    "EN": {
+      "name": "Verräterarm",
+      "type": "Gunlance"
+    }
+  },
+  "crimson_rook": {
+    "EN": {
+      "name": "Crimson Rook",
+      "type": "Gunlance"
+    }
+  },
+  "white_cannon": {
+    "EN": {
+      "name": "White Cannon",
+      "type": "Gunlance"
+    }
+  },
+  "fulgurcannon_guardiana": {
+    "EN": {
+      "name": "Fulgurcannon Guardiana",
+      "type": "Gunlance"
+    }
+  },
+  "ortlinde": {
+    "EN": {
+      "name": "Ortlinde",
+      "type": "Gunlance"
+    }
+  },
+  "big_slugger": {
+    "EN": {
+      "name": "Big Slugger",
+      "type": "Gunlance"
+    }
+  },
+  "g_lawful_bors": {
+    "EN": {
+      "name": "G. Lawful Bors",
+      "type": "Gunlance"
+    }
+  },
+  "precipice_lohamata": {
+    "EN": {
+      "name": "Precipice Lohamata",
+      "type": "Gunlance"
+    }
+  },
+  "shining_rook": {
+    "EN": {
+      "name": "Shining Rook",
+      "type": "Gunlance"
+    }
+  },
+  "ajara_kalika": {
+    "EN": {
+      "name": "Ajara-Kalika",
+      "type": "Gunlance"
+    }
+  },
+  "solid_gunberd": {
+    "EN": {
+      "name": "Solid Gunberd",
+      "type": "Gunlance"
+    }
+  },
+  "falarmata_of_the_waves": {
+    "EN": {
+      "name": "Falarmata-of-the-Waves",
+      "type": "Gunlance"
+    }
+  },
+  "sandsea_visponan": {
+    "EN": {
+      "name": "Sandsea Visponan",
+      "type": "Gunlance"
+    }
+  },
+  "firetrail_quemador": {
+    "EN": {
+      "name": "Firetrail Quemador",
+      "type": "Gunlance"
+    }
+  },
+  "triumvirate_edge": {
+    "EN": {
+      "name": "Triumvirate Edge",
+      "type": "Gunlance"
+    }
+  },
+  "great_bone_gunlance": {
+    "EN": {
+      "name": "Great Bone Gunlance",
+      "type": "Gunlance"
+    }
+  },
+  "zoh_lael_i": {
+    "EN": {
+      "name": "Zoh Lael I",
+      "type": "Gunlance"
+    }
+  },
+  "artian_cannon_ii": {
+    "EN": {
+      "name": "Artian Cannon II",
+      "type": "Gunlance"
+    }
+  },
+  "paretic_gunlance_iv": {
+    "EN": {
+      "name": "Paretic Gunlance IV",
+      "type": "Gunlance"
+    }
+  },
+  "veldian_hasta_i": {
+    "EN": {
+      "name": "Veldian Hasta I",
+      "type": "Gunlance"
+    }
+  },
+  "tyrannenarm_i": {
+    "EN": {
+      "name": "Tyrannenarm I",
+      "type": "Gunlance"
+    }
+  },
+  "princess_panoply_ii": {
+    "EN": {
+      "name": "Princess Panoply II",
+      "type": "Gunlance"
+    }
+  },
+  "jin_dhatop_i": {
+    "EN": {
+      "name": "Jin Dhatop I",
+      "type": "Gunlance"
+    }
+  },
+  "shell_gunberd_iii": {
+    "EN": {
+      "name": "Shell Gunberd III",
+      "type": "Gunlance"
+    }
+  },
+  "uth_falarmata_iii": {
+    "EN": {
+      "name": "Uth Falarmata III",
+      "type": "Gunlance"
+    }
+  },
+  "balahara_exploder_iv": {
+    "EN": {
+      "name": "Balahara Exploder IV",
+      "type": "Gunlance"
+    }
+  },
+  "quematrice_culebrina_iv": {
+    "EN": {
+      "name": "Quematrice Culebrina IV",
+      "type": "Gunlance"
+    }
+  },
+  "hope_gunlance_v": {
+    "EN": {
+      "name": "Hope Gunlance V",
+      "type": "Gunlance"
+    }
+  },
+  "ukiyo_no_yamiwo_i": {
+    "EN": {
+      "name": "Ukiyo no Yamiwo I",
+      "type": "Gunlance"
+    }
+  },
+  "artian_cannon_i": {
+    "EN": {
+      "name": "Artian Cannon I",
+      "type": "Gunlance"
+    }
+  },
+  "red_rook_i": {
+    "EN": {
+      "name": "Red Rook I",
+      "type": "Gunlance"
+    }
+  },
+  "white_gunlance_i": {
+    "EN": {
+      "name": "White Gunlance I",
+      "type": "Gunlance"
+    }
+  },
+  "warring_fulgur_i": {
+    "EN": {
+      "name": "Warring Fulgur I",
+      "type": "Gunlance"
+    }
+  },
+  "hard_hitter_ii": {
+    "EN": {
+      "name": "Hard Hitter II",
+      "type": "Gunlance"
+    }
+  },
+  "g_veldian_hasta_ii": {
+    "EN": {
+      "name": "G. Veldian Hasta II",
+      "type": "Gunlance"
+    }
+  },
+  "albirath_rook_ii": {
+    "EN": {
+      "name": "Albirath Rook II",
+      "type": "Gunlance"
+    }
+  },
+  "ajara_gunpike_ii": {
+    "EN": {
+      "name": "Ajara Gunpike II",
+      "type": "Gunlance"
+    }
+  },
+  "triple_bayonet_iii": {
+    "EN": {
+      "name": "Triple Bayonet III",
+      "type": "Gunlance"
+    }
+  },
+  "bone_gunlance_iv": {
+    "EN": {
+      "name": "Bone Gunlance IV",
+      "type": "Gunlance"
+    }
+  },
+  "paretic_gunlance_iii": {
+    "EN": {
+      "name": "Paretic Gunlance III",
+      "type": "Gunlance"
+    }
+  },
+  "princess_panoply_i": {
+    "EN": {
+      "name": "Princess Panoply I",
+      "type": "Gunlance"
+    }
+  },
+  "hard_hitter_i": {
+    "EN": {
+      "name": "Hard Hitter I",
+      "type": "Gunlance"
+    }
+  },
+  "shell_gunberd_ii": {
+    "EN": {
+      "name": "Shell Gunberd II",
+      "type": "Gunlance"
+    }
+  },
+  "uth_falarmata_ii": {
+    "EN": {
+      "name": "Uth Falarmata II",
+      "type": "Gunlance"
+    }
+  },
+  "balahara_exploder_iii": {
+    "EN": {
+      "name": "Balahara Exploder III",
+      "type": "Gunlance"
+    }
+  },
+  "quematrice_culebrina_iii": {
+    "EN": {
+      "name": "Quematrice Culebrina III",
+      "type": "Gunlance"
+    }
+  },
+  "hope_gunlance_iv": {
+    "EN": {
+      "name": "Hope Gunlance IV",
+      "type": "Gunlance"
+    }
+  },
+  "g_veldian_hasta_i": {
+    "EN": {
+      "name": "G. Veldian Hasta I",
+      "type": "Gunlance"
+    }
+  },
+  "albirath_rook_i": {
+    "EN": {
+      "name": "Albirath Rook I",
+      "type": "Gunlance"
+    }
+  },
+  "balahara_exploder_ii": {
+    "EN": {
+      "name": "Balahara Exploder II",
+      "type": "Gunlance"
+    }
+  },
+  "triple_bayonet_ii": {
+    "EN": {
+      "name": "Triple Bayonet II",
+      "type": "Gunlance"
+    }
+  },
+  "bone_gunlance_iii": {
+    "EN": {
+      "name": "Bone Gunlance III",
+      "type": "Gunlance"
+    }
+  },
+  "paretic_gunlance_ii": {
+    "EN": {
+      "name": "Paretic Gunlance II",
+      "type": "Gunlance"
+    }
+  },
+  "ajara_gunpike_i": {
+    "EN": {
+      "name": "Ajara Gunpike I",
+      "type": "Gunlance"
+    }
+  },
+  "shell_gunberd_i": {
+    "EN": {
+      "name": "Shell Gunberd I",
+      "type": "Gunlance"
+    }
+  },
+  "uth_falarmata_i": {
+    "EN": {
+      "name": "Uth Falarmata I",
+      "type": "Gunlance"
+    }
+  },
+  "quematrice_culebrina_ii": {
+    "EN": {
+      "name": "Quematrice Culebrina II",
+      "type": "Gunlance"
+    }
+  },
+  "hope_gunlance_iii": {
+    "EN": {
+      "name": "Hope Gunlance III",
+      "type": "Gunlance"
+    }
+  },
+  "balahara_exploder_i": {
+    "EN": {
+      "name": "Balahara Exploder I",
+      "type": "Gunlance"
+    }
+  },
+  "triple_bayonet_i": {
+    "EN": {
+      "name": "Triple Bayonet I",
+      "type": "Gunlance"
+    }
+  },
+  "bone_gunlance_ii": {
+    "EN": {
+      "name": "Bone Gunlance II",
+      "type": "Gunlance"
+    }
+  },
+  "paretic_gunlance_i": {
+    "EN": {
+      "name": "Paretic Gunlance I",
+      "type": "Gunlance"
+    }
+  },
+  "quematrice_culebrina_i": {
+    "EN": {
+      "name": "Quematrice Culebrina I",
+      "type": "Gunlance"
+    }
+  },
+  "bone_gunlance_i": {
+    "EN": {
+      "name": "Bone Gunlance I",
+      "type": "Gunlance"
+    }
+  },
+  "hope_gunlance_ii": {
+    "EN": {
+      "name": "Hope Gunlance II",
+      "type": "Gunlance"
+    }
+  },
+  "hope_gunlance_i": {
+    "EN": {
+      "name": "Hope Gunlance I",
+      "type": "Gunlance"
+    }
+  },
+  "blazing_veiah": {
+    "EN": {
+      "name": "Blazing Veiah",
+      "type": "Great Sword"
+    }
+  },
+  "giant_jawblade": {
+    "EN": {
+      "name": "Giant Jawblade",
+      "type": "Great Sword"
+    }
+  },
+  "stalwart_lamorak": {
+    "EN": {
+      "name": "Stalwart Lamorak",
+      "type": "Great Sword"
+    }
+  },
+  "fellslayer_dangeom": {
+    "EN": {
+      "name": "Fellslayer Dangeom",
+      "type": "Great Sword"
+    }
+  },
+  "akanesasu": {
+    "EN": {
+      "name": "Akanesasu",
+      "type": "Great Sword"
+    }
+  },
+  "esperanza_blade": {
+    "EN": {
+      "name": "Esperanza Blade",
+      "type": "Great Sword"
+    }
+  },
+  "varianza": {
+    "EN": {
+      "name": "Varianza",
+      "type": "Great Sword"
+    }
+  },
+  "destructive_torpor": {
+    "EN": {
+      "name": "Destructive Torpor",
+      "type": "Great Sword"
+    }
+  },
+  "freezer_speartuna": {
+    "EN": {
+      "name": "Freezer Speartuna",
+      "type": "Great Sword"
+    }
+  },
+  "g_stalwart_lamorak": {
+    "EN": {
+      "name": "G. Stalwart Lamorak",
+      "type": "Great Sword"
+    }
+  },
+  "fulgurcleaver_guardiana": {
+    "EN": {
+      "name": "Fulgurcleaver Guardiana",
+      "type": "Great Sword"
+    }
+  },
+  "grimslayer_urgeom": {
+    "EN": {
+      "name": "Grimslayer Urgeom",
+      "type": "Great Sword"
+    }
+  },
+  "poison_king": {
+    "EN": {
+      "name": "Poison King",
+      "type": "Great Sword"
+    }
+  },
+  "abaddonian_krake": {
+    "EN": {
+      "name": "Abaddonian Krake",
+      "type": "Great Sword"
+    }
+  },
+  "bone_slasher": {
+    "EN": {
+      "name": "Bone Slasher",
+      "type": "Great Sword"
+    }
+  },
+  "dusterstolz": {
+    "EN": {
+      "name": "Düsterstolz",
+      "type": "Great Sword"
+    }
+  },
+  "immolator_blade": {
+    "EN": {
+      "name": "Immolator Blade",
+      "type": "Great Sword"
+    }
+  },
+  "rathalos_firesword": {
+    "EN": {
+      "name": "Rathalos Firesword",
+      "type": "Great Sword"
+    }
+  },
+  "whitefire_rathguard": {
+    "EN": {
+      "name": "Whitefire Rathguard",
+      "type": "Great Sword"
+    }
+  },
+  "precipice_metallam": {
+    "EN": {
+      "name": "Precipice Metallam",
+      "type": "Great Sword"
+    }
+  },
+  "ravager_blade": {
+    "EN": {
+      "name": "Ravager Blade",
+      "type": "Great Sword"
+    }
+  },
+  "firetrail_blaisdell": {
+    "EN": {
+      "name": "Firetrail Blaisdell",
+      "type": "Great Sword"
+    }
+  },
+  "prinvrilo_s_dissolution": {
+    "EN": {
+      "name": "Prinvrilo's Dissolution",
+      "type": "Great Sword"
+    }
+  },
+  "rooster_decapitator": {
+    "EN": {
+      "name": "Rooster Decapitator",
+      "type": "Great Sword"
+    }
+  },
+  "sieglinde": {
+    "EN": {
+      "name": "Sieglinde",
+      "type": "Great Sword"
+    }
+  },
+  "zoh_veiah_i": {
+    "EN": {
+      "name": "Zoh Veiah I",
+      "type": "Great Sword"
+    }
+  },
+  "artian_blade_ii": {
+    "EN": {
+      "name": "Artian Blade II",
+      "type": "Great Sword"
+    }
+  },
+  "paretic_blade_iv": {
+    "EN": {
+      "name": "Paretic Blade IV",
+      "type": "Great Sword"
+    }
+  },
+  "veldian_gladius_i": {
+    "EN": {
+      "name": "Veldian Gladius I",
+      "type": "Great Sword"
+    }
+  },
+  "nu_krake_ii": {
+    "EN": {
+      "name": "Nu Krake II",
+      "type": "Great Sword"
+    }
+  },
+  "schattenstolz_i": {
+    "EN": {
+      "name": "Schattenstolz I",
+      "type": "Great Sword"
+    }
+  },
+  "immane_blade_iii": {
+    "EN": {
+      "name": "Immane Blade III",
+      "type": "Great Sword"
+    }
+  },
+  "jin_dhavaar_i": {
+    "EN": {
+      "name": "Jin Dhavaar I",
+      "type": "Great Sword"
+    }
+  },
+  "quematrice_espada_iv": {
+    "EN": {
+      "name": "Quematrice Espada IV",
+      "type": "Great Sword"
+    }
+  },
+  "chicken_decapitator_ii": {
+    "EN": {
+      "name": "Chicken Decapitator II",
+      "type": "Great Sword"
+    }
+  },
+  "valkyrie_blade_ii": {
+    "EN": {
+      "name": "Valkyrie Blade II",
+      "type": "Great Sword"
+    }
+  },
+  "hope_blade_v": {
+    "EN": {
+      "name": "Hope Blade V",
+      "type": "Great Sword"
+    }
+  },
+  "jawblade_i": {
+    "EN": {
+      "name": "Jawblade I",
+      "type": "Great Sword"
+    }
+  },
+  "hanayako_yohino_i": {
+    "EN": {
+      "name": "Hanayako Yohino I",
+      "type": "Great Sword"
+    }
+  },
+  "artian_blade_i": {
+    "EN": {
+      "name": "Artian Blade I",
+      "type": "Great Sword"
+    }
+  },
+  "frozen_speartuna_ii": {
+    "EN": {
+      "name": "Frozen Speartuna II",
+      "type": "Great Sword"
+    }
+  },
+  "g_veldian_gladius_ii": {
+    "EN": {
+      "name": "G. Veldian Gladius II",
+      "type": "Great Sword"
+    }
+  },
+  "smiting_fulgur_i": {
+    "EN": {
+      "name": "Smiting Fulgur I",
+      "type": "Great Sword"
+    }
+  },
+  "dosha_grimslayer_ii": {
+    "EN": {
+      "name": "Dosha Grimslayer II",
+      "type": "Great Sword"
+    }
+  },
+  "dosha_fellslayer_iii": {
+    "EN": {
+      "name": "Dosha Fellslayer III",
+      "type": "Great Sword"
+    }
+  },
+  "slaughter_ii": {
+    "EN": {
+      "name": "Slaughter II",
+      "type": "Great Sword"
+    }
+  },
+  "bone_blade_iv": {
+    "EN": {
+      "name": "Bone Blade IV",
+      "type": "Great Sword"
+    }
+  },
+  "red_wing_i": {
+    "EN": {
+      "name": "Red Wing I",
+      "type": "Great Sword"
+    }
+  },
+  "albirath_wing_ii": {
+    "EN": {
+      "name": "Albirath Wing II",
+      "type": "Great Sword"
+    }
+  },
+  "buster_sword_iii": {
+    "EN": {
+      "name": "Buster Sword III",
+      "type": "Great Sword"
+    }
+  },
+  "nihil_great_sword_ii": {
+    "EN": {
+      "name": "Nihil Great Sword II",
+      "type": "Great Sword"
+    }
+  },
+  "paretic_blade_iii": {
+    "EN": {
+      "name": "Paretic Blade III",
+      "type": "Great Sword"
+    }
+  },
+  "slaughter_i": {
+    "EN": {
+      "name": "Slaughter I",
+      "type": "Great Sword"
+    }
+  },
+  "immane_blade_ii": {
+    "EN": {
+      "name": "Immane Blade II",
+      "type": "Great Sword"
+    }
+  },
+  "quematrice_espada_iii": {
+    "EN": {
+      "name": "Quematrice Espada III",
+      "type": "Great Sword"
+    }
+  },
+  "chicken_decapitator_i": {
+    "EN": {
+      "name": "Chicken Decapitator I",
+      "type": "Great Sword"
+    }
+  },
+  "valkyrie_blade_i": {
+    "EN": {
+      "name": "Valkyrie Blade I",
+      "type": "Great Sword"
+    }
+  },
+  "hope_blade_iv": {
+    "EN": {
+      "name": "Hope Blade IV",
+      "type": "Great Sword"
+    }
+  },
+  "frozen_speartuna_i": {
+    "EN": {
+      "name": "Frozen Speartuna I",
+      "type": "Great Sword"
+    }
+  },
+  "g_veldian_gladius_i": {
+    "EN": {
+      "name": "G. Veldian Gladius I",
+      "type": "Great Sword"
+    }
+  },
+  "dosha_grimslayer_i": {
+    "EN": {
+      "name": "Dosha Grimslayer I",
+      "type": "Great Sword"
+    }
+  },
+  "dosha_fellslayer_ii": {
+    "EN": {
+      "name": "Dosha Fellslayer II",
+      "type": "Great Sword"
+    }
+  },
+  "nu_krake_i": {
+    "EN": {
+      "name": "Nu Krake I",
+      "type": "Great Sword"
+    }
+  },
+  "bone_blade_iii": {
+    "EN": {
+      "name": "Bone Blade III",
+      "type": "Great Sword"
+    }
+  },
+  "albirath_wing_i": {
+    "EN": {
+      "name": "Albirath Wing I",
+      "type": "Great Sword"
+    }
+  },
+  "buster_sword_ii": {
+    "EN": {
+      "name": "Buster Sword II",
+      "type": "Great Sword"
+    }
+  },
+  "nihil_great_sword_i": {
+    "EN": {
+      "name": "Nihil Great Sword I",
+      "type": "Great Sword"
+    }
+  },
+  "paretic_blade_ii": {
+    "EN": {
+      "name": "Paretic Blade II",
+      "type": "Great Sword"
+    }
+  },
+  "immane_blade_i": {
+    "EN": {
+      "name": "Immane Blade I",
+      "type": "Great Sword"
+    }
+  },
+  "quematrice_espada_ii": {
+    "EN": {
+      "name": "Quematrice Espada II",
+      "type": "Great Sword"
+    }
+  },
+  "hope_blade_iii": {
+    "EN": {
+      "name": "Hope Blade III",
+      "type": "Great Sword"
+    }
+  },
+  "dosha_fellslayer_i": {
+    "EN": {
+      "name": "Dosha Fellslayer I",
+      "type": "Great Sword"
+    }
+  },
+  "bone_blade_ii": {
+    "EN": {
+      "name": "Bone Blade II",
+      "type": "Great Sword"
+    }
+  },
+  "buster_sword_i": {
+    "EN": {
+      "name": "Buster Sword I",
+      "type": "Great Sword"
+    }
+  },
+  "paretic_blade_i": {
+    "EN": {
+      "name": "Paretic Blade I",
+      "type": "Great Sword"
+    }
+  },
+  "bone_blade_i": {
+    "EN": {
+      "name": "Bone Blade I",
+      "type": "Great Sword"
+    }
+  },
+  "quematrice_espada_i": {
+    "EN": {
+      "name": "Quematrice Espada I",
+      "type": "Great Sword"
+    }
+  },
+  "hope_blade_ii": {
+    "EN": {
+      "name": "Hope Blade II",
+      "type": "Great Sword"
+    }
+  },
+  "hope_blade_i": {
+    "EN": {
+      "name": "Hope Blade I",
+      "type": "Great Sword"
+    }
+  },
+  "evening_dusk": {
+    "EN": {
+      "name": "Evening Dusk",
+      "type": "Dual Blades"
+    }
+  },
+  "blazing_liel": {
+    "EN": {
+      "name": "Blazing Liel",
+      "type": "Dual Blades"
+    }
+  },
+  "inspired_ywain": {
+    "EN": {
+      "name": "Inspired Ywain",
+      "type": "Dual Blades"
+    }
+  },
+  "fastflayers_jambastra": {
+    "EN": {
+      "name": "Fastflayers Jambastra",
+      "type": "Dual Blades"
+    }
+  },
+  "tiltkreise": {
+    "EN": {
+      "name": "Tiltkreise",
+      "type": "Dual Blades"
+    }
+  },
+  "esperanza_daggers": {
+    "EN": {
+      "name": "Esperanza Daggers",
+      "type": "Dual Blades"
+    }
+  },
+  "master_sabers": {
+    "EN": {
+      "name": "Master Sabers",
+      "type": "Dual Blades"
+    }
+  },
+  "hungerklauen": {
+    "EN": {
+      "name": "Hungerklauen",
+      "type": "Dual Blades"
+    }
+  },
+  "wyvern_lovers": {
+    "EN": {
+      "name": "Wyvern Lovers",
+      "type": "Dual Blades"
+    }
+  },
+  "gravios_conquerors": {
+    "EN": {
+      "name": "Gravios Conquerors",
+      "type": "Dual Blades"
+    }
+  },
+  "blango_trishula": {
+    "EN": {
+      "name": "Blango Trishula",
+      "type": "Dual Blades"
+    }
+  },
+  "fulgurtwins_guardiana": {
+    "EN": {
+      "name": "Fulgurtwins Guardiana",
+      "type": "Dual Blades"
+    }
+  },
+  "final_battleaxes": {
+    "EN": {
+      "name": "Final Battleaxes",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_kut_ku": {
+    "EN": {
+      "name": "Dual Kut-Ku",
+      "type": "Dual Blades"
+    }
+  },
+  "g_inspired_ywain": {
+    "EN": {
+      "name": "G. Inspired Ywain",
+      "type": "Dual Blades"
+    }
+  },
+  "bequeathed_oblivion": {
+    "EN": {
+      "name": "Bequeathed Oblivion",
+      "type": "Dual Blades"
+    }
+  },
+  "precipice_ulokiem": {
+    "EN": {
+      "name": "Precipice Ulokiem",
+      "type": "Dual Blades"
+    }
+  },
+  "wyvern_sentinels": {
+    "EN": {
+      "name": "Wyvern Sentinels",
+      "type": "Dual Blades"
+    }
+  },
+  "guardflayers_urbastra": {
+    "EN": {
+      "name": "Guardflayers Urbastra",
+      "type": "Dual Blades"
+    }
+  },
+  "ajara_panthaka": {
+    "EN": {
+      "name": "Ajara-Panthaka",
+      "type": "Dual Blades"
+    }
+  },
+  "ngarpatu_of_the_waves": {
+    "EN": {
+      "name": "Ngarpatu-of-the-Waves",
+      "type": "Dual Blades"
+    }
+  },
+  "funky_maracas": {
+    "EN": {
+      "name": "Funky Maracas",
+      "type": "Dual Blades"
+    }
+  },
+  "lala_harpactirs": {
+    "EN": {
+      "name": "Lala Harpactirs",
+      "type": "Dual Blades"
+    }
+  },
+  "firetrail_magnesiae": {
+    "EN": {
+      "name": "Firetrail Magnesiae",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_cleavers": {
+    "EN": {
+      "name": "Dual Cleavers",
+      "type": "Dual Blades"
+    }
+  },
+  "wild_hatchets": {
+    "EN": {
+      "name": "Wild Hatchets",
+      "type": "Dual Blades"
+    }
+  },
+  "zoh_liel_i": {
+    "EN": {
+      "name": "Zoh Liel I",
+      "type": "Dual Blades"
+    }
+  },
+  "artian_edges_ii": {
+    "EN": {
+      "name": "Artian Edges II",
+      "type": "Dual Blades"
+    }
+  },
+  "veldian_harpes_i": {
+    "EN": {
+      "name": "Veldian Harpes I",
+      "type": "Dual Blades"
+    }
+  },
+  "fledderklauen_i": {
+    "EN": {
+      "name": "Fledderklauen I",
+      "type": "Dual Blades"
+    }
+  },
+  "kut_ku_pair_ii": {
+    "EN": {
+      "name": "Kut-Ku Pair II",
+      "type": "Dual Blades"
+    }
+  },
+  "jin_dhakoo_i": {
+    "EN": {
+      "name": "Jin Dhakoo I",
+      "type": "Dual Blades"
+    }
+  },
+  "uth_ngarpatu_iii": {
+    "EN": {
+      "name": "Uth Ngarpatu III",
+      "type": "Dual Blades"
+    }
+  },
+  "barina_faucilles_iv": {
+    "EN": {
+      "name": "Barina Faucilles IV",
+      "type": "Dual Blades"
+    }
+  },
+  "quematrice_silexes_iv": {
+    "EN": {
+      "name": "Quematrice Silexes IV",
+      "type": "Dual Blades"
+    }
+  },
+  "hope_daggers_v": {
+    "EN": {
+      "name": "Hope Daggers V",
+      "type": "Dual Blades"
+    }
+  },
+  "morning_dawn_i": {
+    "EN": {
+      "name": "Morning Dawn I",
+      "type": "Dual Blades"
+    }
+  },
+  "artian_edges_i": {
+    "EN": {
+      "name": "Artian Edges I",
+      "type": "Dual Blades"
+    }
+  },
+  "guild_knight_sabers_ii": {
+    "EN": {
+      "name": "Guild Knight Sabers II",
+      "type": "Dual Blades"
+    }
+  },
+  "twin_flames_i": {
+    "EN": {
+      "name": "Twin Flames I",
+      "type": "Dual Blades"
+    }
+  },
+  "gravios_warmakers_i": {
+    "EN": {
+      "name": "Gravios Warmakers I",
+      "type": "Dual Blades"
+    }
+  },
+  "blango_sai_i": {
+    "EN": {
+      "name": "Blango Sai I",
+      "type": "Dual Blades"
+    }
+  },
+  "whirling_fulgur_i": {
+    "EN": {
+      "name": "Whirling Fulgur I",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_battleaxes_ii": {
+    "EN": {
+      "name": "Dual Battleaxes II",
+      "type": "Dual Blades"
+    }
+  },
+  "g_veldian_harpes_ii": {
+    "EN": {
+      "name": "G. Veldian Harpes II",
+      "type": "Dual Blades"
+    }
+  },
+  "chthonian_kusarigamas_ii": {
+    "EN": {
+      "name": "Chthonian Kusarigamas II",
+      "type": "Dual Blades"
+    }
+  },
+  "twin_albiraths_ii": {
+    "EN": {
+      "name": "Twin Albiraths II",
+      "type": "Dual Blades"
+    }
+  },
+  "dosha_guardflayers_ii": {
+    "EN": {
+      "name": "Dosha Guardflayers II",
+      "type": "Dual Blades"
+    }
+  },
+  "ajara_twin_edges_ii": {
+    "EN": {
+      "name": "Ajara Twin Edges II",
+      "type": "Dual Blades"
+    }
+  },
+  "dosha_fastflayers_iii": {
+    "EN": {
+      "name": "Dosha Fastflayers III",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_hatchets_iii": {
+    "EN": {
+      "name": "Dual Hatchets III",
+      "type": "Dual Blades"
+    }
+  },
+  "bone_hatchets_iv": {
+    "EN": {
+      "name": "Bone Hatchets IV",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_battleaxes_i": {
+    "EN": {
+      "name": "Dual Battleaxes I",
+      "type": "Dual Blades"
+    }
+  },
+  "kut_ku_pair_i": {
+    "EN": {
+      "name": "Kut-Ku Pair I",
+      "type": "Dual Blades"
+    }
+  },
+  "uth_ngarpatu_ii": {
+    "EN": {
+      "name": "Uth Ngarpatu II",
+      "type": "Dual Blades"
+    }
+  },
+  "pink_maracas_ii": {
+    "EN": {
+      "name": "Pink Maracas II",
+      "type": "Dual Blades"
+    }
+  },
+  "barina_faucilles_iii": {
+    "EN": {
+      "name": "Barina Faucilles III",
+      "type": "Dual Blades"
+    }
+  },
+  "quematrice_silexes_iii": {
+    "EN": {
+      "name": "Quematrice Silexes III",
+      "type": "Dual Blades"
+    }
+  },
+  "hope_daggers_iv": {
+    "EN": {
+      "name": "Hope Daggers IV",
+      "type": "Dual Blades"
+    }
+  },
+  "guild_knight_sabers_i": {
+    "EN": {
+      "name": "Guild Knight Sabers I",
+      "type": "Dual Blades"
+    }
+  },
+  "g_veldian_harpes_i": {
+    "EN": {
+      "name": "G. Veldian Harpes I",
+      "type": "Dual Blades"
+    }
+  },
+  "chthonian_kusarigamas_i": {
+    "EN": {
+      "name": "Chthonian Kusarigamas I",
+      "type": "Dual Blades"
+    }
+  },
+  "twin_albiraths_i": {
+    "EN": {
+      "name": "Twin Albiraths I",
+      "type": "Dual Blades"
+    }
+  },
+  "dosha_guardflayers_i": {
+    "EN": {
+      "name": "Dosha Guardflayers I",
+      "type": "Dual Blades"
+    }
+  },
+  "dosha_fastflayers_ii": {
+    "EN": {
+      "name": "Dosha Fastflayers II",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_hatchets_ii": {
+    "EN": {
+      "name": "Dual Hatchets II",
+      "type": "Dual Blades"
+    }
+  },
+  "bone_hatchets_iii": {
+    "EN": {
+      "name": "Bone Hatchets III",
+      "type": "Dual Blades"
+    }
+  },
+  "ajara_twin_edges_i": {
+    "EN": {
+      "name": "Ajara Twin Edges I",
+      "type": "Dual Blades"
+    }
+  },
+  "uth_ngarpatu_i": {
+    "EN": {
+      "name": "Uth Ngarpatu I",
+      "type": "Dual Blades"
+    }
+  },
+  "barina_faucilles_ii": {
+    "EN": {
+      "name": "Barina Faucilles II",
+      "type": "Dual Blades"
+    }
+  },
+  "quematrice_silexes_ii": {
+    "EN": {
+      "name": "Quematrice Silexes II",
+      "type": "Dual Blades"
+    }
+  },
+  "hope_daggers_iii": {
+    "EN": {
+      "name": "Hope Daggers III",
+      "type": "Dual Blades"
+    }
+  },
+  "dosha_fastflayers_i": {
+    "EN": {
+      "name": "Dosha Fastflayers I",
+      "type": "Dual Blades"
+    }
+  },
+  "pink_maracas_i": {
+    "EN": {
+      "name": "Pink Maracas I",
+      "type": "Dual Blades"
+    }
+  },
+  "dual_hatchets_i": {
+    "EN": {
+      "name": "Dual Hatchets I",
+      "type": "Dual Blades"
+    }
+  },
+  "bone_hatchets_ii": {
+    "EN": {
+      "name": "Bone Hatchets II",
+      "type": "Dual Blades"
+    }
+  },
+  "barina_faucilles_i": {
+    "EN": {
+      "name": "Barina Faucilles I",
+      "type": "Dual Blades"
+    }
+  },
+  "quematrice_silexes_i": {
+    "EN": {
+      "name": "Quematrice Silexes I",
+      "type": "Dual Blades"
+    }
+  },
+  "bone_hatchets_i": {
+    "EN": {
+      "name": "Bone Hatchets I",
+      "type": "Dual Blades"
+    }
+  },
+  "hope_daggers_ii": {
+    "EN": {
+      "name": "Hope Daggers II",
+      "type": "Dual Blades"
+    }
+  },
+  "hope_daggers_i": {
+    "EN": {
+      "name": "Hope Daggers I",
+      "type": "Dual Blades"
+    }
+  },
+  "final_fieldblade": {
+    "EN": {
+      "name": "Final Fieldblade",
+      "type": "Charge Blade"
+    }
+  },
+  "blazing_yirmiya": {
+    "EN": {
+      "name": "Blazing Yirmiya",
+      "type": "Charge Blade"
+    }
+  },
+  "abiding_gawain": {
+    "EN": {
+      "name": "Abiding Gawain",
+      "type": "Charge Blade"
+    }
+  },
+  "shrouded_kutharja": {
+    "EN": {
+      "name": "Shrouded Kutharja",
+      "type": "Charge Blade"
+    }
+  },
+  "esperanza_strongarm": {
+    "EN": {
+      "name": "Esperanza Strongarm",
+      "type": "Charge Blade"
+    }
+  },
+  "chrono_gear": {
+    "EN": {
+      "name": "Chrono Gear",
+      "type": "Charge Blade"
+    }
+  },
+  "leidenskraft": {
+    "EN": {
+      "name": "Leidenskraft",
+      "type": "Charge Blade"
+    }
+  },
+  "bardichion_blade": {
+    "EN": {
+      "name": "Bardichion Blade",
+      "type": "Charge Blade"
+    }
+  },
+  "dear_lutemia": {
+    "EN": {
+      "name": "Dear Lutemia",
+      "type": "Charge Blade"
+    }
+  },
+  "venom_s_kiss": {
+    "EN": {
+      "name": "Venom's Kiss",
+      "type": "Charge Blade"
+    }
+  },
+  "g_abiding_gawain": {
+    "EN": {
+      "name": "G. Abiding Gawain",
+      "type": "Charge Blade"
+    }
+  },
+  "bequeathed_enmity": {
+    "EN": {
+      "name": "Bequeathed Enmity",
+      "type": "Charge Blade"
+    }
+  },
+  "guardian_albathos": {
+    "EN": {
+      "name": "Guardian Albathos",
+      "type": "Charge Blade"
+    }
+  },
+  "abaddonian_pweza": {
+    "EN": {
+      "name": "Abaddonian Pweza",
+      "type": "Charge Blade"
+    }
+  },
+  "windthrash_tamebami": {
+    "EN": {
+      "name": "Windthrash Tamebami",
+      "type": "Charge Blade"
+    }
+  },
+  "arachnoscythe": {
+    "EN": {
+      "name": "Arachnoscythe",
+      "type": "Charge Blade"
+    }
+  },
+  "astrapi_clairaxe": {
+    "EN": {
+      "name": "Astrapi Clairaxe",
+      "type": "Charge Blade"
+    }
+  },
+  "rompo_dendrotox": {
+    "EN": {
+      "name": "Rompo Dendrotox",
+      "type": "Charge Blade"
+    }
+  },
+  "valeroje_of_the_waves": {
+    "EN": {
+      "name": "Valeroje-of-the-Waves",
+      "type": "Charge Blade"
+    }
+  },
+  "lala_eumenophor": {
+    "EN": {
+      "name": "Lala Eumenophor",
+      "type": "Charge Blade"
+    }
+  },
+  "regas_hyper": {
+    "EN": {
+      "name": "Regas Hyper",
+      "type": "Charge Blade"
+    }
+  },
+  "hard_bone_strongarm": {
+    "EN": {
+      "name": "Hard Bone Strongarm",
+      "type": "Charge Blade"
+    }
+  },
+  "zoh_yirmiya_i": {
+    "EN": {
+      "name": "Zoh Yirmiya I",
+      "type": "Charge Blade"
+    }
+  },
+  "artian_defender_ii": {
+    "EN": {
+      "name": "Artian Defender II",
+      "type": "Charge Blade"
+    }
+  },
+  "veldian_labrys_i": {
+    "EN": {
+      "name": "Veldian Labrys I",
+      "type": "Charge Blade"
+    }
+  },
+  "elendskraft_i": {
+    "EN": {
+      "name": "Elendskraft I",
+      "type": "Charge Blade"
+    }
+  },
+  "dear_lutemis_ii": {
+    "EN": {
+      "name": "Dear Lutemis II",
+      "type": "Charge Blade"
+    }
+  },
+  "nu_pweza_ii": {
+    "EN": {
+      "name": "Nu Pweza II",
+      "type": "Charge Blade"
+    }
+  },
+  "windthrash_charger_iii": {
+    "EN": {
+      "name": "Windthrash Charger III",
+      "type": "Charge Blade"
+    }
+  },
+  "arachnoscale_iii": {
+    "EN": {
+      "name": "Arachnoscale III",
+      "type": "Charge Blade"
+    }
+  },
+  "rey_astrapi_iii": {
+    "EN": {
+      "name": "Rey Astrapi III",
+      "type": "Charge Blade"
+    }
+  },
+  "rompo_shielder_iii": {
+    "EN": {
+      "name": "Rompo Shielder III",
+      "type": "Charge Blade"
+    }
+  },
+  "uth_valeroje_iii": {
+    "EN": {
+      "name": "Uth Valeroje III",
+      "type": "Charge Blade"
+    }
+  },
+  "barina_bouclier_iv": {
+    "EN": {
+      "name": "Barina Bouclier IV",
+      "type": "Charge Blade"
+    }
+  },
+  "chata_strongarm_iv": {
+    "EN": {
+      "name": "Chata Strongarm IV",
+      "type": "Charge Blade"
+    }
+  },
+  "hope_strongarm_v": {
+    "EN": {
+      "name": "Hope Strongarm V",
+      "type": "Charge Blade"
+    }
+  },
+  "mizuniya_drill_i": {
+    "EN": {
+      "name": "Mizuniya Drill I",
+      "type": "Charge Blade"
+    }
+  },
+  "artian_defender_i": {
+    "EN": {
+      "name": "Artian Defender I",
+      "type": "Charge Blade"
+    }
+  },
+  "axelion_blade_i": {
+    "EN": {
+      "name": "Axelion Blade I",
+      "type": "Charge Blade"
+    }
+  },
+  "poison_blade_ii": {
+    "EN": {
+      "name": "Poison Blade II",
+      "type": "Charge Blade"
+    }
+  },
+  "g_veldian_labrys_ii": {
+    "EN": {
+      "name": "G. Veldian Labrys II",
+      "type": "Charge Blade"
+    }
+  },
+  "chthonian_flame_ii": {
+    "EN": {
+      "name": "Chthonian Flame II",
+      "type": "Charge Blade"
+    }
+  },
+  "albirath_blade_ii": {
+    "EN": {
+      "name": "Albirath Blade II",
+      "type": "Charge Blade"
+    }
+  },
+  "hyperguard_iii": {
+    "EN": {
+      "name": "Hyperguard III",
+      "type": "Charge Blade"
+    }
+  },
+  "bone_strongarm_iv": {
+    "EN": {
+      "name": "Bone Strongarm IV",
+      "type": "Charge Blade"
+    }
+  },
+  "dear_lutemis_i": {
+    "EN": {
+      "name": "Dear Lutemis I",
+      "type": "Charge Blade"
+    }
+  },
+  "poison_blade_i": {
+    "EN": {
+      "name": "Poison Blade I",
+      "type": "Charge Blade"
+    }
+  },
+  "windthrash_charger_ii": {
+    "EN": {
+      "name": "Windthrash Charger II",
+      "type": "Charge Blade"
+    }
+  },
+  "arachnoscale_ii": {
+    "EN": {
+      "name": "Arachnoscale II",
+      "type": "Charge Blade"
+    }
+  },
+  "rey_astrapi_ii": {
+    "EN": {
+      "name": "Rey Astrapi II",
+      "type": "Charge Blade"
+    }
+  },
+  "rompo_shielder_ii": {
+    "EN": {
+      "name": "Rompo Shielder II",
+      "type": "Charge Blade"
+    }
+  },
+  "uth_valeroje_ii": {
+    "EN": {
+      "name": "Uth Valeroje II",
+      "type": "Charge Blade"
+    }
+  },
+  "barina_bouclier_iii": {
+    "EN": {
+      "name": "Barina Bouclier III",
+      "type": "Charge Blade"
+    }
+  },
+  "chata_strongarm_iii": {
+    "EN": {
+      "name": "Chata Strongarm III",
+      "type": "Charge Blade"
+    }
+  },
+  "hope_strongarm_iv": {
+    "EN": {
+      "name": "Hope Strongarm IV",
+      "type": "Charge Blade"
+    }
+  },
+  "g_veldian_labrys_i": {
+    "EN": {
+      "name": "G. Veldian Labrys I",
+      "type": "Charge Blade"
+    }
+  },
+  "chthonian_flame_i": {
+    "EN": {
+      "name": "Chthonian Flame I",
+      "type": "Charge Blade"
+    }
+  },
+  "albirath_blade_i": {
+    "EN": {
+      "name": "Albirath Blade I",
+      "type": "Charge Blade"
+    }
+  },
+  "nu_pweza_i": {
+    "EN": {
+      "name": "Nu Pweza I",
+      "type": "Charge Blade"
+    }
+  },
+  "hyperguard_ii": {
+    "EN": {
+      "name": "Hyperguard II",
+      "type": "Charge Blade"
+    }
+  },
+  "bone_strongarm_iii": {
+    "EN": {
+      "name": "Bone Strongarm III",
+      "type": "Charge Blade"
+    }
+  },
+  "windthrash_charger_i": {
+    "EN": {
+      "name": "Windthrash Charger I",
+      "type": "Charge Blade"
+    }
+  },
+  "arachnoscale_i": {
+    "EN": {
+      "name": "Arachnoscale I",
+      "type": "Charge Blade"
+    }
+  },
+  "rey_astrapi_i": {
+    "EN": {
+      "name": "Rey Astrapi I",
+      "type": "Charge Blade"
+    }
+  },
+  "rompo_shielder_i": {
+    "EN": {
+      "name": "Rompo Shielder I",
+      "type": "Charge Blade"
+    }
+  },
+  "uth_valeroje_i": {
+    "EN": {
+      "name": "Uth Valeroje I",
+      "type": "Charge Blade"
+    }
+  },
+  "barina_bouclier_ii": {
+    "EN": {
+      "name": "Barina Bouclier II",
+      "type": "Charge Blade"
+    }
+  },
+  "chata_strongarm_ii": {
+    "EN": {
+      "name": "Chata Strongarm II",
+      "type": "Charge Blade"
+    }
+  },
+  "hope_strongarm_iii": {
+    "EN": {
+      "name": "Hope Strongarm III",
+      "type": "Charge Blade"
+    }
+  },
+  "hyperguard_i": {
+    "EN": {
+      "name": "Hyperguard I",
+      "type": "Charge Blade"
+    }
+  },
+  "bone_strongarm_ii": {
+    "EN": {
+      "name": "Bone Strongarm II",
+      "type": "Charge Blade"
+    }
+  },
+  "barina_bouclier_i": {
+    "EN": {
+      "name": "Barina Bouclier I",
+      "type": "Charge Blade"
+    }
+  },
+  "chata_strongarm_i": {
+    "EN": {
+      "name": "Chata Strongarm I",
+      "type": "Charge Blade"
+    }
+  },
+  "bone_strongarm_i": {
+    "EN": {
+      "name": "Bone Strongarm I",
+      "type": "Charge Blade"
+    }
+  },
+  "hope_strongarm_ii": {
+    "EN": {
+      "name": "Hope Strongarm II",
+      "type": "Charge Blade"
+    }
+  },
+  "hope_strongarm_i": {
+    "EN": {
+      "name": "Hope Strongarm I",
+      "type": "Charge Blade"
+    }
+  },
+  "heaven_s_manna": {
+    "EN": {
+      "name": "Heaven's Manna",
+      "type": "Bow"
+    }
+  },
+  "renowned_tristram": {
+    "EN": {
+      "name": "Renowned Tristram",
+      "type": "Bow"
+    }
+  },
+  "fearbringer_callistox": {
+    "EN": {
+      "name": "Fearbringer Callistox",
+      "type": "Bow"
+    }
+  },
+  "esperanza_bow": {
+    "EN": {
+      "name": "Esperanza Bow",
+      "type": "Bow"
+    }
+  },
+  "blazing_samira": {
+    "EN": {
+      "name": "Blazing Samira",
+      "type": "Bow"
+    }
+  },
+  "angelbein": {
+    "EN": {
+      "name": "Angelbein",
+      "type": "Bow"
+    }
+  },
+  "g_renowned_tristram": {
+    "EN": {
+      "name": "G. Renowned Tristram",
+      "type": "Bow"
+    }
+  },
+  "strange_kut_ku_stave": {
+    "EN": {
+      "name": "Strange Kut-Ku Stave",
+      "type": "Bow"
+    }
+  },
+  "singha_sharanga": {
+    "EN": {
+      "name": "Singha Sharanga",
+      "type": "Bow"
+    }
+  },
+  "wildwood_kalifa": {
+    "EN": {
+      "name": "Wildwood Kalifa",
+      "type": "Bow"
+    }
+  },
+  "verzweiflung": {
+    "EN": {
+      "name": "Verzweiflung",
+      "type": "Bow"
+    }
+  },
+  "khviluk_of_the_waves": {
+    "EN": {
+      "name": "Khviluk-of-the-Waves",
+      "type": "Bow"
+    }
+  },
+  "fulgurbow_guardiana": {
+    "EN": {
+      "name": "Fulgurbow Guardiana",
+      "type": "Bow"
+    }
+  },
+  "hunter_s_stoutbow": {
+    "EN": {
+      "name": "Hunter's Stoutbow",
+      "type": "Bow"
+    }
+  },
+  "griefbringer_urstox": {
+    "EN": {
+      "name": "Griefbringer Urstox",
+      "type": "Bow"
+    }
+  },
+  "nershock": {
+    "EN": {
+      "name": "Nershock",
+      "type": "Bow"
+    }
+  },
+  "queen_s_melody": {
+    "EN": {
+      "name": "Queen's Melody",
+      "type": "Bow"
+    }
+  },
+  "dark_filament": {
+    "EN": {
+      "name": "Dark Filament",
+      "type": "Bow"
+    }
+  },
+  "solar_spicule": {
+    "EN": {
+      "name": "Solar Spicule",
+      "type": "Bow"
+    }
+  },
+  "true_dragon_perforator": {
+    "EN": {
+      "name": "True Dragon Perforator",
+      "type": "Bow"
+    }
+  },
+  "firetrail_leviora": {
+    "EN": {
+      "name": "Firetrail Leviora",
+      "type": "Bow"
+    }
+  },
+  "windbrace_ibami": {
+    "EN": {
+      "name": "Windbrace Ibami",
+      "type": "Bow"
+    }
+  },
+  "perkonis_clairbow": {
+    "EN": {
+      "name": "Perkonis Clairbow",
+      "type": "Bow"
+    }
+  },
+  "bookwilthe_s_punisher": {
+    "EN": {
+      "name": "Bookwilthe's Punisher",
+      "type": "Bow"
+    }
+  },
+  "zoh_samira_i": {
+    "EN": {
+      "name": "Zoh Samira I",
+      "type": "Bow"
+    }
+  },
+  "artian_sight_ii": {
+    "EN": {
+      "name": "Artian Sight II",
+      "type": "Bow"
+    }
+  },
+  "veldian_arcum_i": {
+    "EN": {
+      "name": "Veldian Arcum I",
+      "type": "Bow"
+    }
+  },
+  "kut_ku_stave_ii": {
+    "EN": {
+      "name": "Kut-Ku Stave II",
+      "type": "Bow"
+    }
+  },
+  "entbehrung_i": {
+    "EN": {
+      "name": "Entbehrung I",
+      "type": "Bow"
+    }
+  },
+  "uth_khviluk_iii": {
+    "EN": {
+      "name": "Uth Khviluk III",
+      "type": "Bow"
+    }
+  },
+  "scylla_fist_iii": {
+    "EN": {
+      "name": "Scylla Fist III",
+      "type": "Bow"
+    }
+  },
+  "queen_blaster_ii": {
+    "EN": {
+      "name": "Queen Blaster II",
+      "type": "Bow"
+    }
+  },
+  "quematrice_arco_iv": {
+    "EN": {
+      "name": "Quematrice Arco IV",
+      "type": "Bow"
+    }
+  },
+  "windbrace_bow_iii": {
+    "EN": {
+      "name": "Windbrace Bow III",
+      "type": "Bow"
+    }
+  },
+  "rey_perkonis_iii": {
+    "EN": {
+      "name": "Rey Perkonis III",
+      "type": "Bow"
+    }
+  },
+  "hope_bow_v": {
+    "EN": {
+      "name": "Hope Bow V",
+      "type": "Bow"
+    }
+  },
+  "blessed_rain_i": {
+    "EN": {
+      "name": "Blessed Rain I",
+      "type": "Bow"
+    }
+  },
+  "artian_sight_i": {
+    "EN": {
+      "name": "Artian Sight I",
+      "type": "Bow"
+    }
+  },
+  "g_veldian_arcum_ii": {
+    "EN": {
+      "name": "G. Veldian Arcum II",
+      "type": "Bow"
+    }
+  },
+  "blan_sharanga_i": {
+    "EN": {
+      "name": "Blan Sharanga I",
+      "type": "Bow"
+    }
+  },
+  "blinding_fulgur_i": {
+    "EN": {
+      "name": "Blinding Fulgur I",
+      "type": "Bow"
+    }
+  },
+  "hunter_s_bow_iv": {
+    "EN": {
+      "name": "Hunter's Bow IV",
+      "type": "Bow"
+    }
+  },
+  "dosha_griefbringer_ii": {
+    "EN": {
+      "name": "Dosha Griefbringer II",
+      "type": "Bow"
+    }
+  },
+  "dosha_fearbringer_iii": {
+    "EN": {
+      "name": "Dosha Fearbringer III",
+      "type": "Bow"
+    }
+  },
+  "prominence_bow_i": {
+    "EN": {
+      "name": "Prominence Bow I",
+      "type": "Bow"
+    }
+  },
+  "albirath_bow_ii": {
+    "EN": {
+      "name": "Albirath Bow II",
+      "type": "Bow"
+    }
+  },
+  "dragon_perforator_iii": {
+    "EN": {
+      "name": "Dragon Perforator III",
+      "type": "Bow"
+    }
+  },
+  "nihil_bow_ii": {
+    "EN": {
+      "name": "Nihil Bow II",
+      "type": "Bow"
+    }
+  },
+  "kut_ku_stave_i": {
+    "EN": {
+      "name": "Kut-Ku Stave I",
+      "type": "Bow"
+    }
+  },
+  "wild_power_bow_ii": {
+    "EN": {
+      "name": "Wild Power Bow II",
+      "type": "Bow"
+    }
+  },
+  "uth_khviluk_ii": {
+    "EN": {
+      "name": "Uth Khviluk II",
+      "type": "Bow"
+    }
+  },
+  "scylla_fist_ii": {
+    "EN": {
+      "name": "Scylla Fist II",
+      "type": "Bow"
+    }
+  },
+  "queen_blaster_i": {
+    "EN": {
+      "name": "Queen Blaster I",
+      "type": "Bow"
+    }
+  },
+  "quematrice_arco_iii": {
+    "EN": {
+      "name": "Quematrice Arco III",
+      "type": "Bow"
+    }
+  },
+  "windbrace_bow_ii": {
+    "EN": {
+      "name": "Windbrace Bow II",
+      "type": "Bow"
+    }
+  },
+  "rey_perkonis_ii": {
+    "EN": {
+      "name": "Rey Perkonis II",
+      "type": "Bow"
+    }
+  },
+  "hope_bow_iv": {
+    "EN": {
+      "name": "Hope Bow IV",
+      "type": "Bow"
+    }
+  },
+  "g_veldian_arcum_i": {
+    "EN": {
+      "name": "G. Veldian Arcum I",
+      "type": "Bow"
+    }
+  },
+  "hunter_s_bow_iii": {
+    "EN": {
+      "name": "Hunter's Bow III",
+      "type": "Bow"
+    }
+  },
+  "dosha_griefbringer_i": {
+    "EN": {
+      "name": "Dosha Griefbringer I",
+      "type": "Bow"
+    }
+  },
+  "dosha_fearbringer_ii": {
+    "EN": {
+      "name": "Dosha Fearbringer II",
+      "type": "Bow"
+    }
+  },
+  "albirath_bow_i": {
+    "EN": {
+      "name": "Albirath Bow I",
+      "type": "Bow"
+    }
+  },
+  "dragon_perforator_ii": {
+    "EN": {
+      "name": "Dragon Perforator II",
+      "type": "Bow"
+    }
+  },
+  "nihil_bow_i": {
+    "EN": {
+      "name": "Nihil Bow I",
+      "type": "Bow"
+    }
+  },
+  "uth_khviluk_i": {
+    "EN": {
+      "name": "Uth Khviluk I",
+      "type": "Bow"
+    }
+  },
+  "scylla_fist_i": {
+    "EN": {
+      "name": "Scylla Fist I",
+      "type": "Bow"
+    }
+  },
+  "quematrice_arco_ii": {
+    "EN": {
+      "name": "Quematrice Arco II",
+      "type": "Bow"
+    }
+  },
+  "windbrace_bow_i": {
+    "EN": {
+      "name": "Windbrace Bow I",
+      "type": "Bow"
+    }
+  },
+  "rey_perkonis_i": {
+    "EN": {
+      "name": "Rey Perkonis I",
+      "type": "Bow"
+    }
+  },
+  "hope_bow_iii": {
+    "EN": {
+      "name": "Hope Bow III",
+      "type": "Bow"
+    }
+  },
+  "wild_power_bow_i": {
+    "EN": {
+      "name": "Wild Power Bow I",
+      "type": "Bow"
+    }
+  },
+  "hunter_s_bow_ii": {
+    "EN": {
+      "name": "Hunter's Bow II",
+      "type": "Bow"
+    }
+  },
+  "dosha_fearbringer_i": {
+    "EN": {
+      "name": "Dosha Fearbringer I",
+      "type": "Bow"
+    }
+  },
+  "dragon_perforator_i": {
+    "EN": {
+      "name": "Dragon Perforator I",
+      "type": "Bow"
+    }
+  },
+  "hunter_s_bow_i": {
+    "EN": {
+      "name": "Hunter's Bow I",
+      "type": "Bow"
+    }
+  },
+  "quematrice_arco_i": {
+    "EN": {
+      "name": "Quematrice Arco I",
+      "type": "Bow"
+    }
+  },
+  "hope_bow_ii": {
+    "EN": {
+      "name": "Hope Bow II",
+      "type": "Bow"
+    }
+  },
+  "hope_bow_i": {
+    "EN": {
+      "name": "Hope Bow I",
+      "type": "Bow"
+    }
+  }
+}
