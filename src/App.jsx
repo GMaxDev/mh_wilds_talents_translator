@@ -329,7 +329,7 @@ function App() {
         ></div>
       </div>
 
-      <div className="container relative z-10 px-4 py-8 mx-auto">
+      <div className="container relative z-10 px-8 py-8 mx-auto">
         <div className="flex justify-between mb-4">
           <div className="flex gap-2">
             <button
@@ -654,7 +654,7 @@ function TranslatorPage({ talents, darkMode }) {
   };
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <div className="relative mb-6">
         <div
           className={`absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ${
