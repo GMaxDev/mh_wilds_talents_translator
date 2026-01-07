@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import weaponsFullData from "../data/weapons-full.json";
-import armorsFullData from "../data/armors-full.json";
+import armorsFullData from "../data/armors-kiranico-full.json";
 import talentsData from "../data/skills.json";
 import weaponTypeTranslations from "../data/weapon-type-translations.json";
 
@@ -598,96 +598,313 @@ const buildUITranslations = {
 
 // Traductions des éléments
 const elementTranslations = {
-  Fire: { EN: "Fire", FR: "Feu", JP: "火", JA: "火", KO: "화", IT: "Fuoco", DE: "Feuer", ES: "Fuego", RU: "Огонь", PL: "Ogień", PT: "Fogo", AR: "نار" },
-  Water: { EN: "Water", FR: "Eau", JP: "水", JA: "水", KO: "수", IT: "Acqua", DE: "Wasser", ES: "Agua", RU: "Вода", PL: "Woda", PT: "Água", AR: "ماء" },
-  Thunder: { EN: "Thunder", FR: "Foudre", JP: "雷", JA: "雷", KO: "뇌", IT: "Tuono", DE: "Donner", ES: "Rayo", RU: "Молния", PL: "Piorun", PT: "Trovão", AR: "برق" },
-  Ice: { EN: "Ice", FR: "Glace", JP: "氷", JA: "氷", KO: "빙", IT: "Ghiaccio", DE: "Eis", ES: "Hielo", RU: "Лёд", PL: "Lód", PT: "Gelo", AR: "جليد" },
-  Dragon: { EN: "Dragon", FR: "Dragon", JP: "龍", JA: "龍", KO: "용", IT: "Drago", DE: "Drache", ES: "Dragón", RU: "Дракон", PL: "Smok", PT: "Dragão", AR: "تنين" },
-  Poison: { EN: "Poison", FR: "Poison", JP: "毒", JA: "毒", KO: "독", IT: "Veleno", DE: "Gift", ES: "Veneno", RU: "Яд", PL: "Trucizna", PT: "Veneno", AR: "سم" },
-  Paralysis: { EN: "Paralysis", FR: "Paralysie", JP: "麻痺", JA: "麻痺", KO: "마비", IT: "Paralisi", DE: "Paralyse", ES: "Parálisis", RU: "Паралич", PL: "Paraliż", PT: "Paralisia", AR: "شلل" },
-  Sleep: { EN: "Sleep", FR: "Sommeil", JP: "睡眠", JA: "睡眠", KO: "수면", IT: "Sonno", DE: "Schlaf", ES: "Sueño", RU: "Сон", PL: "Sen", PT: "Sono", AR: "نوم" },
-  Blast: { EN: "Blast", FR: "Explosion", JP: "爆破", JA: "爆破", KO: "폭파", IT: "Scoppio", DE: "Explosion", ES: "Explosión", RU: "Взрыв", PL: "Wybuch", PT: "Explosão", AR: "انفجار" },
+  Fire: {
+    EN: "Fire",
+    FR: "Feu",
+    JP: "火",
+    JA: "火",
+    KO: "화",
+    IT: "Fuoco",
+    DE: "Feuer",
+    ES: "Fuego",
+    RU: "Огонь",
+    PL: "Ogień",
+    PT: "Fogo",
+    AR: "نار",
+  },
+  Water: {
+    EN: "Water",
+    FR: "Eau",
+    JP: "水",
+    JA: "水",
+    KO: "수",
+    IT: "Acqua",
+    DE: "Wasser",
+    ES: "Agua",
+    RU: "Вода",
+    PL: "Woda",
+    PT: "Água",
+    AR: "ماء",
+  },
+  Thunder: {
+    EN: "Thunder",
+    FR: "Foudre",
+    JP: "雷",
+    JA: "雷",
+    KO: "뇌",
+    IT: "Tuono",
+    DE: "Donner",
+    ES: "Rayo",
+    RU: "Молния",
+    PL: "Piorun",
+    PT: "Trovão",
+    AR: "برق",
+  },
+  Ice: {
+    EN: "Ice",
+    FR: "Glace",
+    JP: "氷",
+    JA: "氷",
+    KO: "빙",
+    IT: "Ghiaccio",
+    DE: "Eis",
+    ES: "Hielo",
+    RU: "Лёд",
+    PL: "Lód",
+    PT: "Gelo",
+    AR: "جليد",
+  },
+  Dragon: {
+    EN: "Dragon",
+    FR: "Dragon",
+    JP: "龍",
+    JA: "龍",
+    KO: "용",
+    IT: "Drago",
+    DE: "Drache",
+    ES: "Dragón",
+    RU: "Дракон",
+    PL: "Smok",
+    PT: "Dragão",
+    AR: "تنين",
+  },
+  Poison: {
+    EN: "Poison",
+    FR: "Poison",
+    JP: "毒",
+    JA: "毒",
+    KO: "독",
+    IT: "Veleno",
+    DE: "Gift",
+    ES: "Veneno",
+    RU: "Яд",
+    PL: "Trucizna",
+    PT: "Veneno",
+    AR: "سم",
+  },
+  Paralysis: {
+    EN: "Paralysis",
+    FR: "Paralysie",
+    JP: "麻痺",
+    JA: "麻痺",
+    KO: "마비",
+    IT: "Paralisi",
+    DE: "Paralyse",
+    ES: "Parálisis",
+    RU: "Паралич",
+    PL: "Paraliż",
+    PT: "Paralisia",
+    AR: "شلل",
+  },
+  Sleep: {
+    EN: "Sleep",
+    FR: "Sommeil",
+    JP: "睡眠",
+    JA: "睡眠",
+    KO: "수면",
+    IT: "Sonno",
+    DE: "Schlaf",
+    ES: "Sueño",
+    RU: "Сон",
+    PL: "Sen",
+    PT: "Sono",
+    AR: "نوم",
+  },
+  Blast: {
+    EN: "Blast",
+    FR: "Explosion",
+    JP: "爆破",
+    JA: "爆破",
+    KO: "폭파",
+    IT: "Scoppio",
+    DE: "Explosion",
+    ES: "Explosión",
+    RU: "Взрыв",
+    PL: "Wybuch",
+    PT: "Explosão",
+    AR: "انفجار",
+  },
 };
 
 // Liste des éléments disponibles
-const ELEMENTS = ["Fire", "Water", "Thunder", "Ice", "Dragon", "Poison", "Paralysis", "Sleep", "Blast"];
+const ELEMENTS = [
+  "Fire",
+  "Water",
+  "Thunder",
+  "Ice",
+  "Dragon",
+  "Poison",
+  "Paralysis",
+  "Sleep",
+  "Blast",
+];
 
 // Icons
 const WeaponIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/>
-    <path d="m16 16 6-6"/>
-    <path d="m8 8 6-6"/>
-    <path d="m9 7 8 8"/>
-    <path d="m21 11-11 11"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8" />
+    <path d="m16 16 6-6" />
+    <path d="m8 8 6-6" />
+    <path d="m9 7 8 8" />
+    <path d="m21 11-11 11" />
   </svg>
 );
 
 const HeadIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="8" r="6"/>
-    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="8" r="6" />
+    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
   </svg>
 );
 
 const ChestIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/>
-    <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
-    <path d="M2 21h20"/>
-    <path d="M7 8v2"/>
-    <path d="M17 8v2"/>
-    <path d="M12 8v2"/>
-    <path d="M3 11h18"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
+    <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" />
+    <path d="M2 21h20" />
+    <path d="M7 8v2" />
+    <path d="M17 8v2" />
+    <path d="M12 8v2" />
+    <path d="M3 11h18" />
   </svg>
 );
 
 const ArmsIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/>
-    <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"/>
-    <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/>
-    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
+    <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6" />
+    <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
+    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
   </svg>
 );
 
 const WaistIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect width="18" height="6" x="3" y="9" rx="1"/>
-    <path d="M5 15v4"/>
-    <path d="M19 15v4"/>
-    <path d="M12 9v6"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect width="18" height="6" x="3" y="9" rx="1" />
+    <path d="M5 15v4" />
+    <path d="M19 15v4" />
+    <path d="M12 9v6" />
   </svg>
 );
 
 const LegsIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M7 4v16"/>
-    <path d="M17 4v16"/>
-    <path d="M3 8h4"/>
-    <path d="M17 8h4"/>
-    <path d="M3 16h4"/>
-    <path d="M17 16h4"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M7 4v16" />
+    <path d="M17 4v16" />
+    <path d="M3 8h4" />
+    <path d="M17 8h4" />
+    <path d="M3 16h4" />
+    <path d="M17 16h4" />
   </svg>
 );
 
 const TalismanIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 3h12l4 6-10 13L2 9z"/>
-    <path d="M11 3 8 9l4 13 4-13-3-6"/>
-    <path d="M2 9h20"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M6 3h12l4 6-10 13L2 9z" />
+    <path d="M11 3 8 9l4 13 4-13-3-6" />
+    <path d="M2 9h20" />
   </svg>
 );
 
 const CloseIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <line x1="18" y1="6" x2="6" y2="18"></line>
     <line x1="6" y1="6" x2="18" y2="18"></line>
   </svg>
 );
 
 const SearchIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <circle cx="11" cy="11" r="8"></circle>
     <path d="m21 21-4.3-4.3"></path>
   </svg>
@@ -695,7 +912,17 @@ const SearchIcon = () => (
 
 // Icône sauvegarde
 const SaveIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
     <polyline points="17 21 17 13 7 13 7 21"></polyline>
     <polyline points="7 3 7 8 15 8"></polyline>
@@ -704,7 +931,17 @@ const SaveIcon = () => (
 
 // Icône liste
 const ListIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <line x1="8" y1="6" x2="21" y2="6"></line>
     <line x1="8" y1="12" x2="21" y2="12"></line>
     <line x1="8" y1="18" x2="21" y2="18"></line>
@@ -716,7 +953,17 @@ const ListIcon = () => (
 
 // Icône poubelle
 const TrashIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M3 6h18"></path>
     <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
     <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
@@ -725,7 +972,17 @@ const TrashIcon = () => (
 
 // Icône édition/crayon
 const EditIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
   </svg>
@@ -733,13 +990,16 @@ const EditIcon = () => (
 
 // Fonction pour obtenir le texte traduit
 const getUIText = (key, lang) => {
-  return buildUITranslations[key]?.[lang] || buildUITranslations[key]?.EN || key;
+  return (
+    buildUITranslations[key]?.[lang] || buildUITranslations[key]?.EN || key
+  );
 };
 
 // Fonction pour rendre les slots visuellement
 const renderSlots = (slots, darkMode) => {
-  if (!slots || slots.length === 0) return <span className="text-gray-500">—</span>;
-  
+  if (!slots || slots.length === 0)
+    return <span className="text-gray-500">—</span>;
+
   return (
     <div className="flex gap-1">
       {slots.map((slotLevel, index) => {
@@ -753,7 +1013,9 @@ const renderSlots = (slots, darkMode) => {
         return (
           <span
             key={index}
-            className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white ${colors[slotLevel] || colors[1]}`}
+            className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white ${
+              colors[slotLevel] || colors[1]
+            }`}
           >
             {slotLevel}
           </span>
@@ -778,7 +1040,13 @@ function EquipmentSelectionModal({
   const [selectedElement, setSelectedElement] = useState(null);
   const [sortBy, setSortBy] = useState("name"); // "name", "attack", "defense", "affinity", "elementAttack", "fire", "water", "thunder", "ice", "dragon"
   const [sortOrder, setSortOrder] = useState("desc"); // "asc", "desc"
-  const [minResistance, setMinResistance] = useState({ fire: null, water: null, thunder: null, ice: null, dragon: null });
+  const [minResistance, setMinResistance] = useState({
+    fire: null,
+    water: null,
+    thunder: null,
+    ice: null,
+    dragon: null,
+  });
   const searchInputRef = useRef(null);
 
   // Éléments de résistance pour les armures
@@ -794,7 +1062,13 @@ function EquipmentSelectionModal({
       setSelectedElement(null);
       setSortBy("name");
       setSortOrder("desc");
-      setMinResistance({ fire: null, water: null, thunder: null, ice: null, dragon: null });
+      setMinResistance({
+        fire: null,
+        water: null,
+        thunder: null,
+        ice: null,
+        dragon: null,
+      });
     }
   }, [isOpen]);
 
@@ -810,7 +1084,13 @@ function EquipmentSelectionModal({
     setSelectedElement(null);
     setSortBy("name");
     setSortOrder("desc");
-    setMinResistance({ fire: null, water: null, thunder: null, ice: null, dragon: null });
+    setMinResistance({
+      fire: null,
+      water: null,
+      thunder: null,
+      ice: null,
+      dragon: null,
+    });
   };
 
   // Filtrer les équipements
@@ -824,10 +1104,14 @@ function EquipmentSelectionModal({
 
         // Filtre par type d'arme
         if (selectedWeaponType) {
-          const weaponTypeName = weaponTypeTranslations[selectedWeaponType]?.[language] ||
-                                  weaponTypeTranslations[selectedWeaponType]?.EN ||
-                                  selectedWeaponType;
-          if (weaponData.type !== weaponTypeName && weaponData.type !== selectedWeaponType) {
+          const weaponTypeName =
+            weaponTypeTranslations[selectedWeaponType]?.[language] ||
+            weaponTypeTranslations[selectedWeaponType]?.EN ||
+            selectedWeaponType;
+          if (
+            weaponData.type !== weaponTypeName &&
+            weaponData.type !== selectedWeaponType
+          ) {
             // Vérifier aussi en anglais
             const enWeaponData = weapon.EN;
             if (!enWeaponData || enWeaponData.type !== selectedWeaponType) {
@@ -839,7 +1123,10 @@ function EquipmentSelectionModal({
         // Filtre par élément
         if (selectedElement) {
           const enWeaponData = weapon.EN;
-          if (!enWeaponData?.element || enWeaponData.element !== selectedElement) {
+          if (
+            !enWeaponData?.element ||
+            enWeaponData.element !== selectedElement
+          ) {
             return false;
           }
         }
@@ -880,7 +1167,8 @@ function EquipmentSelectionModal({
           comparison = (b.data.affinity || 0) - (a.data.affinity || 0);
           break;
         case "elementAttack":
-          comparison = (b.data.elementAttack || 0) - (a.data.elementAttack || 0);
+          comparison =
+            (b.data.elementAttack || 0) - (a.data.elementAttack || 0);
           break;
         case "name":
         default:
@@ -910,9 +1198,15 @@ function EquipmentSelectionModal({
 
         // Filtre par résistance minimale
         for (const resType of ARMOR_RESISTANCES) {
-          if (minResistance[resType] !== null && minResistance[resType] !== "") {
+          if (
+            minResistance[resType] !== null &&
+            minResistance[resType] !== ""
+          ) {
             const minVal = parseInt(minResistance[resType], 10);
-            if (!isNaN(minVal) && (piece.resistances?.[resType] || 0) < minVal) {
+            if (
+              !isNaN(minVal) &&
+              (piece.resistances?.[resType] || 0) < minVal
+            ) {
               return false;
             }
           }
@@ -925,8 +1219,12 @@ function EquipmentSelectionModal({
             const langData = armorSet[lang];
             if (!langData?.pieces?.[armorPieceType]) return false;
             const langPiece = langData.pieces[armorPieceType];
-            const matchesSetName = langData.name?.toLowerCase().includes(query);
-            const matchesPieceName = langPiece.name?.toLowerCase().includes(query);
+            const matchesSetName = (langData.series_name || langData.name)
+              ?.toLowerCase()
+              .includes(query);
+            const matchesPieceName = langPiece.name
+              ?.toLowerCase()
+              .includes(query);
             const matchesSkill = langPiece.skills?.some((skill) =>
               skill.name?.toLowerCase().includes(query)
             );
@@ -957,19 +1255,26 @@ function EquipmentSelectionModal({
           comparison = (b.data.defense || 0) - (a.data.defense || 0);
           break;
         case "fire":
-          comparison = (b.data.resistances?.fire || 0) - (a.data.resistances?.fire || 0);
+          comparison =
+            (b.data.resistances?.fire || 0) - (a.data.resistances?.fire || 0);
           break;
         case "water":
-          comparison = (b.data.resistances?.water || 0) - (a.data.resistances?.water || 0);
+          comparison =
+            (b.data.resistances?.water || 0) - (a.data.resistances?.water || 0);
           break;
         case "thunder":
-          comparison = (b.data.resistances?.thunder || 0) - (a.data.resistances?.thunder || 0);
+          comparison =
+            (b.data.resistances?.thunder || 0) -
+            (a.data.resistances?.thunder || 0);
           break;
         case "ice":
-          comparison = (b.data.resistances?.ice || 0) - (a.data.resistances?.ice || 0);
+          comparison =
+            (b.data.resistances?.ice || 0) - (a.data.resistances?.ice || 0);
           break;
         case "dragon":
-          comparison = (b.data.resistances?.dragon || 0) - (a.data.resistances?.dragon || 0);
+          comparison =
+            (b.data.resistances?.dragon || 0) -
+            (a.data.resistances?.dragon || 0);
           break;
         case "name":
         default:
@@ -980,17 +1285,18 @@ function EquipmentSelectionModal({
     });
   }
 
-  const modalTitle = type === "weapon"
-    ? getUIText("selectWeapon", language)
-    : type === "head"
-    ? getUIText("selectHead", language)
-    : type === "chest"
-    ? getUIText("selectChest", language)
-    : type === "arms"
-    ? getUIText("selectArms", language)
-    : type === "waist"
-    ? getUIText("selectWaist", language)
-    : getUIText("selectLegs", language);
+  const modalTitle =
+    type === "weapon"
+      ? getUIText("selectWeapon", language)
+      : type === "head"
+      ? getUIText("selectHead", language)
+      : type === "chest"
+      ? getUIText("selectChest", language)
+      : type === "arms"
+      ? getUIText("selectArms", language)
+      : type === "waist"
+      ? getUIText("selectWaist", language)
+      : getUIText("selectLegs", language);
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -1025,7 +1331,11 @@ function EquipmentSelectionModal({
         </div>
 
         {/* Search & Filters */}
-        <div className={`p-4 border-b ${darkMode ? "border-slate-700" : "border-gray-200"}`}>
+        <div
+          className={`p-4 border-b ${
+            darkMode ? "border-slate-700" : "border-gray-200"
+          }`}
+        >
           {/* Barre de recherche */}
           <div className="relative mb-4">
             <div
@@ -1081,7 +1391,11 @@ function EquipmentSelectionModal({
 
               {/* Filtres par élément */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                <span
+                  className={`text-sm font-medium ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   {getUIText("element", language)}:
                 </span>
                 <button
@@ -1101,7 +1415,9 @@ function EquipmentSelectionModal({
                 {ELEMENTS.map((elem) => (
                   <button
                     key={elem}
-                    onClick={() => setSelectedElement(selectedElement === elem ? null : elem)}
+                    onClick={() =>
+                      setSelectedElement(selectedElement === elem ? null : elem)
+                    }
                     className={`px-2 py-1 text-xs rounded-lg transition-colors ${
                       selectedElement === elem
                         ? darkMode
@@ -1119,14 +1435,21 @@ function EquipmentSelectionModal({
 
               {/* Tri */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                <span
+                  className={`text-sm font-medium ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   {getUIText("sortBy", language)}:
                 </span>
                 {[
                   { key: "name", label: getUIText("name", language) },
                   { key: "attack", label: getUIText("attack", language) },
                   { key: "affinity", label: getUIText("affinity", language) },
-                  { key: "elementAttack", label: getUIText("elementAttack", language) },
+                  {
+                    key: "elementAttack",
+                    label: getUIText("elementAttack", language),
+                  },
                 ].map(({ key, label }) => (
                   <button
                     key={key}
@@ -1175,7 +1498,11 @@ function EquipmentSelectionModal({
             <div className="space-y-3">
               {/* Tri */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                <span
+                  className={`text-sm font-medium ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   {getUIText("sortBy", language)}:
                 </span>
                 {[
@@ -1229,21 +1556,41 @@ function EquipmentSelectionModal({
 
               {/* Filtres par résistance minimale */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                <span
+                  className={`text-sm font-medium ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   {getUIText("minResistance", language)}:
                 </span>
                 {ARMOR_RESISTANCES.map((resType) => {
-                  const icons = { fire: "🔥", water: "💧", thunder: "⚡", ice: "❄️", dragon: "🐉" };
-                  const elementKey = resType.charAt(0).toUpperCase() + resType.slice(1);
+                  const icons = {
+                    fire: "🔥",
+                    water: "💧",
+                    thunder: "⚡",
+                    ice: "❄️",
+                    dragon: "🐉",
+                  };
+                  const elementKey =
+                    resType.charAt(0).toUpperCase() + resType.slice(1);
                   return (
                     <div key={resType} className="flex items-center gap-1">
-                      <span title={elementTranslations[elementKey]?.[language] || resType}>
+                      <span
+                        title={
+                          elementTranslations[elementKey]?.[language] || resType
+                        }
+                      >
                         {icons[resType]}
                       </span>
                       <input
                         type="number"
                         value={minResistance[resType] ?? ""}
-                        onChange={(e) => setMinResistance(prev => ({ ...prev, [resType]: e.target.value }))}
+                        onChange={(e) =>
+                          setMinResistance((prev) => ({
+                            ...prev,
+                            [resType]: e.target.value,
+                          }))
+                        }
                         placeholder="0"
                         className={`w-12 h-7 text-xs text-center rounded border focus:outline-none focus:ring-1 ${
                           darkMode
@@ -1296,35 +1643,50 @@ function EquipmentSelectionModal({
                           {item.data.name}
                         </div>
                         {/* Nom anglais si différent */}
-                        {language !== "EN" && item.allData.EN?.name !== item.data.name && (
-                          <div
-                            className={`text-xs italic ${
-                              darkMode ? "text-gray-500" : "text-gray-400"
-                            }`}
-                          >
-                            EN: {item.allData.EN?.name}
-                          </div>
-                        )}
+                        {language !== "EN" &&
+                          item.allData.EN?.name !== item.data.name && (
+                            <div
+                              className={`text-xs italic ${
+                                darkMode ? "text-gray-500" : "text-gray-400"
+                              }`}
+                            >
+                              EN: {item.allData.EN?.name}
+                            </div>
+                          )}
                         <div
                           className={`text-sm ${
                             darkMode ? "text-gray-400" : "text-gray-500"
                           }`}
                         >
-                          {item.data.skills?.map(([name, level]) => `${name} Lv.${level}`).join(", ") || "—"}
+                          {item.data.skills
+                            ?.map(([name, level]) => `${name} Lv.${level}`)
+                            .join(", ") || "—"}
                         </div>
                       </div>
                       <div className="flex items-center gap-4 text-sm">
                         {item.data.affinity > 0 && (
-                          <span className={`${darkMode ? "text-cyan-400" : "text-blue-600"}`}>
+                          <span
+                            className={`${
+                              darkMode ? "text-cyan-400" : "text-blue-600"
+                            }`}
+                          >
                             ✦ {Math.round(item.data.affinity * 100)}%
                           </span>
                         )}
                         {item.data.element && (
-                          <span className={`${darkMode ? "text-orange-400" : "text-orange-600"}`}>
+                          <span
+                            className={`${
+                              darkMode ? "text-orange-400" : "text-orange-600"
+                            }`}
+                          >
                             🔥 {item.data.elementAttack}
                           </span>
                         )}
-                        <span className={`${darkMode ? "text-amber-100" : "text-gray-900"}`}>
+                        <span
+                          className={`${
+                            darkMode ? "text-amber-100" : "text-gray-900"
+                          }`}
+                        >
                           ⚔️ {item.data.attack}
                         </span>
                         {renderSlots(item.data.slots, darkMode)}
@@ -1342,45 +1704,109 @@ function EquipmentSelectionModal({
                           {item.data.name}
                         </div>
                         {/* Nom anglais si différent */}
-                        {language !== "EN" && item.allData.EN?.pieces?.[item.pieceType]?.name !== item.data.name && (
-                          <div
-                            className={`text-xs italic ${
-                              darkMode ? "text-gray-500" : "text-gray-400"
-                            }`}
-                          >
-                            EN: {item.allData.EN?.pieces?.[item.pieceType]?.name}
-                          </div>
-                        )}
+                        {language !== "EN" &&
+                          item.allData.EN?.pieces?.[item.pieceType]?.name !==
+                            item.data.name && (
+                            <div
+                              className={`text-xs italic ${
+                                darkMode ? "text-gray-500" : "text-gray-400"
+                              }`}
+                            >
+                              EN:{" "}
+                              {item.allData.EN?.pieces?.[item.pieceType]?.name}
+                            </div>
+                          )}
                         <div
                           className={`text-sm ${
                             darkMode ? "text-gray-400" : "text-gray-500"
                           }`}
                         >
-                          {item.data.skills?.map((s) => `${s.name} Lv.${s.level}`).join(", ") || "—"}
+                          {item.data.skills
+                            ?.map((s) => `${s.name} Lv.${s.level}`)
+                            .join(", ") || "—"}
                         </div>
                       </div>
                       <div className="flex items-center gap-2 text-sm flex-shrink-0">
                         {/* Défense */}
-                        <span className={`${darkMode ? "text-amber-100" : "text-gray-900"}`}>
+                        <span
+                          className={`${
+                            darkMode ? "text-amber-100" : "text-gray-900"
+                          }`}
+                        >
                           🛡️ {item.data.defense}
                         </span>
                         {/* Résistances élémentaires */}
                         {item.data.resistances && (
                           <div className="flex items-center gap-1 text-xs">
-                            <span className={item.data.resistances.fire > 0 ? "text-red-400" : item.data.resistances.fire < 0 ? "text-red-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
-                              🔥{item.data.resistances.fire >= 0 ? "+" : ""}{item.data.resistances.fire}
+                            <span
+                              className={
+                                item.data.resistances.fire > 0
+                                  ? "text-red-400"
+                                  : item.data.resistances.fire < 0
+                                  ? "text-red-600"
+                                  : darkMode
+                                  ? "text-gray-500"
+                                  : "text-gray-400"
+                              }
+                            >
+                              🔥{item.data.resistances.fire >= 0 ? "+" : ""}
+                              {item.data.resistances.fire}
                             </span>
-                            <span className={item.data.resistances.water > 0 ? "text-blue-400" : item.data.resistances.water < 0 ? "text-blue-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
-                              💧{item.data.resistances.water >= 0 ? "+" : ""}{item.data.resistances.water}
+                            <span
+                              className={
+                                item.data.resistances.water > 0
+                                  ? "text-blue-400"
+                                  : item.data.resistances.water < 0
+                                  ? "text-blue-600"
+                                  : darkMode
+                                  ? "text-gray-500"
+                                  : "text-gray-400"
+                              }
+                            >
+                              💧{item.data.resistances.water >= 0 ? "+" : ""}
+                              {item.data.resistances.water}
                             </span>
-                            <span className={item.data.resistances.thunder > 0 ? "text-yellow-400" : item.data.resistances.thunder < 0 ? "text-yellow-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
-                              ⚡{item.data.resistances.thunder >= 0 ? "+" : ""}{item.data.resistances.thunder}
+                            <span
+                              className={
+                                item.data.resistances.thunder > 0
+                                  ? "text-yellow-400"
+                                  : item.data.resistances.thunder < 0
+                                  ? "text-yellow-600"
+                                  : darkMode
+                                  ? "text-gray-500"
+                                  : "text-gray-400"
+                              }
+                            >
+                              ⚡{item.data.resistances.thunder >= 0 ? "+" : ""}
+                              {item.data.resistances.thunder}
                             </span>
-                            <span className={item.data.resistances.ice > 0 ? "text-cyan-400" : item.data.resistances.ice < 0 ? "text-cyan-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
-                              ❄️{item.data.resistances.ice >= 0 ? "+" : ""}{item.data.resistances.ice}
+                            <span
+                              className={
+                                item.data.resistances.ice > 0
+                                  ? "text-cyan-400"
+                                  : item.data.resistances.ice < 0
+                                  ? "text-cyan-600"
+                                  : darkMode
+                                  ? "text-gray-500"
+                                  : "text-gray-400"
+                              }
+                            >
+                              ❄️{item.data.resistances.ice >= 0 ? "+" : ""}
+                              {item.data.resistances.ice}
                             </span>
-                            <span className={item.data.resistances.dragon > 0 ? "text-purple-400" : item.data.resistances.dragon < 0 ? "text-purple-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
-                              🐉{item.data.resistances.dragon >= 0 ? "+" : ""}{item.data.resistances.dragon}
+                            <span
+                              className={
+                                item.data.resistances.dragon > 0
+                                  ? "text-purple-400"
+                                  : item.data.resistances.dragon < 0
+                                  ? "text-purple-600"
+                                  : darkMode
+                                  ? "text-gray-500"
+                                  : "text-gray-400"
+                              }
+                            >
+                              🐉{item.data.resistances.dragon >= 0 ? "+" : ""}
+                              {item.data.resistances.dragon}
                             </span>
                           </div>
                         )}
@@ -1400,7 +1826,17 @@ function EquipmentSelectionModal({
 
 // Icône globe pour le sélecteur de langue
 const GlobeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <circle cx="12" cy="12" r="10"></circle>
     <line x1="2" y1="12" x2="22" y2="12"></line>
     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
@@ -1409,7 +1845,17 @@ const GlobeIcon = () => (
 
 // Icône partage
 const ShareIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <circle cx="18" cy="5" r="3"></circle>
     <circle cx="6" cy="12" r="3"></circle>
     <circle cx="18" cy="19" r="3"></circle>
@@ -1420,7 +1866,17 @@ const ShareIcon = () => (
 
 // Icône check
 const CheckIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
 );
@@ -1437,7 +1893,7 @@ const encodeBuildToURL = (buildName, selectedEquipment, language) => {
     t: selectedEquipment.waist?.setId || null,
     g: selectedEquipment.legs?.setId || null,
   };
-  
+
   // Encoder en base64 pour garder l'URL courte
   const jsonString = JSON.stringify(buildData);
   const base64 = btoa(encodeURIComponent(jsonString));
@@ -1448,7 +1904,7 @@ const decodeBuildFromURL = (encoded, lang) => {
   try {
     const jsonString = decodeURIComponent(atob(encoded));
     const buildData = JSON.parse(jsonString);
-    
+
     const equipment = {
       weapon: null,
       head: null,
@@ -1458,7 +1914,7 @@ const decodeBuildFromURL = (encoded, lang) => {
       legs: null,
       talisman: null,
     };
-    
+
     // Restaurer l'arme
     if (buildData.w && weaponsFullData[buildData.w]) {
       const weaponAllData = weaponsFullData[buildData.w];
@@ -1468,7 +1924,7 @@ const decodeBuildFromURL = (encoded, lang) => {
         allData: weaponAllData,
       };
     }
-    
+
     // Restaurer les pièces d'armure
     const pieceMapping = {
       h: "head",
@@ -1477,7 +1933,7 @@ const decodeBuildFromURL = (encoded, lang) => {
       t: "waist",
       g: "legs",
     };
-    
+
     Object.entries(pieceMapping).forEach(([key, pieceType]) => {
       const setId = buildData[key];
       if (setId && armorsFullData[setId]) {
@@ -1495,7 +1951,7 @@ const decodeBuildFromURL = (encoded, lang) => {
         }
       }
     });
-    
+
     return {
       buildName: buildData.n || "",
       language: buildData.l || lang,
@@ -1546,7 +2002,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const buildParam = urlParams.get("build");
-    
+
     if (buildParam) {
       const decoded = decodeBuildFromURL(buildParam, initialLanguage);
       if (decoded) {
@@ -1571,7 +2027,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
     // Mettre à jour les données affichées pour chaque équipement sélectionné
     setSelectedEquipment((prev) => {
       const updated = { ...prev };
-      
+
       // Mettre à jour l'arme
       if (prev.weapon) {
         const weaponAllData = prev.weapon.allData;
@@ -1580,7 +2036,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
           data: weaponAllData[newLang] || weaponAllData.EN,
         };
       }
-      
+
       // Mettre à jour les pièces d'armure
       ["head", "chest", "arms", "waist", "legs"].forEach((pieceType) => {
         if (prev[pieceType]) {
@@ -1593,7 +2049,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
           };
         }
       });
-      
+
       return updated;
     });
   };
@@ -1690,7 +2146,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   const handleShareBuild = async () => {
     const encoded = encodeBuildToURL(buildName, selectedEquipment, language);
     const url = `${window.location.origin}${window.location.pathname}?build=${encoded}`;
-    
+
     try {
       await navigator.clipboard.writeText(url);
       setLinkCopied(true);
@@ -1712,7 +2168,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   const handleSaveBuild = () => {
     const name = buildName.trim() || `Build ${savedBuilds.length + 1}`;
     const encoded = encodeBuildToURL(name, selectedEquipment, language);
-    
+
     const newBuild = {
       id: Date.now().toString(),
       name,
@@ -1720,12 +2176,12 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
       createdAt: new Date().toISOString(),
       language,
     };
-    
+
     const updatedBuilds = [...savedBuilds, newBuild];
     setSavedBuilds(updatedBuilds);
     localStorage.setItem("mhwilds_saved_builds", JSON.stringify(updatedBuilds));
     setBuildName(name);
-    
+
     // Afficher le message de confirmation
     setBuildSavedMessage(true);
     setTimeout(() => setBuildSavedMessage(false), 2000);
@@ -1752,7 +2208,10 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
     if (deletingBuildId) {
       const updatedBuilds = savedBuilds.filter((b) => b.id !== deletingBuildId);
       setSavedBuilds(updatedBuilds);
-      localStorage.setItem("mhwilds_saved_builds", JSON.stringify(updatedBuilds));
+      localStorage.setItem(
+        "mhwilds_saved_builds",
+        JSON.stringify(updatedBuilds)
+      );
       setDeletingBuildId(null);
     }
   };
@@ -1774,7 +2233,11 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
           // Mettre à jour le nom dans l'encodage aussi
           const decoded = decodeBuildFromURL(b.encoded, language);
           if (decoded) {
-            const newEncoded = encodeBuildToURL(editingBuildName.trim(), decoded.equipment, decoded.language);
+            const newEncoded = encodeBuildToURL(
+              editingBuildName.trim(),
+              decoded.equipment,
+              decoded.language
+            );
             return { ...b, name: editingBuildName.trim(), encoded: newEncoded };
           }
           return { ...b, name: editingBuildName.trim() };
@@ -1782,7 +2245,10 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
         return b;
       });
       setSavedBuilds(updatedBuilds);
-      localStorage.setItem("mhwilds_saved_builds", JSON.stringify(updatedBuilds));
+      localStorage.setItem(
+        "mhwilds_saved_builds",
+        JSON.stringify(updatedBuilds)
+      );
     }
     setEditingBuildId(null);
     setEditingBuildName("");
@@ -1813,11 +2279,13 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
             onChange={(e) => setBuildName(e.target.value)}
             placeholder={getUIText("untitledSet", language)}
             className={`text-2xl font-bold bg-transparent border-none focus:outline-none w-full ${
-              darkMode ? "text-amber-100 placeholder-amber-100/50" : "text-gray-900 placeholder-gray-400"
+              darkMode
+                ? "text-amber-100 placeholder-amber-100/50"
+                : "text-gray-900 placeholder-gray-400"
             }`}
           />
         </div>
-        
+
         {/* Sélecteur de langue */}
         <div className="flex items-center gap-2">
           <GlobeIcon />
@@ -1837,7 +2305,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
             ))}
           </select>
         </div>
-        
+
         {/* Bouton de partage */}
         <button
           onClick={handleShareBuild}
@@ -1853,10 +2321,12 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
         >
           {linkCopied ? <CheckIcon /> : <ShareIcon />}
           <span className="hidden sm:inline">
-            {linkCopied ? getUIText("linkCopied", language) : getUIText("shareBuild", language)}
+            {linkCopied
+              ? getUIText("linkCopied", language)
+              : getUIText("shareBuild", language)}
           </span>
         </button>
-        
+
         {/* Bouton de sauvegarde */}
         <button
           onClick={handleSaveBuild}
@@ -1872,10 +2342,12 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
         >
           {buildSavedMessage ? <CheckIcon /> : <SaveIcon />}
           <span className="hidden sm:inline">
-            {buildSavedMessage ? getUIText("buildSaved", language) : getUIText("saveBuild", language)}
+            {buildSavedMessage
+              ? getUIText("buildSaved", language)
+              : getUIText("saveBuild", language)}
           </span>
         </button>
-        
+
         {/* Bouton Mes Builds */}
         <button
           onClick={() => setShowSavedBuildsModal(true)}
@@ -1886,16 +2358,22 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
           }`}
         >
           <ListIcon />
-          <span className="hidden sm:inline">{getUIText("myBuilds", language)}</span>
+          <span className="hidden sm:inline">
+            {getUIText("myBuilds", language)}
+          </span>
           {savedBuilds.length > 0 && (
-            <span className={`px-2 py-0.5 text-xs rounded-full ${
-              darkMode ? "bg-purple-700 text-purple-100" : "bg-purple-200 text-purple-800"
-            }`}>
+            <span
+              className={`px-2 py-0.5 text-xs rounded-full ${
+                darkMode
+                  ? "bg-purple-700 text-purple-100"
+                  : "bg-purple-200 text-purple-800"
+              }`}
+            >
               {savedBuilds.length}
             </span>
           )}
         </button>
-        
+
         <button
           onClick={handleReset}
           className={`px-4 py-2 rounded-lg transition-colors ${
@@ -1977,15 +2455,15 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                     </div>
                     {/* Slots de l'équipement */}
                     <div className="flex items-center gap-2">
-                      {equipment
-                        ? renderSlots(equipment.data.slots, darkMode)
-                        : (
-                          <div className="flex gap-1">
-                            <span className="w-5 h-5 rounded-full bg-gray-600/50"></span>
-                            <span className="w-5 h-5 rounded-full bg-gray-600/50"></span>
-                            <span className="w-5 h-5 rounded-full bg-gray-600/50"></span>
-                          </div>
-                        )}
+                      {equipment ? (
+                        renderSlots(equipment.data.slots, darkMode)
+                      ) : (
+                        <div className="flex gap-1">
+                          <span className="w-5 h-5 rounded-full bg-gray-600/50"></span>
+                          <span className="w-5 h-5 rounded-full bg-gray-600/50"></span>
+                          <span className="w-5 h-5 rounded-full bg-gray-600/50"></span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -2204,9 +2682,12 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                               <input
                                 type="text"
                                 value={editingBuildName}
-                                onChange={(e) => setEditingBuildName(e.target.value)}
+                                onChange={(e) =>
+                                  setEditingBuildName(e.target.value)
+                                }
                                 onKeyDown={(e) => {
-                                  if (e.key === "Enter") handleSaveRename(build.id);
+                                  if (e.key === "Enter")
+                                    handleSaveRename(build.id);
                                   if (e.key === "Escape") {
                                     setEditingBuildId(null);
                                     setEditingBuildName("");
@@ -2257,12 +2738,13 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                                   darkMode ? "text-gray-500" : "text-gray-400"
                                 }`}
                               >
-                                {new Date(build.createdAt).toLocaleDateString()} • {build.language}
+                                {new Date(build.createdAt).toLocaleDateString()}{" "}
+                                • {build.language}
                               </div>
                             </>
                           )}
                         </div>
-                        
+
                         {editingBuildId !== build.id && (
                           <div className="flex items-center gap-2 ml-4">
                             <button
@@ -2343,7 +2825,9 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
             >
               <div
                 className={`p-2 rounded-full ${
-                  darkMode ? "bg-red-900/50 text-red-400" : "bg-red-100 text-red-600"
+                  darkMode
+                    ? "bg-red-900/50 text-red-400"
+                    : "bg-red-100 text-red-600"
                 }`}
               >
                 <TrashIcon />
@@ -2368,7 +2852,9 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
               </p>
               {/* Afficher le nom du build à supprimer */}
               {(() => {
-                const buildToDelete = savedBuilds.find((b) => b.id === deletingBuildId);
+                const buildToDelete = savedBuilds.find(
+                  (b) => b.id === deletingBuildId
+                );
                 return buildToDelete ? (
                   <p
                     className={`text-center mt-3 font-semibold ${

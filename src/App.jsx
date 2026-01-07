@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-//import talentsData from "./data/talents.json";
 import talentsData from "./data/skills.json";
 import skillSpecsData from "./data/skill-specifications.json";
 import weaponTypeTranslations from "./data/weapon-type-translations.json";
 import weaponsFullData from "./data/weapons-full.json";
-import armorsFullData from "./data/armors-full.json";
+import armorsFullData from "./data/armors-kiranico-full.json";
 import BuildCreatorPage from "./components/BuildCreatorPage";
 
 // Traductions des types d'armures
@@ -677,7 +676,7 @@ function App() {
     const dataUri =
       "data:application/json;charset=utf-8," + encodeURIComponent(dataStr);
 
-    const exportFileDefaultName = "talents.json";
+    const exportFileDefaultName = "skills.json";
 
     const linkElement = document.createElement("a");
     linkElement.setAttribute("href", dataUri);
@@ -766,7 +765,7 @@ function App() {
                     : "bg-amber-500/30 text-amber-900 hover:bg-amber-500/50 border-amber-500/50"
                 }`}
                 aria-label="Download JSON"
-                title="Download talents.json"
+                title="Download skills.json"
               >
                 <DownloadIcon />
                 <span className="hidden sm:inline">Save JSON</span>
