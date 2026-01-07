@@ -412,7 +412,205 @@ const buildUITranslations = {
     PT: "Fechar",
     AR: "إغلاق",
   },
+  cancel: {
+    EN: "Cancel",
+    FR: "Annuler",
+    JP: "キャンセル",
+    JA: "キャンセル",
+    KO: "취소",
+    IT: "Annulla",
+    DE: "Abbrechen",
+    ES: "Cancelar",
+    RU: "Отмена",
+    PL: "Anuluj",
+    PT: "Cancelar",
+    AR: "إلغاء",
+  },
+  deleteConfirmTitle: {
+    EN: "Delete Build",
+    FR: "Supprimer le Build",
+    JP: "ビルドを削除",
+    JA: "ビルドを削除",
+    KO: "빌드 삭제",
+    IT: "Elimina Build",
+    DE: "Build löschen",
+    ES: "Eliminar Build",
+    RU: "Удалить сборку",
+    PL: "Usuń build",
+    PT: "Excluir Build",
+    AR: "حذف البناء",
+  },
+  filters: {
+    EN: "Filters",
+    FR: "Filtres",
+    JP: "フィルター",
+    JA: "フィルター",
+    KO: "필터",
+    IT: "Filtri",
+    DE: "Filter",
+    ES: "Filtros",
+    RU: "Фильтры",
+    PL: "Filtry",
+    PT: "Filtros",
+    AR: "فلاتر",
+  },
+  element: {
+    EN: "Element",
+    FR: "Élément",
+    JP: "属性",
+    JA: "属性",
+    KO: "속성",
+    IT: "Elemento",
+    DE: "Element",
+    ES: "Elemento",
+    RU: "Стихия",
+    PL: "Żywioł",
+    PT: "Elemento",
+    AR: "عنصر",
+  },
+  sortBy: {
+    EN: "Sort by",
+    FR: "Trier par",
+    JP: "並び替え",
+    JA: "並び替え",
+    KO: "정렬",
+    IT: "Ordina per",
+    DE: "Sortieren",
+    ES: "Ordenar por",
+    RU: "Сортировать",
+    PL: "Sortuj",
+    PT: "Ordenar por",
+    AR: "ترتيب حسب",
+  },
+  attack: {
+    EN: "Attack",
+    FR: "Attaque",
+    JP: "攻撃力",
+    JA: "攻撃力",
+    KO: "공격력",
+    IT: "Attacco",
+    DE: "Angriff",
+    ES: "Ataque",
+    RU: "Атака",
+    PL: "Atak",
+    PT: "Ataque",
+    AR: "هجوم",
+  },
+  affinity: {
+    EN: "Affinity",
+    FR: "Affinité",
+    JP: "会心率",
+    JA: "会心率",
+    KO: "회심률",
+    IT: "Affinità",
+    DE: "Affinität",
+    ES: "Afinidad",
+    RU: "Сродство",
+    PL: "Trafienie kryt.",
+    PT: "Afinidade",
+    AR: "ألفة",
+  },
+  name: {
+    EN: "Name",
+    FR: "Nom",
+    JP: "名前",
+    JA: "名前",
+    KO: "이름",
+    IT: "Nome",
+    DE: "Name",
+    ES: "Nombre",
+    RU: "Название",
+    PL: "Nazwa",
+    PT: "Nome",
+    AR: "اسم",
+  },
+  elementAttack: {
+    EN: "Element Attack",
+    FR: "Attaque Élémentaire",
+    JP: "属性攻撃",
+    JA: "属性攻撃",
+    KO: "속성 공격",
+    IT: "Attacco Elem.",
+    DE: "Elem. Angriff",
+    ES: "Ataque Elem.",
+    RU: "Стих. атака",
+    PL: "Atak żywiołu",
+    PT: "Ataque Elem.",
+    AR: "هجوم عنصري",
+  },
+  all: {
+    EN: "All",
+    FR: "Tous",
+    JP: "すべて",
+    JA: "すべて",
+    KO: "전체",
+    IT: "Tutti",
+    DE: "Alle",
+    ES: "Todos",
+    RU: "Все",
+    PL: "Wszystkie",
+    PT: "Todos",
+    AR: "الكل",
+  },
+  resetFilters: {
+    EN: "Reset",
+    FR: "Réinitialiser",
+    JP: "リセット",
+    JA: "リセット",
+    KO: "초기화",
+    IT: "Reset",
+    DE: "Zurücksetzen",
+    ES: "Restablecer",
+    RU: "Сбросить",
+    PL: "Resetuj",
+    PT: "Redefinir",
+    AR: "إعادة تعيين",
+  },
+  resistances: {
+    EN: "Resistances",
+    FR: "Résistances",
+    JP: "耐性",
+    JA: "耐性",
+    KO: "내성",
+    IT: "Resistenze",
+    DE: "Resistenzen",
+    ES: "Resistencias",
+    RU: "Сопротивления",
+    PL: "Odporności",
+    PT: "Resistências",
+    AR: "مقاومات",
+  },
+  minResistance: {
+    EN: "Min. Resistance",
+    FR: "Rés. min.",
+    JP: "最小耐性",
+    JA: "最小耐性",
+    KO: "최소 내성",
+    IT: "Res. min.",
+    DE: "Min. Res.",
+    ES: "Res. mín.",
+    RU: "Мин. сопр.",
+    PL: "Min. odp.",
+    PT: "Res. mín.",
+    AR: "أدنى مقاومة",
+  },
 };
+
+// Traductions des éléments
+const elementTranslations = {
+  Fire: { EN: "Fire", FR: "Feu", JP: "火", JA: "火", KO: "화", IT: "Fuoco", DE: "Feuer", ES: "Fuego", RU: "Огонь", PL: "Ogień", PT: "Fogo", AR: "نار" },
+  Water: { EN: "Water", FR: "Eau", JP: "水", JA: "水", KO: "수", IT: "Acqua", DE: "Wasser", ES: "Agua", RU: "Вода", PL: "Woda", PT: "Água", AR: "ماء" },
+  Thunder: { EN: "Thunder", FR: "Foudre", JP: "雷", JA: "雷", KO: "뇌", IT: "Tuono", DE: "Donner", ES: "Rayo", RU: "Молния", PL: "Piorun", PT: "Trovão", AR: "برق" },
+  Ice: { EN: "Ice", FR: "Glace", JP: "氷", JA: "氷", KO: "빙", IT: "Ghiaccio", DE: "Eis", ES: "Hielo", RU: "Лёд", PL: "Lód", PT: "Gelo", AR: "جليد" },
+  Dragon: { EN: "Dragon", FR: "Dragon", JP: "龍", JA: "龍", KO: "용", IT: "Drago", DE: "Drache", ES: "Dragón", RU: "Дракон", PL: "Smok", PT: "Dragão", AR: "تنين" },
+  Poison: { EN: "Poison", FR: "Poison", JP: "毒", JA: "毒", KO: "독", IT: "Veleno", DE: "Gift", ES: "Veneno", RU: "Яд", PL: "Trucizna", PT: "Veneno", AR: "سم" },
+  Paralysis: { EN: "Paralysis", FR: "Paralysie", JP: "麻痺", JA: "麻痺", KO: "마비", IT: "Paralisi", DE: "Paralyse", ES: "Parálisis", RU: "Паралич", PL: "Paraliż", PT: "Paralisia", AR: "شلل" },
+  Sleep: { EN: "Sleep", FR: "Sommeil", JP: "睡眠", JA: "睡眠", KO: "수면", IT: "Sonno", DE: "Schlaf", ES: "Sueño", RU: "Сон", PL: "Sen", PT: "Sono", AR: "نوم" },
+  Blast: { EN: "Blast", FR: "Explosion", JP: "爆破", JA: "爆破", KO: "폭파", IT: "Scoppio", DE: "Explosion", ES: "Explosión", RU: "Взрыв", PL: "Wybuch", PT: "Explosão", AR: "انفجار" },
+};
+
+// Liste des éléments disponibles
+const ELEMENTS = ["Fire", "Water", "Thunder", "Ice", "Dragon", "Poison", "Paralysis", "Sleep", "Blast"];
 
 // Icons
 const WeaponIcon = () => (
@@ -577,7 +775,14 @@ function EquipmentSelectionModal({
 }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedWeaponType, setSelectedWeaponType] = useState(null);
+  const [selectedElement, setSelectedElement] = useState(null);
+  const [sortBy, setSortBy] = useState("name"); // "name", "attack", "defense", "affinity", "elementAttack", "fire", "water", "thunder", "ice", "dragon"
+  const [sortOrder, setSortOrder] = useState("desc"); // "asc", "desc"
+  const [minResistance, setMinResistance] = useState({ fire: null, water: null, thunder: null, ice: null, dragon: null });
   const searchInputRef = useRef(null);
+
+  // Éléments de résistance pour les armures
+  const ARMOR_RESISTANCES = ["fire", "water", "thunder", "ice", "dragon"];
 
   useEffect(() => {
     if (isOpen && searchInputRef.current) {
@@ -586,6 +791,10 @@ function EquipmentSelectionModal({
     if (!isOpen) {
       setSearchQuery("");
       setSelectedWeaponType(null);
+      setSelectedElement(null);
+      setSortBy("name");
+      setSortOrder("desc");
+      setMinResistance({ fire: null, water: null, thunder: null, ice: null, dragon: null });
     }
   }, [isOpen]);
 
@@ -593,6 +802,16 @@ function EquipmentSelectionModal({
 
   // Types d'armes disponibles
   const weaponTypes = Object.keys(weaponTypeTranslations);
+
+  // Fonction de réinitialisation des filtres
+  const resetFilters = () => {
+    setSearchQuery("");
+    setSelectedWeaponType(null);
+    setSelectedElement(null);
+    setSortBy("name");
+    setSortOrder("desc");
+    setMinResistance({ fire: null, water: null, thunder: null, ice: null, dragon: null });
+  };
 
   // Filtrer les équipements
   let filteredItems = [];
@@ -614,6 +833,14 @@ function EquipmentSelectionModal({
             if (!enWeaponData || enWeaponData.type !== selectedWeaponType) {
               return false;
             }
+          }
+        }
+
+        // Filtre par élément
+        if (selectedElement) {
+          const enWeaponData = weapon.EN;
+          if (!enWeaponData?.element || enWeaponData.element !== selectedElement) {
+            return false;
           }
         }
 
@@ -641,6 +868,27 @@ function EquipmentSelectionModal({
         data: weapon[language] || weapon.EN,
         allData: weapon,
       }));
+
+    // Tri des armes
+    filteredItems.sort((a, b) => {
+      let comparison = 0;
+      switch (sortBy) {
+        case "attack":
+          comparison = (b.data.attack || 0) - (a.data.attack || 0);
+          break;
+        case "affinity":
+          comparison = (b.data.affinity || 0) - (a.data.affinity || 0);
+          break;
+        case "elementAttack":
+          comparison = (b.data.elementAttack || 0) - (a.data.elementAttack || 0);
+          break;
+        case "name":
+        default:
+          comparison = (a.data.name || "").localeCompare(b.data.name || "");
+          break;
+      }
+      return sortOrder === "asc" ? -comparison : comparison;
+    });
   } else {
     // Pour les armures
     const armorTypeMap = {
@@ -658,16 +906,28 @@ function EquipmentSelectionModal({
         const armorData = armorSet[language] || armorSet.EN;
         if (!armorData?.pieces?.[armorPieceType]) return false;
 
+        const piece = armorData.pieces[armorPieceType];
+
+        // Filtre par résistance minimale
+        for (const resType of ARMOR_RESISTANCES) {
+          if (minResistance[resType] !== null && minResistance[resType] !== "") {
+            const minVal = parseInt(minResistance[resType], 10);
+            if (!isNaN(minVal) && (piece.resistances?.[resType] || 0) < minVal) {
+              return false;
+            }
+          }
+        }
+
         // Recherche multilingue
         if (searchQuery.trim()) {
           const query = searchQuery.toLowerCase();
           const matchesAnyLang = availableLanguages.some((lang) => {
             const langData = armorSet[lang];
             if (!langData?.pieces?.[armorPieceType]) return false;
-            const piece = langData.pieces[armorPieceType];
+            const langPiece = langData.pieces[armorPieceType];
             const matchesSetName = langData.name?.toLowerCase().includes(query);
-            const matchesPieceName = piece.name?.toLowerCase().includes(query);
-            const matchesSkill = piece.skills?.some((skill) =>
+            const matchesPieceName = langPiece.name?.toLowerCase().includes(query);
+            const matchesSkill = langPiece.skills?.some((skill) =>
               skill.name?.toLowerCase().includes(query)
             );
             return matchesSetName || matchesPieceName || matchesSkill;
@@ -688,6 +948,36 @@ function EquipmentSelectionModal({
           allData: armorSet,
         };
       });
+
+    // Tri des armures
+    filteredItems.sort((a, b) => {
+      let comparison = 0;
+      switch (sortBy) {
+        case "defense":
+          comparison = (b.data.defense || 0) - (a.data.defense || 0);
+          break;
+        case "fire":
+          comparison = (b.data.resistances?.fire || 0) - (a.data.resistances?.fire || 0);
+          break;
+        case "water":
+          comparison = (b.data.resistances?.water || 0) - (a.data.resistances?.water || 0);
+          break;
+        case "thunder":
+          comparison = (b.data.resistances?.thunder || 0) - (a.data.resistances?.thunder || 0);
+          break;
+        case "ice":
+          comparison = (b.data.resistances?.ice || 0) - (a.data.resistances?.ice || 0);
+          break;
+        case "dragon":
+          comparison = (b.data.resistances?.dragon || 0) - (a.data.resistances?.dragon || 0);
+          break;
+        case "name":
+        default:
+          comparison = (a.data.name || "").localeCompare(b.data.name || "");
+          break;
+      }
+      return sortOrder === "asc" ? -comparison : comparison;
+    });
   }
 
   const modalTitle = type === "weapon"
@@ -736,6 +1026,7 @@ function EquipmentSelectionModal({
 
         {/* Search & Filters */}
         <div className={`p-4 border-b ${darkMode ? "border-slate-700" : "border-gray-200"}`}>
+          {/* Barre de recherche */}
           <div className="relative mb-4">
             <div
               className={`absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ${
@@ -758,19 +1049,45 @@ function EquipmentSelectionModal({
             />
           </div>
 
-          {/* Filtres par type d'arme */}
+          {/* Filtres pour les armes */}
           {type === "weapon" && (
-            <div className="flex flex-wrap gap-2">
-              {weaponTypes.map((wType) => (
+            <div className="space-y-3">
+              {/* Filtres par type d'arme */}
+              <div className="flex flex-wrap gap-2">
+                {weaponTypes.map((wType) => (
+                  <button
+                    key={wType}
+                    onClick={() =>
+                      setSelectedWeaponType(
+                        selectedWeaponType === wType ? null : wType
+                      )
+                    }
+                    className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                      selectedWeaponType === wType
+                        ? darkMode
+                          ? "bg-cyan-600 text-white"
+                          : "bg-amber-500 text-white"
+                        : darkMode
+                        ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
+                  >
+                    {weaponTypeTranslations[wType]?.[language] ||
+                      weaponTypeTranslations[wType]?.EN ||
+                      wType}
+                  </button>
+                ))}
+              </div>
+
+              {/* Filtres par élément */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                  {getUIText("element", language)}:
+                </span>
                 <button
-                  key={wType}
-                  onClick={() =>
-                    setSelectedWeaponType(
-                      selectedWeaponType === wType ? null : wType
-                    )
-                  }
-                  className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
-                    selectedWeaponType === wType
+                  onClick={() => setSelectedElement(null)}
+                  className={`px-2 py-1 text-xs rounded-lg transition-colors ${
+                    selectedElement === null
                       ? darkMode
                         ? "bg-cyan-600 text-white"
                         : "bg-amber-500 text-white"
@@ -779,11 +1096,165 @@ function EquipmentSelectionModal({
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >
-                  {weaponTypeTranslations[wType]?.[language] ||
-                    weaponTypeTranslations[wType]?.EN ||
-                    wType}
+                  {getUIText("all", language)}
                 </button>
-              ))}
+                {ELEMENTS.map((elem) => (
+                  <button
+                    key={elem}
+                    onClick={() => setSelectedElement(selectedElement === elem ? null : elem)}
+                    className={`px-2 py-1 text-xs rounded-lg transition-colors ${
+                      selectedElement === elem
+                        ? darkMode
+                          ? "bg-cyan-600 text-white"
+                          : "bg-amber-500 text-white"
+                        : darkMode
+                        ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
+                  >
+                    {elementTranslations[elem]?.[language] || elem}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tri */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                  {getUIText("sortBy", language)}:
+                </span>
+                {[
+                  { key: "name", label: getUIText("name", language) },
+                  { key: "attack", label: getUIText("attack", language) },
+                  { key: "affinity", label: getUIText("affinity", language) },
+                  { key: "elementAttack", label: getUIText("elementAttack", language) },
+                ].map(({ key, label }) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      if (sortBy === key) {
+                        setSortOrder(sortOrder === "desc" ? "asc" : "desc");
+                      } else {
+                        setSortBy(key);
+                        setSortOrder("desc");
+                      }
+                    }}
+                    className={`px-2 py-1 text-xs rounded-lg transition-colors flex items-center gap-1 ${
+                      sortBy === key
+                        ? darkMode
+                          ? "bg-cyan-600 text-white"
+                          : "bg-amber-500 text-white"
+                        : darkMode
+                        ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
+                  >
+                    {label}
+                    {sortBy === key && (
+                      <span>{sortOrder === "desc" ? "↓" : "↑"}</span>
+                    )}
+                  </button>
+                ))}
+
+                {/* Bouton reset */}
+                <button
+                  onClick={resetFilters}
+                  className={`px-2 py-1 text-xs rounded-lg transition-colors ml-auto ${
+                    darkMode
+                      ? "bg-red-900/50 text-red-300 hover:bg-red-800/50"
+                      : "bg-red-100 text-red-700 hover:bg-red-200"
+                  }`}
+                >
+                  {getUIText("resetFilters", language)}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Filtres pour les armures */}
+          {type !== "weapon" && (
+            <div className="space-y-3">
+              {/* Tri */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                  {getUIText("sortBy", language)}:
+                </span>
+                {[
+                  { key: "name", label: getUIText("name", language) },
+                  { key: "defense", label: getUIText("defense", language) },
+                  { key: "fire", label: "🔥" },
+                  { key: "water", label: "💧" },
+                  { key: "thunder", label: "⚡" },
+                  { key: "ice", label: "❄️" },
+                  { key: "dragon", label: "🐉" },
+                ].map(({ key, label }) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      if (sortBy === key) {
+                        setSortOrder(sortOrder === "desc" ? "asc" : "desc");
+                      } else {
+                        setSortBy(key);
+                        setSortOrder("desc");
+                      }
+                    }}
+                    className={`px-2 py-1 text-xs rounded-lg transition-colors flex items-center gap-1 ${
+                      sortBy === key
+                        ? darkMode
+                          ? "bg-cyan-600 text-white"
+                          : "bg-amber-500 text-white"
+                        : darkMode
+                        ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    }`}
+                  >
+                    {label}
+                    {sortBy === key && (
+                      <span>{sortOrder === "desc" ? "↓" : "↑"}</span>
+                    )}
+                  </button>
+                ))}
+
+                {/* Bouton reset */}
+                <button
+                  onClick={resetFilters}
+                  className={`px-2 py-1 text-xs rounded-lg transition-colors ml-auto ${
+                    darkMode
+                      ? "bg-red-900/50 text-red-300 hover:bg-red-800/50"
+                      : "bg-red-100 text-red-700 hover:bg-red-200"
+                  }`}
+                >
+                  {getUIText("resetFilters", language)}
+                </button>
+              </div>
+
+              {/* Filtres par résistance minimale */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className={`text-sm font-medium ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                  {getUIText("minResistance", language)}:
+                </span>
+                {ARMOR_RESISTANCES.map((resType) => {
+                  const icons = { fire: "🔥", water: "💧", thunder: "⚡", ice: "❄️", dragon: "🐉" };
+                  const elementKey = resType.charAt(0).toUpperCase() + resType.slice(1);
+                  return (
+                    <div key={resType} className="flex items-center gap-1">
+                      <span title={elementTranslations[elementKey]?.[language] || resType}>
+                        {icons[resType]}
+                      </span>
+                      <input
+                        type="number"
+                        value={minResistance[resType] ?? ""}
+                        onChange={(e) => setMinResistance(prev => ({ ...prev, [resType]: e.target.value }))}
+                        placeholder="0"
+                        className={`w-12 h-7 text-xs text-center rounded border focus:outline-none focus:ring-1 ${
+                          darkMode
+                            ? "bg-slate-700 border-slate-600 text-white focus:ring-cyan-500"
+                            : "bg-white border-gray-300 text-gray-900 focus:ring-amber-500"
+                        }`}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
@@ -862,7 +1333,7 @@ function EquipmentSelectionModal({
                   ) : (
                     // Affichage pièce d'armure
                     <div className="flex items-center justify-between">
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <div
                           className={`font-medium ${
                             darkMode ? "text-amber-100" : "text-gray-900"
@@ -888,10 +1359,31 @@ function EquipmentSelectionModal({
                           {item.data.skills?.map((s) => `${s.name} Lv.${s.level}`).join(", ") || "—"}
                         </div>
                       </div>
-                      <div className="flex items-center gap-4 text-sm">
+                      <div className="flex items-center gap-2 text-sm flex-shrink-0">
+                        {/* Défense */}
                         <span className={`${darkMode ? "text-amber-100" : "text-gray-900"}`}>
                           🛡️ {item.data.defense}
                         </span>
+                        {/* Résistances élémentaires */}
+                        {item.data.resistances && (
+                          <div className="flex items-center gap-1 text-xs">
+                            <span className={item.data.resistances.fire > 0 ? "text-red-400" : item.data.resistances.fire < 0 ? "text-red-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
+                              🔥{item.data.resistances.fire >= 0 ? "+" : ""}{item.data.resistances.fire}
+                            </span>
+                            <span className={item.data.resistances.water > 0 ? "text-blue-400" : item.data.resistances.water < 0 ? "text-blue-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
+                              💧{item.data.resistances.water >= 0 ? "+" : ""}{item.data.resistances.water}
+                            </span>
+                            <span className={item.data.resistances.thunder > 0 ? "text-yellow-400" : item.data.resistances.thunder < 0 ? "text-yellow-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
+                              ⚡{item.data.resistances.thunder >= 0 ? "+" : ""}{item.data.resistances.thunder}
+                            </span>
+                            <span className={item.data.resistances.ice > 0 ? "text-cyan-400" : item.data.resistances.ice < 0 ? "text-cyan-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
+                              ❄️{item.data.resistances.ice >= 0 ? "+" : ""}{item.data.resistances.ice}
+                            </span>
+                            <span className={item.data.resistances.dragon > 0 ? "text-purple-400" : item.data.resistances.dragon < 0 ? "text-purple-600" : darkMode ? "text-gray-500" : "text-gray-400"}>
+                              🐉{item.data.resistances.dragon >= 0 ? "+" : ""}{item.data.resistances.dragon}
+                            </span>
+                          </div>
+                        )}
                         {renderSlots(item.data.slots, darkMode)}
                       </div>
                     </div>
@@ -1036,6 +1528,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   const [buildSavedMessage, setBuildSavedMessage] = useState(false);
   const [editingBuildId, setEditingBuildId] = useState(null);
   const [editingBuildName, setEditingBuildName] = useState("");
+  const [deletingBuildId, setDeletingBuildId] = useState(null);
 
   // Charger les builds sauvegardés depuis localStorage
   useEffect(() => {
@@ -1251,10 +1744,16 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
 
   // Supprimer un build sauvegardé
   const handleDeleteBuild = (buildId) => {
-    if (window.confirm(getUIText("confirmDelete", language))) {
-      const updatedBuilds = savedBuilds.filter((b) => b.id !== buildId);
+    setDeletingBuildId(buildId);
+  };
+
+  // Confirmer la suppression du build
+  const confirmDeleteBuild = () => {
+    if (deletingBuildId) {
+      const updatedBuilds = savedBuilds.filter((b) => b.id !== deletingBuildId);
       setSavedBuilds(updatedBuilds);
       localStorage.setItem("mhwilds_saved_builds", JSON.stringify(updatedBuilds));
+      setDeletingBuildId(null);
     }
   };
 
@@ -1822,6 +2321,91 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                 }`}
               >
                 {getUIText("close", language)}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal de confirmation de suppression */}
+      {deletingBuildId && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
+          <div
+            className={`rounded-xl shadow-2xl w-full max-w-md ${
+              darkMode ? "bg-slate-900" : "bg-white"
+            }`}
+          >
+            {/* Header */}
+            <div
+              className={`p-4 border-b flex items-center gap-3 ${
+                darkMode ? "border-slate-700" : "border-gray-200"
+              }`}
+            >
+              <div
+                className={`p-2 rounded-full ${
+                  darkMode ? "bg-red-900/50 text-red-400" : "bg-red-100 text-red-600"
+                }`}
+              >
+                <TrashIcon />
+              </div>
+              <h2
+                className={`text-xl font-bold ${
+                  darkMode ? "text-amber-100" : "text-gray-900"
+                }`}
+              >
+                {getUIText("deleteConfirmTitle", language)}
+              </h2>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <p
+                className={`text-center ${
+                  darkMode ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
+                {getUIText("confirmDelete", language)}
+              </p>
+              {/* Afficher le nom du build à supprimer */}
+              {(() => {
+                const buildToDelete = savedBuilds.find((b) => b.id === deletingBuildId);
+                return buildToDelete ? (
+                  <p
+                    className={`text-center mt-3 font-semibold ${
+                      darkMode ? "text-amber-200" : "text-gray-900"
+                    }`}
+                  >
+                    &quot;{buildToDelete.name}&quot;
+                  </p>
+                ) : null;
+              })()}
+            </div>
+
+            {/* Actions */}
+            <div
+              className={`p-4 border-t flex gap-3 ${
+                darkMode ? "border-slate-700" : "border-gray-200"
+              }`}
+            >
+              <button
+                onClick={() => setDeletingBuildId(null)}
+                className={`flex-1 px-4 py-2.5 rounded-lg font-medium transition-colors ${
+                  darkMode
+                    ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                }`}
+              >
+                {getUIText("cancel", language)}
+              </button>
+              <button
+                onClick={confirmDeleteBuild}
+                className={`flex-1 px-4 py-2.5 rounded-lg font-medium transition-colors ${
+                  darkMode
+                    ? "bg-red-900/70 text-red-200 hover:bg-red-800/70"
+                    : "bg-red-600 text-white hover:bg-red-700"
+                }`}
+              >
+                {getUIText("delete", language)}
               </button>
             </div>
           </div>
