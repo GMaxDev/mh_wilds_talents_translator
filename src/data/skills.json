@@ -3,7 +3,13 @@
     "EN": {
       "name": "Attack Boost",
       "description": "Increases attack power.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +3",
+        "Lv2": "Attack +5",
+        "Lv3": "Attack +7",
+        "Lv4": "Attack +2% Bonus: +8",
+        "Lv5": "Attack +4% Bonus: +9"
+      }
     },
     "JA": {
       "name": "攻撃",
@@ -65,7 +71,11 @@
     "EN": {
       "name": "Offensive Guard",
       "description": "Temporarily increases attack power after executing a perfectly-timed guard.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +5% while active.",
+        "Lv2": "Attack +10% while active.",
+        "Lv3": "Attack +15% while active."
+      }
     },
     "JA": {
       "name": "攻めの守勢",
@@ -127,7 +137,13 @@
     "EN": {
       "name": "Critical Eye",
       "description": "Increases affinity.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Affinity +4%",
+        "Lv2": "Affinity +8%",
+        "Lv3": "Affinity +12%",
+        "Lv4": "Affinity +16%",
+        "Lv5": "Affinity +20%"
+      }
     },
     "JA": {
       "name": "見切り",
@@ -189,7 +205,13 @@
     "EN": {
       "name": "Critical Boost",
       "description": "Increases the damage of critical hits.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Increases damage dealt by critical hits to 28%.",
+        "Lv2": "Increases damage dealt by critical hits to 31%.",
+        "Lv3": "Increases damage dealt by critical hits to 34%.",
+        "Lv4": "Increases damage dealt by critical hits to 37%.",
+        "Lv5": "Increases damage dealt by critical hits to 40%."
+      }
     },
     "JA": {
       "name": "超会心",
@@ -251,7 +273,11 @@
     "EN": {
       "name": "Critical Draw",
       "description": "Increases affinity when performing draw attacks. (Not effective while riding.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Affinity +50%",
+        "Lv2": "Affinity +75%",
+        "Lv3": "Affinity +100%"
+      }
     },
     "JA": {
       "name": "抜刀術【技】",
@@ -313,7 +339,11 @@
     "EN": {
       "name": "Fire Attack",
       "description": "Increases fire element attack power. (Elemental attack power has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Fire attack +40",
+        "Lv2": "Fire attack +10% Bonus: +50",
+        "Lv3": "Fire attack +20% Bonus: +60"
+      }
     },
     "JA": {
       "name": "火属性攻撃強化",
@@ -375,7 +405,11 @@
     "EN": {
       "name": "Water Attack",
       "description": "Increases water element attack power. (Elemental attack power has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Water attack +40",
+        "Lv2": "Water attack +10% Bonus: +50",
+        "Lv3": "Water attack +20% Bonus: +60"
+      }
     },
     "JA": {
       "name": "水属性攻撃強化",
@@ -437,7 +471,11 @@
     "EN": {
       "name": "Ice Attack",
       "description": "Increases ice element attack power. (Elemental attack power has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Ice attack +40",
+        "Lv2": "Ice attack +10% Bonus: +50",
+        "Lv3": "Ice attack +20% Bonus: +60"
+      }
     },
     "JA": {
       "name": "氷属性攻撃強化",
@@ -499,7 +537,11 @@
     "EN": {
       "name": "Thunder Attack",
       "description": "Increases thunder element attack power. (Elemental attack power has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Thunder attack +40",
+        "Lv2": "Thunder attack +10% Bonus: +50",
+        "Lv3": "Thunder attack +20% Bonus: +60"
+      }
     },
     "JA": {
       "name": "雷属性攻撃強化",
@@ -561,7 +603,11 @@
     "EN": {
       "name": "Dragon Attack",
       "description": "Increases dragon element attack power. (Elemental attack power has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Dragon attack +40",
+        "Lv2": "Dragon attack +10% Bonus: +50",
+        "Lv3": "Dragon attack +20% Bonus: +60"
+      }
     },
     "JA": {
       "name": "龍属性攻撃強化",
@@ -623,7 +669,11 @@
     "EN": {
       "name": "Poison Attack",
       "description": "Increases the rate of poison buildup. (Poison buildup has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Poison buildup +5% Bonus: +10",
+        "Lv2": "Poison buildup +10% Bonus: +20",
+        "Lv3": "Poison buildup +20% Bonus: +50"
+      }
     },
     "JA": {
       "name": "毒属性強化",
@@ -685,7 +735,11 @@
     "EN": {
       "name": "Paralysis Attack",
       "description": "Increases the rate of paralysis buildup. (Paralysis buildup has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Paralysis buildup +5% Bonus: +10",
+        "Lv2": "Paralysis buildup +10% Bonus: +20",
+        "Lv3": "Paralysis buildup +20% Bonus: +50"
+      }
     },
     "JA": {
       "name": "麻痺属性強化",
@@ -747,7 +801,11 @@
     "EN": {
       "name": "Sleep Attack",
       "description": "Increases the rate of sleep buildup. (Sleep buildup has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Sleep buildup +5% Bonus: +10",
+        "Lv2": "Sleep buildup +10% Bonus: +20",
+        "Lv3": "Sleep buildup +20% Bonus: +50"
+      }
     },
     "JA": {
       "name": "睡眠属性強化",
@@ -809,7 +867,11 @@
     "EN": {
       "name": "Blast Attack",
       "description": "Increases the rate of blast buildup. (Blast buildup has a maximum limit.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Blast buildup +5% Bonus: +10",
+        "Lv2": "Blast buildup +10% Bonus: +20",
+        "Lv3": "Blast buildup +20% Bonus: +50"
+      }
     },
     "JA": {
       "name": "爆破属性強化",
@@ -871,7 +933,11 @@
     "EN": {
       "name": "Critical Element",
       "description": "Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases elemental damage while active.",
+        "Lv2": "Increases elemental damage while active.",
+        "Lv3": "Greatly increases elemental damage while active."
+      }
     },
     "JA": {
       "name": "会心撃【属性】",
@@ -933,7 +999,11 @@
     "EN": {
       "name": "Critical Status",
       "description": "Increases abnormal status effects (paralysis, poison, sleep, blast) when landing critical hits.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases abnormal status effects when landing critical hits.",
+        "Lv2": "Increases abnormal status effects when landing critical hits.",
+        "Lv3": "Greatly increases abnormal status effects when landing critical hits."
+      }
     },
     "JA": {
       "name": "会心撃【特殊】",
@@ -995,7 +1065,11 @@
     "EN": {
       "name": "Charge Master",
       "description": "Increases element power and status buildup for charged attacks.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases elemental attack and status buildup for charged attacks.",
+        "Lv2": "Increases elemental attack and status buildup for charged attacks.",
+        "Lv3": "Greatly increases elemental attack and status buildup for charged attacks."
+      }
     },
     "JA": {
       "name": "チャージマスター",
@@ -1057,7 +1131,13 @@
     "EN": {
       "name": "Handicraft",
       "description": "Extends the weapon sharpness gauge. However, it will not increase the gauge past its maximum.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Weapon sharpness +10",
+        "Lv2": "Weapon sharpness +20",
+        "Lv3": "Weapon sharpness +30",
+        "Lv4": "Weapon sharpness +40",
+        "Lv5": "Weapon sharpness +50"
+      }
     },
     "JA": {
       "name": "匠",
@@ -1119,7 +1199,11 @@
     "EN": {
       "name": "Razor Sharp",
       "description": "Prevents your weapon from losing sharpness.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Grants a 10% chance of no sharpness loss.",
+        "Lv2": "Grants a 25% chance of no sharpness loss.",
+        "Lv3": "Grants a 50% chance of no sharpness loss."
+      }
     },
     "JA": {
       "name": "業物",
@@ -1181,7 +1265,11 @@
     "EN": {
       "name": "Protective Polish",
       "description": "Weapon sharpness does not decrease for a set time after sharpening.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Grants no sharpness loss for 30 seconds after activation.",
+        "Lv2": "Grants no sharpness loss for 60 seconds after activation.",
+        "Lv3": "Grants no sharpness loss for 90 seconds after activation."
+      }
     },
     "JA": {
       "name": "剛刃研磨",
@@ -1243,7 +1331,11 @@
     "EN": {
       "name": "Mind's Eye",
       "description": "Your attacks are deflected less and are more powerful against hard monster parts.",
-      "levels": {}
+      "levels": {
+        "Lv1": "50% chance of your attacks not being deflected, +10% attack power against hard targets.",
+        "Lv2": "100% chance of your attacks not being deflected, +15% attack power against hard targets.",
+        "Lv3": "100% chance of your attacks not being deflected, +30% attack power against hard targets."
+      }
     },
     "JA": {
       "name": "心眼",
@@ -1305,7 +1397,11 @@
     "EN": {
       "name": "Bludgeoner",
       "description": "Increases damage dealt when your weapon sharpness is low.",
-      "levels": {}
+      "levels": {
+        "Lv1": "+5% damage dealt when your sharpness gauge is yellow or lower.",
+        "Lv2": "+10% damage dealt when your sharpness gauge is yellow or lower.",
+        "Lv3": "+10% damage dealt when your sharpness gauge is green or lower."
+      }
     },
     "JA": {
       "name": "鈍器使い",
@@ -1367,7 +1463,9 @@
     "EN": {
       "name": "Master's Touch",
       "description": "Prevents your weapon from losing sharpness during critical hits.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Grants an 80% chance of no sharpness loss while active."
+      }
     },
     "JA": {
       "name": "達人芸",
@@ -1429,7 +1527,9 @@
     "EN": {
       "name": "Normal Shots",
       "description": "Increases the attack power of Normal Ammo, normal arrows, and Flying Swallow Shot.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases the power of specified ammo and arrows."
+      }
     },
     "JA": {
       "name": "通常弾・通常矢強化",
@@ -1491,7 +1591,9 @@
     "EN": {
       "name": "Piercing Shots",
       "description": "Increases the attack of the bowgun's Pierce Ammo, and the bow's Dragon Piercer and Thousand Dragons.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases the power of specified ammo and arrows."
+      }
     },
     "JA": {
       "name": "貫通弾・竜の矢強化",
@@ -1553,7 +1655,9 @@
     "EN": {
       "name": "Spread/Power Shots",
       "description": "Increases the attack of the bowgun's Spread Ammo and the bow's Power Shots and Quick Shots.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases the power of specified ammo and arrows."
+      }
     },
     "JA": {
       "name": "散弾・剛射強化",
@@ -1615,7 +1719,11 @@
     "EN": {
       "name": "Ballistics",
       "description": "Extends the range in which ammo and arrows have maximum power. Also boosts power at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly extends range.",
+        "Lv2": "Extends range.",
+        "Lv3": "Greatly extends critical range, and boosts the power of attacks made within critical range."
+      }
     },
     "JA": {
       "name": "弾導強化",
@@ -1677,7 +1785,9 @@
     "EN": {
       "name": "Rapid Fire Up",
       "description": "Improves light bowgun rapid fire.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Rapid fire power +5%"
+      }
     },
     "JA": {
       "name": "速射強化",
@@ -1739,7 +1849,11 @@
     "EN": {
       "name": "Opening Shot",
       "description": "Increases the bowgun's reload speed and increases the power of bullets when fully loaded.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Moderately increases bowgun reload speed and attack power of ammo when certain conditions are met.",
+        "Lv2": "Increases bowgun reload speed and attack power of ammo when certain conditions are met.",
+        "Lv3": "Greatly increases bowgun reload speed and attack power of ammo when certain conditions are met."
+      }
     },
     "JA": {
       "name": "ファーストショット",
@@ -1801,7 +1915,11 @@
     "EN": {
       "name": "Tetrad Shot",
       "description": "Increases affinity of bowgun ammo/ coatings from the fourth shot and attack of the fourth and sixth shots.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases the attack power and affinity of ammo after certain conditions are met.",
+        "Lv2": "Moderately increases attack power and affinity of ammo after certain conditions are met.",
+        "Lv3": "Increases the attack power and affinity of ammo after certain conditions are met."
+      }
     },
     "JA": {
       "name": "フォースショット",
@@ -1863,7 +1981,10 @@
     "EN": {
       "name": "Special Ammo Boost",
       "description": "Increases the power of the bowgun's special ammo, and the bow's Dragon Piercer, Thousand Dragons, and Tracer.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Moderately increases the power of specified ammo and arrows.",
+        "Lv2": "Increases the power of specified ammo and arrows."
+      }
     },
     "JA": {
       "name": "特殊射撃強化",
@@ -1925,7 +2046,9 @@
     "EN": {
       "name": "Poison Functionality",
       "description": "Allows you to apply poison coatings.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Lets you use poison coatings."
+      }
     },
     "JA": {
       "name": "毒ビン追加",
@@ -1987,7 +2110,9 @@
     "EN": {
       "name": "Para Functionality",
       "description": "Allows you to apply paralysis coatings.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Lets you use paralysis coatings."
+      }
     },
     "JA": {
       "name": "麻痺ビン追加",
@@ -2049,7 +2174,9 @@
     "EN": {
       "name": "Sleep Functionality",
       "description": "Allows you to apply sleep coatings.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Lets you use sleep coatings."
+      }
     },
     "JA": {
       "name": "睡眠ビン追加",
@@ -2111,7 +2238,9 @@
     "EN": {
       "name": "Blast Functionality",
       "description": "Allows you to apply blast coatings.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Lets you use blast coatings."
+      }
     },
     "JA": {
       "name": "爆破ビン追加",
@@ -2173,7 +2302,9 @@
     "EN": {
       "name": "Exhaust Functionality",
       "description": "Allows you to apply exhaust coatings.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Lets you use exhaust coatings."
+      }
     },
     "JA": {
       "name": "減気ビン追加",
@@ -2235,7 +2366,11 @@
     "EN": {
       "name": "Focus",
       "description": "Increases the fill rate for weapons with gauges and the charge rate for weapons with charge attacks.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases gauge fill rate and reduces charge times by 5%.",
+        "Lv2": "Moderately increases gauge fill rate and reduces charge times by 10%.",
+        "Lv3": "Increases gauge fill rate and reduces charge times by 15%."
+      }
     },
     "JA": {
       "name": "集中",
@@ -2297,7 +2432,11 @@
     "EN": {
       "name": "Power Prolonger",
       "description": "Allows long swords, dual blades, insect glaives, switch axes, and charge blades to stay powered up longer.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Moderately boosts the duration weapons are powered up.",
+        "Lv2": "Boosts the duration weapons are powered up.",
+        "Lv3": "Greatly boosts the duration weapons are powered up."
+      }
     },
     "JA": {
       "name": "強化持続",
@@ -2359,7 +2498,11 @@
     "EN": {
       "name": "Punishing Draw",
       "description": "Adds a stun effect to draw attacks and slightly increases attack power. (Not effective while riding.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Draw attacks deal a small amount of stun damage and gain attack +3.",
+        "Lv2": "Draw attacks deal a medium amount of stun damage and gain attack +5.",
+        "Lv3": "Draw attacks deal a large amount of stun damage and gain attack +7."
+      }
     },
     "JA": {
       "name": "抜刀術【力】",
@@ -2421,7 +2564,11 @@
     "EN": {
       "name": "Slugger",
       "description": "Makes it easier to stun monsters.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Stun power +20%",
+        "Lv2": "Stun power +30%",
+        "Lv3": "Stun power +40%"
+      }
     },
     "JA": {
       "name": "ＫＯ術",
@@ -2483,7 +2630,11 @@
     "EN": {
       "name": "Stamina Thief",
       "description": "Increases certain attacks' ability to exhaust monsters.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Exhaust power +20%",
+        "Lv2": "Exhaust power +30%",
+        "Lv3": "Exhaust power +40%"
+      }
     },
     "JA": {
       "name": "スタミナ奪取",
@@ -2545,7 +2696,11 @@
     "EN": {
       "name": "Artillery",
       "description": "Strengthens explosive attacks like shells, Wyvern's Fire, charge blade phial attacks, and Sticky Ammo.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Moderately increases each attack and Wyvern's Fire firing speed. Shelling fire attack +30.",
+        "Lv2": "Increases each attack and Wyvern's Fire firing speed. Shelling fire attack +60.",
+        "Lv3": "Greatly increases each attack and Wyvern's Fire firing speed. Shelling fire attack +90."
+      }
     },
     "JA": {
       "name": "砲術",
@@ -2607,7 +2762,11 @@
     "EN": {
       "name": "Rapid Morph",
       "description": "Increases switch speed and power for switch axes and charge blades.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Speed +10%",
+        "Lv2": "Speed +20% Morph attack power +10%",
+        "Lv3": "Speed +30% Morph attack power +20%"
+      }
     },
     "JA": {
       "name": "高速変形",
@@ -2669,7 +2828,10 @@
     "EN": {
       "name": "Horn Maestro",
       "description": "Increases the effect duration of hunting horn melodies. (Effect lost when you change weapons.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Extends Melody Effect duration and increases the chance of larger heals from healing melodies.",
+        "Lv2": "Greatly increases the effect duration of hunting horn melodies."
+      }
     },
     "JA": {
       "name": "笛吹き名人",
@@ -2731,7 +2893,9 @@
     "EN": {
       "name": "Charge Up",
       "description": "Increases the damage and stun power of charged hammer attacks.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "溜打強化",
@@ -2793,7 +2957,9 @@
     "EN": {
       "name": "Airborne",
       "description": "Increases the damage caused by jumping attacks.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Jumping attack power +10%"
+      }
     },
     "JA": {
       "name": "飛燕",
@@ -2855,7 +3021,9 @@
     "EN": {
       "name": "Poison Duration Up",
       "description": "Extends the duration of your poison's effect on monsters.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Extends the duration of your poison's effect by 20%."
+      }
     },
     "JA": {
       "name": "毒ダメージ強化",
@@ -2917,7 +3085,11 @@
     "EN": {
       "name": "Guard",
       "description": "Reduces knockbacks and stamina depletion when guarding.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly decreases the impact of attacks and reduces stamina depletion by 15%.",
+        "Lv2": "Decreases the impact of attacks and reduces stamina depletion by 30%.",
+        "Lv3": "Greatly decreases the impact of attacks and reduces stamina depletion by 50%."
+      }
     },
     "JA": {
       "name": "ガード性能",
@@ -2979,7 +3151,11 @@
     "EN": {
       "name": "Guard Up",
       "description": "Reduces damage taken when guarding and allows you to guard against ordinarily unblockable attacks.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces damage taken by 10%, plus an additional 20% when conditions are met.",
+        "Lv2": "Reduces damage taken by 20%, plus an additional 30% when conditions are met.",
+        "Lv3": "Reduces damage taken by 30%, plus an additional 50% when conditions are met."
+      }
     },
     "JA": {
       "name": "ガード強化",
@@ -3041,7 +3217,10 @@
     "EN": {
       "name": "Load Shells",
       "description": "Improves reloading, and increases the gunlance's shell capacity and charge blade's phial capacity.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Increases shell and phial reloading speed.",
+        "Lv2": "Increases shell/phial reloading speed. Gunlance loading capacity +1. Charge blade charges 5 phials on yellow gauge."
+      }
     },
     "JA": {
       "name": "砲弾装填",
@@ -3103,7 +3282,10 @@
     "EN": {
       "name": "Speed Sharpening",
       "description": "Speeds up weapon sharpening when using a whetstone.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Removes one cycle from the sharpening process.",
+        "Lv2": "Removes two cycles from the sharpening process."
+      }
     },
     "JA": {
       "name": "砥石使用高速化",
@@ -3165,7 +3347,11 @@
     "EN": {
       "name": "Slicked Blade",
       "description": "Temporarily increases affinity when wet or when inflicted with bubbleblight. (Wet and bubbleblight effects stack.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Affinity +3% when wet, and +7% while afflicted with bubbleblight.",
+        "Lv2": "Affinity +6% when wet, and +14% while afflicted with bubbleblight.",
+        "Lv3": "Affinity +9% when wet, and +21% while afflicted with bubbleblight."
+      }
     },
     "JA": {
       "name": "濡れ刃紋",
@@ -3227,7 +3413,9 @@
     "EN": {
       "name": "Whiteflame Torrent",
       "description": "Chance to deal additional damage after landing an attack.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect. (When used with Scorcher, does not stack but adds extra fire damage.)"
+      }
     },
     "JA": {
       "name": "白熾の奔流",
@@ -3289,7 +3477,9 @@
     "EN": {
       "name": "Convert Thunder Resistance",
       "description": "Increase to your weapon's elemental attack proportional to your thunder resistance.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "耐性変換【雷】",
@@ -3351,7 +3541,9 @@
     "EN": {
       "name": "Bladescale Honing",
       "description": "Narrowly evading a monster's attack while your weapon is drawn grants special sharpness.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "刃鱗研装",
@@ -3413,7 +3605,9 @@
     "EN": {
       "name": "Bladescale Loading",
       "description": "Narrowly evading a monster's attack while your weapon is drawn grants special loaded ammo or applied coatings.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "刃鱗増装",
@@ -3475,7 +3669,9 @@
     "EN": {
       "name": "Power Stone",
       "description": "Temporarily increases attack upon mining materials.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Mining particularly rare materials greatly increases attack. (Attack increase has a maximum limit.)"
+      }
     },
     "JA": {
       "name": "パワーストーン",
@@ -3537,7 +3733,9 @@
     "EN": {
       "name": "Crackling Cornpopper",
       "description": "Increases shelling power and fire attack while the Wyvern's Fire Gauge is blinking red.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "焼き砲モロコシ",
@@ -3599,7 +3797,9 @@
     "EN": {
       "name": "Grillmaster",
       "description": "Grill meat to sharpen your weapon and temporarily increase your attack. (Duration and effect vary based on results.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "炎の料理人",
@@ -3661,7 +3861,9 @@
     "EN": {
       "name": "Evading Reload",
       "description": "Evading loads the currently selected ammo automatically.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "回避装填",
@@ -3723,7 +3925,9 @@
     "EN": {
       "name": "Darkside",
       "description": "Performing certain Lvl 2 or higher charged slashes deals self-damage. Attack is also temporarily boosted.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect. (Requires activation cooldown, but self-damage still occurs.)"
+      }
     },
     "JA": {
       "name": "暗黒",
@@ -3785,7 +3989,9 @@
     "EN": {
       "name": "Synthetic Shield",
       "description": "Temporarily increases your defense and the defense of those around you after a successful Perfect Guard.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "シールドオプション",
@@ -3847,7 +4053,9 @@
     "EN": {
       "name": "Synergy",
       "description": "Temporarily increases your affinity and the affinity of those around you after using a Rising Spiral Slash.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "連携プログラム",
@@ -3971,7 +4179,13 @@
     "EN": {
       "name": "Resentment",
       "description": "Increases attack when you have recoverable damage (the red portion of your Health Gauge).",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +5 while active.",
+        "Lv2": "Attack +10 while active.",
+        "Lv3": "Attack +15 while active.",
+        "Lv4": "Attack +20 while active.",
+        "Lv5": "Attack +25 while active."
+      }
     },
     "JA": {
       "name": "逆恨み",
@@ -4033,7 +4247,13 @@
     "EN": {
       "name": "Adrenaline Rush",
       "description": "Temporarily increases attack power after executing a perfectly-timed evade just as a monster attacks.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +10 while active.",
+        "Lv2": "Attack +15 while active.",
+        "Lv3": "Attack +20 while active.",
+        "Lv4": "Attack +25 while active.",
+        "Lv5": "Attack +30 while active."
+      }
     },
     "JA": {
       "name": "巧撃",
@@ -4095,7 +4315,13 @@
     "EN": {
       "name": "Peak Performance",
       "description": "Increases attack when your health is full.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +3 while active.",
+        "Lv2": "Attack +6 while active.",
+        "Lv3": "Attack +10 while active.",
+        "Lv4": "Attack +15 while active.",
+        "Lv5": "Attack +20 while active."
+      }
     },
     "JA": {
       "name": "フルチャージ",
@@ -4157,7 +4383,11 @@
     "EN": {
       "name": "Counterstrike",
       "description": "Temporarily increases attack power after being knocked back.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +10 while active.",
+        "Lv2": "Attack +15 while active. Moderately extends effect time.",
+        "Lv3": "Attack +25 while active. Extends effect time."
+      }
     },
     "JA": {
       "name": "逆襲",
@@ -4219,7 +4449,13 @@
     "EN": {
       "name": "Weakness Exploit",
       "description": "Increases the affinity of attacks that exploit a monster's weak  points and wounds.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attacks that hit weak points gain affinity +5%, with an extra 3% on wounds.",
+        "Lv2": "Attacks that hit weak points gain affinity +10%, with an extra 5% on wounds.",
+        "Lv3": "Attacks that hit weak points gain affinity +15%, with an extra 10% on wounds.",
+        "Lv4": "Attacks that hit weak points have 20% increased affinity, with an extra 15% on wounds.",
+        "Lv5": "Attacks that hit weak points have 30% increased affinity, with an extra 20% on wounds."
+      }
     },
     "JA": {
       "name": "弱点特効",
@@ -4281,7 +4517,11 @@
     "EN": {
       "name": "Maximum Might",
       "description": "Increases affinity if stamina is kept full for a period of time.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Affinity +10% while active",
+        "Lv2": "Affinity +20% while active",
+        "Lv3": "Affinity +30% while active"
+      }
     },
     "JA": {
       "name": "渾身",
@@ -4343,7 +4583,11 @@
     "EN": {
       "name": "Convert Element",
       "description": "After taking elemental damage, temporarily grants you dragon element effects. (Cooldown after effect ends.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "While active, deals extra dragon damage after dealing enough elemental damage. Slightly increases dragon attack.",
+        "Lv2": "Increases additional dragon damage and increases dragon attack.",
+        "Lv3": "Further increases additional dragon damage and greatly increases dragon attack."
+      }
     },
     "JA": {
       "name": "属性変換",
@@ -4405,7 +4649,15 @@
     "EN": {
       "name": "Defense Boost",
       "description": "Increases defense. Also improves resistances at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Defense +5",
+        "Lv2": "Defense +10",
+        "Lv3": "Defense +5% Bonus: +10",
+        "Lv4": "Defense +5% Bonus: +20 All elemental resistances +3",
+        "Lv5": "Defense +8% Bonus: +20 All elemental resistances +3",
+        "Lv6": "Defense +8% Bonus: +35 All elemental resistances +5",
+        "Lv7": "Defense +10% Bonus: +35 All elemental resistances +5"
+      }
     },
     "JA": {
       "name": "防御",
@@ -4467,7 +4719,11 @@
     "EN": {
       "name": "Divine Blessing",
       "description": "Has a predetermined chance of reducing the damage you take.",
-      "levels": {}
+      "levels": {
+        "Lv1": "While active, reduces damage taken by 15%.",
+        "Lv2": "While active, reduces damage taken by 30%.",
+        "Lv3": "While active, reduces damage taken by 50%."
+      }
     },
     "JA": {
       "name": "精霊の加護",
@@ -4529,7 +4785,11 @@
     "EN": {
       "name": "Fire Resistance",
       "description": "Increases fire resistance. Also improves defense at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Fire resistance +6",
+        "Lv2": "Fire resistance +12",
+        "Lv3": "Fire resistance +20 Defense +10"
+      }
     },
     "JA": {
       "name": "火耐性",
@@ -4591,7 +4851,11 @@
     "EN": {
       "name": "Water Resistance",
       "description": "Increases water resistance. Also improves defense at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Water resistance +6",
+        "Lv2": "Water resistance +12",
+        "Lv3": "Water resistance +20 Defense +10"
+      }
     },
     "JA": {
       "name": "水耐性",
@@ -4653,7 +4917,11 @@
     "EN": {
       "name": "Thunder Resistance",
       "description": "Increases thunder resistance. Also improves defense at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Thunder resistance +6",
+        "Lv2": "Thunder resistance +12",
+        "Lv3": "Thunder resistance +20 Defense +10"
+      }
     },
     "JA": {
       "name": "雷耐性",
@@ -4715,7 +4983,11 @@
     "EN": {
       "name": "Ice Resistance",
       "description": "Increases ice resistance. Also improves defense at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Ice resistance +6",
+        "Lv2": "Ice resistance +12",
+        "Lv3": "Ice resistance +20 Defense +10"
+      }
     },
     "JA": {
       "name": "氷耐性",
@@ -4777,7 +5049,11 @@
     "EN": {
       "name": "Dragon Resistance",
       "description": "Increases dragon resistance. Also improves defense at higher levels.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Dragon resistance +6",
+        "Lv2": "Dragon resistance +12",
+        "Lv3": "Dragon resistance +20 Defense +10"
+      }
     },
     "JA": {
       "name": "龍耐性",
@@ -4839,7 +5115,11 @@
     "EN": {
       "name": "Poison Resistance",
       "description": "Reduces damage while poisoned.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the number of times you take poison damage.",
+        "Lv2": "Greatly reduces the number of times you take poison damage.",
+        "Lv3": "Prevents poison."
+      }
     },
     "JA": {
       "name": "毒耐性",
@@ -4901,7 +5181,11 @@
     "EN": {
       "name": "Paralysis Resistance",
       "description": "Reduces the duration of paralysis.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the duration of paralysis by 30%.",
+        "Lv2": "Reduces the duration of paralysis by 60%.",
+        "Lv3": "Prevents paralysis."
+      }
     },
     "JA": {
       "name": "麻痺耐性",
@@ -4963,7 +5247,11 @@
     "EN": {
       "name": "Sleep Resistance",
       "description": "Reduces the duration of sleep.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the duration of sleep by 30%.",
+        "Lv2": "Reduces the duration of sleep by 60%.",
+        "Lv3": "Prevents sleep."
+      }
     },
     "JA": {
       "name": "睡眠耐性",
@@ -5025,7 +5313,11 @@
     "EN": {
       "name": "Iron Skin",
       "description": "Grants protection against defense down.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the duration of defense down by 50%.",
+        "Lv2": "Reduces the duration of defense down by 75%.",
+        "Lv3": "Prevents defense down."
+      }
     },
     "JA": {
       "name": "防御力ＤＯＷＮ耐性",
@@ -5087,7 +5379,11 @@
     "EN": {
       "name": "Blight Resistance",
       "description": "Grants protection against all elemental blights.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the duration of all elemental blights by 50%.",
+        "Lv2": "Reduces the duration of all elemental blights by 75%.",
+        "Lv3": "Nullifies all elemental blights."
+      }
     },
     "JA": {
       "name": "属性やられ耐性",
@@ -5149,7 +5445,11 @@
     "EN": {
       "name": "Stun Resistance",
       "description": "Reduces the duration of stun.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the duration of stun by 30%.",
+        "Lv2": "Reduces the duration of stun by 60%.",
+        "Lv3": "Prevents stun."
+      }
     },
     "JA": {
       "name": "気絶耐性",
@@ -5211,7 +5511,11 @@
     "EN": {
       "name": "Bleeding Resistance",
       "description": "Grants protection against bleeding.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces damage while bleeding.",
+        "Lv2": "Greatly reduces damage while bleeding.",
+        "Lv3": "Prevents bleeding."
+      }
     },
     "JA": {
       "name": "裂傷耐性",
@@ -5273,7 +5577,11 @@
     "EN": {
       "name": "Bind Resistance",
       "description": "Grants protection against webbed status and frostblight.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Allows you to quickly recover from webbed status or frostblight.",
+        "Lv2": "Allows you to very quickly recover from webbed status or frostblight.",
+        "Lv3": "Prevents webbed status and frostblight."
+      }
     },
     "JA": {
       "name": "拘束耐性",
@@ -5335,7 +5643,11 @@
     "EN": {
       "name": "Blast Resistance",
       "description": "Grants protection against blastblight.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Delays blastblight and reduces blast damage.",
+        "Lv2": "Greatly delays blastblight and greatly reduces blast damage.",
+        "Lv3": "Prevents blastblight."
+      }
     },
     "JA": {
       "name": "爆破やられ耐性",
@@ -5397,7 +5709,10 @@
     "EN": {
       "name": "Stench Resistance",
       "description": "Grants protection against stench.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces stench duration by 50%.",
+        "Lv2": "Prevents stench."
+      }
     },
     "JA": {
       "name": "悪臭耐性",
@@ -5459,7 +5774,10 @@
     "EN": {
       "name": "Adaptability",
       "description": "Grants protection against environmental damage, such as from heat or cold.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Negates the effects of heat and cold.",
+        "Lv2": "Negates environmental damage."
+      }
     },
     "JA": {
       "name": "環境適応",
@@ -5521,7 +5839,11 @@
     "EN": {
       "name": "Recovery Up",
       "description": "Increases the amount recovered when restoring health.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases recovery.",
+        "Lv2": "Moderately increases recovery.",
+        "Lv3": "Greatly increases recovery."
+      }
     },
     "JA": {
       "name": "体力回復量ＵＰ",
@@ -5583,7 +5905,11 @@
     "EN": {
       "name": "Recovery Speed",
       "description": "Speeds healing of recoverable damage (the red portion of the Health Gauge).",
-      "levels": {}
+      "levels": {
+        "Lv1": "Doubles the speed at which you heal recoverable damage.",
+        "Lv2": "Triples the speed at which you heal recoverable damage.",
+        "Lv3": "Quadruples the speed at which you heal recoverable damage."
+      }
     },
     "JA": {
       "name": "回復速度",
@@ -5645,7 +5971,11 @@
     "EN": {
       "name": "Survival Expert",
       "description": "Extra health is recovered from environmental interactables.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Restores 50 health.",
+        "Lv2": "Restores 80 health.",
+        "Lv3": "Restores 100 health."
+      }
     },
     "JA": {
       "name": "環境利用の知識",
@@ -5707,7 +6037,13 @@
     "EN": {
       "name": "Constitution",
       "description": "Reduces stamina depletion when evading, blocking, or doing certain other actions.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces fixed stamina depletion by 10%.",
+        "Lv2": "Reduces fixed stamina depletion by 20%.",
+        "Lv3": "Reduces fixed stamina depletion by 30%.",
+        "Lv4": "Reduces fixed stamina depletion by 40%.",
+        "Lv5": "Reduces fixed stamina depletion by 50%."
+      }
     },
     "JA": {
       "name": "体術",
@@ -5769,7 +6105,11 @@
     "EN": {
       "name": "Stamina Surge",
       "description": "Speeds up stamina recovery.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Stamina recovery speed +10%",
+        "Lv2": "Stamina recovery speed +30%",
+        "Lv3": "Stamina recovery speed +50%"
+      }
     },
     "JA": {
       "name": "スタミナ急速回復",
@@ -5831,7 +6171,11 @@
     "EN": {
       "name": "Marathon Runner",
       "description": "Slows down stamina depletion for actions that continuously drain stamina (such as dashing).",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces continuous stamina depletion by 15%.",
+        "Lv2": "Reduces continuous stamina depletion by 30%.",
+        "Lv3": "Reduces continuous stamina depletion by 50%."
+      }
     },
     "JA": {
       "name": "ランナー",
@@ -5893,7 +6237,11 @@
     "EN": {
       "name": "Hunger Resistance",
       "description": "Reduces maximum stamina depletion over time.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Extends the time until your stamina cap reduces by 50%.",
+        "Lv2": "Extends the time until your stamina cap reduces by 100%.",
+        "Lv3": "Prevents your stamina cap from decreasing."
+      }
     },
     "JA": {
       "name": "腹減り耐性",
@@ -5955,7 +6303,13 @@
     "EN": {
       "name": "Agitator",
       "description": "Increases attack power and affinity when large monsters become enraged.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +4 and affinity +3% while active.",
+        "Lv2": "Attack +8 and affinity +5% while active.",
+        "Lv3": "Attack +12 and affinity +7% while active.",
+        "Lv4": "Attack +16 and affinity +10% while active.",
+        "Lv5": "Attack +20 and affinity +15% while active."
+      }
     },
     "JA": {
       "name": "挑戦者",
@@ -6017,7 +6371,13 @@
     "EN": {
       "name": "Latent Power",
       "description": "Temporarily increases affinity and reduces stamina depletion when certain conditions are met.",
-      "levels": {}
+      "levels": {
+        "Lv1": "While active, affinity +10% and reduces stamina depletion by 30%.",
+        "Lv2": "While active, affinity +20% and reduces stamina depletion by 30%.",
+        "Lv3": "While active, affinity +30% and reduces stamina depletion by 50%.",
+        "Lv4": "While active, affinity +40% and reduces stamina depletion by 50%.",
+        "Lv5": "While active, affinity +50% and reduces stamina depletion by 50%."
+      }
     },
     "JA": {
       "name": "力の解放",
@@ -6079,7 +6439,13 @@
     "EN": {
       "name": "Heroics",
       "description": "Increases attack power and defense when health drops to 35% or lower.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Defense +50 while active.",
+        "Lv2": "Attack +5% and defense +50 while active.",
+        "Lv3": "Attack +5% and defense +100 while active.",
+        "Lv4": "Attack +10% and defense +100 while active.",
+        "Lv5": "Attack +30% and defense-increasing effects are negated while active."
+      }
     },
     "JA": {
       "name": "火事場力",
@@ -6141,7 +6507,13 @@
     "EN": {
       "name": "Burst",
       "description": "Continuously landing hits gradually increases attack and elemental attack. (Amount increased depends on weapon.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "On first hit, gain a small temporary attack and element boost, replaced by a larger boost after the fifth hit.",
+        "Lv2": "Hit 5 successive times for a moderate stat boost.",
+        "Lv3": "Hit 5 successive times for a bigger stat boost.",
+        "Lv4": "Hit 5 successive times for an even bigger stat boost.",
+        "Lv5": "Hit 5 successive times for a huge stat boost."
+      }
     },
     "JA": {
       "name": "連撃",
@@ -6203,7 +6575,13 @@
     "EN": {
       "name": "Foray",
       "description": "Increases attack power and affinity against large monsters affected by poison or paralysis.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +6 against large monsters affected by poison or paralysis.",
+        "Lv2": "Attack +8 and affinity +5% against large monsters affected by poison or paralysis.",
+        "Lv3": "Attack +10 and affinity +10% against large monsters affected by poison or paralysis.",
+        "Lv4": "Attack +12 and affinity +15% against large monsters affected by poison or paralysis.",
+        "Lv5": "Attack +15 and affinity +20% against large monsters affected by poison or paralysis."
+      }
     },
     "JA": {
       "name": "攻勢",
@@ -6265,7 +6643,13 @@
     "EN": {
       "name": "Flayer",
       "description": "Makes it easier to inflict wounds. Can also deal extra non-elemental damage upon buildup. (Excludes some attacks.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Makes it ever so slightly easier to inflict wounds. Also deals additional non-elemental damage.",
+        "Lv2": "Makes it moderately easier to inflict wounds. Also deals slightly more additional non-elemental damage.",
+        "Lv3": "Makes it easier to inflict wounds. Also deals moderately more additional non-elemental damage.",
+        "Lv4": "Makes it much easier to inflict wounds. Also deals more additional non-elemental damage.",
+        "Lv5": "Makes it significantly easier to inflict wounds. Also deals much more additional non-elemental damage."
+      }
     },
     "JA": {
       "name": "鎖刃刺撃",
@@ -6327,7 +6711,13 @@
     "EN": {
       "name": "Palico Rally",
       "description": "Powers up Palicoes.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Increases Palico attack power and defense by 5%.",
+        "Lv2": "Increases Palico attack power and defense by 10%.",
+        "Lv3": "Increases Palico attack power and defense by 15%.",
+        "Lv4": "Increases Palico attack power and defense by 20%.",
+        "Lv5": "Increases Palico attack power and defense by 25%."
+      }
     },
     "JA": {
       "name": "オトモへの采配",
@@ -6389,7 +6779,11 @@
     "EN": {
       "name": "Partbreaker",
       "description": "Makes it easier to break large monster parts, and increases damage dealt when destroying a wound with a Focus Strike.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Increases part damage and damage dealt when conditions are met by 10%.",
+        "Lv2": "Increases part damage and damage dealt when conditions are met by 20%.",
+        "Lv3": "Increases part damage and damage dealt when conditions are met by 30%."
+      }
     },
     "JA": {
       "name": "破壊王",
@@ -6451,7 +6845,11 @@
     "EN": {
       "name": "Coalescence",
       "description": "Temporarily increases elemental attack power and status effects after recovering from blights or abnormal status.",
-      "levels": {}
+      "levels": {
+        "Lv1": "When active, grants a slight increase to elemental attack and status buildup.",
+        "Lv2": "When active, grants an increase to elemental attack and status buildup.",
+        "Lv3": "When active, grants a large increase to elemental attack and status buildup."
+      }
     },
     "JA": {
       "name": "災禍転福",
@@ -6513,7 +6911,11 @@
     "EN": {
       "name": "Ambush",
       "description": "Temporarily increases damage to large monsters with a successful Sneak Attack.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Attack +5% while active.",
+        "Lv2": "Attack +10% while active.",
+        "Lv3": "Attack +15% while active."
+      }
     },
     "JA": {
       "name": "急襲",
@@ -6575,7 +6977,11 @@
     "EN": {
       "name": "Antivirus",
       "description": "Once infected, makes it easier to overcome the Frenzy and increases affinity if cured.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases recovery rate after contracting the Frenzy. Affinity +3% if cured.",
+        "Lv2": "Increases recovery rate after contracting the Frenzy. Affinity +6% if cured.",
+        "Lv3": "Greatly increases recovery rate after contracting the Frenzy. Affinity +10% if cured."
+      }
     },
     "JA": {
       "name": "無我の境地",
@@ -6637,7 +7043,11 @@
     "EN": {
       "name": "Elemental Absorption",
       "description": "After taking elemental damage, temporarily grants you element effects. (Cooldown after effect ends)",
-      "levels": {}
+      "levels": {
+        "Lv1": "While active, slightly increases elemental attack, and resistance to element taken at activation by 4.",
+        "Lv2": "While active, moderately increases elemental attack, and resistance to element taken at activation by 6.",
+        "Lv3": "While active, increases elemental attack, and resistance to element taken at activation by 8."
+      }
     },
     "JA": {
       "name": "属性吸収",
@@ -6699,7 +7109,9 @@
     "EN": {
       "name": "Self-Improvement",
       "description": "Attack and defense increase as time passes while on a quest. (The maximum is reached after 30 minutes.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "研鑽",
@@ -6761,7 +7173,13 @@
     "EN": {
       "name": "Evade Window",
       "description": "Extends the invulnerability period when evading.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Very slightly increases invulnerability window.",
+        "Lv2": "Slightly increases invulnerability window.",
+        "Lv3": "Increases invulnerability window.",
+        "Lv4": "Greatly increases invulnerability window.",
+        "Lv5": "Massively increases invulnerability window."
+      }
     },
     "JA": {
       "name": "回避性能",
@@ -6823,7 +7241,11 @@
     "EN": {
       "name": "Evade Extender",
       "description": "Increases evade distance.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly extends evasion distance.",
+        "Lv2": "Extends evasion distance.",
+        "Lv3": "Greatly extends evasion distance."
+      }
     },
     "JA": {
       "name": "回避距離ＵＰ",
@@ -6885,7 +7307,11 @@
     "EN": {
       "name": "Earplugs",
       "description": "Grants protection from large monsters' roars.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces the effects of weak monster roars.",
+        "Lv2": "Nullifies weak monster roars and reduces the effects of strong monster roars.",
+        "Lv3": "Nullifies weak and strong monster roars."
+      }
     },
     "JA": {
       "name": "耳栓",
@@ -6947,7 +7373,11 @@
     "EN": {
       "name": "Quick Sheathe",
       "description": "Speeds up weapon sheathing.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Slightly increases sheathing speed.",
+        "Lv2": "Increases sheathing speed.",
+        "Lv3": "Greatly increases sheathing speed."
+      }
     },
     "JA": {
       "name": "納刀術",
@@ -7009,7 +7439,11 @@
     "EN": {
       "name": "Windproof",
       "description": "Grants protection against wind pressure.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Negates minor wind pressure and halves the effects of major wind pressure.",
+        "Lv2": "Negates minor and major wind pressure and halves the effects of dragon wind pressure.",
+        "Lv3": "Negates all kinds of wind pressure."
+      }
     },
     "JA": {
       "name": "風圧耐性",
@@ -7071,7 +7505,11 @@
     "EN": {
       "name": "Tremor Resistance",
       "description": "Grants protection against ground tremors.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Nullifies very minor ground tremors and halves effects of minor ground tremors.",
+        "Lv2": "Nullifies up to minor ground tremors and greatly reduces the effects of major ground tremors.",
+        "Lv3": "Nullifies all ground tremors."
+      }
     },
     "JA": {
       "name": "耐震",
@@ -7133,7 +7571,11 @@
     "EN": {
       "name": "Flinch Free",
       "description": "Prevents knockbacks and other reactions to small damage.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Prevents knockbacks.",
+        "Lv2": "Prevents knockbacks. Tripping is reduced to a knockback instead.",
+        "Lv3": "Prevents knockbacks and tripping."
+      }
     },
     "JA": {
       "name": "ひるみ軽減",
@@ -7195,7 +7637,11 @@
     "EN": {
       "name": "Intimidator",
       "description": "Reduces the chance small monsters will attack after spotting you. (Has no effect on certain monsters.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Discourages monsters from engaging you even if you've been spotted.",
+        "Lv2": "Highly discourages monsters from engaging you even if you've been spotted.",
+        "Lv3": "Prevents monsters from engaging you even if you've been spotted."
+      }
     },
     "JA": {
       "name": "威嚇",
@@ -7257,7 +7703,11 @@
     "EN": {
       "name": "Speed Eating",
       "description": "Increases meat-eating and item-consumption speed.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Moderately increases eating speed.",
+        "Lv2": "Increases eating speed.",
+        "Lv3": "Greatly increases eating speed."
+      }
     },
     "JA": {
       "name": "早食い",
@@ -7319,7 +7769,10 @@
     "EN": {
       "name": "Aquatic/Oilsilt Mobility",
       "description": "Grants resistance against impairments to mobility while in water, oilsilt, or streams.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Negates the effects of muddy streams, nullifies slowing from water and oilsilt, and reduces slowing from heavy oil.",
+        "Lv2": "Also negates the effects of waves."
+      }
     },
     "JA": {
       "name": "水場・油泥適応",
@@ -7381,7 +7834,9 @@
     "EN": {
       "name": "Shock Absorber",
       "description": "Disables damage reactions when you hit a friend or when a friend hits you.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "緩衝",
@@ -7443,7 +7898,9 @@
     "EN": {
       "name": "Leap of Faith",
       "description": "Allows you to do a dive-evade when facing towards large monsters and extends the dive-evade distance.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Enables skill use."
+      }
     },
     "JA": {
       "name": "飛び込み",
@@ -7505,7 +7962,9 @@
     "EN": {
       "name": "Jump Master",
       "description": "Prevents attacks from knocking you back during a jump.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Negates knockback during jumps."
+      }
     },
     "JA": {
       "name": "ジャンプ鉄人",
@@ -7567,7 +8026,9 @@
     "EN": {
       "name": "Cliffhanger",
       "description": "Decreases stamina depletion when climbing on vines.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Reduces stamina depletion while climbing by 50%."
+      }
     },
     "JA": {
       "name": "クライマー",
@@ -7629,7 +8090,13 @@
     "EN": {
       "name": "Wide-Range",
       "description": "Allows the effects of certain items to also affect nearby allies.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Items affect nearby allies with 33% of their efficacy.",
+        "Lv2": "Items affect nearby allies in a wider radius with 33% of their efficacy.",
+        "Lv3": "Items affect nearby allies in a wider radius with 66% of their efficacy.",
+        "Lv4": "Items affect nearby allies in a much wider radius with 66% of their efficacy.",
+        "Lv5": "Items affect nearby allies in a much wider radius with full efficacy."
+      }
     },
     "JA": {
       "name": "広域化",
@@ -7691,7 +8158,13 @@
     "EN": {
       "name": "Tool Specialist",
       "description": "Reduces the recharge time for specialized tools.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Shortens recharge time by 10%.",
+        "Lv2": "Shortens recharge time by 20%.",
+        "Lv3": "Shortens recharge time by 30%.",
+        "Lv4": "Shortens recharge time by 40%.",
+        "Lv5": "Shortens recharge time by 50%."
+      }
     },
     "JA": {
       "name": "整備",
@@ -7753,7 +8226,11 @@
     "EN": {
       "name": "Bombardier",
       "description": "Increases the damage of explosive items.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Explosive power +10%",
+        "Lv2": "Explosive power +20%",
+        "Lv3": "Explosive power +30%"
+      }
     },
     "JA": {
       "name": "ボマー",
@@ -7815,7 +8292,11 @@
     "EN": {
       "name": "Mushroomancer",
       "description": "Lets you digest mushrooms that would otherwise be inedible and gain their advantageous effects.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Lets you digest blue mushrooms and toadstools.",
+        "Lv2": "Additionally lets you digest nitroshrooms and parashrooms.",
+        "Lv3": "Additionally lets you digest mandragoras, devil's blight, and exciteshrooms."
+      }
     },
     "JA": {
       "name": "キノコ大好き",
@@ -7877,7 +8358,11 @@
     "EN": {
       "name": "Item Prolonger",
       "description": "Extends the duration of some item effects.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Item effect duration +10%",
+        "Lv2": "Item effect duration +25%",
+        "Lv3": "Item effect duration +50%"
+      }
     },
     "JA": {
       "name": "アイテム使用強化",
@@ -7939,7 +8424,11 @@
     "EN": {
       "name": "Free Meal",
       "description": "Gives you a predetermined chance of consuming a food or drink item for free.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates 10% of the time.",
+        "Lv2": "Activates 25% of the time.",
+        "Lv3": "Activates 45% of the time."
+      }
     },
     "JA": {
       "name": "満足感",
@@ -8001,7 +8490,9 @@
     "EN": {
       "name": "Blindsider",
       "description": "Improves the effectiveness of flash attacks and items.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Improves the effectiveness of flash attacks and items."
+      }
     },
     "JA": {
       "name": "閃光強化",
@@ -8063,7 +8554,12 @@
     "EN": {
       "name": "Botanist",
       "description": "Increases the quantity of herbs and other consumable items you gather.",
-      "levels": {}
+      "levels": {
+        "Lv1": "One extra consumable herb item per gather.",
+        "Lv2": "Additionally adds one extra consumable fruit, nut, or seed item per gather.",
+        "Lv3": "Additionally adds one extra consumable insect item per gather.",
+        "Lv4": "Additionally adds one extra consumable mushroom item per gather."
+      }
     },
     "JA": {
       "name": "植生学",
@@ -8125,7 +8621,11 @@
     "EN": {
       "name": "Geologist",
       "description": "Increases the number of items you gain at gathering points.",
-      "levels": {}
+      "levels": {
+        "Lv1": "One extra item when gathering from bonepiles.",
+        "Lv2": "Additionally adds one extra item when gathering special items.",
+        "Lv3": "Additionally adds one extra item when gathering from mining outcrops."
+      }
     },
     "JA": {
       "name": "地質学",
@@ -8187,7 +8687,9 @@
     "EN": {
       "name": "Entomologist",
       "description": "The bodies of small insect monsters won't be destroyed, allowing them to be carved. (Excludes some.)",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "昆虫標本の達人",
@@ -8249,7 +8751,9 @@
     "EN": {
       "name": "Outdoorsman",
       "description": "Improves fishing, grilling, and transporting abilities.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Improves fishing, grilling, and transporting abilities."
+      }
     },
     "JA": {
       "name": "ハンター生活",
@@ -8311,7 +8815,9 @@
     "EN": {
       "name": "Rice Ball",
       "description": "Increases the attack power of Akuma actions and stun damage.",
-      "levels": {}
+      "levels": {
+        "Lv1": "Activates skill effect."
+      }
     },
     "JA": {
       "name": "にぎりめし",
@@ -8373,7 +8879,9 @@
     "EN": {
       "name": "Neopteron Alert",
       "description": "3 → Increases the amount of honey you gain from gathering points.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases the amount of honey you gain from gathering points."
+      }
     },
     "JA": {
       "name": "甲虫の知らせ",
@@ -8435,7 +8943,9 @@
     "EN": {
       "name": "Neopteron Camouflage",
       "description": "3 → Increases movement speed while crouching, and makes it easier to escape large monsters' detection.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases movement speed while crouching, and makes it easier to escape large monsters' detection."
+      }
     },
     "JA": {
       "name": "甲虫の擬態",
@@ -8497,7 +9007,9 @@
     "EN": {
       "name": "Scaling Prowess",
       "description": "3 → Makes it easier to mount monsters and to wound them once mounted.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Makes it easier to mount monsters and to wound them once mounted."
+      }
     },
     "JA": {
       "name": "鱗張りの技法",
@@ -8559,7 +9071,9 @@
     "EN": {
       "name": "Scale Layering",
       "description": "3 → Temporarily reduces stamina depletion when health is at 40% or lower.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Temporarily reduces stamina depletion when health is at 40% or lower."
+      }
     },
     "JA": {
       "name": "鱗重ねの工夫",
@@ -8621,7 +9135,9 @@
     "EN": {
       "name": "Flexible Leathercraft",
       "description": "3 → Increases gathering speed, and prevents knock back when gathering or carving.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases gathering speed, and prevents knock back when gathering or carving."
+      }
     },
     "JA": {
       "name": "革細工の柔性",
@@ -8683,7 +9199,9 @@
     "EN": {
       "name": "Buttery Leathercraft",
       "description": "3 → Increases your affinity temporarily when sliding on terrain.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases your affinity temporarily when sliding on terrain."
+      }
     },
     "JA": {
       "name": "革細工の滑性",
@@ -8745,7 +9263,9 @@
     "EN": {
       "name": "Fortifying Pelt",
       "description": "3 → Increases attack and defense after fainting during a quest. (Can be used twice.)",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases attack and defense after fainting during a quest. (Can be used twice.)"
+      }
     },
     "JA": {
       "name": "毛皮の昂揚",
@@ -8807,7 +9327,9 @@
     "EN": {
       "name": "Alluring Pelt",
       "description": "3 → Increases the attention drawn to you when attacking a monster.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases the attention drawn to you when attacking a monster."
+      }
     },
     "JA": {
       "name": "毛皮の誘惑",
@@ -8869,7 +9391,9 @@
     "EN": {
       "name": "Lord's Favor",
       "description": "3 → Temporarily increases attack power when using effects like Melody Effects that affect companions in range.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Temporarily increases attack power when using effects like Melody Effects that affect companions in range."
+      }
     },
     "JA": {
       "name": "ヌシの誇り",
@@ -8931,7 +9455,9 @@
     "EN": {
       "name": "Lord's Fury",
       "description": "3 → Increases attack when inflicted with ailments.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases attack when inflicted with ailments."
+      }
     },
     "JA": {
       "name": "ヌシの憤激",
@@ -8993,7 +9519,9 @@
     "EN": {
       "name": "Guardian's Pulse",
       "description": "3 → Increases recovery speed of stamina and red gauge when near Wylkrystals.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases recovery speed of stamina and red gauge when near Wylkrystals."
+      }
     },
     "JA": {
       "name": "護竜の脈動",
@@ -9055,7 +9583,9 @@
     "EN": {
       "name": "Guardian's Protection",
       "description": "3 → Reduces elemental and unique damage while in the Ruins of Wyveria.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Reduces elemental and unique damage while in the Ruins of Wyveria."
+      }
     },
     "JA": {
       "name": "護竜の守り",
@@ -9117,7 +9647,9 @@
     "EN": {
       "name": "Imparted Wisdom",
       "description": "3 → Increases the chance of finding rare gathering points.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases the chance of finding rare gathering points."
+      }
     },
     "JA": {
       "name": "先達の導き",
@@ -9179,7 +9711,9 @@
     "EN": {
       "name": "Lord's Soul",
       "description": "3 → Boosts attack and lowers defense but lets you survive one lethal hit. Afterwards, boosts defense and res.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Boosts attack and lowers defense but lets you survive one lethal hit. Afterwards, boosts defense and res."
+      }
     },
     "JA": {
       "name": "ヌシの魂",
@@ -9241,7 +9775,9 @@
     "EN": {
       "name": "Master of the Fist",
       "description": "3 → Increases power of special actions. Drive Impacts can trigger offset attacks. Further increases power of offset attacks.",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases power of special actions. Drive Impacts can trigger offset attacks. Further increases power of offset attacks."
+      }
     },
     "JA": {
       "name": "拳を極めし者",
@@ -9303,7 +9839,9 @@
     "EN": {
       "name": "Festival Spirit",
       "description": "3 → Lets you carve one additional time from carcasses during quests. (No effect when joining mid-quest.)",
-      "levels": {}
+      "levels": {
+        "Lv3": "Lets you carve one additional time from carcasses during quests. (No effect when joining mid-quest.)"
+      }
     },
     "JA": {
       "name": "祝祭の巡り",
@@ -9365,7 +9903,9 @@
     "EN": {
       "name": "Glory's Favor",
       "description": "3 → Increases quest target rewards. (No effect when joining mid-quest.)",
-      "levels": {}
+      "levels": {
+        "Lv3": "Increases quest target rewards. (No effect when joining mid-quest.)"
+      }
     },
     "JA": {
       "name": "栄光の誉れ",
@@ -9427,7 +9967,10 @@
     "EN": {
       "name": "Doshaguma's Might",
       "description": "2 → Temporarily grants attack +10 after a successful Power Clash or Offset attack4 → Temporarily grants attack +25 after a successful Power Clash or Offset attack",
-      "levels": {}
+      "levels": {
+        "Lv2": "Temporarily grants attack +10 after a successful Power Clash or Offset attack",
+        "Lv4": "Temporarily grants attack +25 after a successful Power Clash or Offset attack"
+      }
     },
     "JA": {
       "name": "闢獣の力",
@@ -9489,7 +10032,10 @@
     "EN": {
       "name": "Rathalos's Flare",
       "description": "2 → Chance to deal additional fire damage after landing an attack.4 → Increases additional fire damage after landing an attack.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Chance to deal additional fire damage after landing an attack.",
+        "Lv4": "Increases additional fire damage after landing an attack."
+      }
     },
     "JA": {
       "name": "火竜の力",
@@ -9551,7 +10097,10 @@
     "EN": {
       "name": "Xu Wu's Vigor",
       "description": "2 → Temporarily grants attack +15 after eating items such as well-done steak.4 → Temporarily grants attack +30 after eating items such as well-done steak.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Temporarily grants attack +15 after eating items such as well-done steak.",
+        "Lv4": "Temporarily grants attack +30 after eating items such as well-done steak."
+      }
     },
     "JA": {
       "name": "暗器蛸の力",
@@ -9613,7 +10162,10 @@
     "EN": {
       "name": "Gravios's Protection",
       "description": "2 → Reduces the damage you take by 20% when your health is full.4 → Reduces the damage you take by 35% when your health is full.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Reduces the damage you take by 20% when your health is full.",
+        "Lv4": "Reduces the damage you take by 35% when your health is full."
+      }
     },
     "JA": {
       "name": "鎧竜の守護",
@@ -9675,7 +10227,10 @@
     "EN": {
       "name": "Blangonga's Spirit",
       "description": "2 → Using the To Victory! gesture moderately  increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters.4 → Using the To Victory! gesture increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Using the To Victory! gesture moderately  increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters.",
+        "Lv4": "Using the To Victory! gesture increases attack temporarily to nearby allies. Greatly effects Palicoes and Support Hunters."
+      }
     },
     "JA": {
       "name": "雪獅子の闘志",
@@ -9737,7 +10292,10 @@
     "EN": {
       "name": "Ebony Odogaron's Power",
       "description": "2 → Extends the duration of the Burst skill and grants attack +8 while Burst is active.4 → Further extends the duration of the Burst skill and grants attack +18 while Burst is active.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Extends the duration of the Burst skill and grants attack +8 while Burst is active.",
+        "Lv4": "Further extends the duration of the Burst skill and grants attack +18 while Burst is active."
+      }
     },
     "JA": {
       "name": "兇爪竜の力",
@@ -9799,7 +10357,10 @@
     "EN": {
       "name": "Fulgur Anjanath's Will",
       "description": "2 → Grants an additional Stamina Gauge.4 → Grants an additional long Stamina Gauge.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Grants an additional Stamina Gauge.",
+        "Lv4": "Grants an additional long Stamina Gauge."
+      }
     },
     "JA": {
       "name": "雷顎竜の闘志",
@@ -9861,7 +10422,10 @@
     "EN": {
       "name": "Uth Duna's Cover",
       "description": "2 → Increases defense temporarily when using a specialized tool.4 → Greatly increases defense and resistance temporarily when using a specialized tool.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Increases defense temporarily when using a specialized tool.",
+        "Lv4": "Greatly increases defense and resistance temporarily when using a specialized tool."
+      }
     },
     "JA": {
       "name": "波衣竜の守護",
@@ -9923,7 +10487,10 @@
     "EN": {
       "name": "Rey Dau's Voltage",
       "description": "2 → Moderately extends the activation time of the Latent Power skill.4 → Extends the activation time of the Latent Power skill.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Moderately extends the activation time of the Latent Power skill.",
+        "Lv4": "Extends the activation time of the Latent Power skill."
+      }
     },
     "JA": {
       "name": "煌雷竜の力",
@@ -9985,7 +10552,10 @@
     "EN": {
       "name": "Nu Udra's Mutiny",
       "description": "2 → Deals moderate additional damage while the Resentment skill is active.4 → Deals additional damage while the Resentment skill is active.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Deals moderate additional damage while the Resentment skill is active.",
+        "Lv4": "Deals additional damage while the Resentment skill is active."
+      }
     },
     "JA": {
       "name": "獄焔蛸の反逆",
@@ -10047,7 +10617,10 @@
     "EN": {
       "name": "Jin Dahaad's Revolt",
       "description": "2 → Increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash.4 → Greatly increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash.",
+        "Lv4": "Greatly increases attack after recovering from webbed status, frostblight, being pinned, or a Power Clash."
+      }
     },
     "JA": {
       "name": "凍峰竜の反逆",
@@ -10109,7 +10682,10 @@
     "EN": {
       "name": "Gore Magala's Tyranny",
       "description": "2 → Infects you with Frenzy when against large monsters.4 → Infects you with Frenzy and raises attack when against large monsters. Attack power increases upon recovery.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Infects you with Frenzy when against large monsters.",
+        "Lv4": "Infects you with Frenzy and raises attack when against large monsters. Attack power increases upon recovery."
+      }
     },
     "JA": {
       "name": "黒蝕竜の力",
@@ -10171,7 +10747,10 @@
     "EN": {
       "name": "Arkveld's Hunger",
       "description": "2 → Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon.4 → Regenerates your health as you continually attack a monster. Recovery varies by weapon.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Regenerates a small amount of your health as you continually attack a monster. Recovery varies by weapon.",
+        "Lv4": "Regenerates your health as you continually attack a monster. Recovery varies by weapon."
+      }
     },
     "JA": {
       "name": "鎖刃竜の飢餓",
@@ -10233,7 +10812,10 @@
     "EN": {
       "name": "Guardian Arkveld's Vitality",
       "description": "2 → Restores a moderate amount of health when destroying a wound on a large monster.4 → Restores health when destroying a wound on a large monster.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Restores a moderate amount of health when destroying a wound on a large monster.",
+        "Lv4": "Restores health when destroying a wound on a large monster."
+      }
     },
     "JA": {
       "name": "護鎖刃竜の命脈",
@@ -10295,7 +10877,10 @@
     "EN": {
       "name": "Mizutsune's Prowess",
       "description": "2 → Prevents major bubbleblight and grants you minor bubbleblight after evading several times.4 → In addition to previous effects, also increases evasion while afflicted with bubbleblight.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Prevents major bubbleblight and grants you minor bubbleblight after evading several times.",
+        "Lv4": "In addition to previous effects, also increases evasion while afflicted with bubbleblight."
+      }
     },
     "JA": {
       "name": "泡狐竜の力",
@@ -10357,7 +10942,10 @@
     "EN": {
       "name": "Zoh Shia's Pulse",
       "description": "2 → Allows the Health Gauge to continue to slowly recover up to the max value, even if there is no red portion.4 → Allows the Health Gauge to continue to recover up to the max value, even if there is no red portion.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Allows the Health Gauge to continue to slowly recover up to the max value, even if there is no red portion.",
+        "Lv4": "Allows the Health Gauge to continue to recover up to the max value, even if there is no red portion."
+      }
     },
     "JA": {
       "name": "白熾龍の脈動",
@@ -10419,7 +11007,10 @@
     "EN": {
       "name": "Blossomdance Prayer",
       "description": "2 → During Blossomdance, adds special items to quest rewards. (No effect when joining mid-quest.)4 → During Blossomdance, adds special items to quest rewards, and greatly boosts attack and defense.",
-      "levels": {}
+      "levels": {
+        "Lv2": "During Blossomdance, adds special items to quest rewards. (No effect when joining mid-quest.)",
+        "Lv4": "During Blossomdance, adds special items to quest rewards, and greatly boosts attack and defense."
+      }
     },
     "JA": {
       "name": "花舞の祈り",
@@ -10481,7 +11072,10 @@
     "EN": {
       "name": "Leviathan's Fury",
       "description": "2 → Temporarily increases affinity and can deal extra thunder damage upon buildup. (Excludes some attacks.)4 → Further increases additional thunder damage and moderately extends the duration affinity is increased.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Temporarily increases affinity and can deal extra thunder damage upon buildup. (Excludes some attacks.)",
+        "Lv4": "Further increases additional thunder damage and moderately extends the duration affinity is increased."
+      }
     },
     "JA": {
       "name": "海竜の渦雷",
@@ -10543,7 +11137,10 @@
     "EN": {
       "name": "Seregios's Tenacity",
       "description": "2 → Extends the duration of Adrenaline Rush. If triggered again while the skill is active, extends the effect duration once.4 → Additionally, if triggered again while the skill is active, further increases attack.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Extends the duration of Adrenaline Rush. If triggered again while the skill is active, extends the effect duration once.",
+        "Lv4": "Additionally, if triggered again while the skill is active, further increases attack."
+      }
     },
     "JA": {
       "name": "千刃竜の闘志",
@@ -10605,7 +11202,10 @@
     "EN": {
       "name": "Flamefete Prayer",
       "description": "2 → During Flamefete, adds special items to quest rewards. (No effect when joining mid-quest.)4 → During Flamefete, adds special items to quest rewards, and greatly boosts attack and defense.",
-      "levels": {}
+      "levels": {
+        "Lv2": "During Flamefete, adds special items to quest rewards. (No effect when joining mid-quest.)",
+        "Lv4": "During Flamefete, adds special items to quest rewards, and greatly boosts attack and defense."
+      }
     },
     "JA": {
       "name": "踊火の祈り",
@@ -10667,7 +11267,10 @@
     "EN": {
       "name": "Dreamspell Prayer",
       "description": "2 → During Dreamspell, adds special items to quest rewards. (No effect when joining mid-quest.)4 → During Dreamspell, adds special items to quest rewards, and greatly boosts attack and defense.",
-      "levels": {}
+      "levels": {
+        "Lv2": "During Dreamspell, adds special items to quest rewards. (No effect when joining mid-quest.)",
+        "Lv4": "During Dreamspell, adds special items to quest rewards, and greatly boosts attack and defense."
+      }
     },
     "JA": {
       "name": "夢灯の祈り",
@@ -10791,7 +11394,10 @@
     "EN": {
       "name": "Soul of the Dark Knight",
       "description": "2 → Having recoverable damage increases elemental attack, and some great sword Lvl 3 charged slashes are strengthened.4 → Allows you to perform the special action: The Blackest Night.",
-      "levels": {}
+      "levels": {
+        "Lv2": "Having recoverable damage increases elemental attack, and some great sword Lvl 3 charged slashes are strengthened.",
+        "Lv4": "Allows you to perform the special action: The Blackest Night."
+      }
     },
     "JA": {
       "name": "暗黒騎士の証",
@@ -10853,7 +11459,10 @@
     "EN": {
       "name": "Omega Resonance",
       "description": "2 → (When quest starts) Local and Remote Resonance alternate, increasing attack or affinity when conditions are met.4 → Increases the effect of Resonance I, and the effect of the weapon skill Synthetic Shield or the effect of Synergy.",
-      "levels": {}
+      "levels": {
+        "Lv2": "(When quest starts) Local and Remote Resonance alternate, increasing attack or affinity when conditions are met.",
+        "Lv4": "Increases the effect of Resonance I, and the effect of the weapon skill Synthetic Shield or the effect of Synergy."
+      }
     },
     "JA": {
       "name": "オメガレゾナンス",
@@ -10971,6 +11580,43 @@
       "name": "巨戟龍的啟示錄",
       "description": "2 → 戰鬥中的大型魔物發怒時，增加屬性攻擊值。4 → 提升Ⅰ的效果，並於一定時間內獲得抵擋傷害的護盾（護盾發動後需等候一定時間才會再次發動）",
       "levels": {}
+    }
+  },
+  "attack_boost": {
+    "EN": {
+      "name": "",
+      "description": "",
+      "levels": {
+        "Lv1": "Attack +3",
+        "Lv2": "Attack +5",
+        "Lv3": "Attack +7",
+        "Lv4": "Attack +2% Bonus: +8",
+        "Lv5": "Attack +4% Bonus: +9"
+      }
+    }
+  },
+  "offensive_guard": {
+    "EN": {
+      "name": "",
+      "description": "",
+      "levels": {
+        "Lv1": "Attack +5% while active.",
+        "Lv2": "Attack +10% while active.",
+        "Lv3": "Attack +15% while active."
+      }
+    }
+  },
+  "critical_eye": {
+    "EN": {
+      "name": "",
+      "description": "",
+      "levels": {
+        "Lv1": "Affinity +4%",
+        "Lv2": "Affinity +8%",
+        "Lv3": "Affinity +12%",
+        "Lv4": "Affinity +16%",
+        "Lv5": "Affinity +20%"
+      }
     }
   }
 }

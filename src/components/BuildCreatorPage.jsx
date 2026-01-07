@@ -594,6 +594,48 @@ const buildUITranslations = {
     PT: "Res. mín.",
     AR: "أدنى مقاومة",
   },
+  filterBySkill: {
+    EN: "Skill",
+    FR: "Talent",
+    JP: "スキル",
+    JA: "スキル",
+    KO: "스킬",
+    IT: "Abilità",
+    DE: "Fähigkeit",
+    ES: "Habilidad",
+    RU: "Навык",
+    PL: "Umiejętność",
+    PT: "Habilidade",
+    AR: "مهارة",
+  },
+  searchSkill: {
+    EN: "Search skill...",
+    FR: "Rechercher un talent...",
+    JP: "スキルを検索...",
+    JA: "スキルを検索...",
+    KO: "스킬 검색...",
+    IT: "Cerca abilità...",
+    DE: "Fähigkeit suchen...",
+    ES: "Buscar habilidad...",
+    RU: "Поиск навыка...",
+    PL: "Szukaj umiejętności...",
+    PT: "Buscar habilidade...",
+    AR: "بحث عن مهارة...",
+  },
+  more: {
+    EN: "more",
+    FR: "autres",
+    JP: "他",
+    JA: "他",
+    KO: "더",
+    IT: "altri",
+    DE: "weitere",
+    ES: "más",
+    RU: "ещё",
+    PL: "więcej",
+    PT: "mais",
+    AR: "المزيد",
+  },
 };
 
 // Traductions des éléments
@@ -995,6 +1037,25 @@ const getUIText = (key, lang) => {
   );
 };
 
+// Fonction pour obtenir le nom traduit d'un talent
+const translateSkillName = (skillName, targetLang) => {
+  if (!skillName) return skillName;
+  
+  // Chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
+  const talentKey = Object.keys(talentsData).find((key) => {
+    const talent = talentsData[key];
+    return Object.values(talent).some(
+      (langData) => langData?.name?.toLowerCase() === skillName.toLowerCase()
+    );
+  });
+
+  if (talentKey) {
+    const talent = talentsData[talentKey];
+    return talent[targetLang]?.name || talent.EN?.name || skillName;
+  }
+  return skillName;
+};
+
 // Fonction pour rendre les slots visuellement
 const renderSlots = (slots, darkMode) => {
   if (!slots || slots.length === 0)
@@ -1047,6 +1108,8 @@ function EquipmentSelectionModal({
     ice: null,
     dragon: null,
   });
+  const [skillFilter, setSkillFilter] = useState(""); // Filtre par talent
+  const [skillSearchQuery, setSkillSearchQuery] = useState(""); // Recherche de talent
   const searchInputRef = useRef(null);
 
   // Éléments de résistance pour les armures
@@ -1069,6 +1132,8 @@ function EquipmentSelectionModal({
         ice: null,
         dragon: null,
       });
+      setSkillFilter("");
+      setSkillSearchQuery("");
     }
   }, [isOpen]);
 
@@ -1091,6 +1156,70 @@ function EquipmentSelectionModal({
       ice: null,
       dragon: null,
     });
+    setSkillFilter("");
+    setSkillSearchQuery("");
+  };
+
+  // Collecter tous les talents disponibles pour les armures (pour le type actuel)
+  // avec toutes leurs traductions pour la recherche multilingue
+  const getAvailableSkills = () => {
+    if (type === "weapon") return [];
+    
+    const armorPieceType = type;
+    const skillsMap = new Map(); // key: skill name EN lowercase, value: { keyName, allNames: [] }
+    
+    Object.values(armorsFullData).forEach((armorSet) => {
+      // Collecter les noms de skills dans toutes les langues
+      availableLanguages.forEach((lang) => {
+        const armorData = armorSet[lang];
+        const piece = armorData?.pieces?.[armorPieceType];
+        if (piece?.name && piece.skills) {
+          piece.skills.forEach((skill) => {
+            if (skill.name) {
+              // Utiliser le nom EN comme clé unique
+              const enPiece = armorSet.EN?.pieces?.[armorPieceType];
+              const enSkill = enPiece?.skills?.find(s => 
+                s.name?.toLowerCase() === skill.name?.toLowerCase() ||
+                // Chercher correspondance par position si même nombre de skills
+                (enPiece?.skills?.length === piece.skills.length && 
+                 enPiece?.skills?.indexOf(s) === piece.skills.indexOf(skill))
+              );
+              const keyName = (enSkill?.name || skill.name);
+              const keyNameLower = keyName.toLowerCase();
+              
+              if (!skillsMap.has(keyNameLower)) {
+                skillsMap.set(keyNameLower, {
+                  keyName: keyName,
+                  allNames: new Set([skill.name.toLowerCase()])
+                });
+              } else {
+                skillsMap.get(keyNameLower).allNames.add(skill.name.toLowerCase());
+              }
+            }
+          });
+        }
+      });
+    });
+    
+    return Array.from(skillsMap.values())
+      .map(s => ({
+        // Utiliser translateSkillName pour obtenir le nom dans la langue courante
+        displayName: translateSkillName(s.keyName, language),
+        keyName: s.keyName,
+        allNames: Array.from(s.allNames)
+      }))
+      .sort((a, b) => a.displayName.localeCompare(b.displayName));
+  };
+  
+  const availableSkills = getAvailableSkills();
+  
+  // Fonction pour vérifier si un skill correspond à la recherche (multilingue)
+  const skillMatchesSearch = (skill, query) => {
+    if (!query) return true;
+    const lowerQuery = query.toLowerCase();
+    return skill.allNames.some(name => name.includes(lowerQuery)) ||
+           skill.displayName.toLowerCase().includes(lowerQuery) ||
+           skill.keyName.toLowerCase().includes(lowerQuery);
   };
 
   // Filtrer les équipements
@@ -1195,6 +1324,21 @@ function EquipmentSelectionModal({
         if (!armorData?.pieces?.[armorPieceType]) return false;
 
         const piece = armorData.pieces[armorPieceType];
+        
+        // Exclure les pièces sans nom (pièces qui n'existent pas dans le jeu)
+        if (!piece.name || piece.name.trim() === "") return false;
+
+        // Filtre par talent (recherche multilingue)
+        if (skillFilter) {
+          // Chercher dans toutes les langues
+          const hasSkill = availableLanguages.some((lang) => {
+            const langPiece = armorSet[lang]?.pieces?.[armorPieceType];
+            return langPiece?.skills?.some(
+              (skill) => skill.name?.toLowerCase() === skillFilter.toLowerCase()
+            );
+          });
+          if (!hasSkill) return false;
+        }
 
         // Filtre par résistance minimale
         for (const resType of ARMOR_RESISTANCES) {
@@ -1299,11 +1443,15 @@ function EquipmentSelectionModal({
       : getUIText("selectLegs", language);
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div 
+      className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
       <div
         className={`rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col ${
           darkMode ? "bg-slate-900" : "bg-white"
         }`}
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div
@@ -1412,25 +1560,39 @@ function EquipmentSelectionModal({
                 >
                   {getUIText("all", language)}
                 </button>
-                {ELEMENTS.map((elem) => (
-                  <button
-                    key={elem}
-                    onClick={() =>
-                      setSelectedElement(selectedElement === elem ? null : elem)
-                    }
-                    className={`px-2 py-1 text-xs rounded-lg transition-colors ${
-                      selectedElement === elem
-                        ? darkMode
-                          ? "bg-cyan-600 text-white"
-                          : "bg-amber-500 text-white"
-                        : darkMode
-                        ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
-                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                    }`}
-                  >
-                    {elementTranslations[elem]?.[language] || elem}
-                  </button>
-                ))}
+                {ELEMENTS.map((elem) => {
+                  const elementIcons = {
+                    Fire: "🔥",
+                    Water: "💧",
+                    Thunder: "⚡",
+                    Ice: "❄️",
+                    Dragon: "🐉",
+                    Poison: "☠️",
+                    Paralysis: "⚡",
+                    Sleep: "💤",
+                    Blast: "💥",
+                  };
+                  return (
+                    <button
+                      key={elem}
+                      onClick={() =>
+                        setSelectedElement(selectedElement === elem ? null : elem)
+                      }
+                      title={elementTranslations[elem]?.[language] || elem}
+                      className={`px-2 py-1 text-xs rounded-lg transition-colors ${
+                        selectedElement === elem
+                          ? darkMode
+                            ? "bg-cyan-600 text-white"
+                            : "bg-amber-500 text-white"
+                          : darkMode
+                          ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                          : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                      }`}
+                    >
+                      {elementIcons[elem] || ""} {elementTranslations[elem]?.[language] || elem}
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Tri */}
@@ -1602,6 +1764,80 @@ function EquipmentSelectionModal({
                   );
                 })}
               </div>
+
+              {/* Filtre par talent */}
+              <div className="space-y-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span
+                    className={`text-sm font-medium ${
+                      darkMode ? "text-gray-400" : "text-gray-600"
+                    }`}
+                  >
+                    🎯 {getUIText("filterBySkill", language) || "Talent"}:
+                  </span>
+                  {/* Recherche de talent */}
+                  <div className="relative flex-1 max-w-xs">
+                    <input
+                      type="text"
+                      placeholder={getUIText("searchSkill", language) || "Rechercher un talent..."}
+                      value={skillSearchQuery}
+                      onChange={(e) => setSkillSearchQuery(e.target.value)}
+                      className={`w-full h-7 text-xs rounded border px-2 focus:outline-none focus:ring-1 ${
+                        darkMode
+                          ? "bg-slate-700 border-slate-600 text-white focus:ring-cyan-500 placeholder-gray-500"
+                          : "bg-white border-gray-300 text-gray-900 focus:ring-amber-500 placeholder-gray-400"
+                      }`}
+                    />
+                  </div>
+                  {/* Afficher le talent sélectionné */}
+                  {skillFilter && (
+                    <div className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs ${
+                      darkMode ? "bg-cyan-600 text-white" : "bg-amber-500 text-white"
+                    }`}>
+                      <span>{availableSkills.find(s => s.keyName === skillFilter)?.displayName || skillFilter}</span>
+                      <button
+                        onClick={() => setSkillFilter("")}
+                        className="hover:bg-white/20 rounded-full p-0.5"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  )}
+                </div>
+                {/* Liste des talents filtrés */}
+                {(skillSearchQuery || !skillFilter) && (
+                  <div className="flex flex-wrap gap-1 max-h-24 overflow-y-auto">
+                    {availableSkills
+                      .filter((skill) => skillMatchesSearch(skill, skillSearchQuery))
+                      .slice(0, skillSearchQuery ? 50 : 15) // Limiter l'affichage
+                      .map((skill) => (
+                        <button
+                          key={skill.keyName}
+                          onClick={() => {
+                            setSkillFilter(skill.keyName);
+                            setSkillSearchQuery("");
+                          }}
+                          className={`px-2 py-0.5 text-xs rounded transition-colors ${
+                            skillFilter === skill.keyName
+                              ? darkMode
+                                ? "bg-cyan-600 text-white"
+                                : "bg-amber-500 text-white"
+                              : darkMode
+                              ? "bg-slate-700 text-gray-300 hover:bg-slate-600"
+                              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                          }`}
+                        >
+                          {skill.displayName}
+                        </button>
+                      ))}
+                    {!skillSearchQuery && availableSkills.length > 15 && (
+                      <span className={`text-xs italic ${darkMode ? "text-gray-500" : "text-gray-400"}`}>
+                        +{availableSkills.length - 15} {getUIText("more", language) || "autres"}...
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
@@ -1659,7 +1895,7 @@ function EquipmentSelectionModal({
                           }`}
                         >
                           {item.data.skills
-                            ?.map(([name, level]) => `${name} Lv.${level}`)
+                            ?.map(([name, level]) => `${translateSkillName(name, language)} Lv.${level}`)
                             .join(", ") || "—"}
                         </div>
                       </div>
@@ -1722,7 +1958,7 @@ function EquipmentSelectionModal({
                           }`}
                         >
                           {item.data.skills
-                            ?.map((s) => `${s.name} Lv.${s.level}`)
+                            ?.map((s) => `${translateSkillName(s.name, language)} Lv.${s.level}`)
                             .join(", ") || "—"}
                         </div>
                       </div>
@@ -1985,6 +2221,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   const [editingBuildId, setEditingBuildId] = useState(null);
   const [editingBuildName, setEditingBuildName] = useState("");
   const [deletingBuildId, setDeletingBuildId] = useState(null);
+  const [hoveredTalent, setHoveredTalent] = useState(null); // Talent survolé pour le tooltip
 
   // Charger les builds sauvegardés depuis localStorage
   useEffect(() => {
@@ -2096,6 +2333,29 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
     return total;
   };
 
+  // Calculer les résistances totales élémentaires
+  const calculateTotalResistances = () => {
+    const resistances = {
+      fire: 0,
+      water: 0,
+      thunder: 0,
+      ice: 0,
+      dragon: 0,
+    };
+
+    ["head", "chest", "arms", "waist", "legs"].forEach((pieceType) => {
+      const piece = selectedEquipment[pieceType];
+      if (piece?.data?.resistances) {
+        Object.keys(resistances).forEach((resType) => {
+          if (piece.data.resistances[resType] !== undefined) {
+            resistances[resType] += piece.data.resistances[resType];
+          }
+        });
+      }
+    });
+    return resistances;
+  };
+
   // Calculer tous les slots disponibles
   const calculateTotalSlots = () => {
     const allSlots = [];
@@ -2118,6 +2378,23 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
     });
 
     return allSlots.sort((a, b) => b - a);
+  };
+
+  // Obtenir le nom traduit d'une compétence
+  const getTranslatedSkillName = (skillName, lang) => {
+    const talentKey = Object.keys(talentsData).find((key) => {
+      const talent = talentsData[key];
+      return availableLanguages.some(
+        (l) =>
+          talent[l]?.name?.toLowerCase() === skillName.toLowerCase()
+      );
+    });
+
+    if (talentKey) {
+      const talent = talentsData[talentKey];
+      return talent[lang]?.name || talent.EN?.name || skillName;
+    }
+    return skillName;
   };
 
   const handleSelect = (type, item) => {
@@ -2269,7 +2546,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-full lg:max-w-6xl xl:max-w-7xl mx-auto px-4">
       {/* Header avec titre, sélecteur de langue et bouton reset */}
       <div className="flex items-center justify-between mb-6 gap-4">
         <div className="flex-1">
@@ -2421,27 +2698,122 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                     </div>
                     <div className="flex-1">
                       {equipment ? (
-                        <div>
-                          <div
-                            className={`font-medium ${
-                              darkMode ? "text-amber-100" : "text-gray-900"
-                            }`}
-                          >
-                            {equipment.data.name}
-                          </div>
-                          <div
-                            className={`text-sm ${
-                              darkMode ? "text-gray-400" : "text-gray-500"
-                            }`}
-                          >
-                            {isWeapon
-                              ? equipment.data.skills
-                                  ?.map(([n, l]) => `${n} Lv.${l}`)
-                                  .join(", ") || "—"
-                              : equipment.data.skills
-                                  ?.map((s) => `${s.name} Lv.${s.level}`)
-                                  .join(", ") || "—"}
-                          </div>
+                        <div className="space-y-2">
+                          {/* Nom et compétences pour armes */}
+                          {isWeapon ? (
+                            <div>
+                              <div
+                                className={`font-medium ${
+                                  darkMode ? "text-amber-100" : "text-gray-900"
+                                }`}
+                              >
+                                {equipment.data.name}
+                              </div>
+                              {/* Stats arme */}
+                              <div
+                                className={`text-sm ${
+                                  darkMode ? "text-gray-400" : "text-gray-500"
+                                }`}
+                              >
+                                {equipment.data.element && (
+                                  <div className="mb-1">
+                                    {equipment.data.element === "Fire" && "🔥 "}
+                                    {equipment.data.element === "Water" && "💧 "}
+                                    {equipment.data.element === "Thunder" && "⚡ "}
+                                    {equipment.data.element === "Ice" && "❄️ "}
+                                    {equipment.data.element === "Dragon" && "🐉 "}
+                                    {equipment.data.element} {equipment.data.elementAttack}
+                                  </div>
+                                )}
+                                <div>
+                                  ⚔️ {equipment.data.attack} {equipment.data.affinity ? `(Affinity: ${(equipment.data.affinity * 100).toFixed(0)}%)` : ""}
+                                </div>
+                              </div>
+                              {/* Compétences arme */}
+                              {equipment.data.skills && equipment.data.skills.length > 0 && (
+                                <div className="flex flex-wrap gap-2 mt-1">
+                                  {equipment.data.skills.map(([skillName, level], idx) => (
+                                    <span
+                                      key={idx}
+                                      className={`text-xs px-2 py-1 rounded ${
+                                        darkMode
+                                          ? "bg-cyan-900/30 text-cyan-300"
+                                          : "bg-blue-100 text-blue-700"
+                                      }`}
+                                    >
+                                      {getTranslatedSkillName(skillName, language)} Lv.{level}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            // Armure
+                            <div>
+                              <div className="flex items-center justify-between gap-2 mb-1 flex-wrap">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <div
+                                    className={`font-medium ${
+                                      darkMode ? "text-amber-100" : "text-gray-900"
+                                    }`}
+                                  >
+                                    {equipment.data.name}
+                                  </div>
+                                  {/* Compétences armure - à côté du nom */}
+                                  {equipment.data.skills && equipment.data.skills.length > 0 && (
+                                    <div className="flex flex-wrap gap-1">
+                                      {equipment.data.skills.map((skill, idx) => (
+                                        <span
+                                          key={idx}
+                                          className={`text-xs px-2 py-1 rounded ${
+                                            darkMode
+                                              ? "bg-cyan-900/30 text-cyan-300"
+                                              : "bg-blue-100 text-blue-700"
+                                          }`}
+                                        >
+                                          {getTranslatedSkillName(skill.name, language)} Lv.{skill.level}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                                <div className={`text-sm font-medium ${darkMode ? "text-amber-200" : "text-amber-700"}`}>
+                                  🛡️ {equipment.data.defense}
+                                </div>
+                              </div>
+
+                              {/* Résistances */}
+                              {equipment.data.resistances && (
+                                <div className="flex flex-wrap gap-1 mb-1">
+                                  {equipment.data.resistances.fire !== 0 && (
+                                    <span className={`text-xs font-medium ${equipment.data.resistances.fire > 0 ? (darkMode ? "text-red-400" : "text-red-600") : (darkMode ? "text-blue-400" : "text-blue-600")}`}>
+                                      🔥 {equipment.data.resistances.fire > 0 ? "+" : ""}{equipment.data.resistances.fire}
+                                    </span>
+                                  )}
+                                  {equipment.data.resistances.water !== 0 && (
+                                    <span className={`text-xs font-medium ${equipment.data.resistances.water > 0 ? (darkMode ? "text-blue-400" : "text-blue-600") : (darkMode ? "text-orange-400" : "text-orange-600")}`}>
+                                      💧 {equipment.data.resistances.water > 0 ? "+" : ""}{equipment.data.resistances.water}
+                                    </span>
+                                  )}
+                                  {equipment.data.resistances.thunder !== 0 && (
+                                    <span className={`text-xs font-medium ${equipment.data.resistances.thunder > 0 ? (darkMode ? "text-yellow-400" : "text-yellow-600") : (darkMode ? "text-purple-400" : "text-purple-600")}`}>
+                                      ⚡ {equipment.data.resistances.thunder > 0 ? "+" : ""}{equipment.data.resistances.thunder}
+                                    </span>
+                                  )}
+                                  {equipment.data.resistances.ice !== 0 && (
+                                    <span className={`text-xs font-medium ${equipment.data.resistances.ice > 0 ? (darkMode ? "text-cyan-400" : "text-cyan-600") : (darkMode ? "text-red-400" : "text-red-600")}`}>
+                                      ❄️ {equipment.data.resistances.ice > 0 ? "+" : ""}{equipment.data.resistances.ice}
+                                    </span>
+                                  )}
+                                  {equipment.data.resistances.dragon !== 0 && (
+                                    <span className={`text-xs font-medium ${equipment.data.resistances.dragon > 0 ? (darkMode ? "text-purple-400" : "text-purple-600") : (darkMode ? "text-green-400" : "text-green-600")}`}>
+                                      🐉 {equipment.data.resistances.dragon > 0 ? "+" : ""}{equipment.data.resistances.dragon}
+                                    </span>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          )}
                         </div>
                       ) : (
                         <div
@@ -2476,39 +2848,104 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                 darkMode ? "border-slate-600" : "border-gray-200"
               }`}
             >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`text-sm ${
-                        darkMode ? "text-gray-400" : "text-gray-500"
-                      }`}
-                    >
-                      {getUIText("totalDefense", language)}:
-                    </span>
-                    <span
-                      className={`font-bold text-lg ${
-                        darkMode ? "text-amber-100" : "text-gray-900"
-                      }`}
-                    >
-                      🛡️ {totalDefense}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`text-sm ${
-                        darkMode ? "text-gray-400" : "text-gray-500"
-                      }`}
-                    >
-                      {getUIText("slots", language)}:
-                    </span>
-                    {totalSlots.length > 0 ? (
-                      renderSlots(totalSlots, darkMode)
-                    ) : (
-                      <span className="text-gray-500">—</span>
-                    )}
+              <div className="space-y-4">
+                {/* Première ligne : Défense et Slots */}
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`text-sm ${
+                          darkMode ? "text-gray-400" : "text-gray-500"
+                        }`}
+                      >
+                        {getUIText("totalDefense", language)}:
+                      </span>
+                      <span
+                        className={`font-bold text-lg ${
+                          darkMode ? "text-amber-100" : "text-gray-900"
+                        }`}
+                      >
+                        🛡️ {totalDefense}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`text-sm ${
+                          darkMode ? "text-gray-400" : "text-gray-500"
+                        }`}
+                      >
+                        {getUIText("slots", language)}:
+                      </span>
+                      {totalSlots.length > 0 ? (
+                        renderSlots(totalSlots, darkMode)
+                      ) : (
+                        <span className="text-gray-500">—</span>
+                      )}
+                    </div>
                   </div>
                 </div>
+
+                {/* Deuxième ligne : Résistances élémentaires */}
+                {(() => {
+                  const totalResistances = calculateTotalResistances();
+                  const hasAnyResistance = Object.values(totalResistances).some(r => r !== 0);
+                  
+                  if (!hasAnyResistance) return null;
+
+                  return (
+                    <div className="flex items-center gap-4 flex-wrap">
+                      <span
+                        className={`text-sm ${
+                          darkMode ? "text-gray-400" : "text-gray-500"
+                        }`}
+                      >
+                        {getUIText("resistances", language)}:
+                      </span>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        {totalResistances.fire !== 0 && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-red-500">🔥</span>
+                            <span className={`text-sm font-medium ${totalResistances.fire > 0 ? (darkMode ? "text-red-400" : "text-red-600") : (darkMode ? "text-blue-400" : "text-blue-600")}`}>
+                              {totalResistances.fire > 0 ? "+" : ""}{totalResistances.fire}
+                            </span>
+                          </div>
+                        )}
+                        {totalResistances.water !== 0 && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-blue-500">💧</span>
+                            <span className={`text-sm font-medium ${totalResistances.water > 0 ? (darkMode ? "text-blue-400" : "text-blue-600") : (darkMode ? "text-orange-400" : "text-orange-600")}`}>
+                              {totalResistances.water > 0 ? "+" : ""}{totalResistances.water}
+                            </span>
+                          </div>
+                        )}
+                        {totalResistances.thunder !== 0 && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-yellow-500">⚡</span>
+                            <span className={`text-sm font-medium ${totalResistances.thunder > 0 ? (darkMode ? "text-yellow-400" : "text-yellow-600") : (darkMode ? "text-purple-400" : "text-purple-600")}`}>
+                              {totalResistances.thunder > 0 ? "+" : ""}{totalResistances.thunder}
+                            </span>
+                          </div>
+                        )}
+                        {totalResistances.ice !== 0 && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-cyan-500">❄️</span>
+                            <span className={`text-sm font-medium ${totalResistances.ice > 0 ? (darkMode ? "text-cyan-400" : "text-cyan-600") : (darkMode ? "text-red-400" : "text-red-600")}`}>
+                              {totalResistances.ice > 0 ? "+" : ""}{totalResistances.ice}
+                            </span>
+                          </div>
+                        )}
+                        {totalResistances.dragon !== 0 && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-purple-500">🐉</span>
+                            <span className={`text-sm font-medium ${totalResistances.dragon > 0 ? (darkMode ? "text-purple-400" : "text-purple-600") : (darkMode ? "text-green-400" : "text-green-600")}`}>
+                              {totalResistances.dragon > 0 ? "+" : ""}{totalResistances.dragon}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })()}
               </div>
             </div>
           </div>
@@ -2550,22 +2987,22 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                     );
                   });
                   const talentInfo = talentKey ? talentsData[talentKey] : null;
+                  const talentLangData = talentInfo?.[language] || talentInfo?.EN;
+                  const levels = talentLangData?.levels || talentInfo?.EN?.levels || {};
                   const maxLevel = talentInfo
                     ? Math.max(
-                        ...Object.keys(
-                          talentInfo[language]?.levels ||
-                            talentInfo.EN?.levels ||
-                            {}
-                        ).map((l) => parseInt(l.replace(/\D/g, "")) || 0)
+                        ...Object.keys(levels).map((l) => parseInt(l.replace(/\D/g, "")) || 0)
                       )
                     : 7;
 
                   return (
                     <div
                       key={index}
-                      className={`flex items-center justify-between p-3 rounded-lg ${
-                        darkMode ? "bg-slate-700/50" : "bg-gray-100"
+                      className={`relative flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
+                        darkMode ? "bg-slate-700/50 hover:bg-slate-700/80" : "bg-gray-100 hover:bg-gray-200"
                       }`}
+                      onMouseEnter={() => setHoveredTalent({ key: talentKey, skill, talentInfo, index })}
+                      onMouseLeave={() => setHoveredTalent(null)}
                     >
                       <div className="flex-1">
                         <div
@@ -2573,7 +3010,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                             darkMode ? "text-amber-100" : "text-gray-900"
                           }`}
                         >
-                          {skill.name}
+                          {getTranslatedSkillName(skill.name, language)}
                         </div>
                         {/* Barre de progression */}
                         <div className="flex gap-1 mt-1">
@@ -2600,6 +3037,75 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                       >
                         Lv.{skill.level}
                       </span>
+
+                      {/* Tooltip au survol */}
+                      {hoveredTalent?.index === index && talentInfo && (
+                        <div
+                          className={`absolute z-50 right-full mr-3 top-0 w-80 p-4 rounded-xl shadow-2xl border ${
+                            darkMode
+                              ? "bg-slate-800 border-slate-600 text-amber-100"
+                              : "bg-white border-gray-200 text-gray-900"
+                          }`}
+                          style={{ minWidth: '300px' }}
+                        >
+                          {/* En-tête du tooltip */}
+                          <div className="mb-3">
+                            <h4 className={`font-bold text-lg ${darkMode ? "text-cyan-400" : "text-amber-600"}`}>
+                              {talentLangData?.name || skill.name}
+                            </h4>
+                            {talentLangData?.description && (
+                              <p className={`text-sm mt-1 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+                                {talentLangData.description}
+                              </p>
+                            )}
+                          </div>
+
+                          {/* Niveaux */}
+                          {Object.keys(levels).length > 0 && (
+                            <div>
+                              <h5 className={`text-xs font-semibold uppercase tracking-wide mb-2 ${
+                                darkMode ? "text-amber-100/70" : "text-gray-500"
+                              }`}>
+                                Levels {!talentInfo[language]?.levels && "(EN)"}
+                              </h5>
+                              <div className={`space-y-1.5 rounded-lg p-2 ${
+                                darkMode ? "bg-slate-700/50" : "bg-gray-50"
+                              }`}>
+                                {Object.entries(levels).map(([level, desc]) => {
+                                  const levelNum = parseInt(level.replace(/\D/g, "")) || 0;
+                                  const isActive = levelNum <= skill.level;
+                                  return (
+                                    <div
+                                      key={level}
+                                      className={`flex items-start gap-2 text-sm ${
+                                        isActive
+                                          ? darkMode ? "text-cyan-300" : "text-amber-700"
+                                          : darkMode ? "text-gray-400" : "text-gray-500"
+                                      }`}
+                                    >
+                                      <span className={`font-semibold shrink-0 ${
+                                        isActive
+                                          ? darkMode ? "text-cyan-400" : "text-amber-600"
+                                          : ""
+                                      }`}>
+                                        {level}:
+                                      </span>
+                                      <span className={isActive ? "font-medium" : ""}>{desc}</span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Flèche du tooltip */}
+                          <div
+                            className={`absolute top-4 -right-2 w-4 h-4 transform rotate-45 ${
+                              darkMode ? "bg-slate-800 border-r border-t border-slate-600" : "bg-white border-r border-t border-gray-200"
+                            }`}
+                          />
+                        </div>
+                      )}
                     </div>
                   );
                 })}

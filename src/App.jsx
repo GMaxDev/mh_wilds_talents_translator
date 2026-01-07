@@ -1602,6 +1602,7 @@ function TranslatorPage({ talents, darkMode }) {
                 language={sourceLanguage}
                 darkMode={darkMode}
                 onClick={() => setExpandedSide("source")}
+                fallbackLevels={talents[selectedTalent]?.EN?.levels}
               />
               <TalentCard
                 talent={talents[selectedTalent][targetLanguage]}
@@ -1609,6 +1610,7 @@ function TranslatorPage({ talents, darkMode }) {
                 language={targetLanguage}
                 darkMode={darkMode}
                 onClick={() => setExpandedSide("target")}
+                fallbackLevels={talents[selectedTalent]?.EN?.levels}
               />
             </div>
           )}
@@ -3377,7 +3379,7 @@ function WeaponCard({ weapon, language, darkMode, onClick }) {
   );
 }
 
-function TalentCard({ talent, language, darkMode, onClick }) {
+function TalentCard({ talent, language, darkMode, onClick, fallbackLevels }) {
   if (!talent) {
     return (
       <div
@@ -3396,6 +3398,14 @@ function TalentCard({ talent, language, darkMode, onClick }) {
       </div>
     );
   }
+
+  // Utiliser les levels du talent ou les fallbackLevels (EN) si vides
+  const levelsToShow = (talent.levels && Object.keys(talent.levels).length > 0) 
+    ? talent.levels 
+    : (fallbackLevels || {});
+  
+  // Déterminer si on utilise le fallback
+  const usingFallback = !(talent.levels && Object.keys(talent.levels).length > 0) && fallbackLevels && Object.keys(fallbackLevels).length > 0;
 
   return (
     <div
@@ -3456,14 +3466,14 @@ function TalentCard({ talent, language, darkMode, onClick }) {
           {talent.description}
         </p>
 
-        {Object.keys(talent.levels).length > 0 && (
+        {Object.keys(levelsToShow).length > 0 && (
           <div>
             <h3
               className={`font-semibold mb-2 text-sm uppercase tracking-wide ${
                 darkMode ? "text-amber-100/70" : "text-amber-800/70"
               }`}
             >
-              Levels
+              Levels {usingFallback && <span className="text-xs opacity-60 font-normal">(EN)</span>}
             </h3>
             <div
               className={`space-y-2 rounded-xl backdrop-blur-md p-3 border ${
@@ -3472,7 +3482,7 @@ function TalentCard({ talent, language, darkMode, onClick }) {
                   : "bg-amber-100/20 border-amber-200/30"
               }`}
             >
-              {Object.entries(talent.levels).map(([level, description]) => (
+              {Object.entries(levelsToShow).map(([level, description]) => (
                 <div key={level} className="flex gap-2 text-sm">
                   <span
                     className={`px-2 py-0.5 rounded-lg
