@@ -7,6 +7,7 @@ import skillSpecsData from "./data/skill-specifications.json";
 import weaponTypeTranslations from "./data/weapon-type-translations.json";
 import weaponsFullData from "./data/weapons-full.json";
 import armorsFullData from "./data/armors-full.json";
+import BuildCreatorPage from "./components/BuildCreatorPage";
 
 // Traductions des types d'armures
 const armorTypeTranslations = {
@@ -611,9 +612,17 @@ const EyeIcon = () => (
 );
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("translator"); // "translator" ou "editor"
+  const [currentPage, setCurrentPage] = useState("translator"); // "translator", "builder" ou "editor"
   const [darkMode, setDarkMode] = useState(true); // Mode sombre par défaut
   const [talents, setTalents] = useState({});
+
+  // Détecter le paramètre build dans l'URL pour naviguer automatiquement vers le builder
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("build")) {
+      setCurrentPage("builder");
+    }
+  }, []);
 
   useEffect(() => {
     // Appliquer le mode sombre par défaut au chargement
@@ -725,6 +734,25 @@ function App() {
               <span className="hidden sm:inline">Translator</span>
             </button>
 
+            <button
+              onClick={() => setCurrentPage("builder")}
+              className={`p-2 rounded-full backdrop-blur-sm border transition-all duration-300 shadow-lg flex items-center gap-2 ${
+                darkMode
+                  ? "bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/30"
+                  : "bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50"
+              } ${
+                currentPage === "builder"
+                  ? darkMode
+                    ? "ring-2 ring-cyan-500/50"
+                    : "ring-2 ring-amber-500/50"
+                  : ""
+              }`}
+              aria-label="Go to build creator"
+            >
+              <EditIcon />
+              <span className="hidden sm:inline">Build Creator</span>
+            </button>
+
             {/* Editor button - DISABLED FOR NOW */}
           </div>
 
@@ -769,8 +797,8 @@ function App() {
                 : "bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-orange-600"
             }`}
           >
-            MH Wilds Talent{" "}
-            {currentPage === "translator" ? "Translator" : "Editor"}
+            MH Wilds{" "}
+            {currentPage === "translator" ? "Talent Translator" : currentPage === "builder" ? "Build Creator" : "Editor"}
           </h1>
           <p
             className={`${
@@ -779,12 +807,16 @@ function App() {
           >
             {currentPage === "translator"
               ? "Translate Monster Hunter Wilds talents between languages"
+              : currentPage === "builder"
+              ? "Create and customize your Monster Hunter Wilds builds"
               : "Add, edit or delete Monster Hunter Wilds talents"}
           </p>
         </div>
 
         {currentPage === "translator" ? (
           <TranslatorPage talents={talents} darkMode={darkMode} />
+        ) : currentPage === "builder" ? (
+          <BuildCreatorPage darkMode={darkMode} initialLanguage="FR" />
         ) : (
           <TranslatorPage talents={talents} darkMode={darkMode} />
           // <EditorPage

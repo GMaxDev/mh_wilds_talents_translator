@@ -241,13 +241,14 @@ async function scrapeArmorDetail(lang, slug) {
     }
 
     const pageProps = nextData.props?.pageProps || {};
-    
+
     // Extraire les traductions i18n
     const i18nLangCode = LANG_I18N_MAP[lang] || lang.toLowerCase();
     const i18nStore = pageProps._nextI18Next?.initialI18nStore || {};
     // Les traductions peuvent être dans la langue demandée ou zh-TW (fallback)
-    const translations = i18nStore[i18nLangCode]?.armor || i18nStore["zh-TW"]?.armor || {};
-    
+    const translations =
+      i18nStore[i18nLangCode]?.armor || i18nStore["zh-TW"]?.armor || {};
+
     return { ...pageProps, translations };
   } catch (error) {
     return null;
