@@ -798,7 +798,11 @@ function App() {
             }`}
           >
             MH Wilds{" "}
-            {currentPage === "translator" ? "Talent Translator" : currentPage === "builder" ? "Build Creator" : "Editor"}
+            {currentPage === "translator"
+              ? "Talent Translator"
+              : currentPage === "builder"
+              ? "Build Creator"
+              : "Editor"}
           </h1>
           <p
             className={`${
