@@ -8,6 +8,25 @@ import weaponsFullData from "./data/weapons-full.json";
 import armorsFullData from "./data/armors-kiranico-full.json";
 import BuildCreatorPage from "./components/BuildCreatorPage";
 
+// Fonction helper pour traduire les noms de skills
+const translateSkillName = (skillName, targetLang) => {
+  if (!skillName) return skillName;
+
+  // Chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
+  const talentKey = Object.keys(talentsData).find((key) => {
+    const talent = talentsData[key];
+    return Object.values(talent).some(
+      (langData) => langData?.name?.toLowerCase() === skillName.toLowerCase()
+    );
+  });
+
+  if (talentKey) {
+    const talent = talentsData[talentKey];
+    return talent[targetLang]?.name || talent.EN?.name || skillName;
+  }
+  return skillName;
+};
+
 // Traductions des types d'armures
 const armorTypeTranslations = {
   Head: {
@@ -3073,7 +3092,7 @@ function ArmorSetCard({ armorSet, language, darkMode, talents }) {
                           : "bg-amber-200/70 text-amber-800 border-amber-300/50"
                       }`}
                     >
-                      {skill.name} +{skill.level}
+                      {translateSkillName(skill.name, language)} +{skill.level}
                     </span>
                   ))}
                 </div>
@@ -3107,7 +3126,8 @@ function ArmorSetCard({ armorSet, language, darkMode, talents }) {
                     : "bg-amber-100/50 text-amber-900 border-amber-200/50"
                 }`}
               >
-                {skill.name} <strong>+{skill.level}</strong>
+                {translateSkillName(skill.name, language)}{" "}
+                <strong>+{skill.level}</strong>
               </span>
             ))}
           </div>
@@ -3349,7 +3369,7 @@ function WeaponCard({ weapon, language, darkMode, onClick }) {
                       darkMode ? "text-amber-100/90" : "text-amber-900/90"
                     }
                   >
-                    {skillName}
+                    {translateSkillName(skillName, language)}
                   </span>
                   <span
                     className={`px-2 py-0.5 rounded-lg border ${
@@ -3400,12 +3420,16 @@ function TalentCard({ talent, language, darkMode, onClick, fallbackLevels }) {
   }
 
   // Utiliser les levels du talent ou les fallbackLevels (EN) si vides
-  const levelsToShow = (talent.levels && Object.keys(talent.levels).length > 0) 
-    ? talent.levels 
-    : (fallbackLevels || {});
-  
+  const levelsToShow =
+    talent.levels && Object.keys(talent.levels).length > 0
+      ? talent.levels
+      : fallbackLevels || {};
+
   // Déterminer si on utilise le fallback
-  const usingFallback = !(talent.levels && Object.keys(talent.levels).length > 0) && fallbackLevels && Object.keys(fallbackLevels).length > 0;
+  const usingFallback =
+    !(talent.levels && Object.keys(talent.levels).length > 0) &&
+    fallbackLevels &&
+    Object.keys(fallbackLevels).length > 0;
 
   return (
     <div
@@ -3473,7 +3497,10 @@ function TalentCard({ talent, language, darkMode, onClick, fallbackLevels }) {
                 darkMode ? "text-amber-100/70" : "text-amber-800/70"
               }`}
             >
-              Levels {usingFallback && <span className="text-xs opacity-60 font-normal">(EN)</span>}
+              Levels{" "}
+              {usingFallback && (
+                <span className="text-xs opacity-60 font-normal">(EN)</span>
+              )}
             </h3>
             <div
               className={`space-y-2 rounded-xl backdrop-blur-md p-3 border ${
@@ -3840,7 +3867,7 @@ function ExpandedWeaponCard({
                               darkMode ? "text-amber-100" : "text-amber-900"
                             }`}
                           >
-                            {skillName}
+                            {translateSkillName(skillName, language)}
                           </div>
                           {talentInfo && (
                             <div

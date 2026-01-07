@@ -181,7 +181,9 @@ function parseArgs() {
 async function main() {
   console.log("╔════════════════════════════════════════════════════════════╗");
   console.log("║     MH Wilds Skills Levels Scraper (Kiranico)              ║");
-  console.log("╚════════════════════════════════════════════════════════════╝\n");
+  console.log(
+    "╚════════════════════════════════════════════════════════════╝\n"
+  );
 
   const options = parseArgs();
   const existingSkills = loadExistingSkills();

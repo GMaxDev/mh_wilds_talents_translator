@@ -636,6 +636,20 @@ const buildUITranslations = {
     PT: "mais",
     AR: "المزيد",
   },
+  levels: {
+    EN: "Levels",
+    FR: "Niveaux",
+    JP: "レベル",
+    JA: "レベル",
+    KO: "레벨",
+    IT: "Livelli",
+    DE: "Stufen",
+    ES: "Niveles",
+    RU: "Уровни",
+    PL: "Poziomy",
+    PT: "Níveis",
+    AR: "المستويات",
+  },
 };
 
 // Traductions des éléments
@@ -1040,7 +1054,7 @@ const getUIText = (key, lang) => {
 // Fonction pour obtenir le nom traduit d'un talent
 const translateSkillName = (skillName, targetLang) => {
   if (!skillName) return skillName;
-  
+
   // Chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
   const talentKey = Object.keys(talentsData).find((key) => {
     const talent = talentsData[key];
@@ -1164,10 +1178,10 @@ function EquipmentSelectionModal({
   // avec toutes leurs traductions pour la recherche multilingue
   const getAvailableSkills = () => {
     if (type === "weapon") return [];
-    
+
     const armorPieceType = type;
     const skillsMap = new Map(); // key: skill name EN lowercase, value: { keyName, allNames: [] }
-    
+
     Object.values(armorsFullData).forEach((armorSet) => {
       // Collecter les noms de skills dans toutes les langues
       availableLanguages.forEach((lang) => {
@@ -1178,48 +1192,53 @@ function EquipmentSelectionModal({
             if (skill.name) {
               // Utiliser le nom EN comme clé unique
               const enPiece = armorSet.EN?.pieces?.[armorPieceType];
-              const enSkill = enPiece?.skills?.find(s => 
-                s.name?.toLowerCase() === skill.name?.toLowerCase() ||
-                // Chercher correspondance par position si même nombre de skills
-                (enPiece?.skills?.length === piece.skills.length && 
-                 enPiece?.skills?.indexOf(s) === piece.skills.indexOf(skill))
+              const enSkill = enPiece?.skills?.find(
+                (s) =>
+                  s.name?.toLowerCase() === skill.name?.toLowerCase() ||
+                  // Chercher correspondance par position si même nombre de skills
+                  (enPiece?.skills?.length === piece.skills.length &&
+                    enPiece?.skills?.indexOf(s) === piece.skills.indexOf(skill))
               );
-              const keyName = (enSkill?.name || skill.name);
+              const keyName = enSkill?.name || skill.name;
               const keyNameLower = keyName.toLowerCase();
-              
+
               if (!skillsMap.has(keyNameLower)) {
                 skillsMap.set(keyNameLower, {
                   keyName: keyName,
-                  allNames: new Set([skill.name.toLowerCase()])
+                  allNames: new Set([skill.name.toLowerCase()]),
                 });
               } else {
-                skillsMap.get(keyNameLower).allNames.add(skill.name.toLowerCase());
+                skillsMap
+                  .get(keyNameLower)
+                  .allNames.add(skill.name.toLowerCase());
               }
             }
           });
         }
       });
     });
-    
+
     return Array.from(skillsMap.values())
-      .map(s => ({
+      .map((s) => ({
         // Utiliser translateSkillName pour obtenir le nom dans la langue courante
         displayName: translateSkillName(s.keyName, language),
         keyName: s.keyName,
-        allNames: Array.from(s.allNames)
+        allNames: Array.from(s.allNames),
       }))
       .sort((a, b) => a.displayName.localeCompare(b.displayName));
   };
-  
+
   const availableSkills = getAvailableSkills();
-  
+
   // Fonction pour vérifier si un skill correspond à la recherche (multilingue)
   const skillMatchesSearch = (skill, query) => {
     if (!query) return true;
     const lowerQuery = query.toLowerCase();
-    return skill.allNames.some(name => name.includes(lowerQuery)) ||
-           skill.displayName.toLowerCase().includes(lowerQuery) ||
-           skill.keyName.toLowerCase().includes(lowerQuery);
+    return (
+      skill.allNames.some((name) => name.includes(lowerQuery)) ||
+      skill.displayName.toLowerCase().includes(lowerQuery) ||
+      skill.keyName.toLowerCase().includes(lowerQuery)
+    );
   };
 
   // Filtrer les équipements
@@ -1324,7 +1343,7 @@ function EquipmentSelectionModal({
         if (!armorData?.pieces?.[armorPieceType]) return false;
 
         const piece = armorData.pieces[armorPieceType];
-        
+
         // Exclure les pièces sans nom (pièces qui n'existent pas dans le jeu)
         if (!piece.name || piece.name.trim() === "") return false;
 
@@ -1443,7 +1462,7 @@ function EquipmentSelectionModal({
       : getUIText("selectLegs", language);
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
@@ -1576,7 +1595,9 @@ function EquipmentSelectionModal({
                     <button
                       key={elem}
                       onClick={() =>
-                        setSelectedElement(selectedElement === elem ? null : elem)
+                        setSelectedElement(
+                          selectedElement === elem ? null : elem
+                        )
                       }
                       title={elementTranslations[elem]?.[language] || elem}
                       className={`px-2 py-1 text-xs rounded-lg transition-colors ${
@@ -1589,7 +1610,8 @@ function EquipmentSelectionModal({
                           : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                       }`}
                     >
-                      {elementIcons[elem] || ""} {elementTranslations[elem]?.[language] || elem}
+                      {elementIcons[elem] || ""}{" "}
+                      {elementTranslations[elem]?.[language] || elem}
                     </button>
                   );
                 })}
@@ -1779,7 +1801,10 @@ function EquipmentSelectionModal({
                   <div className="relative flex-1 max-w-xs">
                     <input
                       type="text"
-                      placeholder={getUIText("searchSkill", language) || "Rechercher un talent..."}
+                      placeholder={
+                        getUIText("searchSkill", language) ||
+                        "Rechercher un talent..."
+                      }
                       value={skillSearchQuery}
                       onChange={(e) => setSkillSearchQuery(e.target.value)}
                       className={`w-full h-7 text-xs rounded border px-2 focus:outline-none focus:ring-1 ${
@@ -1791,10 +1816,17 @@ function EquipmentSelectionModal({
                   </div>
                   {/* Afficher le talent sélectionné */}
                   {skillFilter && (
-                    <div className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs ${
-                      darkMode ? "bg-cyan-600 text-white" : "bg-amber-500 text-white"
-                    }`}>
-                      <span>{availableSkills.find(s => s.keyName === skillFilter)?.displayName || skillFilter}</span>
+                    <div
+                      className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs ${
+                        darkMode
+                          ? "bg-cyan-600 text-white"
+                          : "bg-amber-500 text-white"
+                      }`}
+                    >
+                      <span>
+                        {availableSkills.find((s) => s.keyName === skillFilter)
+                          ?.displayName || skillFilter}
+                      </span>
                       <button
                         onClick={() => setSkillFilter("")}
                         className="hover:bg-white/20 rounded-full p-0.5"
@@ -1808,7 +1840,9 @@ function EquipmentSelectionModal({
                 {(skillSearchQuery || !skillFilter) && (
                   <div className="flex flex-wrap gap-1 max-h-24 overflow-y-auto">
                     {availableSkills
-                      .filter((skill) => skillMatchesSearch(skill, skillSearchQuery))
+                      .filter((skill) =>
+                        skillMatchesSearch(skill, skillSearchQuery)
+                      )
                       .slice(0, skillSearchQuery ? 50 : 15) // Limiter l'affichage
                       .map((skill) => (
                         <button
@@ -1831,8 +1865,13 @@ function EquipmentSelectionModal({
                         </button>
                       ))}
                     {!skillSearchQuery && availableSkills.length > 15 && (
-                      <span className={`text-xs italic ${darkMode ? "text-gray-500" : "text-gray-400"}`}>
-                        +{availableSkills.length - 15} {getUIText("more", language) || "autres"}...
+                      <span
+                        className={`text-xs italic ${
+                          darkMode ? "text-gray-500" : "text-gray-400"
+                        }`}
+                      >
+                        +{availableSkills.length - 15}{" "}
+                        {getUIText("more", language) || "autres"}...
                       </span>
                     )}
                   </div>
@@ -1895,7 +1934,13 @@ function EquipmentSelectionModal({
                           }`}
                         >
                           {item.data.skills
-                            ?.map(([name, level]) => `${translateSkillName(name, language)} Lv.${level}`)
+                            ?.map(
+                              ([name, level]) =>
+                                `${translateSkillName(
+                                  name,
+                                  language
+                                )} Lv.${level}`
+                            )
                             .join(", ") || "—"}
                         </div>
                       </div>
@@ -1958,7 +2003,12 @@ function EquipmentSelectionModal({
                           }`}
                         >
                           {item.data.skills
-                            ?.map((s) => `${translateSkillName(s.name, language)} Lv.${s.level}`)
+                            ?.map(
+                              (s) =>
+                                `${translateSkillName(s.name, language)} Lv.${
+                                  s.level
+                                }`
+                            )
                             .join(", ") || "—"}
                         </div>
                       </div>
@@ -2385,8 +2435,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
     const talentKey = Object.keys(talentsData).find((key) => {
       const talent = talentsData[key];
       return availableLanguages.some(
-        (l) =>
-          talent[l]?.name?.toLowerCase() === skillName.toLowerCase()
+        (l) => talent[l]?.name?.toLowerCase() === skillName.toLowerCase()
       );
     });
 
@@ -2718,51 +2767,32 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                                 {equipment.data.element && (
                                   <div className="mb-1">
                                     {equipment.data.element === "Fire" && "🔥 "}
-                                    {equipment.data.element === "Water" && "💧 "}
-                                    {equipment.data.element === "Thunder" && "⚡ "}
+                                    {equipment.data.element === "Water" &&
+                                      "💧 "}
+                                    {equipment.data.element === "Thunder" &&
+                                      "⚡ "}
                                     {equipment.data.element === "Ice" && "❄️ "}
-                                    {equipment.data.element === "Dragon" && "🐉 "}
-                                    {equipment.data.element} {equipment.data.elementAttack}
+                                    {equipment.data.element === "Dragon" &&
+                                      "🐉 "}
+                                    {equipment.data.element}{" "}
+                                    {equipment.data.elementAttack}
                                   </div>
                                 )}
                                 <div>
-                                  ⚔️ {equipment.data.attack} {equipment.data.affinity ? `(Affinity: ${(equipment.data.affinity * 100).toFixed(0)}%)` : ""}
+                                  ⚔️ {equipment.data.attack}{" "}
+                                  {equipment.data.affinity
+                                    ? `(Affinity: ${(
+                                        equipment.data.affinity * 100
+                                      ).toFixed(0)}%)`
+                                    : ""}
                                 </div>
                               </div>
                               {/* Compétences arme */}
-                              {equipment.data.skills && equipment.data.skills.length > 0 && (
-                                <div className="flex flex-wrap gap-2 mt-1">
-                                  {equipment.data.skills.map(([skillName, level], idx) => (
-                                    <span
-                                      key={idx}
-                                      className={`text-xs px-2 py-1 rounded ${
-                                        darkMode
-                                          ? "bg-cyan-900/30 text-cyan-300"
-                                          : "bg-blue-100 text-blue-700"
-                                      }`}
-                                    >
-                                      {getTranslatedSkillName(skillName, language)} Lv.{level}
-                                    </span>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          ) : (
-                            // Armure
-                            <div>
-                              <div className="flex items-center justify-between gap-2 mb-1 flex-wrap">
-                                <div className="flex items-center gap-2 flex-wrap">
-                                  <div
-                                    className={`font-medium ${
-                                      darkMode ? "text-amber-100" : "text-gray-900"
-                                    }`}
-                                  >
-                                    {equipment.data.name}
-                                  </div>
-                                  {/* Compétences armure - à côté du nom */}
-                                  {equipment.data.skills && equipment.data.skills.length > 0 && (
-                                    <div className="flex flex-wrap gap-1">
-                                      {equipment.data.skills.map((skill, idx) => (
+                              {equipment.data.skills &&
+                                equipment.data.skills.length > 0 && (
+                                  <div className="flex flex-wrap gap-2 mt-1">
+                                    {equipment.data.skills.map(
+                                      ([skillName, level], idx) => (
                                         <span
                                           key={idx}
                                           className={`text-xs px-2 py-1 rounded ${
@@ -2771,13 +2801,63 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                                               : "bg-blue-100 text-blue-700"
                                           }`}
                                         >
-                                          {getTranslatedSkillName(skill.name, language)} Lv.{skill.level}
+                                          {getTranslatedSkillName(
+                                            skillName,
+                                            language
+                                          )}{" "}
+                                          Lv.{level}
                                         </span>
-                                      ))}
-                                    </div>
-                                  )}
+                                      )
+                                    )}
+                                  </div>
+                                )}
+                            </div>
+                          ) : (
+                            // Armure
+                            <div>
+                              <div className="flex items-center justify-between gap-2 mb-1 flex-wrap">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <div
+                                    className={`font-medium ${
+                                      darkMode
+                                        ? "text-amber-100"
+                                        : "text-gray-900"
+                                    }`}
+                                  >
+                                    {equipment.data.name}
+                                  </div>
+                                  {/* Compétences armure - à côté du nom */}
+                                  {equipment.data.skills &&
+                                    equipment.data.skills.length > 0 && (
+                                      <div className="flex flex-wrap gap-1">
+                                        {equipment.data.skills.map(
+                                          (skill, idx) => (
+                                            <span
+                                              key={idx}
+                                              className={`text-xs px-2 py-1 rounded ${
+                                                darkMode
+                                                  ? "bg-cyan-900/30 text-cyan-300"
+                                                  : "bg-blue-100 text-blue-700"
+                                              }`}
+                                            >
+                                              {getTranslatedSkillName(
+                                                skill.name,
+                                                language
+                                              )}{" "}
+                                              Lv.{skill.level}
+                                            </span>
+                                          )
+                                        )}
+                                      </div>
+                                    )}
                                 </div>
-                                <div className={`text-sm font-medium ${darkMode ? "text-amber-200" : "text-amber-700"}`}>
+                                <div
+                                  className={`text-sm font-medium ${
+                                    darkMode
+                                      ? "text-amber-200"
+                                      : "text-amber-700"
+                                  }`}
+                                >
                                   🛡️ {equipment.data.defense}
                                 </div>
                               </div>
@@ -2786,28 +2866,98 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                               {equipment.data.resistances && (
                                 <div className="flex flex-wrap gap-1 mb-1">
                                   {equipment.data.resistances.fire !== 0 && (
-                                    <span className={`text-xs font-medium ${equipment.data.resistances.fire > 0 ? (darkMode ? "text-red-400" : "text-red-600") : (darkMode ? "text-blue-400" : "text-blue-600")}`}>
-                                      🔥 {equipment.data.resistances.fire > 0 ? "+" : ""}{equipment.data.resistances.fire}
+                                    <span
+                                      className={`text-xs font-medium ${
+                                        equipment.data.resistances.fire > 0
+                                          ? darkMode
+                                            ? "text-red-400"
+                                            : "text-red-600"
+                                          : darkMode
+                                          ? "text-blue-400"
+                                          : "text-blue-600"
+                                      }`}
+                                    >
+                                      🔥{" "}
+                                      {equipment.data.resistances.fire > 0
+                                        ? "+"
+                                        : ""}
+                                      {equipment.data.resistances.fire}
                                     </span>
                                   )}
                                   {equipment.data.resistances.water !== 0 && (
-                                    <span className={`text-xs font-medium ${equipment.data.resistances.water > 0 ? (darkMode ? "text-blue-400" : "text-blue-600") : (darkMode ? "text-orange-400" : "text-orange-600")}`}>
-                                      💧 {equipment.data.resistances.water > 0 ? "+" : ""}{equipment.data.resistances.water}
+                                    <span
+                                      className={`text-xs font-medium ${
+                                        equipment.data.resistances.water > 0
+                                          ? darkMode
+                                            ? "text-blue-400"
+                                            : "text-blue-600"
+                                          : darkMode
+                                          ? "text-orange-400"
+                                          : "text-orange-600"
+                                      }`}
+                                    >
+                                      💧{" "}
+                                      {equipment.data.resistances.water > 0
+                                        ? "+"
+                                        : ""}
+                                      {equipment.data.resistances.water}
                                     </span>
                                   )}
                                   {equipment.data.resistances.thunder !== 0 && (
-                                    <span className={`text-xs font-medium ${equipment.data.resistances.thunder > 0 ? (darkMode ? "text-yellow-400" : "text-yellow-600") : (darkMode ? "text-purple-400" : "text-purple-600")}`}>
-                                      ⚡ {equipment.data.resistances.thunder > 0 ? "+" : ""}{equipment.data.resistances.thunder}
+                                    <span
+                                      className={`text-xs font-medium ${
+                                        equipment.data.resistances.thunder > 0
+                                          ? darkMode
+                                            ? "text-yellow-400"
+                                            : "text-yellow-600"
+                                          : darkMode
+                                          ? "text-purple-400"
+                                          : "text-purple-600"
+                                      }`}
+                                    >
+                                      ⚡{" "}
+                                      {equipment.data.resistances.thunder > 0
+                                        ? "+"
+                                        : ""}
+                                      {equipment.data.resistances.thunder}
                                     </span>
                                   )}
                                   {equipment.data.resistances.ice !== 0 && (
-                                    <span className={`text-xs font-medium ${equipment.data.resistances.ice > 0 ? (darkMode ? "text-cyan-400" : "text-cyan-600") : (darkMode ? "text-red-400" : "text-red-600")}`}>
-                                      ❄️ {equipment.data.resistances.ice > 0 ? "+" : ""}{equipment.data.resistances.ice}
+                                    <span
+                                      className={`text-xs font-medium ${
+                                        equipment.data.resistances.ice > 0
+                                          ? darkMode
+                                            ? "text-cyan-400"
+                                            : "text-cyan-600"
+                                          : darkMode
+                                          ? "text-red-400"
+                                          : "text-red-600"
+                                      }`}
+                                    >
+                                      ❄️{" "}
+                                      {equipment.data.resistances.ice > 0
+                                        ? "+"
+                                        : ""}
+                                      {equipment.data.resistances.ice}
                                     </span>
                                   )}
                                   {equipment.data.resistances.dragon !== 0 && (
-                                    <span className={`text-xs font-medium ${equipment.data.resistances.dragon > 0 ? (darkMode ? "text-purple-400" : "text-purple-600") : (darkMode ? "text-green-400" : "text-green-600")}`}>
-                                      🐉 {equipment.data.resistances.dragon > 0 ? "+" : ""}{equipment.data.resistances.dragon}
+                                    <span
+                                      className={`text-xs font-medium ${
+                                        equipment.data.resistances.dragon > 0
+                                          ? darkMode
+                                            ? "text-purple-400"
+                                            : "text-purple-600"
+                                          : darkMode
+                                          ? "text-green-400"
+                                          : "text-green-600"
+                                      }`}
+                                    >
+                                      🐉{" "}
+                                      {equipment.data.resistances.dragon > 0
+                                        ? "+"
+                                        : ""}
+                                      {equipment.data.resistances.dragon}
                                     </span>
                                   )}
                                 </div>
@@ -2888,8 +3038,10 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                 {/* Deuxième ligne : Résistances élémentaires */}
                 {(() => {
                   const totalResistances = calculateTotalResistances();
-                  const hasAnyResistance = Object.values(totalResistances).some(r => r !== 0);
-                  
+                  const hasAnyResistance = Object.values(totalResistances).some(
+                    (r) => r !== 0
+                  );
+
                   if (!hasAnyResistance) return null;
 
                   return (
@@ -2905,40 +3057,95 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                         {totalResistances.fire !== 0 && (
                           <div className="flex items-center gap-1">
                             <span className="text-red-500">🔥</span>
-                            <span className={`text-sm font-medium ${totalResistances.fire > 0 ? (darkMode ? "text-red-400" : "text-red-600") : (darkMode ? "text-blue-400" : "text-blue-600")}`}>
-                              {totalResistances.fire > 0 ? "+" : ""}{totalResistances.fire}
+                            <span
+                              className={`text-sm font-medium ${
+                                totalResistances.fire > 0
+                                  ? darkMode
+                                    ? "text-red-400"
+                                    : "text-red-600"
+                                  : darkMode
+                                  ? "text-blue-400"
+                                  : "text-blue-600"
+                              }`}
+                            >
+                              {totalResistances.fire > 0 ? "+" : ""}
+                              {totalResistances.fire}
                             </span>
                           </div>
                         )}
                         {totalResistances.water !== 0 && (
                           <div className="flex items-center gap-1">
                             <span className="text-blue-500">💧</span>
-                            <span className={`text-sm font-medium ${totalResistances.water > 0 ? (darkMode ? "text-blue-400" : "text-blue-600") : (darkMode ? "text-orange-400" : "text-orange-600")}`}>
-                              {totalResistances.water > 0 ? "+" : ""}{totalResistances.water}
+                            <span
+                              className={`text-sm font-medium ${
+                                totalResistances.water > 0
+                                  ? darkMode
+                                    ? "text-blue-400"
+                                    : "text-blue-600"
+                                  : darkMode
+                                  ? "text-orange-400"
+                                  : "text-orange-600"
+                              }`}
+                            >
+                              {totalResistances.water > 0 ? "+" : ""}
+                              {totalResistances.water}
                             </span>
                           </div>
                         )}
                         {totalResistances.thunder !== 0 && (
                           <div className="flex items-center gap-1">
                             <span className="text-yellow-500">⚡</span>
-                            <span className={`text-sm font-medium ${totalResistances.thunder > 0 ? (darkMode ? "text-yellow-400" : "text-yellow-600") : (darkMode ? "text-purple-400" : "text-purple-600")}`}>
-                              {totalResistances.thunder > 0 ? "+" : ""}{totalResistances.thunder}
+                            <span
+                              className={`text-sm font-medium ${
+                                totalResistances.thunder > 0
+                                  ? darkMode
+                                    ? "text-yellow-400"
+                                    : "text-yellow-600"
+                                  : darkMode
+                                  ? "text-purple-400"
+                                  : "text-purple-600"
+                              }`}
+                            >
+                              {totalResistances.thunder > 0 ? "+" : ""}
+                              {totalResistances.thunder}
                             </span>
                           </div>
                         )}
                         {totalResistances.ice !== 0 && (
                           <div className="flex items-center gap-1">
                             <span className="text-cyan-500">❄️</span>
-                            <span className={`text-sm font-medium ${totalResistances.ice > 0 ? (darkMode ? "text-cyan-400" : "text-cyan-600") : (darkMode ? "text-red-400" : "text-red-600")}`}>
-                              {totalResistances.ice > 0 ? "+" : ""}{totalResistances.ice}
+                            <span
+                              className={`text-sm font-medium ${
+                                totalResistances.ice > 0
+                                  ? darkMode
+                                    ? "text-cyan-400"
+                                    : "text-cyan-600"
+                                  : darkMode
+                                  ? "text-red-400"
+                                  : "text-red-600"
+                              }`}
+                            >
+                              {totalResistances.ice > 0 ? "+" : ""}
+                              {totalResistances.ice}
                             </span>
                           </div>
                         )}
                         {totalResistances.dragon !== 0 && (
                           <div className="flex items-center gap-1">
                             <span className="text-purple-500">🐉</span>
-                            <span className={`text-sm font-medium ${totalResistances.dragon > 0 ? (darkMode ? "text-purple-400" : "text-purple-600") : (darkMode ? "text-green-400" : "text-green-600")}`}>
-                              {totalResistances.dragon > 0 ? "+" : ""}{totalResistances.dragon}
+                            <span
+                              className={`text-sm font-medium ${
+                                totalResistances.dragon > 0
+                                  ? darkMode
+                                    ? "text-purple-400"
+                                    : "text-purple-600"
+                                  : darkMode
+                                  ? "text-green-400"
+                                  : "text-green-600"
+                              }`}
+                            >
+                              {totalResistances.dragon > 0 ? "+" : ""}
+                              {totalResistances.dragon}
                             </span>
                           </div>
                         )}
@@ -2987,11 +3194,22 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                     );
                   });
                   const talentInfo = talentKey ? talentsData[talentKey] : null;
-                  const talentLangData = talentInfo?.[language] || talentInfo?.EN;
-                  const levels = talentLangData?.levels || talentInfo?.EN?.levels || {};
+                  const talentLangData =
+                    talentInfo?.[language] || talentInfo?.EN;
+                  // Utiliser les levels de la langue courante, sinon fallback sur EN
+                  const langLevels = talentLangData?.levels || {};
+                  const levels =
+                    Object.keys(langLevels).length > 0
+                      ? langLevels
+                      : talentInfo?.EN?.levels || {};
+                  const usingFallbackLevels =
+                    Object.keys(langLevels).length === 0 &&
+                    Object.keys(talentInfo?.EN?.levels || {}).length > 0;
                   const maxLevel = talentInfo
                     ? Math.max(
-                        ...Object.keys(levels).map((l) => parseInt(l.replace(/\D/g, "")) || 0)
+                        ...Object.keys(levels).map(
+                          (l) => parseInt(l.replace(/\D/g, "")) || 0
+                        )
                       )
                     : 7;
 
@@ -2999,9 +3217,18 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                     <div
                       key={index}
                       className={`relative flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
-                        darkMode ? "bg-slate-700/50 hover:bg-slate-700/80" : "bg-gray-100 hover:bg-gray-200"
+                        darkMode
+                          ? "bg-slate-700/50 hover:bg-slate-700/80"
+                          : "bg-gray-100 hover:bg-gray-200"
                       }`}
-                      onMouseEnter={() => setHoveredTalent({ key: talentKey, skill, talentInfo, index })}
+                      onMouseEnter={() =>
+                        setHoveredTalent({
+                          key: talentKey,
+                          skill,
+                          talentInfo,
+                          index,
+                        })
+                      }
                       onMouseLeave={() => setHoveredTalent(null)}
                     >
                       <div className="flex-1">
@@ -3046,15 +3273,23 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                               ? "bg-slate-800 border-slate-600 text-amber-100"
                               : "bg-white border-gray-200 text-gray-900"
                           }`}
-                          style={{ minWidth: '300px' }}
+                          style={{ minWidth: "300px" }}
                         >
                           {/* En-tête du tooltip */}
                           <div className="mb-3">
-                            <h4 className={`font-bold text-lg ${darkMode ? "text-cyan-400" : "text-amber-600"}`}>
+                            <h4
+                              className={`font-bold text-lg ${
+                                darkMode ? "text-cyan-400" : "text-amber-600"
+                              }`}
+                            >
                               {talentLangData?.name || skill.name}
                             </h4>
                             {talentLangData?.description && (
-                              <p className={`text-sm mt-1 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+                              <p
+                                className={`text-sm mt-1 ${
+                                  darkMode ? "text-gray-300" : "text-gray-600"
+                                }`}
+                              >
                                 {talentLangData.description}
                               </p>
                             )}
@@ -3063,34 +3298,58 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                           {/* Niveaux */}
                           {Object.keys(levels).length > 0 && (
                             <div>
-                              <h5 className={`text-xs font-semibold uppercase tracking-wide mb-2 ${
-                                darkMode ? "text-amber-100/70" : "text-gray-500"
-                              }`}>
-                                Levels {!talentInfo[language]?.levels && "(EN)"}
+                              <h5
+                                className={`text-xs font-semibold uppercase tracking-wide mb-2 ${
+                                  darkMode
+                                    ? "text-amber-100/70"
+                                    : "text-gray-500"
+                                }`}
+                              >
+                                {getUIText("levels", language)}{" "}
+                                {usingFallbackLevels && (
+                                  <span className="opacity-60">(EN)</span>
+                                )}
                               </h5>
-                              <div className={`space-y-1.5 rounded-lg p-2 ${
-                                darkMode ? "bg-slate-700/50" : "bg-gray-50"
-                              }`}>
+                              <div
+                                className={`space-y-1.5 rounded-lg p-2 ${
+                                  darkMode ? "bg-slate-700/50" : "bg-gray-50"
+                                }`}
+                              >
                                 {Object.entries(levels).map(([level, desc]) => {
-                                  const levelNum = parseInt(level.replace(/\D/g, "")) || 0;
+                                  const levelNum =
+                                    parseInt(level.replace(/\D/g, "")) || 0;
                                   const isActive = levelNum <= skill.level;
                                   return (
                                     <div
                                       key={level}
                                       className={`flex items-start gap-2 text-sm ${
                                         isActive
-                                          ? darkMode ? "text-cyan-300" : "text-amber-700"
-                                          : darkMode ? "text-gray-400" : "text-gray-500"
+                                          ? darkMode
+                                            ? "text-cyan-300"
+                                            : "text-amber-700"
+                                          : darkMode
+                                          ? "text-gray-400"
+                                          : "text-gray-500"
                                       }`}
                                     >
-                                      <span className={`font-semibold shrink-0 ${
-                                        isActive
-                                          ? darkMode ? "text-cyan-400" : "text-amber-600"
-                                          : ""
-                                      }`}>
+                                      <span
+                                        className={`font-semibold shrink-0 ${
+                                          isActive
+                                            ? darkMode
+                                              ? "text-cyan-400"
+                                              : "text-amber-600"
+                                            : ""
+                                        }`}
+                                      >
                                         {level}:
                                       </span>
-                                      <span className={isActive ? "font-medium" : ""}>{desc}</span>
+                                      <span
+                                        className={
+                                          isActive ? "font-medium" : ""
+                                        }
+                                      >
+                                        {desc}
+                                      </span>
                                     </div>
                                   );
                                 })}
@@ -3101,7 +3360,9 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                           {/* Flèche du tooltip */}
                           <div
                             className={`absolute top-4 -right-2 w-4 h-4 transform rotate-45 ${
-                              darkMode ? "bg-slate-800 border-r border-t border-slate-600" : "bg-white border-r border-t border-gray-200"
+                              darkMode
+                                ? "bg-slate-800 border-r border-t border-slate-600"
+                                : "bg-white border-r border-t border-gray-200"
                             }`}
                           />
                         </div>
