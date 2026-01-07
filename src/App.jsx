@@ -13,12 +13,12 @@ const translateSkillName = (skillName, targetLang) => {
   if (!skillName) return skillName;
 
   // Chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
-  const talentKey = Object.keys(talentsData).find((key) => {
-    const talent = talentsData[key];
-    return Object.values(talent).some(
-      (langData) => langData?.name?.toLowerCase() === skillName.toLowerCase()
-    );
-  });
+    const talentKey = Object.keys(talentsData).find((key) => {
+      const talent = talentsData[key];
+      return Object.values(talent).some(
+        (langData) => (langData?.name || "").toLowerCase() === (skillName || "").toLowerCase()
+      );
+    });
 
   if (talentKey) {
     const talent = talentsData[talentKey];
@@ -972,7 +972,7 @@ function TranslatorPage({ talents, darkMode }) {
       const talent = talents[talentKey];
       return (
         availableLanguages.some((lang) =>
-          talent[lang]?.name.toLowerCase().includes(searchQuery.toLowerCase())
+          (talent[lang]?.name || "").toLowerCase().includes(searchQuery.toLowerCase())
         ) || talentKey.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
@@ -986,14 +986,14 @@ function TranslatorPage({ talents, darkMode }) {
           const weaponData = weapon[lang];
           if (!weaponData) return false;
           // Chercher par nom, type d'arme ou nom de skill
-          const matchesName = weaponData.name
-            ?.toLowerCase()
-            .includes(searchQuery.toLowerCase());
-          const matchesType = weaponData.type
-            ?.toLowerCase()
-            .includes(searchQuery.toLowerCase());
+          const matchesName = (weaponData.name || "").toLowerCase().includes(
+            searchQuery.toLowerCase()
+          );
+          const matchesType = (weaponData.type || "").toLowerCase().includes(
+            searchQuery.toLowerCase()
+          );
           const matchesSkill = weaponData.skills?.some(([skillName]) =>
-            skillName?.toLowerCase().includes(searchQuery.toLowerCase())
+            (skillName || "").toLowerCase().includes(searchQuery.toLowerCase())
           );
           return matchesName || matchesType || matchesSkill;
         });
@@ -1009,19 +1009,21 @@ function TranslatorPage({ talents, darkMode }) {
           const armorData = armor[lang];
           if (!armorData) return false;
           // Chercher par nom d'ensemble, nom de pièce ou nom de skill
-          const matchesSetName = armorData.name
-            ?.toLowerCase()
-            .includes(searchQuery.toLowerCase());
+          const matchesSetName = (armorData.name || "").toLowerCase().includes(
+            searchQuery.toLowerCase()
+          );
           const matchesPieceName =
             armorData.pieces &&
             Object.values(armorData.pieces).some((piece) =>
-              piece?.name?.toLowerCase().includes(searchQuery.toLowerCase())
+              (piece?.name || "").toLowerCase().includes(searchQuery.toLowerCase())
             );
           const matchesSkill =
             armorData.pieces &&
             Object.values(armorData.pieces).some((piece) =>
               piece?.skills?.some((skill) =>
-                skill?.name?.toLowerCase().includes(searchQuery.toLowerCase())
+                (skill?.name || "").toLowerCase().includes(
+                  searchQuery.toLowerCase()
+                )
               )
             );
           return matchesSetName || matchesPieceName || matchesSkill;
