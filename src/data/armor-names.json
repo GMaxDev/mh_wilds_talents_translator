@@ -1,0 +1,727 @@
+{
+  "hope": {
+    "name": "Hope",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "bone": {
+    "name": "Bone",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "leather": {
+    "name": "Leather",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "chainmail": {
+    "name": "Chainmail",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "talioth": {
+    "name": "Talioth",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "chatacabra": {
+    "name": "Chatacabra",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "quematrice": {
+    "name": "Quematrice",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "alloy": {
+    "name": "Alloy",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "piragill": {
+    "name": "Piragill",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "lala_barina": {
+    "name": "Lala Barina",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "bulaqchi": {
+    "name": "Bulaqchi",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "vespoid": {
+    "name": "Vespoid",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "gajau": {
+    "name": "Gajau",
+    "rank": "LOW",
+    "rarity": 1
+  },
+  "doshaguma": {
+    "name": "Doshaguma",
+    "rank": "LOW",
+    "rarity": 2
+  },
+  "conga": {
+    "name": "Conga",
+    "rank": "LOW",
+    "rarity": 2
+  },
+  "balahara": {
+    "name": "Balahara",
+    "rank": "LOW",
+    "rarity": 2
+  },
+  "ingot": {
+    "name": "Ingot",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "rompopolo": {
+    "name": "Rompopolo",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "kranodath": {
+    "name": "Kranodath",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "nerscylla": {
+    "name": "Nerscylla",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "hirabami": {
+    "name": "Hirabami",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "ajarakan": {
+    "name": "Ajarakan",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "comaqchi": {
+    "name": "Comaqchi",
+    "rank": "LOW",
+    "rarity": 3
+  },
+  "guardian_doshaguma": {
+    "name": "Guardian Doshaguma",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "uth_duna": {
+    "name": "Uth Duna",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "rey_dau": {
+    "name": "Rey Dau",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "nu_udra": {
+    "name": "Nu Udra",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "guardian_ebony": {
+    "name": "Guardian Ebony",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "xu_wu": {
+    "name": "Xu Wu",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "guardian_arkveld": {
+    "name": "Guardian Arkveld",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "guardian_seikret": {
+    "name": "Guardian Seikret",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "guardian_rathalos": {
+    "name": "Guardian Rathalos",
+    "rank": "LOW",
+    "rarity": 4
+  },
+  "hope_alpha": {
+    "name": "Hope α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "bone_alpha": {
+    "name": "Bone α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "leather_alpha": {
+    "name": "Leather α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "chainmail_alpha": {
+    "name": "Chainmail α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "talioth_alpha": {
+    "name": "Talioth α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "talioth_beta": {
+    "name": "Talioth β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "chatacabra_alpha": {
+    "name": "Chatacabra α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "chatacabra_beta": {
+    "name": "Chatacabra β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "quematrice_alpha": {
+    "name": "Quematrice α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "quematrice_beta": {
+    "name": "Quematrice β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "alloy_alpha": {
+    "name": "Alloy α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "piragill_alpha": {
+    "name": "Piragill α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "piragill_beta": {
+    "name": "Piragill β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "lala_barina_alpha": {
+    "name": "Lala Barina α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "lala_barina_beta": {
+    "name": "Lala Barina β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "conga_alpha": {
+    "name": "Conga α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "conga_beta": {
+    "name": "Conga β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "balahara_alpha": {
+    "name": "Balahara α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "balahara_beta": {
+    "name": "Balahara β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "bulaqchi_alpha": {
+    "name": "Bulaqchi α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "bulaqchi_beta": {
+    "name": "Bulaqchi β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "rompopolo_alpha": {
+    "name": "Rompopolo α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "rompopolo_beta": {
+    "name": "Rompopolo β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "kranodath_alpha": {
+    "name": "Kranodath α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "kranodath_beta": {
+    "name": "Kranodath β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "nerscylla_alpha": {
+    "name": "Nerscylla α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "nerscylla_beta": {
+    "name": "Nerscylla β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "hirabami_alpha": {
+    "name": "Hirabami α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "hirabami_beta": {
+    "name": "Hirabami β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "comaqchi_alpha": {
+    "name": "Comaqchi α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "comaqchi_beta": {
+    "name": "Comaqchi β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "vespoid_alpha": {
+    "name": "Vespoid α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "vespoid_beta": {
+    "name": "Vespoid β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "kut_ku_alpha": {
+    "name": "Kut-Ku α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "kut_ku_beta": {
+    "name": "Kut-Ku β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "rathian_alpha": {
+    "name": "Rathian α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "rathian_beta": {
+    "name": "Rathian β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "gypceros_alpha": {
+    "name": "Gypceros α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "gypceros_beta": {
+    "name": "Gypceros β",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "mimiphyta_alpha": {
+    "name": "Mimiphyta α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "sakuratide_alpha": {
+    "name": "Sakuratide α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "guild_cross_alpha": {
+    "name": "Guild Cross α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "blossom_alpha": {
+    "name": "Blossom α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "gourmand_s_earring_alpha": {
+    "name": "Gourmand's Earring α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "amstrigian_alpha": {
+    "name": "Amstrigian α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "expedition_headgear_alpha": {
+    "name": "Expedition Headgear α",
+    "rank": "HIGH",
+    "rarity": 5
+  },
+  "doshaguma_alpha": {
+    "name": "Doshaguma α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "doshaguma_beta": {
+    "name": "Doshaguma β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_doshaguma_alpha": {
+    "name": "Guardian Doshaguma α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_doshaguma_beta": {
+    "name": "Guardian Doshaguma β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "ingot_alpha": {
+    "name": "Ingot α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "ajarakan_alpha": {
+    "name": "Ajarakan α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "ajarakan_beta": {
+    "name": "Ajarakan β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_ebony_alpha": {
+    "name": "Guardian Ebony α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_ebony_beta": {
+    "name": "Guardian Ebony β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "xu_wu_alpha": {
+    "name": "Xu Wu α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "xu_wu_beta": {
+    "name": "Xu Wu β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_seikret_alpha": {
+    "name": "Guardian Seikret α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_seikret_beta": {
+    "name": "Guardian Seikret β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "rathalos_alpha": {
+    "name": "Rathalos α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "rathalos_beta": {
+    "name": "Rathalos β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_rathalos_alpha": {
+    "name": "Guardian Rathalos α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_rathalos_beta": {
+    "name": "Guardian Rathalos β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "gravios_alpha": {
+    "name": "Gravios α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "gravios_beta": {
+    "name": "Gravios β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "blango_alpha": {
+    "name": "Blango α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "blango_beta": {
+    "name": "Blango β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_fulgur_alpha": {
+    "name": "Guardian Fulgur α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "guardian_fulgur_beta": {
+    "name": "Guardian Fulgur β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "kunafa_alpha": {
+    "name": "Kunafa α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "azuz_alpha": {
+    "name": "Azuz α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "sild_alpha": {
+    "name": "Sild α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "suja_alpha": {
+    "name": "Suja α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "commission_alpha": {
+    "name": "Commission α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "artian_alpha": {
+    "name": "Artian α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "gajau_alpha": {
+    "name": "Gajau α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "death_stench_alpha": {
+    "name": "Death Stench α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "butterfly_alpha": {
+    "name": "Butterfly α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "king_beetle_alpha": {
+    "name": "King Beetle α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "high_metal_alpha": {
+    "name": "High Metal α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "battle_alpha": {
+    "name": "Battle α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "melahoa_alpha": {
+    "name": "Melahoa α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "mizutsune_alpha": {
+    "name": "Mizutsune α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "mizutsune_beta": {
+    "name": "Mizutsune β",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "clerk_alpha": {
+    "name": "Clerk α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "earrings_of_dedication_alpha": {
+    "name": "Earrings of Dedication α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "sealed_dragon_cloth_alpha": {
+    "name": "Sealed Dragon Cloth α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "strategist_spectacles_alpha": {
+    "name": "Strategist Spectacles α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "square_glasses_alpha": {
+    "name": "Square Glasses α",
+    "rank": "HIGH",
+    "rarity": 6
+  },
+  "uth_duna_alpha": {
+    "name": "Uth Duna α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "uth_duna_beta": {
+    "name": "Uth Duna β",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "dober_alpha": {
+    "name": "Dober α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "rey_dau_alpha": {
+    "name": "Rey Dau α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "rey_dau_beta": {
+    "name": "Rey Dau β",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "damascus_alpha": {
+    "name": "Damascus α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "nu_udra_alpha": {
+    "name": "Nu Udra α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "nu_udra_beta": {
+    "name": "Nu Udra β",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "dahaad_alpha": {
+    "name": "Dahaad α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "dahaad_beta": {
+    "name": "Dahaad β",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "gore_alpha": {
+    "name": "Gore α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "gore_beta": {
+    "name": "Gore β",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "sealed_eyepatch_alpha": {
+    "name": "Sealed Eyepatch α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "shadow_shades_alpha": {
+    "name": "Shadow Shades α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "round_glasses_alpha": {
+    "name": "Round Glasses α",
+    "rank": "HIGH",
+    "rarity": 7
+  },
+  "rey_dau_gamma": {
+    "name": "Rey Dau γ",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "arkveld_alpha": {
+    "name": "Arkveld α",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "arkveld_beta": {
+    "name": "Arkveld β",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "guardian_arkveld_alpha": {
+    "name": "Guardian Arkveld α",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "guardian_arkveld_beta": {
+    "name": "Guardian Arkveld β",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "dragonking_alpha": {
+    "name": "Dragonking α",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "numinous_alpha": {
+    "name": "Numinous α",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "numinous_beta": {
+    "name": "Numinous β",
+    "rank": "HIGH",
+    "rarity": 8
+  },
+  "guild_ace_alpha": {
+    "name": "Guild Ace α",
+    "rank": "HIGH",
+    "rarity": 8
+  }
+}
