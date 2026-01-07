@@ -92,13 +92,18 @@ function sleep(ms) {
 
 /**
  * Normalise un nom d'armure pour créer un ID unique
+ * Conserve les indicateurs α, β, γ comme _alpha, _beta, _gamma
  */
 function normalizeArmorName(name) {
   return name
     .toLowerCase()
+    .replace(/α/g, "_alpha")
+    .replace(/β/g, "_beta")
+    .replace(/γ/g, "_gamma")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "") // Remove accents
-    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/[^a-z0-9_]+/g, "_")
+    .replace(/_+/g, "_")
     .replace(/^_+|_+$/g, "");
 }
 
@@ -147,6 +152,7 @@ function extractNextData(html) {
 
 /**
  * Scrape la liste des ensembles d'armure pour une langue donnée
+ * Extrait tous les liens d'armures du HTML au lieu de se baser sur initialSeries
  */
 async function scrapeArmorList(lang) {
   const url = buildArmorListUrl(lang);
@@ -160,20 +166,37 @@ async function scrapeArmorList(lang) {
     }
 
     const html = await response.text();
+    const $ = cheerio.load(html);
+
+    // Extraire tous les liens d'armures depuis le HTML
+    const armorLinks = [];
+    const langCode = LANG_URL_MAP[lang];
+    const basePath = langCode === "" ? "/armor/" : `/${langCode}/armor/`;
+
+    $(`a[href^="${basePath}"]`).each((_, el) => {
+      const href = $(el).attr("href");
+      if (href) {
+        // Extraire le slug de l'URL
+        const slug = href.replace(basePath, "").replace(/\/$/, "");
+        // Décoder les caractères URL encodés (comme %CE%B1 pour α)
+        const decodedSlug = decodeURIComponent(slug);
+        if (slug && !armorLinks.some((a) => a.slug === slug)) {
+          // Convertir le slug en nom lisible
+          const name = decodedSlug
+            .replace(/-/g, " ")
+            .replace(/\b\w/g, (c) => c.toUpperCase())
+            .replace(/ α/g, " α")
+            .replace(/ β/g, " β")
+            .replace(/ γ/g, " γ");
+          armorLinks.push({ slug, decodedSlug, name });
+        }
+      }
+    });
+
     const nextData = extractNextData(html);
+    const infoMap = nextData?.props?.pageProps?.infoMap || {};
 
-    if (!nextData) {
-      console.warn(`  ⚠ Could not extract __NEXT_DATA__ from ${url}`);
-      return null;
-    }
-
-    const pageProps = nextData.props?.pageProps || {};
-
-    // Extraire les noms des ensembles depuis initialSeries
-    const armorSeries = pageProps.initialSeries || [];
-    const infoMap = pageProps.infoMap || {};
-
-    return { armorSeries, infoMap };
+    return { armorLinks, infoMap };
   } catch (error) {
     console.error(`  ✗ Error scraping ${url}:`, error.message);
     return null;
@@ -181,15 +204,27 @@ async function scrapeArmorList(lang) {
 }
 
 /**
- * Scrape les détails d'un ensemble d'armure
+ * Mapping des codes de langue vers les codes i18n utilisés par le site
  */
-async function scrapeArmorDetail(lang, armorName) {
-  // Convertir le nom en slug URL
-  const slug = armorName
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[()]/g, "");
+const LANG_I18N_MAP = {
+  EN: "en",
+  JP: "ja",
+  JA: "ja",
+  KO: "ko",
+  FR: "fr",
+  IT: "it",
+  DE: "de",
+  ES: "es",
+  RU: "ru",
+  PL: "pl",
+  PT: "pt",
+  AR: "ar",
+};
 
+/**
+ * Scrape les détails d'un ensemble d'armure avec le slug
+ */
+async function scrapeArmorDetail(lang, slug) {
   const url = buildArmorDetailUrl(lang, slug);
 
   try {
@@ -206,7 +241,14 @@ async function scrapeArmorDetail(lang, armorName) {
     }
 
     const pageProps = nextData.props?.pageProps || {};
-    return pageProps;
+    
+    // Extraire les traductions i18n
+    const i18nLangCode = LANG_I18N_MAP[lang] || lang.toLowerCase();
+    const i18nStore = pageProps._nextI18Next?.initialI18nStore || {};
+    // Les traductions peuvent être dans la langue demandée ou zh-TW (fallback)
+    const translations = i18nStore[i18nLangCode]?.armor || i18nStore["zh-TW"]?.armor || {};
+    
+    return { ...pageProps, translations };
   } catch (error) {
     return null;
   }
@@ -271,6 +313,14 @@ function findSkillId(skillName, lang, skillsData) {
 }
 
 /**
+ * Traduit un nom en utilisant les traductions i18n
+ */
+function translateName(name, translations) {
+  if (!name || !translations) return name;
+  return translations[name] || name;
+}
+
+/**
  * Traite les données d'un ensemble d'armure
  */
 function processArmorSet(pageProps, lang, skillsData) {
@@ -278,13 +328,17 @@ function processArmorSet(pageProps, lang, skillsData) {
   const armorList = pageProps.armorList || [];
   const groupSkill = pageProps.groupSkill;
   const setBonus = pageProps.setBonus;
+  const translations = pageProps.translations || {};
 
   if (!armorSet) {
     return null;
   }
 
+  // Traduire le nom du set
+  const translatedSetName = translateName(armorSet.Name, translations);
+
   const result = {
-    name: armorSet.Name,
+    name: translatedSetName,
     rank: armorSet.Rank,
     rarity: armorSet.Rarity,
     type: armorSet.Type, // Alpha, Beta, Gamma, etc.
@@ -306,16 +360,21 @@ function processArmorSet(pageProps, lang, skillsData) {
     const pieceType = PIECE_TYPE_MAP[piece.type];
     if (!pieceType) continue;
 
+    // Traduire le nom de la pièce
+    const translatedPieceName = translateName(piece.name, translations);
+
     // Parser les skills
     const skills = [];
     if (piece.skills && Array.isArray(piece.skills)) {
       for (const skill of piece.skills) {
         const skillName = skill.skill || skill.name;
+        // Traduire le nom du skill aussi
+        const translatedSkillName = translateName(skillName, translations);
         const skillLevel = skill.level || 1;
         const skillId = findSkillId(skillName, lang, skillsData);
 
         skills.push({
-          name: skillName,
+          name: translatedSkillName,
           level: skillLevel,
           skillId: skillId,
         });
@@ -323,7 +382,7 @@ function processArmorSet(pageProps, lang, skillsData) {
     }
 
     result.pieces[pieceType] = {
-      name: piece.name,
+      name: translatedPieceName,
       defense: piece.defense || 0,
       slots: piece.slots || [0, 0, 0],
       skills: skills,
@@ -371,7 +430,7 @@ async function main() {
   }
 
   // D'abord, scraper EN pour obtenir la liste des armures
-  console.log("\n📋 Fetching EN armor list to get all set names...\n");
+  console.log("\n📋 Fetching EN armor list to get all armor set URLs...\n");
 
   const enListResult = await scrapeArmorList("EN");
 
@@ -380,12 +439,12 @@ async function main() {
     process.exit(1);
   }
 
-  // Extraire la liste des ensembles d'armure
-  const armorSeries = enListResult.armorSeries;
-  console.log(`  Found ${armorSeries.length} armor sets in EN list`);
+  // Extraire la liste des liens d'armures
+  const armorLinks = enListResult.armorLinks;
+  console.log(`  Found ${armorLinks.length} armor sets in EN list`);
 
   // Appliquer la limite si spécifiée
-  let armorSetsToProcess = armorSeries;
+  let armorSetsToProcess = armorLinks;
   if (options.limit && armorSetsToProcess.length > options.limit) {
     armorSetsToProcess = armorSetsToProcess.slice(0, options.limit);
     console.log(`  Limited to ${armorSetsToProcess.length} sets`);
@@ -395,18 +454,18 @@ async function main() {
   const failedSets = [];
 
   // Traiter chaque ensemble d'armure pour chaque langue
-  for (const armorSeriesItem of armorSetsToProcess) {
-    const armorName = armorSeriesItem.Name;
-    const armorId = normalizeArmorName(armorName);
+  for (const armorItem of armorSetsToProcess) {
+    const { slug, name } = armorItem;
+    const armorId = normalizeArmorName(name);
 
-    console.log(`\n📦 Processing: ${armorName}`);
+    console.log(`\n📦 Processing: ${name} (${slug})`);
 
     if (!allArmors[armorId]) {
       allArmors[armorId] = {};
     }
 
     for (const lang of langsToScrape) {
-      const detailData = await scrapeArmorDetail(lang, armorName);
+      const detailData = await scrapeArmorDetail(lang, slug);
 
       if (detailData && detailData.armorSet) {
         const processed = processArmorSet(detailData, lang, skillsData);
@@ -419,7 +478,7 @@ async function main() {
       } else {
         process.stdout.write(`  ✗ ${lang}`);
         if (lang === "EN") {
-          failedSets.push(armorName);
+          failedSets.push(name);
         }
       }
 
