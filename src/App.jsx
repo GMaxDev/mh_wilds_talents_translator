@@ -7,24 +7,56 @@ import weaponTypeTranslations from "./data/weapon-type-translations.json";
 import weaponsFullData from "./data/weapons-full.json";
 import armorsFullData from "./data/armors-kiranico-full.json";
 import BuildCreatorPage from "./components/BuildCreatorPage";
+import charmsData from "./data/charms-kiranico-mapped.json";
 
 // Fonction helper pour traduire les noms de skills
 const translateSkillName = (skillName, targetLang) => {
   if (!skillName) return skillName;
 
   // Chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
-    const talentKey = Object.keys(talentsData).find((key) => {
-      const talent = talentsData[key];
-      return Object.values(talent).some(
-        (langData) => (langData?.name || "").toLowerCase() === (skillName || "").toLowerCase()
-      );
-    });
+  const talentKey = Object.keys(talentsData).find((key) => {
+    const talent = talentsData[key];
+    return Object.values(talent).some(
+      (langData) =>
+        (langData?.name || "").toLowerCase() === (skillName || "").toLowerCase()
+    );
+  });
 
   if (talentKey) {
     const talent = talentsData[talentKey];
     return talent[targetLang]?.name || talent.EN?.name || skillName;
   }
   return skillName;
+};
+
+// Fonction pour rendre les slots visuellement (copiée depuis BuildCreatorPage)
+const renderSlots = (slots, darkMode) => {
+  if (!slots || slots.length === 0)
+    return <span className="text-gray-500">—</span>;
+
+  return (
+    <div className="flex gap-1">
+      {slots.map((slotLevel, index) => {
+        if (slotLevel === 0) return null;
+        const colors = {
+          1: darkMode ? "bg-gray-600" : "bg-gray-400",
+          2: darkMode ? "bg-blue-600" : "bg-blue-400",
+          3: darkMode ? "bg-yellow-600" : "bg-yellow-400",
+          4: darkMode ? "bg-purple-600" : "bg-purple-400",
+        };
+        return (
+          <span
+            key={index}
+            className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white ${
+              colors[slotLevel] || colors[1]
+            }`}
+          >
+            {slotLevel}
+          </span>
+        );
+      })}
+    </div>
+  );
 };
 
 // Traductions des types d'armures
@@ -925,12 +957,14 @@ function TranslatorPage({ talents, darkMode }) {
   const [selectedTalent, setSelectedTalent] = useState(null);
   const [selectedWeapon, setSelectedWeapon] = useState(null); // Nouvelle: arme sélectionnée
   const [selectedArmor, setSelectedArmor] = useState(null); // Nouvelle: armure sélectionnée
+  const [selectedCharm, setSelectedCharm] = useState(null); // talisman sélectionné
   const [sourceLanguage, setSourceLanguage] = useState("EN");
   const [targetLanguage, setTargetLanguage] = useState("FR");
   const [availableLanguages, setAvailableLanguages] = useState([]);
   const [filteredTalents, setFilteredTalents] = useState([]);
   const [filteredWeapons, setFilteredWeapons] = useState([]); // Nouvelle: armes filtrées
   const [filteredArmors, setFilteredArmors] = useState([]); // Nouvelle: armures filtrées
+  const [filteredCharms, setFilteredCharms] = useState([]); // talismans filtrés
   const [keyboardSelectedIndex, setKeyboardSelectedIndex] = useState(-1); // Pour la navigation au clavier
   const [showResults, setShowResults] = useState(false);
   const [expandedSide, setExpandedSide] = useState(null); // "source" ou "target" ou null
@@ -972,7 +1006,9 @@ function TranslatorPage({ talents, darkMode }) {
       const talent = talents[talentKey];
       return (
         availableLanguages.some((lang) =>
-          (talent[lang]?.name || "").toLowerCase().includes(searchQuery.toLowerCase())
+          (talent[lang]?.name || "")
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase())
         ) || talentKey.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
@@ -986,12 +1022,12 @@ function TranslatorPage({ talents, darkMode }) {
           const weaponData = weapon[lang];
           if (!weaponData) return false;
           // Chercher par nom, type d'arme ou nom de skill
-          const matchesName = (weaponData.name || "").toLowerCase().includes(
-            searchQuery.toLowerCase()
-          );
-          const matchesType = (weaponData.type || "").toLowerCase().includes(
-            searchQuery.toLowerCase()
-          );
+          const matchesName = (weaponData.name || "")
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase());
+          const matchesType = (weaponData.type || "")
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase());
           const matchesSkill = weaponData.skills?.some(([skillName]) =>
             (skillName || "").toLowerCase().includes(searchQuery.toLowerCase())
           );
@@ -1009,21 +1045,23 @@ function TranslatorPage({ talents, darkMode }) {
           const armorData = armor[lang];
           if (!armorData) return false;
           // Chercher par nom d'ensemble, nom de pièce ou nom de skill
-          const matchesSetName = (armorData.name || "").toLowerCase().includes(
-            searchQuery.toLowerCase()
-          );
+          const matchesSetName = (armorData.name || "")
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase());
           const matchesPieceName =
             armorData.pieces &&
             Object.values(armorData.pieces).some((piece) =>
-              (piece?.name || "").toLowerCase().includes(searchQuery.toLowerCase())
+              (piece?.name || "")
+                .toLowerCase()
+                .includes(searchQuery.toLowerCase())
             );
           const matchesSkill =
             armorData.pieces &&
             Object.values(armorData.pieces).some((piece) =>
               piece?.skills?.some((skill) =>
-                (skill?.name || "").toLowerCase().includes(
-                  searchQuery.toLowerCase()
-                )
+                (skill?.name || "")
+                  .toLowerCase()
+                  .includes(searchQuery.toLowerCase())
               )
             );
           return matchesSetName || matchesPieceName || matchesSkill;
@@ -1035,10 +1073,30 @@ function TranslatorPage({ talents, darkMode }) {
     setFilteredWeapons(filteredWeaponsList);
     setFilteredArmors(filteredArmorsList);
 
+    // Filtrer les talismans (charms)
+    const filteredCharmsList = Object.keys(charmsData)
+      .filter((charmId) => {
+        const charm = charmsData[charmId];
+        const charmLang = charm[sourceLanguage] || charm.EN || {};
+        if (!charmLang?.name) return false;
+        const q = searchQuery.toLowerCase();
+        const matchesName = Object.values(charm).some((cd) =>
+          (cd?.name || "").toLowerCase().includes(q)
+        );
+        const matchesSkill = (charmLang.skills || []).some((s) =>
+          (s.name || "").toLowerCase().includes(q)
+        );
+        return matchesName || matchesSkill || charmId.toLowerCase().includes(q);
+      })
+      .slice(0, 50);
+
+    setFilteredCharms(filteredCharmsList);
+
     // Réinitialiser l'index sélectionné
     const totalResults =
       filteredTalentsList.length +
       filteredWeaponsList.length +
+      filteredCharmsList.length +
       filteredArmorsList.length;
     setKeyboardSelectedIndex(totalResults > 0 ? 0 : -1);
   }, [searchQuery, talents, availableLanguages]);
@@ -1169,6 +1227,23 @@ function TranslatorPage({ talents, darkMode }) {
     }
   };
 
+  const handleCharmSelect = (charmId) => {
+    setSelectedCharm(charmId);
+    setSelectedTalent(null);
+    setSelectedWeapon(null);
+    setSelectedArmor(null);
+    setSearchQuery("");
+    setFilteredTalents([]);
+    setFilteredWeapons([]);
+    setFilteredArmors([]);
+    setFilteredCharms([]);
+    setShowResults(true);
+    setKeyboardSelectedIndex(-1);
+    setExpandedSide(null);
+
+    if (searchInputRef.current) searchInputRef.current.focus();
+  };
+
   const handleLanguageSwap = () => {
     const temp = sourceLanguage;
     setSourceLanguage(targetLanguage);
@@ -1177,7 +1252,10 @@ function TranslatorPage({ talents, darkMode }) {
 
   // Calcul des résultats combinés pour la navigation clavier
   const totalResults =
-    filteredTalents.length + filteredWeapons.length + filteredArmors.length;
+    filteredTalents.length +
+    filteredWeapons.length +
+    filteredCharms.length +
+    filteredArmors.length;
 
   // Gestionnaire pour les touches du clavier
   const handleKeyDown = (e) => {
@@ -1203,17 +1281,28 @@ function TranslatorPage({ talents, darkMode }) {
       ) {
         const weaponIndex = keyboardSelectedIndex - filteredTalents.length;
         handleWeaponSelect(filteredWeapons[weaponIndex]);
+      } else if (
+        keyboardSelectedIndex <
+        filteredTalents.length + filteredWeapons.length + filteredCharms.length
+      ) {
+        const charmIndex =
+          keyboardSelectedIndex -
+          filteredTalents.length -
+          filteredWeapons.length;
+        handleCharmSelect(filteredCharms[charmIndex]);
       } else {
         const armorIndex =
           keyboardSelectedIndex -
           filteredTalents.length -
-          filteredWeapons.length;
+          filteredWeapons.length -
+          filteredCharms.length;
         handleArmorSelect(filteredArmors[armorIndex]);
       }
     } else if (e.key === "Escape") {
       setFilteredTalents([]);
       setFilteredWeapons([]);
       setFilteredArmors([]);
+      setFilteredCharms([]);
       setKeyboardSelectedIndex(-1);
     }
   };
@@ -1432,6 +1521,80 @@ function TranslatorPage({ talents, darkMode }) {
                       >
                         ⚔️ {weapon?.attack || "?"}
                       </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          )}
+
+          {/* Section Charms/Talismans */}
+          {filteredCharms.length > 0 && (
+            <>
+              <div
+                className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider sticky top-0 ${
+                  darkMode
+                    ? "bg-slate-700/90 text-cyan-300 border-b border-slate-600/50"
+                    : "bg-amber-200/90 text-amber-700 border-b border-amber-300/50"
+                }`}
+              >
+                🔮 Charms ({filteredCharms.length})
+              </div>
+              {filteredCharms.map((charmId, index) => {
+                const globalIndex =
+                  filteredTalents.length + filteredWeapons.length + index;
+                const charm = charmsData[charmId]?.[sourceLanguage] || {};
+                const skillsCount = (charm.skills || []).length;
+                return (
+                  <div
+                    key={`charm-${charmId}`}
+                    ref={(el) => (resultItemsRef.current[globalIndex] = el)}
+                    className={`p-3 cursor-pointer transition-all duration-300
+                        border-b last:border-b-0 flex justify-between items-center ${
+                          darkMode
+                            ? `border-slate-700/50 ${
+                                globalIndex === keyboardSelectedIndex
+                                  ? "bg-slate-700/70"
+                                  : "hover:bg-slate-700/50"
+                              }`
+                            : `border-amber-200/50 ${
+                                globalIndex === keyboardSelectedIndex
+                                  ? "bg-amber-200/70"
+                                  : "hover:bg-amber-200/50"
+                              }`
+                        }`}
+                    onClick={() => handleCharmSelect(charmId)}
+                    onMouseEnter={() => setKeyboardSelectedIndex(globalIndex)}
+                  >
+                    <div>
+                      <span
+                        className={`font-medium ${
+                          darkMode ? "text-amber-100" : "text-amber-900"
+                        }`}
+                      >
+                        {charm?.name || charmId}
+                      </span>
+                      <span
+                        className={`text-xs ml-2 ${
+                          darkMode ? "text-amber-100/70" : "text-amber-800/70"
+                        }`}
+                      >
+                        {charm?.description || ""}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      {skillsCount > 0 && (
+                        <span
+                          className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                            darkMode
+                              ? "bg-cyan-900/30 text-cyan-300 border-cyan-700/50"
+                              : "bg-green-100/50 text-green-700 border-green-200/50"
+                          }`}
+                        >
+                          {skillsCount} skills
+                        </span>
+                      )}
+                      {renderSlots(charm?.slots, darkMode)}
                     </div>
                   </div>
                 );
@@ -1818,6 +1981,172 @@ function TranslatorPage({ talents, darkMode }) {
               darkMode={darkMode}
               talents={talents}
             />
+          </div>
+        </div>
+      )}
+
+      {/* Affichage du talisman sélectionné */}
+      {showResults && selectedCharm && charmsData[selectedCharm] && (
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <select
+                value={sourceLanguage}
+                onChange={(e) => setSourceLanguage(e.target.value)}
+                className={`w-[100px] rounded-xl px-3 py-2
+                  backdrop-blur-md shadow-md focus:outline-none border ${
+                    darkMode
+                      ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                      : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                  }`}
+              >
+                {availableLanguages.map((lang) => (
+                  <option key={`source-charm-${lang}`} value={lang}>
+                    {lang}
+                  </option>
+                ))}
+              </select>
+
+              <button
+                onClick={handleLanguageSwap}
+                className={`p-2 rounded-full backdrop-blur-md border transition-all duration-300 shadow-md ${
+                  darkMode
+                    ? "bg-slate-800/30 text-amber-100 hover:bg-slate-700/50 border-slate-700/50"
+                    : "bg-amber-100/30 text-amber-900 hover:bg-amber-200/50 border-amber-200/50"
+                }`}
+              >
+                <ArrowLeftRightIcon />
+              </button>
+
+              <select
+                value={targetLanguage}
+                onChange={(e) => setTargetLanguage(e.target.value)}
+                className={`w-[100px] rounded-xl px-3 py-2
+                  backdrop-blur-md shadow-md focus:outline-none border ${
+                    darkMode
+                      ? "bg-slate-800/30 text-amber-100 border-slate-700/50 focus:ring-2 focus:ring-cyan-500/50"
+                      : "bg-amber-100/30 text-amber-900 border-amber-200/50 focus:ring-2 focus:ring-amber-500/50"
+                  }`}
+              >
+                {availableLanguages.map((lang) => (
+                  <option key={`target-charm-${lang}`} value={lang}>
+                    {lang}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <span
+              className={`text-xs px-2 py-1 rounded-full backdrop-blur-md border ${
+                darkMode
+                  ? "bg-cyan-900/30 text-cyan-300 border-cyan-800/50"
+                  : "bg-orange-100/50 text-orange-700 border-orange-200/50"
+              }`}
+            >
+              🔮 {selectedCharm}
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div
+              className={`p-4 rounded-xl border cursor-pointer transition-all duration-300 ${
+                darkMode
+                  ? "bg-slate-800/30 border-slate-700/50 hover:bg-slate-700/50"
+                  : "bg-amber-100/30 border-amber-200/50 hover:bg-amber-200/50"
+              }`}
+            >
+              <h4
+                className={`font-bold mb-2 ${
+                  darkMode ? "text-amber-100" : "text-amber-900"
+                }`}
+              >
+                {charmsData[selectedCharm][sourceLanguage]?.name ||
+                  selectedCharm}
+              </h4>
+              <p
+                className={`text-sm mb-3 ${
+                  darkMode ? "text-amber-100/70" : "text-amber-800/70"
+                }`}
+              >
+                {charmsData[selectedCharm][sourceLanguage]?.description}
+              </p>
+              <div className="space-y-1">
+                {(charmsData[selectedCharm]._applies || []).map((s, i) => {
+                  const skillName = s.skill
+                    ? translateSkillName(s.skill, sourceLanguage)
+                    : s.name;
+                  return (
+                    <div
+                      key={i}
+                      className={`text-sm flex justify-between ${
+                        darkMode ? "text-amber-100/90" : "text-amber-900/90"
+                      }`}
+                    >
+                      <span>{skillName}</span>
+                      <span
+                        className={`px-2 py-0.5 rounded ${
+                          darkMode
+                            ? "bg-cyan-900/30 text-cyan-300"
+                            : "bg-amber-200 text-amber-800"
+                        }`}
+                      >
+                        Lv.{s.level}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div
+              className={`p-4 rounded-xl border cursor-pointer transition-all duration-300 ${
+                darkMode
+                  ? "bg-slate-800/30 border-slate-700/50 hover:bg-slate-700/50"
+                  : "bg-amber-100/30 border-amber-200/50 hover:bg-amber-200/50"
+              }`}
+            >
+              <h4
+                className={`font-bold mb-2 ${
+                  darkMode ? "text-amber-100" : "text-amber-900"
+                }`}
+              >
+                {charmsData[selectedCharm][targetLanguage]?.name ||
+                  selectedCharm}
+              </h4>
+              <p
+                className={`text-sm mb-3 ${
+                  darkMode ? "text-amber-100/70" : "text-amber-800/70"
+                }`}
+              >
+                {charmsData[selectedCharm][targetLanguage]?.description}
+              </p>
+              <div className="space-y-1">
+                {(charmsData[selectedCharm]._applies || []).map((s, i) => {
+                  const skillName = s.skill
+                    ? translateSkillName(s.skill, targetLanguage)
+                    : s.name;
+                  return (
+                    <div
+                      key={i}
+                      className={`text-sm flex justify-between ${
+                        darkMode ? "text-amber-100/90" : "text-amber-900/90"
+                      }`}
+                    >
+                      <span>{skillName}</span>
+                      <span
+                        className={`px-2 py-0.5 rounded ${
+                          darkMode
+                            ? "bg-cyan-900/30 text-cyan-300"
+                            : "bg-amber-200 text-amber-800"
+                        }`}
+                      >
+                        Lv.{s.level}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -3,6 +3,7 @@ import weaponsFullData from "../data/weapons-full.json";
 import armorsFullData from "../data/armors-kiranico-full.json";
 import talentsData from "../data/skills.json";
 import weaponTypeTranslations from "../data/weapon-type-translations.json";
+import charmsData from "../data/charms-kiranico.json";
 
 // Traductions UI pour le Build Creator
 const buildUITranslations = {
@@ -1052,22 +1053,29 @@ const getUIText = (key, lang) => {
 };
 
 // Fonction pour obtenir le nom traduit d'un talent
-const translateSkillName = (skillName, targetLang) => {
-  if (!skillName) return skillName;
+const translateSkillName = (skillNameOrSlug, targetLang) => {
+  if (!skillNameOrSlug) return skillNameOrSlug;
 
-  // Chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
+  // D'abord, essayer de trouver directement par slug
+  if (talentsData[skillNameOrSlug]) {
+    const talent = talentsData[skillNameOrSlug];
+    return talent[targetLang]?.name || talent.EN?.name || skillNameOrSlug;
+  }
+
+  // Sinon, chercher le talent dans talentsData par son nom (dans n'importe quelle langue)
   const talentKey = Object.keys(talentsData).find((key) => {
     const talent = talentsData[key];
     return Object.values(talent).some(
-      (langData) => langData?.name?.toLowerCase() === skillName.toLowerCase()
+      (langData) =>
+        langData?.name?.toLowerCase() === skillNameOrSlug.toLowerCase()
     );
   });
 
   if (talentKey) {
     const talent = talentsData[talentKey];
-    return talent[targetLang]?.name || talent.EN?.name || skillName;
+    return talent[targetLang]?.name || talent.EN?.name || skillNameOrSlug;
   }
-  return skillName;
+  return skillNameOrSlug;
 };
 
 // Fonction pour rendre les slots visuellement
@@ -1325,6 +1333,34 @@ function EquipmentSelectionModal({
       }
       return sortOrder === "asc" ? -comparison : comparison;
     });
+  } else if (type === "talisman") {
+    // Talismans / charms
+    filteredItems = Object.entries(charmsData)
+      .filter(([, charm]) => {
+        const langData = charm[language] || charm.EN || {};
+        if (!langData?.name) return false;
+
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase();
+          const matchesName = Object.values(charm).some((cd) =>
+            (cd?.name || "").toLowerCase().includes(q)
+          );
+          const matchesSkill = (langData.skills || []).some((s) =>
+            (s.name || "").toLowerCase().includes(q)
+          );
+          return matchesName || matchesSkill;
+        }
+        return true;
+      })
+      .map(([id, charm]) => ({
+        id,
+        data: charm[language] || charm.EN || {},
+        allData: charm,
+      }));
+
+    filteredItems.sort((a, b) =>
+      (a.data.name || "").localeCompare(b.data.name || "")
+    );
   } else {
     // Pour les armures
     const armorTypeMap = {
@@ -1459,6 +1495,8 @@ function EquipmentSelectionModal({
       ? getUIText("selectArms", language)
       : type === "waist"
       ? getUIText("selectWaist", language)
+      : type === "talisman"
+      ? getUIText("selectTalisman", language)
       : getUIText("selectLegs", language);
 
   return (
@@ -1973,6 +2011,46 @@ function EquipmentSelectionModal({
                         {renderSlots(item.data.slots, darkMode)}
                       </div>
                     </div>
+                  ) : type === "talisman" ? (
+                    // Affichage talisman
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1 min-w-0">
+                        <div
+                          className={`font-medium ${
+                            darkMode ? "text-amber-100" : "text-gray-900"
+                          }`}
+                        >
+                          {item.data.name}
+                        </div>
+                        {language !== "EN" &&
+                          item.allData.EN?.name !== item.data.name && (
+                            <div
+                              className={`text-xs italic ${
+                                darkMode ? "text-gray-500" : "text-gray-400"
+                              }`}
+                            >
+                              EN: {item.allData.EN?.name}
+                            </div>
+                          )}
+                        <div
+                          className={`text-sm ${
+                            darkMode ? "text-gray-400" : "text-gray-500"
+                          }`}
+                        >
+                          {item.data.skills
+                            ?.map(
+                              (s) =>
+                                `${translateSkillName(s.slug, language)} Lv.${
+                                  s.level
+                                }`
+                            )
+                            .join(", ") || "—"}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm flex-shrink-0">
+                        {renderSlots(item.data.slots, darkMode)}
+                      </div>
+                    </div>
                   ) : (
                     // Affichage pièce d'armure
                     <div className="flex items-center justify-between">
@@ -2178,6 +2256,7 @@ const encodeBuildToURL = (buildName, selectedEquipment, language) => {
     a: selectedEquipment.arms?.setId || null,
     t: selectedEquipment.waist?.setId || null,
     g: selectedEquipment.legs?.setId || null,
+    z: selectedEquipment.talisman?.id || null,
   };
 
   // Encoder en base64 pour garder l'URL courte
@@ -2237,6 +2316,21 @@ const decodeBuildFromURL = (encoded, lang) => {
         }
       }
     });
+
+    // Restaurer le talisman (si présent)
+    try {
+      const talId = buildData.z;
+      if (talId && charmsData && charmsData[talId]) {
+        const charmAllData = charmsData[talId];
+        equipment.talisman = {
+          id: talId,
+          data: charmAllData[lang] || charmAllData.EN,
+          allData: charmAllData,
+        };
+      }
+    } catch (e) {
+      // ignore
+    }
 
     return {
       buildName: buildData.n || "",
@@ -2347,11 +2441,12 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
 
     // Ajouter les skills de l'arme
     if (selectedEquipment.weapon?.data?.skills) {
-      selectedEquipment.weapon.data.skills.forEach(([name, level]) => {
-        if (!skillsMap[name]) {
-          skillsMap[name] = { name, level: 0 };
+      selectedEquipment.weapon.data.skills.forEach(([nameOrSlug, level]) => {
+        // Les armes utilisent le nom directement comme clé
+        if (!skillsMap[nameOrSlug]) {
+          skillsMap[nameOrSlug] = { nameOrSlug, level: 0 };
         }
-        skillsMap[name].level += level;
+        skillsMap[nameOrSlug].level += level;
       });
     }
 
@@ -2360,13 +2455,26 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
       const piece = selectedEquipment[pieceType];
       if (piece?.data?.skills) {
         piece.data.skills.forEach((skill) => {
-          if (!skillsMap[skill.name]) {
-            skillsMap[skill.name] = { name: skill.name, level: 0 };
+          const key = skill.name;
+          if (!skillsMap[key]) {
+            skillsMap[key] = { nameOrSlug: key, level: 0 };
           }
-          skillsMap[skill.name].level += skill.level;
+          skillsMap[key].level += skill.level;
         });
       }
     });
+
+    // Ajouter les skills du talisman (avec slug comme clé)
+    if (selectedEquipment.talisman?.data?.skills) {
+      selectedEquipment.talisman.data.skills.forEach((skill) => {
+        // Les talismans utilisent le slug comme clé unique
+        const key = skill.slug;
+        if (!skillsMap[key]) {
+          skillsMap[key] = { nameOrSlug: key, level: 0 };
+        }
+        skillsMap[key].level += skill.level;
+      });
+    }
 
     return Object.values(skillsMap).sort((a, b) => b.level - a.level);
   };
@@ -2427,23 +2535,37 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
       }
     });
 
+    // Slots du talisman (si présent)
+    if (selectedEquipment.talisman?.data?.slots) {
+      selectedEquipment.talisman.data.slots.forEach((slot) => {
+        if (slot > 0) allSlots.push(slot);
+      });
+    }
+
     return allSlots.sort((a, b) => b - a);
   };
 
   // Obtenir le nom traduit d'une compétence
-  const getTranslatedSkillName = (skillName, lang) => {
+  const getTranslatedSkillName = (skillNameOrSlug, lang) => {
+    // D'abord, essayer de trouver directement par slug
+    if (talentsData[skillNameOrSlug]) {
+      const talent = talentsData[skillNameOrSlug];
+      return talent[lang]?.name || talent.EN?.name || skillNameOrSlug;
+    }
+
+    // Sinon, chercher par nom dans toutes les langues
     const talentKey = Object.keys(talentsData).find((key) => {
       const talent = talentsData[key];
       return availableLanguages.some(
-        (l) => talent[l]?.name?.toLowerCase() === skillName.toLowerCase()
+        (l) => talent[l]?.name?.toLowerCase() === skillNameOrSlug.toLowerCase()
       );
     });
 
     if (talentKey) {
       const talent = talentsData[talentKey];
-      return talent[lang]?.name || talent.EN?.name || skillName;
+      return talent[lang]?.name || talent.EN?.name || skillNameOrSlug;
     }
-    return skillName;
+    return skillNameOrSlug;
   };
 
   const handleSelect = (type, item) => {
@@ -2729,11 +2851,9 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                 return (
                   <div
                     key={type}
-                    onClick={() => !isTalisman && setModalOpen(type)}
+                    onClick={() => setModalOpen(type)}
                     className={`flex items-center p-4 rounded-lg border-2 border-dashed cursor-pointer transition-all ${
-                      isTalisman
-                        ? "cursor-not-allowed opacity-50"
-                        : darkMode
+                      darkMode
                         ? "border-slate-600 hover:border-cyan-500 hover:bg-slate-700/50"
                         : "border-gray-300 hover:border-amber-500 hover:bg-amber-50"
                     }`}
@@ -3185,15 +3305,23 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
               <div className="space-y-3">
                 {totalSkills.map((skill, index) => {
                   // Trouver le niveau max du talent dans talentsData
-                  const talentKey = Object.keys(talentsData).find((key) => {
-                    const talent = talentsData[key];
-                    return availableLanguages.some(
-                      (lang) =>
-                        talent[lang]?.name?.toLowerCase() ===
-                        skill.name.toLowerCase()
-                    );
-                  });
-                  const talentInfo = talentKey ? talentsData[talentKey] : null;
+                  // D'abord essayer par slug direct
+                  let talentKey = skill.nameOrSlug;
+                  let talentInfo = talentsData[talentKey] || null;
+
+                  // Si pas trouvé par slug, chercher par nom dans toutes les langues
+                  if (!talentInfo) {
+                    talentKey = Object.keys(talentsData).find((key) => {
+                      const talent = talentsData[key];
+                      return availableLanguages.some(
+                        (lang) =>
+                          talent[lang]?.name?.toLowerCase() ===
+                          skill.nameOrSlug.toLowerCase()
+                      );
+                    });
+                    talentInfo = talentKey ? talentsData[talentKey] : null;
+                  }
+
                   const talentLangData =
                     talentInfo?.[language] || talentInfo?.EN;
                   // Utiliser les levels de la langue courante, sinon fallback sur EN
@@ -3237,7 +3365,7 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                             darkMode ? "text-amber-100" : "text-gray-900"
                           }`}
                         >
-                          {getTranslatedSkillName(skill.name, language)}
+                          {getTranslatedSkillName(skill.nameOrSlug, language)}
                         </div>
                         {/* Barre de progression */}
                         <div className="flex gap-1 mt-1">
