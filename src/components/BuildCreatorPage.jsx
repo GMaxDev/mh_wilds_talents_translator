@@ -2497,6 +2497,52 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
   const [editingBuildName, setEditingBuildName] = useState("");
   const [deletingBuildId, setDeletingBuildId] = useState(null);
   const [hoveredTalent, setHoveredTalent] = useState(null); // Talent survolé pour le tooltip
+  const [hoveredEquipment, setHoveredEquipment] = useState(null); // Pièce d'équipement survolée pour highlight des talents
+
+  // Fonction pour obtenir les skills d'une pièce d'équipement
+  const getEquipmentSkills = (type) => {
+    const equipment = selectedEquipment[type];
+    if (!equipment?.data) return [];
+    
+    if (type === "weapon") {
+      // Les armes ont des skills sous forme [name, level]
+      return (equipment.data.skills || []).map(([name]) => name.toLowerCase());
+    } else if (type === "talisman") {
+      // Les talismans ont des skills avec slug
+      return (equipment.data.skills || []).map(skill => 
+        (skill.slug || skill.name || "").toLowerCase()
+      );
+    } else {
+      // Les armures ont des skills avec name ou slug
+      return (equipment.data.skills || []).map(skill => 
+        (skill.name || skill.slug || "").toLowerCase()
+      );
+    }
+  };
+
+  // Vérifier si un talent est impacté par la pièce d'équipement survolée
+  const isTalentHighlighted = (skillNameOrSlug) => {
+    if (!hoveredEquipment) return false;
+    const equipmentSkills = getEquipmentSkills(hoveredEquipment);
+    const skillLower = skillNameOrSlug.toLowerCase();
+    
+    // Chercher aussi le nom traduit
+    const talentKey = Object.keys(talentsData).find((key) => {
+      const talent = talentsData[key];
+      return availableLanguages.some(
+        (lang) =>
+          talent[lang]?.name?.toLowerCase() === skillLower
+      );
+    });
+    
+    return equipmentSkills.some(eSkill => 
+      eSkill === skillLower || 
+      eSkill === talentKey?.toLowerCase() ||
+      (talentKey && talentsData[talentKey] && availableLanguages.some(lang => 
+        talentsData[talentKey][lang]?.name?.toLowerCase() === eSkill
+      ))
+    );
+  };
 
   // Charger les builds sauvegardés depuis localStorage
   useEffect(() => {
@@ -2987,6 +3033,8 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                   <div
                     key={type}
                     onClick={() => setModalOpen(type)}
+                    onMouseEnter={() => equipment && setHoveredEquipment(type)}
+                    onMouseLeave={() => setHoveredEquipment(null)}
                     className={`flex items-center p-4 rounded-lg border-2 border-dashed cursor-pointer transition-all ${
                       darkMode
                         ? "border-slate-600 hover:border-cyan-500 hover:bg-slate-700/50"
@@ -3476,11 +3524,17 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                       )
                     : 7;
 
+                  const isHighlighted = isTalentHighlighted(skill.nameOrSlug);
+
                   return (
                     <div
                       key={index}
-                      className={`relative flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
-                        darkMode
+                      className={`relative flex items-center justify-between p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                        isHighlighted
+                          ? darkMode
+                            ? "bg-cyan-900/60 ring-2 ring-cyan-400 animate-pulse"
+                            : "bg-amber-200/80 ring-2 ring-amber-500 animate-pulse"
+                          : darkMode
                           ? "bg-slate-700/50 hover:bg-slate-700/80"
                           : "bg-gray-100 hover:bg-gray-200"
                       }`}
@@ -3497,7 +3551,13 @@ export default function BuildCreatorPage({ darkMode, initialLanguage = "FR" }) {
                       <div className="flex-1">
                         <div
                           className={`font-medium ${
-                            darkMode ? "text-amber-100" : "text-gray-900"
+                            isHighlighted
+                              ? darkMode
+                                ? "text-cyan-100"
+                                : "text-amber-900"
+                              : darkMode
+                              ? "text-amber-100"
+                              : "text-gray-900"
                           }`}
                         >
                           {getTranslatedSkillName(skill.nameOrSlug, language)}
