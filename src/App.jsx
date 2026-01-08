@@ -7,7 +7,7 @@ import weaponTypeTranslations from "./data/weapon-type-translations.json";
 import weaponsFullData from "./data/weapons-full.json";
 import armorsFullData from "./data/armors-kiranico-full.json";
 import BuildCreatorPage from "./components/BuildCreatorPage";
-import charmsData from "./data/charms-kiranico-mapped.json";
+import charmsData from "./data/charms-kiranico.json";
 
 // Fonction helper pour traduire les noms de skills
 const translateSkillName = (skillName, targetLang) => {
@@ -2070,32 +2070,62 @@ function TranslatorPage({ talents, darkMode }) {
               >
                 {charmsData[selectedCharm][sourceLanguage]?.description}
               </p>
-              <div className="space-y-1">
-                {(charmsData[selectedCharm]._applies || []).map((s, i) => {
-                  const skillName = s.skill
-                    ? translateSkillName(s.skill, sourceLanguage)
-                    : s.name;
-                  return (
-                    <div
-                      key={i}
-                      className={`text-sm flex justify-between ${
-                        darkMode ? "text-amber-100/90" : "text-amber-900/90"
-                      }`}
-                    >
-                      <span>{skillName}</span>
-                      <span
-                        className={`px-2 py-0.5 rounded ${
-                          darkMode
-                            ? "bg-cyan-900/30 text-cyan-300"
-                            : "bg-amber-200 text-amber-800"
+              {/* Skills du talisman */}
+              {(charmsData[selectedCharm][sourceLanguage]?.skills || charmsData[selectedCharm].EN?.skills || []).length > 0 ? (
+                <div className="space-y-3">
+                  {(charmsData[selectedCharm][sourceLanguage]?.skills || charmsData[selectedCharm].EN?.skills || []).map((s, i) => {
+                    const talentInfo = talents[s.slug];
+                    const talentLangData = talentInfo?.[sourceLanguage] || talentInfo?.EN;
+                    const skillName = talentLangData?.name || s.name || s.slug;
+                    const levelKey = `Lv${s.level}`;
+                    const levelDescription = talentLangData?.levels?.[levelKey];
+                    
+                    return (
+                      <div
+                        key={i}
+                        className={`rounded-lg p-3 ${
+                          darkMode ? "bg-slate-700/40" : "bg-amber-100/50"
                         }`}
                       >
-                        Lv.{s.level}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
+                        <div className="flex justify-between items-center mb-1">
+                          <span className={`font-medium ${
+                            darkMode ? "text-cyan-400" : "text-blue-600"
+                          }`}>
+                            {skillName}
+                          </span>
+                          <span
+                            className={`px-2 py-0.5 rounded text-xs font-bold ${
+                              darkMode
+                                ? "bg-cyan-900/50 text-cyan-300 border border-cyan-800"
+                                : "bg-blue-100 text-blue-700 border border-blue-300"
+                            }`}
+                          >
+                            Lv.{s.level}
+                          </span>
+                        </div>
+                        {talentLangData?.description && (
+                          <p className={`text-xs mb-1 ${
+                            darkMode ? "text-gray-400" : "text-gray-600"
+                          }`}>
+                            {talentLangData.description}
+                          </p>
+                        )}
+                        {levelDescription && (
+                          <p className={`text-xs ${
+                            darkMode ? "text-amber-300" : "text-amber-700"
+                          }`}>
+                            {levelDescription}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p className={`text-sm italic ${darkMode ? "text-gray-500" : "text-gray-400"}`}>
+                  Aucun talent associé
+                </p>
+              )}
             </div>
 
             <div
@@ -2120,32 +2150,62 @@ function TranslatorPage({ talents, darkMode }) {
               >
                 {charmsData[selectedCharm][targetLanguage]?.description}
               </p>
-              <div className="space-y-1">
-                {(charmsData[selectedCharm]._applies || []).map((s, i) => {
-                  const skillName = s.skill
-                    ? translateSkillName(s.skill, targetLanguage)
-                    : s.name;
-                  return (
-                    <div
-                      key={i}
-                      className={`text-sm flex justify-between ${
-                        darkMode ? "text-amber-100/90" : "text-amber-900/90"
-                      }`}
-                    >
-                      <span>{skillName}</span>
-                      <span
-                        className={`px-2 py-0.5 rounded ${
-                          darkMode
-                            ? "bg-cyan-900/30 text-cyan-300"
-                            : "bg-amber-200 text-amber-800"
+              {/* Skills du talisman */}
+              {(charmsData[selectedCharm][targetLanguage]?.skills || charmsData[selectedCharm].EN?.skills || []).length > 0 ? (
+                <div className="space-y-3">
+                  {(charmsData[selectedCharm][targetLanguage]?.skills || charmsData[selectedCharm].EN?.skills || []).map((s, i) => {
+                    const talentInfo = talents[s.slug];
+                    const talentLangData = talentInfo?.[targetLanguage] || talentInfo?.EN;
+                    const skillName = talentLangData?.name || s.name || s.slug;
+                    const levelKey = `Lv${s.level}`;
+                    const levelDescription = talentLangData?.levels?.[levelKey];
+                    
+                    return (
+                      <div
+                        key={i}
+                        className={`rounded-lg p-3 ${
+                          darkMode ? "bg-slate-700/40" : "bg-amber-100/50"
                         }`}
                       >
-                        Lv.{s.level}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
+                        <div className="flex justify-between items-center mb-1">
+                          <span className={`font-medium ${
+                            darkMode ? "text-cyan-400" : "text-blue-600"
+                          }`}>
+                            {skillName}
+                          </span>
+                          <span
+                            className={`px-2 py-0.5 rounded text-xs font-bold ${
+                              darkMode
+                                ? "bg-cyan-900/50 text-cyan-300 border border-cyan-800"
+                                : "bg-blue-100 text-blue-700 border border-blue-300"
+                            }`}
+                          >
+                            Lv.{s.level}
+                          </span>
+                        </div>
+                        {talentLangData?.description && (
+                          <p className={`text-xs mb-1 ${
+                            darkMode ? "text-gray-400" : "text-gray-600"
+                          }`}>
+                            {talentLangData.description}
+                          </p>
+                        )}
+                        {levelDescription && (
+                          <p className={`text-xs ${
+                            darkMode ? "text-amber-300" : "text-amber-700"
+                          }`}>
+                            {levelDescription}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p className={`text-sm italic ${darkMode ? "text-gray-500" : "text-gray-400"}`}>
+                  No associated talent
+                </p>
+              )}
             </div>
           </div>
         </div>
